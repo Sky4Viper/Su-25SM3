@@ -379,7 +379,7 @@
 		<y-offset>3.1167</y-offset>
 		<z-offset>6.5944</z-offset>
 		<yaw-offset>90</yaw-offset>
-		<pitch-offset>80</pitch-offset>
+		<pitch-offset>72</pitch-offset>
 		<life>5</life>
 		<buoyancy>25</buoyancy>
 		<eda>1</eda>
@@ -400,7 +400,49 @@
 		<y-offset>-3.1167</y-offset>
 		<z-offset>6.5944</z-offset>
 		<yaw-offset>-90</yaw-offset>
-		<pitch-offset>80</pitch-offset>
+		<pitch-offset>72</pitch-offset>
+		<life>5</life>
+		<buoyancy>25</buoyancy>
+		<eda>1</eda>
+		<cd>0.2</cd>
+		<random>true</random>
+		<no-roll>true</no-roll>
+	</submodel>
+
+	<submodel>
+		<name>flares</name>
+		<model>Aircraft/Su-25/Models/Effects/Flare/Flare.xml</model>
+		<trigger>controls/armament/trigger2</trigger>
+		<speed>400</speed>
+		<repeat>true</repeat>
+		<delay>0.2</delay>
+		<count>-1</count>
+		<x-offset>-11.2204</x-offset>
+		<y-offset>3.1167</y-offset>
+		<z-offset>1.5944</z-offset>
+		<yaw-offset>90</yaw-offset>
+		<pitch-offset>-78</pitch-offset>
+		<life>5</life>
+		<buoyancy>25</buoyancy>
+		<eda>1</eda>
+		<cd>0.2</cd>
+		<random>true</random>
+		<no-roll>true</no-roll>
+	</submodel>
+	
+	<submodel>
+		<name>flares</name>
+		<model>Aircraft/Su-25/Models/Effects/Flare/Flare.xml</model>
+		<trigger>controls/armament/trigger2</trigger>
+		<speed>400</speed>
+		<repeat>true</repeat>
+		<delay>0.2</delay>
+		<count>-1</count>
+		<x-offset>-11.2204</x-offset>
+		<y-offset>-3.1167</y-offset>
+		<z-offset>1.5944</z-offset>
+		<yaw-offset>-90</yaw-offset>
+		<pitch-offset>-78</pitch-offset>
 		<life>5</life>
 		<buoyancy>25</buoyancy>
 		<eda>1</eda>
