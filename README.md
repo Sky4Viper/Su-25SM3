@@ -3,6 +3,8 @@ FG Aircraft  |  Su-25
 
 ## Historical background
 
+<a href='https://postimg.cc/K4yHjJGC' target='_blank'><img src='https://i.postimg.cc/K4yHjJGC/su-25sm3.jpg' border='0' alt='su-25sm3'/></a>
+
 The Su-25SM3 is an extensively modified version of the Su-25 to extend the aircraft’s operative life for at least another ten years.
 
 The upgraded Su-25SM3 is equipped with: 
