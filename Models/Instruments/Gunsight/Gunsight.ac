@@ -7,7 +7,7 @@ kids 3
 OBJECT poly
 name "Sight"
 loc -4.16396 2.69516 -0.00200991
-texture "Sight.png"
+texture "Sight3.svg"
 crease 45.000000
 numvert 4
 0.234193 0.0228176 -0.0198846

@@ -164,6 +164,155 @@
 		<submodel-path>Aircraft/Su-25/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
 	</submodel>
 	
+		<!-- Pylon-2 -->
+	
+	<submodel>
+		<name>pylon-two-bomb</name>
+		<model>Aircraft/Su-25/Models/Payload/FAB-two.xml</model>
+		<trigger>controls/armament/station[1]/release</trigger>
+		<trigger-once>false</trigger-once>
+		<repeat>true</repeat>
+		<speed>0</speed>
+		<count>1</count>
+		<x-offset>-0.9186</x-offset>
+		<y-offset>-14.566</y-offset>
+		<z-offset>5.511811</z-offset>
+		<yaw-offset>0.0</yaw-offset>
+		<pitch-offset>-3</pitch-offset>
+		<eda>1</eda>
+		<weight>1100</weight>
+		<cd>0.3</cd>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+		<submodel-path>Aircraft/Su-25/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+	</submodel>
+	
+	<!-- Pylon-9 -->
+	
+	<submodel>
+		<name>pylon-eight-bomb</name>
+		<model>Aircraft/Su-25/Models/Payload/FAB-one.xml</model>
+		<trigger>controls/armament/station[8]/release</trigger>
+		<trigger-once>false</trigger-once>
+		<repeat>true</repeat>
+		<speed>0</speed>
+		<count>1</count>
+		<x-offset>-0.9186</x-offset>
+		<y-offset>14.566</y-offset>
+		<z-offset>5.511811</z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>-3</pitch-offset>
+		<eda>1</eda>
+		<weight>1100</weight>
+		<cd>0.3</cd>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+		<submodel-path>Aircraft/Su-25/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+	</submodel>
+		<!-- Pylon-4 -->
+	
+	<submodel>
+		<name>pylon-three-bomb</name>
+		<model>Aircraft/Su-25/Models/Payload/FAB-four.xml</model>
+		<trigger>controls/armament/station[3]/release</trigger>
+		<trigger-once>false</trigger-once>
+		<repeat>true</repeat>
+		<speed>0</speed>
+		<count>1</count>
+		<x-offset>-0.9186</x-offset>
+		<y-offset>-10.0078</y-offset>
+		<z-offset>5.511811</z-offset>
+		<yaw-offset>0.0</yaw-offset>
+		<pitch-offset>-3</pitch-offset>
+		<eda>1</eda>
+		<weight>1100</weight>
+		<cd>0.3</cd>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+		<submodel-path>Aircraft/Su-25/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+	</submodel>
+	
+	<!-- Pylon-7 -->
+	
+	<submodel>
+		<name>pylon-eight-bomb</name>
+		<model>Aircraft/Su-25/Models/Payload/FAB-seven.xml</model>
+		<trigger>controls/armament/station[6]/release</trigger>
+		<trigger-once>false</trigger-once>
+		<repeat>true</repeat>
+		<speed>0</speed>
+		<count>1</count>
+		<x-offset>-0.9186</x-offset>
+		<y-offset>10.0078</y-offset>
+		<z-offset>5.511811</z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>-3</pitch-offset>
+		<eda>1</eda>
+		<weight>1100</weight>
+		<cd>0.3</cd>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+		<submodel-path>Aircraft/Su-25/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+	</submodel>
+	
+		<!-- Pylon-5 -->
+	
+	<submodel>
+		<name>pylon-two-bomb</name>
+		<model>Aircraft/Su-25/Models/Payload/FAB-five.xml</model>
+		<trigger>controls/armament/station[4]/release</trigger>
+		<trigger-once>false</trigger-once>
+		<repeat>true</repeat>
+		<speed>0</speed>
+		<count>1</count>
+		<x-offset>-0.9186</x-offset>
+		<y-offset>-8.566</y-offset>
+		<z-offset>5.511811</z-offset>
+		<yaw-offset>0.0</yaw-offset>
+		<pitch-offset>-3</pitch-offset>
+		<eda>1</eda>
+		<weight>1100</weight>
+		<cd>0.3</cd>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+		<submodel-path>Aircraft/Su-25/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+	</submodel>
+	
+	<!-- Pylon-6 -->
+	
+	<submodel>
+		<name>pylon-eight-bomb</name>
+		<model>Aircraft/Su-25/Models/Payload/FAB-six.xml</model>
+		<trigger>controls/armament/station[5]/release</trigger>
+		<trigger-once>false</trigger-once>
+		<repeat>true</repeat>
+		<speed>0</speed>
+		<count>1</count>
+		<x-offset>-0.9186</x-offset>
+		<y-offset>8.566</y-offset>
+		<z-offset>5.511811</z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>-3</pitch-offset>
+		<eda>1</eda>
+		<weight>1100</weight>
+		<cd>0.3</cd>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+		<submodel-path>Aircraft/Su-25/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+	</submodel>
+	
 	<!-- Flares -->
 	
 	<submodel>

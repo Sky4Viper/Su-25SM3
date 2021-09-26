@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="81.919998"
+   height="81.919998"
+   viewBox="0 0 81.919998 81.919998"
+   sodipodi:docname="Sight2.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1316" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="10.144043"
+     inkscape:cx="48.550662"
+     inkscape:cy="37.706859"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g8">
+    <path
+       id="rect2124"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.702486;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:2.80994, 1.40497;stroke-dashoffset:0;paint-order:markers stroke fill"
+       d="M 42.050781 22.177734 C 41.809752 22.177734 41.615234 22.372252 41.615234 22.613281 L 41.615234 37.699219 L 42.492188 37.699219 L 42.492188 22.613281 C 42.492188 22.372252 42.29767 22.177734 42.056641 22.177734 L 42.050781 22.177734 z M 23.96875 40.230469 C 23.727721 40.230071 23.533601 40.424986 23.533203 40.666016 L 23.533203 40.671875 C 23.532805 40.912904 23.725767 41.107024 23.966797 41.107422 L 39.054688 41.132812 L 39.054688 40.255859 L 23.96875 40.230469 z M 45.054688 40.265625 L 45.054688 41.142578 L 60.140625 41.167969 C 60.381654 41.168367 60.575774 40.973451 60.576172 40.732422 L 60.576172 40.726562 C 60.57657 40.485533 60.381654 40.291413 60.140625 40.291016 L 45.054688 40.265625 z M 41.615234 43.699219 L 41.615234 58.785156 C 41.615234 59.026186 41.809752 59.220703 42.050781 59.220703 L 42.056641 59.220703 C 42.29767 59.220703 42.492188 59.026186 42.492188 58.785156 L 42.492188 43.699219 L 41.615234 43.699219 z "
+       inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+       id="path1066"
+       sodipodi:type="arc"
+       sodipodi:cx="42.0303"
+       sodipodi:cy="40.781124"
+       sodipodi:rx="0.96178395"
+       sodipodi:ry="0.98694342"
+       sodipodi:start="1.5768107"
+       sodipodi:end="1.568386"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       d="m 42.024516,41.76805 a 0.96178395,0.98694342 0 0 1 -0.955992,-0.990783 0.96178395,0.98694342 0 0 1 0.963509,-0.983085 0.96178395,0.98694342 0 0 1 0.960051,0.986642 0.96178395,0.98694342 0 0 1 -0.959466,0.987241" />
+    <path
+       id="path4500"
+       style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+       d="M 42.189407 63.716315 A 22.941843 22.937208 0 0 0 64.972656 40.773438 A 22.941843 22.937208 0 0 0 42.189796 17.84231 " />
+    <g
+       id="g1551"
+       style="fill:#ff0000">
+      <g
+         id="use1196"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(10,74.140662,541.98702)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path2027"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect2029"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1198"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(20,80.010605,289.97857)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path2021"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect2023"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1200"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(30,81.98721,205.11629)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path2015"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect2017"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1202"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(40,82.990696,162.03071)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path2009"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect2011"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1204"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(50,83.605238,135.64436)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path2003"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect2005"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1206"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(60,84.025631,117.59501)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1997"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1999"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1208"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(70,84.335397,104.29593)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1991"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1993"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1210"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(80,84.576349,93.951065)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1985"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1987"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1212"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(90,84.772445,85.560486)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1979"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1981"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1214"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(100,84.935741,78.51872)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1973"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1975"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1216"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(110,85.077368,72.440697)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1967"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1969"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1218"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(120,85.202627,67.064358)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1961"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1963"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1220"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(130,85.315785,62.205054)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1955"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1957"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1222"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(140,85.42005,57.726714)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1949"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1951"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1224"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(150,85.517909,53.52476)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1943"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1945"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1226"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(160,85.611324,49.515294)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1937"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1939"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+      <g
+         id="use1228"
+         inkscape:tile-x0="18.588453"
+         inkscape:tile-y0="17.342622"
+         style="fill:#ff0000"
+         transform="rotate(170,85.701903,45.627634)">
+        <path
+           style="fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+           id="path1931"
+           sodipodi:type="arc"
+           sodipodi:cx="42.0303"
+           sodipodi:cy="40.779831"
+           sodipodi:rx="22.941843"
+           sodipodi:ry="22.937208"
+           sodipodi:start="1.5768108"
+           sodipodi:end="1.568386"
+           sodipodi:arc-type="arc"
+           sodipodi:open="true"
+           inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           d="M 41.892318,63.716624 A 22.941843,22.937208 0 0 1 19.088632,40.690186 22.941843,22.937208 0 0 1 42.071643,17.84266 22.941843,22.937208 0 0 1 64.972142,40.772855 22.941843,22.937208 0 0 1 42.085597,63.716972" />
+        <rect
+           style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+           id="rect1933"
+           width="1"
+           height="2.8210373"
+           x="41.502983"
+           y="17.470245"
+           ry="0.2700837" />
+      </g>
+    </g>
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2340-6"
+       width="1"
+       height="2.8210373"
+       x="41.559067"
+       y="61.423832"
+       ry="0.2700837" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2346"
+       width="1"
+       height="2.8210373"
+       x="47.898163"
+       y="9.4101562"
+       ry="0.2700837"
+       transform="rotate(10)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2352"
+       width="1"
+       height="2.8210373"
+       x="52.818653"
+       y="0.47202629"
+       ry="0.2700837"
+       transform="rotate(20)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2358"
+       width="1"
+       height="2.8210373"
+       x="56.112297"
+       y="-9.1847477"
+       ry="0.2700837"
+       transform="rotate(30)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2364"
+       width="1"
+       height="2.8210373"
+       x="57.679024"
+       y="-19.266748"
+       ry="0.2700837"
+       transform="rotate(40)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2370"
+       width="1"
+       height="2.8210373"
+       x="57.471226"
+       y="-29.46764"
+       ry="0.2700837"
+       transform="rotate(50)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2376"
+       width="1"
+       height="2.8210373"
+       x="55.49522"
+       y="-39.477474"
+       ry="0.2700837"
+       transform="rotate(60)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2382"
+       width="1"
+       height="2.8210373"
+       x="51.811043"
+       y="-48.992107"
+       ry="0.2700837"
+       transform="rotate(70)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2388"
+       width="1"
+       height="2.8210373"
+       x="46.53064"
+       y="-57.722439"
+       ry="0.2700837"
+       transform="rotate(80)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2394"
+       width="1"
+       height="2.8210373"
+       x="39.814453"
+       y="-65.403206"
+       ry="0.2700837"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2400"
+       width="1"
+       height="2.8210373"
+       x="31.866545"
+       y="-71.801033"
+       ry="0.2700837"
+       transform="rotate(100)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2406"
+       width="1"
+       height="2.8210373"
+       x="22.928415"
+       y="-76.721519"
+       ry="0.2700837"
+       transform="rotate(110)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2412"
+       width="1"
+       height="2.8210373"
+       x="13.271641"
+       y="-80.015167"
+       ry="0.2700837"
+       transform="rotate(120)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2418"
+       width="1"
+       height="2.8210373"
+       x="3.18964"
+       y="-81.581894"
+       ry="0.2700837"
+       transform="rotate(130)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2424"
+       width="1"
+       height="2.8210373"
+       x="-7.0112519"
+       y="-81.374092"
+       ry="0.2700837"
+       transform="rotate(140)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2430"
+       width="1"
+       height="2.8210373"
+       x="-17.021086"
+       y="-79.398087"
+       ry="0.2700837"
+       transform="rotate(150)" />
+    <rect
+       style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2436"
+       width="1"
+       height="2.8210373"
+       x="-26.535719"
+       y="-75.713913"
+       ry="0.2700837"
+       transform="rotate(160)" />
+    <g
+       id="use2238"
+       inkscape:tile-x0="18.781733"
+       inkscape:tile-y0="17.342969"
+       transform="rotate(170,42.223579,40.537691)">
+      <rect
+         style="fill:#ffff00;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+         id="rect2442"
+         width="1"
+         height="2.8210373"
+         x="41.50034"
+         y="17.358063"
+         ry="0.2700837" />
+    </g>
+    <path
+       style="fill:#ffff00;stroke:#ffff00;stroke-width:0.665796px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 41.49504,21.413513 0.507597,-1.703535 0.575018,1.688577 z"
+       id="path5861" />
+  </g>
+</svg>

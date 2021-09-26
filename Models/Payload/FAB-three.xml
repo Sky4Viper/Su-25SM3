@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>FAB-500.ac</path>
+	<path>FAB-250.ac</path>
 	
 	<animation>
 	<enable-hot type="bool">false</enable-hot>
@@ -10,7 +10,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>FAB-500</object-name>
+		<object-name>OFAB-250-270</object-name>
 		<condition>
 			<not>
 				<property>controls/armament/station2/release</property>

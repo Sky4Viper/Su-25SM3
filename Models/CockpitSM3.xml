@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>CockpitSM3.ac</path>
+
+	<!-- Pilot -->
+	
+	<model>
+		<path>Aircraft/Su-25/Models/Pilot/Pilot.xml</path>
+		<offsets>
+			<x-m>-3.32</x-m>
+			<y-m>0.00</y-m>
+			<z-m>2.23</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<condition>
+			<not>
+				<property>/sim/current-view/internal</property>
+			</not>
+		</condition>
+	</model>
+	
+	<!-- Instruments -->
+	
+	<model>
+		<path>Aircraft/Su-25/Models/Instruments/InstrumentsSM3.xml</path>
+	</model>
+
+</PropertyList>

@@ -233,7 +233,7 @@
 					<property>/sim/current-view/internal</property>
 					<greater-than>
 						<property>/accelerations/pilot/z-accel-fps_sec</property>
-						<value>-161</value>
+						<value>161</value>
 					</greater-than>
 				</and>
 			</condition>
@@ -377,7 +377,7 @@
 		<guns>
 			<name>Gun</name>
 			<mode>looped</mode>
-			<path>Aircraft/Su-25/Sounds/Samples/Gun.wav</path>
+			<path>Aircraft/Su-25/Sounds/Samples/GSh23.wav</path>
 			
 			<condition>
 				<property>controls/armament/trigger</property>

@@ -11,13 +11,13 @@
 	</animation>
 
 	<model>
-		<path>Aircraft/Su-25/Models/Instruments/Gunsight/Gunsight.xml</path>
+		<path>Aircraft/Su-25/Models/Instruments/HUD/HUD2.xml</path>
 		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
+      <x-m>-3.98922</x-m>
+      <y-m>0.0</y-m>
+      <z-m>2.63887</z-m>
+      <pitch-deg>-5</pitch-deg>
+    </offsets>
 	</model>
 	
 	<model>

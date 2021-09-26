@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>FAB-250.ac</path>
+	
+	<animation>
+	<enable-hot type="bool">false</enable-hot>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>OFAB-250-270</object-name>
+		<condition>
+			<not>
+				<property>controls/armament/station4/release</property>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>12000</max-m>
+	</animation>
+
+</PropertyList>

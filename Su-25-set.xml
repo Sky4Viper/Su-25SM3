@@ -8,7 +8,7 @@
 	
 		<description>Sukhoi Su-25</description>
 		<author>Petar Jedvaj, Stuart Cassie, Raptor and Gary Brown</author>
-		<status>1.3.1</status>
+		<status>1.3.5</status>
 		
 		<rating>
 			<FDM type="int">3</FDM>
@@ -380,6 +380,11 @@
 			
 			<key>
 				<name>e</name>
+				<desc>Eject</desc>
+			</key>
+			
+			<key>
+				<name>d</name>
 				<desc>Fire UB-32 rocket pod</desc>
 			</key>
 			
@@ -389,8 +394,20 @@
 			</key>
 			
 			<key>
-				<name>Ctrl-j</name>
-				<desc>Drop bomb</desc>
+				<name>i</name>
+				<desc>Drop bombs ----X()X----</desc>
+			</key>
+			<key>
+				<name>j</name>
+				<desc>Drop bombs ---X-()-X---</desc>
+			</key>
+			<key>
+				<name>k</name>
+				<desc>Drop bombs --X--()--X--</desc>
+			</key>
+			<key>
+				<name>l</name>
+				<desc>Drop bombs -X---()---X-</desc>
 			</key>
 			
 			<line>Parking brake is on</line>
@@ -409,8 +426,8 @@
 	<input>
 		<keyboard>
 		
-			<key n="10">
-				<name>Ctrl-j</name>
+			<key n="107">
+				<name>k</name>
 				<desc>Drop bomb</desc>
 				<binding>
 					<command>property-assign</command>
@@ -420,6 +437,49 @@
 				<binding>
 					<command>property-assign</command>
 					<property>/controls/armament/station[7]/release</property>
+					<value type="bool">1</value>
+				</binding>
+								
+			</key>
+			<key n="108">
+				<name>l</name>
+				<desc>Drop bomb</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/armament/station[1]/release</property>
+					<value type="bool">1</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/armament/station[8]/release</property>
+					<value type="bool">1</value>
+				</binding>
+			</key>
+			<key n="106">
+				<name>j</name>
+				<desc>Drop bomb</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/armament/station[3]/release</property>
+					<value type="bool">1</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/armament/station[6]/release</property>
+					<value type="bool">1</value>
+				</binding>
+			</key>
+						<key n="105">
+				<name>i</name>
+				<desc>Drop bomb</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/armament/station[5]/release</property>
+					<value type="bool">1</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/armament/station[4]/release</property>
 					<value type="bool">1</value>
 				</binding>
 			</key>
@@ -445,8 +505,8 @@
 				</binding>
 			</key>
 			
-			<key n="101">
-				<name>e</name>
+			<key n="100">
+				<name>d</name>
 				<desc>Fire UB-32 rocket pod</desc>
 				<binding>
 					<command>nasal</command>
@@ -459,6 +519,16 @@
 					</binding>
 				</mod-up>
 			</key>
+			
+			<key n="101">
+				<name>e</name>
+				<desc>Eject</desc>
+				<binding>
+					<command>nasal</command>
+					<script>Eject.eject();</script>
+				</binding>
+			</key>
+			
 			
 			<key n="102">
 				<name>f</name>
@@ -677,14 +747,21 @@
 	<!-- Nasal scripts -->
 	
 	<nasal>
-		<Su-25>
-			<file>Aircraft/Su-25/Nasal/lights.nas</file>
+				<Su-25>
 			<file>Aircraft/Su-25/Nasal/liveries.nas</file>
 		</Su-25>
+		
+	    <lights>
+	    	<file>Aircraft/Su-25/Nasal/Lights.nas</file>
+	    </lights>
 		
 		<canopy>
 			<file>Aircraft/Su-25/Nasal/canopy.nas</file>
 		</canopy>
+		
+		<Eject>
+			<file>Aircraft/Su-25/Nasal/eject.nas</file>
+		</Eject>
 		
 		<tyresmoke>
 			<file>Aircraft/Su-25/Nasal/tyresmoke.nas</file>
@@ -693,6 +770,10 @@
 		<guns>
 			<file>Aircraft/Su-25/Nasal/weapons.nas</file>
 		</guns>
+		
+		<rwr>
+			<file>Aircraft/Su-25/Nasal/rwr.nas</file>
+		</rwr>
 
 		<low>
 			<file>Aircraft/Su-25/Nasal/low.nas</file>

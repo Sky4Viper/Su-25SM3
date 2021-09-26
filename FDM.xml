@@ -112,6 +112,23 @@ sweep="24">
 <control-speed control="FLAP0" transition-time="1"/>
 </vstab>
 
+  <!-- dummy mstab to provide drag-chute -->
+<mstab x="-2.2" y="0.5" z="0.3"
+         taper="1"
+         incidence="0"
+         twist="0"
+         length="2"
+         chord="0.5"
+         sweep="0"
+         dihedral="0"
+         effectiveness="1" >
+    <stall aoa="27" width="3" peak="1.3"/>
+    <flap0 start="0" end="0.9" lift="0.0" drag="30"/>
+    <control-input axis="/controls/flight/chute_deploy" control="FLAP0"/>
+    <control-output control="FLAP0" prop="/surface-positions/drag-chute-pos-norm"/>
+    <control-speed control="FLAP0" transition-time="2"/>
+</mstab>
+
 <jet x="-0.7" y="0.8" z="1.7"
 mass="1784"
 thrust="9480" >
@@ -125,6 +142,13 @@ thrust="9480">
 <actionpt x="-3.561" y="-0.8" z="1.3"/>
 <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
 </jet>
+
+<!--guns recoil in 5000 Lbf = 2.5Tf negative angle of the gun : -2'-->
+<thruster thrust="5000"
+      x="-5.38696" y="0.0" z="1.36593"
+      vx="-0.999390827" vy="0" vz="0.03489949">
+<control-input axis="controls/armament/trigger" control="THROTTLE" />
+</thruster>
 
 <!-- Landing gear -->
 
