@@ -29,6 +29,7 @@
 		
 		<model>
 			<path>Aircraft/Su-25/Models/Su-25SM3.xml</path>
+			<hide-lights type="int">1</hide-lights>
 		</model>
 		
 		<!-- Submodels -->
@@ -50,7 +51,7 @@
 		</systems>
 		
 		<sound>
-			<path>Aircraft/Su-25/Sounds/Sounds.xml</path>
+			<path>Aircraft/Su-25/Sounds/SoundsSM3.xml</path>
 		</sound>
 		
 		<virtual-cockpit archive="y">true</virtual-cockpit>
@@ -715,8 +716,10 @@
 		
 		<lighting>
 			<instruments-norm>0.3</instruments-norm>
+			<panels-norm>0.1</panels-norm>
 			<strobe type="bool">true</strobe>
 			<beacon type="bool">true</beacon>
+			<landing-lights type="bool">true</landing-lights>
 			<nav-lights type="bool">true</nav-lights>
 		</lighting>
 		
@@ -822,7 +825,7 @@
 		</Su-25>
 		
 	    <lights>
-	    	<file>Aircraft/Su-25/Nasal/Lights.nas</file>
+	    	<file>Aircraft/Su-25/Nasal/lights.nas</file>
 	    </lights>
 		
 		<canopy>

@@ -10,12 +10,12 @@
  <object-name>RV-21.Needle</object-name>
  <object-name>RV-21.DAM</object-name>
  <object-name>RV-21.blenker</object-name>
- <emission>
-  <red>0.8</red>
-  <green>0.8</green>
-  <blue>0.8</blue>
-  <factor-prop>mig29/systems/cockpitlighting/instruments-norm</factor-prop>
- </emission>
+    <emission>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+    </emission>
 </animation>
 
 <animation>
@@ -25,7 +25,7 @@
   <red>0.8</red>
   <green>0.8</green>
   <blue>0.8</blue>
-  <factor-prop>mig29/systems/cockpitlighting/panel-norm</factor-prop>
+  <factor-prop>controls/lighting/instruments-norm</factor-prop>
  </emission>
 </animation>
 
@@ -136,10 +136,7 @@
  <object-name>RV-21.KnobL</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>

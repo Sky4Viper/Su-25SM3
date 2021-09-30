@@ -18,6 +18,7 @@
     <object-name>bras</object-name>
     <object-name>avantbras</object-name>
     <object-name>main</object-name>
+    <object-name>helmet</object-name>
 
     <!-- Objets transparents -->
     <object-name>lunettes</object-name>

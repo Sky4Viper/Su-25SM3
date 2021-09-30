@@ -16,12 +16,13 @@
  <object-name>ISTR4-2.tankmarker3</object-name>
  <object-name>ISTR4-2.tankmarkerKr</object-name>
  <object-name>ISTR4-2.tankmarkerPTB</object-name>
- <emission>
-  <red>0.8</red>
-  <green>0.8</green>
-  <blue>0.8</blue>
-  <factor-prop>mig29/systems/cockpitlighting/instruments-norm</factor-prop>
- </emission>
+ <object-name>PTZ</object-name>
+    <emission>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+    </emission>
 </animation>
 
 <animation>
@@ -35,10 +36,10 @@
  </emission>
 </animation>
 
- <effect>
+<!--  <effect>
   <inherits-from>Aircraft/MiG-29/Models/Effects/model-transparent</inherits-from>
   <object-name>frontglass</object-name>
- </effect>
+ </effect> -->
 
 <animation>
  <type>shader</type>
@@ -52,10 +53,7 @@
  <object-name>ISTR4-2.tankPTB</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -75,10 +73,7 @@
  <object-name>ISTR4-2.tankKr</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -104,10 +99,7 @@
  <object-name>ISTR4-2.tank3</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -127,10 +119,7 @@
  <object-name>ISTR4-2.tank1</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -148,7 +137,8 @@
 <animation>
  <type>textranslate</type>
  <object-name>ISTR4-2.tape</object-name>
- <property>mig29/instrumentation/ISTR4-2/total-fuel-kg-t</property>
+ <!-- <property>mig29/instrumentation/ISTR4-2/total-fuel-kg-t</property> -->
+ <property>consumables/fuel/total-fuel-lbs</property>
  <factor>0.0001245</factor>
  <axis>
   <x>0</x>
@@ -160,7 +150,8 @@
 <animation>
  <type>textranslate</type>
  <object-name>ISTR4-2.scale</object-name>
- <property>mig29/instrumentation/ISTR4-2/total-fuel-kg</property>
+ <!-- <property>mig29/instrumentation/ISTR4-2/total-fuel-kg</property> -->
+ <property>consumables/fuel/total-fuel-lbs</property>
  <factor>0.000083</factor>
  <axis>
   <x>0</x>
@@ -174,10 +165,7 @@
  <object-name>ISTR4-2.LampOPT</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -191,15 +179,13 @@
   </and>
  </condition>
 </animation>
+
 <animation>
  <type>select</type>
  <object-name>ISTR4-2.LampTEK</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -219,10 +205,7 @@
  <object-name>ISTR4-2.LampT</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -236,15 +219,13 @@
   </and>
  </condition>
 </animation>
+
 <animation>
  <type>select</type>
  <object-name>ISTR4-2.LampR</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -302,7 +283,8 @@
 <animation>
  <type>textranslate</type>
  <object-name>ISTR4-2.DC1</object-name>
- <property>fdm/jsbsim/systems/fuel/tek</property>
+ <!-- <property>fdm/jsbsim/systems/fuel/tek</property> -->
+ <property>consumables/fuel/total-fuel-lbs</property>
  <factor>0.0001</factor>
  <step>1000.0</step>
  <axis>
@@ -311,10 +293,12 @@
   <z> 0</z>
  </axis>
 </animation>
+
 <animation>
  <type>textranslate</type>
  <object-name>ISTR4-2.DC2</object-name>
- <property>fdm/jsbsim/systems/fuel/tek</property>
+ <!-- <property>fdm/jsbsim/systems/fuel/tek</property> -->
+ <property>consumables/fuel/total-fuel-lbs</property>
  <factor>0.001</factor>
  <step>100.0</step>
  <axis>
@@ -323,10 +307,12 @@
   <z> 0</z>
  </axis>
 </animation>
+
 <animation>
  <type>textranslate</type>
  <object-name>ISTR4-2.DC3</object-name>
- <property>fdm/jsbsim/systems/fuel/tek</property>
+ <!-- <property>fdm/jsbsim/systems/fuel/tek</property> -->
+ <property>consumables/fuel/total-fuel-lbs</property>
  <factor>0.01</factor>
  <step>10.0</step>
  <axis>
@@ -350,6 +336,7 @@
   </binding>
  </action>
 </animation>
+
 <animation>
  <type>pick</type>
  <object-name>ISTR4-2.cz2</object-name>
@@ -379,6 +366,7 @@
   </binding>
  </action>
 </animation>
+
 <animation>
  <type>pick</type>
  <object-name>ISTR4-2.cz4</object-name>

@@ -1,0 +1,34 @@
+<PropertyList>
+    
+    <path>Mirrors.ac</path>
+    
+	<!-- Glass shader -->
+    
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+        <object-name>Mirrors</object-name>
+    </animation>
+	
+    <!-- Canopy -->
+
+     <animation>
+        <type>rotate</type>
+        <object-name>Mirrors</object-name>
+         <object-name>Bezels</object-name>
+         <property>/canopy/position-norm</property>
+         <factor>95</factor>
+		<axis>
+			<x1-m>-2.95</x1-m>
+			<y1-m>0.40</y1-m>
+			<z1-m>2.51</z1-m>
+			<x2-m>-3.66</x2-m>
+			<y2-m>0.42</y2-m>
+			<z2-m>2.34</z2-m>
+		</axis>
+     </animation>
+	
+
+	
+</PropertyList>

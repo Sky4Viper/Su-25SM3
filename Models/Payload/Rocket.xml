@@ -6,6 +6,26 @@
 	
 	<!--  Rotate flame -->
 	
+	<effect>
+    		<inherits-from>Effects/model-transparent</inherits-from>
+    		<condition>
+      		<property>/sim/rendering/rembrandt/enabled</property>
+    		</condition>
+    		<object-name>flame-one</object-name>
+    		<object-name>flame-two</object-name>
+ 	</effect>
+	
+	<animation>
+		<type>material</type>
+		<object-name>flame-one</object-name>
+    		<object-name>flame-two</object-name>
+		<emission>
+			<red>255</red>
+			<green>255</green>
+			<blue>254</blue>
+		</emission>
+	</animation>
+	
 	<animation>
 		<type>rotate</type>
 		<object-name>flame-one</object-name>
@@ -40,7 +60,7 @@
 		</axis>
 	</animation>
 	
-	<!-- Smoke -->
+	<!-- Smoke removed and attached to blank-->
 	
 	<!-- <model>
 		<path>Aircraft/Su-25/Models/Effects/UB-32/Smoke.xml</path>

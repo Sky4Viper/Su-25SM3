@@ -23,9 +23,9 @@
 	<model>
 		<path>Aircraft/Su-25/Models/Instruments/KPP/KPP.xml</path>
 		<offsets>
-			<x-m>-3.87734</x-m>
-			<y-m>-0.000184</y-m>
-			<z-m>2.39049</z-m>
+			<x-m>-3.89886</x-m>
+			<y-m>0</y-m>
+			<z-m>2.3738</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -33,9 +33,9 @@
 	<model>
 		<path>Aircraft/Su-25/Models/Instruments/PNP-72-12/PNP-72-12.xml</path>
 		<offsets>
-			<x-m>-3.89734</x-m>
-			<y-m>-0.000184</y-m>
-			<z-m>2.2527</z-m>
+			<x-m>-3.90035</x-m>
+			<y-m>0</y-m>
+			<z-m>2.25181</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 		<overlay>
@@ -43,8 +43,8 @@
 			<type>scale</type>
 			<property>constants/zero</property>
 			<x-offset>1.0</x-offset>
-			<y-offset>1.3</y-offset>
-			<z-offset>1.3</z-offset>
+			<y-offset>1.22</y-offset>
+			<z-offset>1.22</z-offset>
 			</animation>
 		</overlay>
 	</model>
@@ -71,7 +71,8 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Su-25/Models/Instruments/Chronometer/MiG-15bis-Chronometer.xml</path>
+		<!-- <path>Aircraft/Su-25/Models/Instruments/Chronometer/MiG-15bis-Chronometer.xml</path> -->
+		<path>Aircraft/Su-25/Models/Instruments/Chronometer/Chronometer.xml</path>
 		<offsets>
 			<x-m>-3.90034</x-m>
 			<y-m>0.103286</y-m>
@@ -81,17 +82,18 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Su-25/Models/Instruments/ALT/ALT.xml</path>
+		<!-- <path>Aircraft/Su-25/Models/Instruments/US-1600/US-1600.xml</path> -->
+		<path>Aircraft/Su-25/Models/Instruments/ASI/ASI.xml</path>
 		<offsets>
 			<x-m>-3.89034</x-m>
 			<y-m>-0.103286</y-m>
-			<z-m>2.39049</z-m>
+			<z-m>2.39549</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
 
 	<model>
-		<path>Aircraft/Su-25/Models/Instruments/US-1600/US-1600.xml</path>
+		<path>Aircraft/Su-25/Models/Instruments/ALT/ALT.xml</path>
 		<offsets>
 			<x-m>-3.89534</x-m>
 			<y-m>-0.103286</y-m>
@@ -104,7 +106,7 @@
 		<path>Aircraft/Su-25/Models/Instruments/RV-21/RV-21.xml</path>
 		<offsets>
 			<x-m>-3.89534</x-m>
-			<y-m>-0.103286</y-m>
+			<y-m>-0.123286</y-m>
 			<z-m>2.24338</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
@@ -113,35 +115,154 @@
 	<model>
 		<path>Aircraft/Su-25/Models/Instruments/ITG-1/ITG-1_L.xml</path>
 		<offsets>
-			<x-m>-3.88653</x-m>
-			<y-m>0.208085</y-m>
+			<x-m>-3.88898</x-m>
+			<y-m>0.207743</y-m>
 			<z-m>2.23755</z-m>
 			<pitch-deg>0</pitch-deg>
-			<heading-deg>-13</heading-deg>
+			<heading-deg>-12.74</heading-deg>
 		</offsets>
 	</model>
 	
 	<model>
 		<path>Aircraft/Su-25/Models/Instruments/ITG-1/ITG-1_R.xml</path>
 		<offsets>
-			<x-m>-3.87401</x-m>
-			<y-m>0.264035</y-m>
+			<x-m>-3.87674</x-m>
+			<y-m>0.262338</y-m>
 			<z-m>2.23755</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>-12.74</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<!-- <path>Aircraft/Su-25/Models/Instruments/Tachometer/MiG-15bis-Tachometer.xml</path> -->
+		<path>Aircraft/Su-25/Models/Instruments/RPM/RPM.xml</path>
+		<offsets>
+			<x-m>-3.86894</x-m>
+			<y-m>0.258901</y-m>
+			<z-m>2.3216</z-m>
 			<pitch-deg>0</pitch-deg>
 			<heading-deg>-13</heading-deg>
 		</offsets>
 	</model>
 
 	<model>
-		<path>Aircraft/Su-25/Models/Instruments/Tachometer/MiG-15bis-Tachometer.xml</path>
+		<path>Aircraft/Su-25/Models/Instruments/ISTR4-2/ISTR4-2.xml</path>
 		<offsets>
-			<x-m>-3.87394</x-m>
-			<y-m>0.268901</y-m>
-			<z-m>2.3116</z-m>
+			<x-m>-3.8895</x-m>
+			<y-m>0.192765</y-m>
+			<z-m>2.38662</z-m>
 			<pitch-deg>0</pitch-deg>
 			<heading-deg>-13</heading-deg>
 		</offsets>
 	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Instruments/Hydro-PneumaticsIndicators/Hydro-pneu-indicator.xml</path>
+		<offsets>
+			<x-m>-3.87644</x-m>
+			<y-m>0.246901</y-m>
+			<z-m>2.40162</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>-12.7</heading-deg>
+		</offsets>
+		<overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.0</x-offset>
+			<y-offset>0.8</y-offset>
+			<z-offset>0.8</z-offset>
+			</animation>
+		</overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Instruments/IP-52/IP-52.xml</path>
+		<offsets>
+			<x-m>-3.8594</x-m>
+			<y-m>-0.332338</y-m>
+			<z-m>2.23755</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>12.74</heading-deg>
+		</offsets>
+	</model>
+
+<!-- Throttle -->
+    
+    <!-- <model>
+        <path>Aircraft/Su-25/Models/Cockpit/Throttle/Throttle.xml</path>
+        <offsets>
+            <x-m>-3.59498</x-m>
+            <y-m>-0.361881</y-m>
+            <z-m>2.24393</z-m>
+            <pitch-deg>0</pitch-deg>
+			<heading-deg>1</heading-deg>
+        </offsets>
+    </model> -->
+
+    <model>
+		<path>Aircraft/Su-25/Models/Cockpit/Throttle.blocks/throttle-blocks.xml</path>
+        <offsets>
+            <x-m>-3.57498</x-m>
+            <y-m>-0.406881</y-m>
+            <z-m>2.24393</z-m>
+            <pitch-deg>0</pitch-deg>
+			<heading-deg>9</heading-deg>
+        </offsets>
+    </model>
+
+<!-- Stick -->
+
+<!--   <model>
+    <name>Stick</name>
+    <path>Aircraft/Su-25/Models/Cockpit/Stick1/Stick.xml</path>
+    <offsets>
+			<x-m>0.1</x-m>
+            <y-m>0</y-m>
+            <z-m>1.72368</z-m>
+    </offsets>
+  </model> -->
+
+  <model>
+    <name>Stick</name>
+    <path>Aircraft/Su-25/Models/Cockpit/Stick/Stick.xml</path>
+    <offsets>
+            <x-m>-3.75245</x-m>
+            <y-m>0</y-m>
+            <z-m>1.74368</z-m>
+    </offsets>
+  </model>
+
+<!-- Pedals -->
+
+	<model>
+        <name>Pedals</name>
+        <path>Aircraft/Su-25/Models/Cockpit/Pedals/Pedals.xml</path>
+        <offsets>
+            <x-m>-4.25014</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>1.74368</z-m>
+        </offsets>
+    </model>
+
+    <!-- Mirrors -->	
+    
+    <model>
+        <path>Aircraft/Su-25/Models/Cockpit/Mirrors/Mirrors.xml</path>
+    </model>
+
+<!-- Seat -->
+
+  <model>
+    <path>Aircraft/Su-25/Models/Cockpit/Seat/Seat.ac</path>
+	<offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0 </y-m>
+      <z-m>0.0 </z-m>
+	  <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
 
 	
 <!-- 	<model>
@@ -155,18 +276,6 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/Su-25/Models/Instruments/Tachometer/MiG-15bis-Tachometer.xml</path>
-		<offsets>
-			<x-m>-3.9</x-m>
-			<y-m>0.09</y-m>
-			<z-m>2.335</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-	
-
-	
-	<model>
 		<path>Aircraft/Su-25/Models/Instruments/PPD1M/PPD1M.xml</path>
 		<offsets>
 			<x-m>-3.895</x-m>
@@ -176,26 +285,6 @@
 		</offsets>
 	</model>
 	
-	<model>
-		<path>Aircraft/Su-25/Models/Instruments/IP-52/IP-52.xml</path>
-		<offsets>
-			<x-m>-3.885</x-m>
-			<y-m>-0.21</y-m>
-			<z-m>2.29</z-m>
-			<pitch-deg>0</pitch-deg>
-			<heading-deg>14</heading-deg>
-		</offsets>
-	</model>
-	
-	<model>
-		<path>Aircraft/Su-25/Models/Instruments/ISTR4-2/ISTR4-2.xml</path>
-		<offsets>
-			<x-m>-3.895</x-m>
-			<y-m>0.145</y-m>
-			<z-m>2.38</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
 	
 	<model>
 		<path>Aircraft/Su-25/Models/Instruments/UMS-2.5/UMS-2.5.xml</path>

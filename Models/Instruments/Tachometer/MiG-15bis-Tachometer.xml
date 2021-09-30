@@ -19,12 +19,12 @@
 		<type>material</type>
 		<object-name>TC_Needle</object-name>
 		<object-name>TC_Backplate</object-name>
-  		<emission>
-			<factor-prop>systems/electrical-real/outputs/engine_control/volts-norm</factor-prop>
-			<red>0.222</red>
-			<green>0.212</green>
-			<blue>0.212</blue>
-		</emission>
+    <emission>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <red>0.8</red>
+        <green>0.8</green>
+        <blue>0.8</blue>
+    </emission>
 	</animation>
 
 <!--

@@ -16,12 +16,12 @@
  <object-name>gearleft</object-name>
  <object-name>gearright</object-name>
  <object-name>siluet</object-name>
- <emission>
-  <red>0.8</red>
-  <green>0.8</green>
-  <blue>0.8</blue>
-  <factor-prop>mig29/systems/cockpitlighting/instruments-norm</factor-prop>
- </emission>
+    <emission>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+    </emission>
 </animation>
 
 <animation>
@@ -49,10 +49,7 @@
  <object-name>IP-52.cp</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -99,10 +96,7 @@
  <object-name>IP-52.gearnose</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -149,10 +143,7 @@
  <object-name>IP-52.gearleft</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>/gear/gear[1]/position-norm</property>
@@ -195,10 +186,7 @@
  <object-name>IP-52.gearright</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -218,10 +206,7 @@
  <object-name>IP-52.speedbrake</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -241,10 +226,7 @@
  <object-name>IP-52.slats</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -264,10 +246,7 @@
  <object-name>IP-52.flaps1</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
     <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>
@@ -287,10 +266,7 @@
  <object-name>IP-52.flaps2</object-name>
  <condition>
   <and>
-   <greater-than>
-    <property>mig29/instrumentation/electrical/v27</property>
-    <value>18</value>
-   </greater-than>
+   <property>/controls/power/battery</property>
    <or>
      <equals>
      <property>mig29/controls/lighting/kontr_lamp</property>

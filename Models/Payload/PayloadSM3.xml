@@ -37,7 +37,8 @@
 	
 	<model>
 		<name>2LUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>-4.43</y-m>
@@ -126,7 +127,8 @@
 	
 	<model>
 		<name>3LUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.60</x-m>
 			<y-m>-3.66</y-m>
@@ -215,7 +217,8 @@
 	
 	<model>
 		<name>4LUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.40</x-m>
 			<y-m>-2.86</y-m>
@@ -333,7 +336,8 @@
 	
 	<model>
 		<name>5LUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.00</x-m>
 			<y-m>-2.06</y-m>
@@ -422,7 +426,8 @@
 	
 	<model>
 		<name>5RUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.00</x-m>
 			<y-m>2.06</y-m>
@@ -482,7 +487,8 @@
 	
 	<model>
 		<name>4RUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.40</x-m>
 			<y-m>2.86</y-m>
@@ -600,7 +606,8 @@
 	
 	<model>
 		<name>3RUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.60</x-m>
 			<y-m>3.66</y-m>
@@ -689,7 +696,8 @@
 	
 	<model>
 		<name>2RUB-32</name>
-		<path>Aircraft/Su-25/Models/Payload/UB-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>4.43</y-m>
@@ -779,12 +787,26 @@
 	<!-- Parachute -->
 
 	<model>
-  		<name>Drag_Parachute</name>
-  		<path>Aircraft/Su-25/Models/TPK-27/TPK-27.xml</path>
+  		<name>Drag_Parachute L</name>
+  		<path>Aircraft/Su-25/Models/TPK-27/TPK-27L.xml</path>
   		<offsets>
   			<x-m>7.39095</x-m>
    			<y-m>0.0</y-m>
    			<z-m>2.14613</z-m>
+			<roll-deg>5</roll-deg>
+			<heading-deg>15</heading-deg>
+  		</offsets>
+ 	</model>
+
+	<model>
+  		<name>Drag_Parachute R</name>
+  		<path>Aircraft/Su-25/Models/TPK-27/TPK-27R.xml</path>
+  		<offsets>
+  			<x-m>7.39095</x-m>
+   			<y-m>0.0</y-m>
+   			<z-m>2.14613</z-m>
+			<roll-deg>-5</roll-deg>
+			<heading-deg>-15</heading-deg>
   		</offsets>
  	</model>
 	

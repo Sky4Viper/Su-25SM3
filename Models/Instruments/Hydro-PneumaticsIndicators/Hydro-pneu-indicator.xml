@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>Hydro-pneu-indicator</name>
+	<path>IKZH.ac</path>
+	
+	
+	<animation>
+	 <type>material</type>
+	 <object-name>IKZh-1.needle1</object-name>
+	 <object-name>IKZh-1.needle2</object-name>
+	 <object-name>IKZh-1.needle2.001</object-name>
+	 <object-name>IKZh-1.needle3</object-name>
+	 <object-name>IKZh-1.needle3.001</object-name>
+	 <object-name>seg1</object-name>
+	 <object-name>seg2</object-name>
+	 <object-name>seg3</object-name>
+	 <object-name>seg2.001</object-name>
+	 <object-name>seg3.001</object-name>
+		 
+    <emission>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+    </emission>
+	</animation>
+
+  
+
+</PropertyList>

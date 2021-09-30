@@ -377,7 +377,7 @@
 		<guns>
 			<name>Gun</name>
 			<mode>looped</mode>
-			<path>Aircraft/Su-25/Sounds/Samples/GSh23.wav</path>
+			<path>Aircraft/Su-25/Sounds/Samples/GSh301.wav</path>
 			
 			<condition>
 				<property>controls/armament/trigger</property>
