@@ -255,7 +255,7 @@
 <!-- Seat -->
 
   <model>
-    <path>Aircraft/Su-25/Models/Cockpit/Seat/Seat.ac</path>
+    <path>Aircraft/Su-25/Models/Cockpit/Seat/Seat-K-36.xml</path>
 	<offsets>
       <x-m>0.0</x-m>
       <y-m>0.0 </y-m>

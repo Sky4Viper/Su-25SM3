@@ -11,6 +11,10 @@
             <livery-logo>
                 <texture>Liveries/USSR206OShAP.png</texture>
             </livery-logo>
+            <fueltk>
+            	<name type="string">DroptankSU206</name>
+            	<texture>Liveries/DroptankSU206.png</texture>
+            </fueltk>
         </model>
     </sim>
 

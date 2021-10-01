@@ -205,6 +205,14 @@
 		<texture>Aircraft/Su-25/Models/Liveres/Default.png</texture>
 	</animation>
 	
+	<animation>
+        	<type>material</type>
+        	<object-name>Droptank</object-name>
+         	<property-base>sim/model/fueltk</property-base>
+         	<texture-prop>texture</texture-prop>
+      		<texture>Droptank.png</texture>
+    	</animation> 
+	
 	<!-- Animations -->
 	
 	<!-- Slats -->

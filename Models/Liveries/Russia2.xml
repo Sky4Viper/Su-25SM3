@@ -11,6 +11,10 @@
             <livery-logo>
                 <texture>Liveries/Russia2.png</texture>
             </livery-logo>
+            <fueltk>
+            	<name type="string">Russia29</name>
+            	<texture>Liveries/DroptankRU29.png</texture>
+            </fueltk> 
         </model>
     </sim>
 

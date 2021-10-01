@@ -703,6 +703,22 @@
 			<max-dist>2.0</max-dist>
 		</stall>
 		
+		<!-- Chute -->
+		
+		<chute>
+      		<name>chute-deploy</name>
+      		<mode>once</mode>
+      		<path>Aircraft/Su-25/Sounds/Samples/Chute.wav</path>
+      		<condition>
+        		<and>
+        		<property>controls/flight/chute_deploy</property>
+        		<not>
+          		<property>/sim/current-view/internal</property>
+        		</not>
+        		</and>
+      		</condition>
+      		</chute>
+		
 		<!-- Aircraft crash -->
 		
 		<crash>

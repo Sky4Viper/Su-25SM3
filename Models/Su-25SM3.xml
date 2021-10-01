@@ -6,7 +6,7 @@
 
 <!-- Model -->
 
-	<path>Su-25.ac</path>
+	<path>Su-25SM3.ac</path>
 	
 	<model>
 		<usage>interior</usage>
@@ -38,21 +38,33 @@
 	</model> -->
 
 	<model>
-    	<name>LightPack</name>
-    	<path>Aircraft/Su-25/Models/Lights/LightPack.xml</path>
-    </model>
+    		<name>LightPack</name>
+    		<path>Aircraft/Su-25/Models/Lights/LightPack.xml</path>
+    	</model>
 
 	
 	
 	<!-- Shaders -->
 	
-	<animation>
+	<!--<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
 		<object-name>FrontGlass</object-name>
 		<object-name>CanopyGlass</object-name>
-	</animation>
+	</animation>-->
+	
+	<effect>
+    		<inherits-from>Aircraft/MiG-21UPG/Models/Effects/Fx/mig-21bison-glass-combined</inherits-from>
+    		<object-name>FrontGlassIn</object-name>
+		<object-name>CanopyGlassIn</object-name>
+  	</effect>
+  	
+  	<effect>
+    		<inherits-from>Aircraft/Su-25/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
+    		<object-name>FrontGlass</object-name>
+		<object-name>CanopyGlass</object-name>
+  	</effect>
 	
 	<animation>
 		<type>noshadow</type>
@@ -531,6 +543,14 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 		<texture-prop>texture</texture-prop>
 		<texture>Aircraft/Su-25/Models/Liveres/Default.png</texture>
 	</animation>
+
+	<animation>
+        <type>material</type>
+        	<object-name>Droptank</object-name>
+         	<property-base>sim/model/fueltk</property-base>
+         	<texture-prop>texture</texture-prop>
+      		<texture>Droptank.png</texture>
+    </animation> 
 	
 	<!-- Animations -->
 	

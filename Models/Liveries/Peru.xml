@@ -11,6 +11,10 @@
             <livery-logo>
                 <texture>Liveries/Peru.png</texture>
             </livery-logo>
+            <fueltk>
+            	<name type="string">DefaultDroptank</name>
+            	<texture>Liveries/Droptank.png</texture>
+            </fueltk>
         </model>
     </sim>
 

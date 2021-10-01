@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	
+	<name>Seat-K-36</name>
+	<path>Seat.ac</path>
+
+	<animation>
+	 	<type>material</type> 
+	 	<object-name>cables</object-name>
+	 	<object-name>rocket-catapult</object-name>
+	 	<object-name>screws</object-name>
+  		<specular>
+   		<red>1.0</red>
+   		<green>1.0</green>
+   		<blue>1.0</blue>
+  		</specular>
+  		<shininess>105</shininess>
+	</animation>
+	
+</PropertyList>
