@@ -40,7 +40,7 @@
 	<model>
     		<name>LightPack</name>
     		<path>Aircraft/Su-25/Models/Lights/LightPack.xml</path>
-    	</model>
+    </model>
 
 	
 	
@@ -58,6 +58,9 @@
     		<inherits-from>Aircraft/MiG-21UPG/Models/Effects/Fx/mig-21bison-glass-combined</inherits-from>
     		<object-name>FrontGlassIn</object-name>
 		<object-name>CanopyGlassIn</object-name>
+		<object-name>Optics</object-name>
+		<object-name>Zahvat1Glass</object-name>
+		<object-name>Zahvat2Glass</object-name>
   	</effect>
   	
   	<effect>
@@ -71,6 +74,8 @@
 		<object-name>FrontGlass</object-name>
 		<object-name>CanopyGlass</object-name>
 		<object-name>Optics</object-name>
+		<object-name>Zahvat1Glass</object-name>
+		<object-name>Zahvat2Glass</object-name>
 	</animation>
 	
 	<!-- Effects -->
@@ -90,6 +95,16 @@
 	<model>
 		<path>Aircraft/Su-25/Models/Payload/PayloadSM3.xml</path>
 	</model>
+
+	<model>
+    	<name>ground-equipment</name>
+    	<path>Aircraft/Su-25/Models/Ground-Equipment/ground-equipment-model.xml</path>
+    	<offsets>
+      		<x-m>0</x-m>
+      		<y-m>0</y-m>
+      		<z-m>0</z-m>
+    	</offsets>
+  	</model>
 	
 	<!-- Livery -->
 	
@@ -535,6 +550,8 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 		<object-name>Pylon5Right</object-name>
 		<object-name>Tail</object-name>
 		<object-name>Rudder</object-name>
+		<object-name>Zahvat1</object-name>
+		<object-name>Zahvat2</object-name>
 		<object-name>HorizontalStabilizerLeft</object-name>
 		<object-name>HorizontalStabilizerRight</object-name>
 		<object-name>ElevatorLeft</object-name>
@@ -1272,6 +1289,7 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 		<object-name>CanopyArch</object-name>
 		<object-name>CanopyArchInner</object-name>
 		<object-name>CanopyGlass</object-name>
+		<object-name>CanopyGlassIn</object-name>
 		<property>/canopy/position-norm</property>
 		<factor>95</factor>
 		<axis>

@@ -30,6 +30,12 @@
 		<model>
 			<path>Aircraft/Su-25/Models/Su-25SM3.xml</path>
 			<hide-lights type="int">1</hide-lights>
+
+			<ground-equipment-e    type="int">1</ground-equipment-e> <!-- covers -->
+      		<ground-equipment-g    type="int">1</ground-equipment-g> <!-- chocks -->
+      		<ground-equipment-s    type="int">1</ground-equipment-s> <!-- ladder -->
+      		<ground-equipment-p    type="int">1</ground-equipment-p> <!-- power unit -->
+      		<ground-equipment-f    type="int">1</ground-equipment-f> <!-- fuel truck -->
 		</model>
 		
 		<!-- Submodels -->
@@ -49,6 +55,60 @@
 				<path>Aircraft/Generic/generic-electrical.xml</path>
 			</electrical>
 		</systems>
+
+		<flight-recorder>
+    		<replay-config type="int">0</replay-config>
+    		<config n="0" 
+        		include="Aircraft/Su-25/Flightrecorder/Flightrecorder.xml">
+      			<name type="string">Su-25SM3 Flight Recorder</name>
+      	<!-- Custom properties examples-->
+      			<!-- <signal>
+        			<type>float</type>
+        			<property type="string">/controls/gear/nosegear-steering-cmd-norm</property>
+        			<interpolation>linear</interpolation>
+      			</signal>
+        		<signal>
+          			<type>float</type>
+          			<property type="string">/controls/gear/nosegear-steering-cmd-norm</property>
+        		</signal>
+        		<signal>
+          			<type>double</type>
+          			<interpolation>rotational-deg</interpolation>
+          			<property type="string">/ai/model/carrier/alpha-angle-deg</property>
+        		</signal>
+				<signal>
+          			<type>bool</type>
+          			<property type="string">/controls/panel/custom-switch</property>
+        		</signal> -->
+      	<!-- Add custom signals here -->
+		  		<signal>
+          			<type>bool</type>
+          			<property type="string">/controls/flight/chute_deploy</property>
+        		</signal>
+				<signal>
+          			<type>bool</type>
+          			<property type="string">lightpack/landing-lights-intensity</property>
+        		</signal>
+				<signal>
+          			<type>bool</type>
+          			<property type="string">lightpack/beacon-state/state</property>
+        		</signal>
+				<signal>
+          			<type>bool</type>
+          			<property type="string">/controls/lighting/beacon-switch</property>
+        		</signal>
+				<signal>
+          			<type>bool</type>
+          			<property type="string">lightpack/nav-lights-intensity</property>
+        		</signal>
+				<signal>
+          			<type>bool</type>
+          			<property type="string">/controls/armament/trigger</property>
+        		</signal>
+    		</config>
+  		</flight-recorder>
+
+		  
 		
 		<sound>
 			<path>Aircraft/Su-25/Sounds/SoundsSM3.xml</path>
@@ -176,6 +236,10 @@
 				<name>R-60 missile</name>
 				<lbs>96</lbs>
 			</opt>
+			<opt>
+				<name>L-370-3S pod</name>
+				<lbs>96</lbs>
+			</opt>
 		</weight>
 		
 		<weight n="1">
@@ -264,6 +328,14 @@
 				<lbs>590</lbs>
 			</opt>
 			<opt>
+				<name>KAB-500L bomb</name>
+				<lbs>1157</lbs>
+			</opt>
+			<opt>
+				<name>Kh-29T missile</name>
+				<lbs>1499</lbs>
+			</opt>
+			<opt>
 				<name>Fuel droptank</name>
 				<lbs>2692</lbs>
 				<gals>396</gals>
@@ -286,6 +358,14 @@
 			<opt>
 				<name>FAB-250 bomb</name>
 				<lbs>590</lbs>
+			</opt>
+			<opt>
+				<name>KAB-500L bomb</name>
+				<lbs>1157</lbs>
+			</opt>
+			<opt>
+				<name>Kh-29T missile</name>
+				<lbs>1499</lbs>
 			</opt>
 			<opt>
 				<name>Fuel droptank</name>
@@ -374,6 +454,10 @@
 				<name>R-60 missile</name>
 				<lbs>96</lbs>
 			</opt>
+			<opt>
+				<name>L-370-3S pod</name>
+				<lbs>96</lbs>
+			</opt>
 		</weight>
 		
 		<!-- Menu -->
@@ -390,6 +474,29 @@
 							<script>aircraft.livery.dialog.toggle()</script>
 						</binding>
 					</item>
+          <item>
+            <label>Ground Equipment Toggle</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-e</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-g</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-s</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-p</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-f</property>
+            </binding>
+          </item>
 				</menu>
 			</default>
 		</menubar>
@@ -517,6 +624,23 @@
 					<value type="bool">1</value>
 				</binding>
 			</key>
+
+			<key n="76">
+          		<name>Shift-L</name>
+          		<desc>LightsToggle</desc>
+          		<binding>
+        			<command>property-toggle</command>
+        			<property>/controls/lighting/beacon-switch</property>
+				</binding>
+				<binding>
+        			<command>property-toggle</command>
+        			<property>/controls/lighting/landing-lights-switch</property>
+				</binding>
+				<binding>
+        			<command>property-toggle</command>
+        			<property>/controls/lighting/nav-lights-switch</property>
+				</binding>
+       		</key>
 			
 			<key n="78">
 				<name>N</name>
@@ -717,10 +841,10 @@
 		<lighting>
 			<instruments-norm>0.3</instruments-norm>
 			<panels-norm>0.1</panels-norm>
-			<strobe type="bool">true</strobe>
-			<beacon type="bool">true</beacon>
-			<landing-lights type="bool">true</landing-lights>
-			<nav-lights type="bool">true</nav-lights>
+			<strobe-switch type="bool">true</strobe-switch>
+			<beacon-switch type="bool">true</beacon-switch>
+			<landing-lights-switch type="bool">true</landing-lights-switch>
+			<nav-lights-switch type="bool">true</nav-lights-switch>
 		</lighting>
 		
 	</controls>

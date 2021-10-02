@@ -41,6 +41,17 @@
       <pitch-deg>6</pitch-deg>
     </offsets>
   </model>
+
+  <model>
+    <name>Ground Equipment Beacon</name>
+    <path>Aircraft/Su-25/Models/Lights/GroundEquipmentBeacon.xml</path>
+    <offsets>
+      <x-m>-1.63019</x-m>
+			<y-m>9.00508</y-m>
+			<z-m>2.55922</z-m>
+      <pitch-deg>6</pitch-deg>
+    </offsets>
+  </model>
   <!--
   <model>
     <name>Beacon2</name>

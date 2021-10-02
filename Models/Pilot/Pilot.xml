@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <path>fighter_default.ac</path>
+  <path>pilot_vks.ac</path>
   
   <animation>
         <type>range</type>
@@ -33,6 +33,7 @@
     <name>AnimeTete</name>
     <object-name>lunettes</object-name>
     <object-name>tete</object-name>
+    <object-name>helmet</object-name>
   </animation>
 
   <animation>

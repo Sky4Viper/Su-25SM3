@@ -32,6 +32,35 @@
 			</and>
 		</condition>
 	</animation>
+
+	<model>
+		<name>1LL-370-3S</name>
+		<path>Aircraft/Su-25/Models/Payload/L-370-3S.ac</path>
+		<offsets>
+			<x-m>1.24</x-m>
+			<y-m>-5.12</y-m>
+			<z-m>1.603</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>1LL-370-3S</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[0]/selected</property>
+					<value>L-370-3S pod</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[0]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
 	
 	<!-- pylon 2 L -->
 	
@@ -392,6 +421,64 @@
 			</and>
 		</condition>
 	</animation>
+
+	<model>
+		<name>5LKAB-500L</name>
+		<path>Aircraft/Su-25/Models/Payload/kab-500l.ac</path>
+		<offsets>
+			<x-m>-0.35</x-m>
+			<y-m>-2.06</y-m>
+			<z-m>1.59</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>5LKAB-500L</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[4]/selected</property>
+					<value>KAB-500L bomb</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[4]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<model>
+		<name>5LKh-29T</name>
+		<path>Aircraft/Su-25/Models/Payload/kh-29t.ac</path>
+		<offsets>
+			<x-m>-0.17</x-m>
+			<y-m>-2.06</y-m>
+			<z-m>1.62</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>5LKh-29T</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[4]/selected</property>
+					<value>Kh-29T missile</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[4]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
 	
 	<!-- pylon 5 R -->
 	
@@ -474,6 +561,64 @@
 				<equals>
 					<property>sim/weight[5]/selected</property>
 					<value>FAB-250 bomb</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[5]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<model>
+		<name>5RKAB-500L</name>
+		<path>Aircraft/Su-25/Models/Payload/kab-500l.ac</path>
+		<offsets>
+			<x-m>-0.35</x-m>
+			<y-m>2.06</y-m>
+			<z-m>1.59</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>5RKAB-500L</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[5]/selected</property>
+					<value>KAB-500L bomb</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[5]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<model>
+		<name>5RKh-29T</name>
+		<path>Aircraft/Su-25/Models/Payload/kh-29t.ac</path>
+		<offsets>
+			<x-m>-0.17</x-m>
+			<y-m>2.06</y-m>
+			<z-m>1.62</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>5RKh-29T</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[5]/selected</property>
+					<value>Kh-29T missile</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[5]/release</property>
@@ -775,6 +920,35 @@
 				<equals>
 					<property>sim/weight[9]/selected</property>
 					<value>R-60 missile</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[9]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<model>
+		<name>1RL-370-3S</name>
+		<path>Aircraft/Su-25/Models/Payload/L-370-3S.ac</path>
+		<offsets>
+			<x-m>1.24</x-m>
+			<y-m>5.12</y-m>
+			<z-m>1.603</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>1RL-370-3S</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[9]/selected</property>
+					<value>L-370-3S pod</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[9]/release</property>

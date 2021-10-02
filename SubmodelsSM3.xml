@@ -379,7 +379,7 @@
 		<y-offset>3.1167</y-offset>
 		<z-offset>6.5944</z-offset>
 		<yaw-offset>90</yaw-offset>
-		<pitch-offset>72</pitch-offset>
+		<pitch-offset>62</pitch-offset>
 		<life>5</life>
 		<buoyancy>25</buoyancy>
 		<eda>1</eda>
@@ -400,7 +400,7 @@
 		<y-offset>-3.1167</y-offset>
 		<z-offset>6.5944</z-offset>
 		<yaw-offset>-90</yaw-offset>
-		<pitch-offset>72</pitch-offset>
+		<pitch-offset>62</pitch-offset>
 		<life>5</life>
 		<buoyancy>25</buoyancy>
 		<eda>1</eda>
@@ -420,7 +420,7 @@
 		<x-offset>-11.2204</x-offset>
 		<y-offset>3.1167</y-offset>
 		<z-offset>1.5944</z-offset>
-		<yaw-offset>90</yaw-offset>
+		<yaw-offset>45</yaw-offset>
 		<pitch-offset>-78</pitch-offset>
 		<life>5</life>
 		<buoyancy>25</buoyancy>
@@ -441,7 +441,7 @@
 		<x-offset>-11.2204</x-offset>
 		<y-offset>-3.1167</y-offset>
 		<z-offset>1.5944</z-offset>
-		<yaw-offset>-90</yaw-offset>
+		<yaw-offset>-45</yaw-offset>
 		<pitch-offset>-78</pitch-offset>
 		<life>5</life>
 		<buoyancy>25</buoyancy>
