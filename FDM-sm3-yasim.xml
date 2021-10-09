@@ -2,7 +2,29 @@
 
 <!-- Sukhoi Su-25 YASim FDM by StuartC-->
 
-<airplane mass="23677">
+<!-- General characteristics
+
+    Crew: 1
+    Length: 15.53 m (50 ft 11 in) (including nose probe)
+    Wingspan: 14.36 m (47 ft 1 in)
+    Height: 4.8 m (15 ft 9 in)
+    Wing area: 33.7 m2 (363 sq ft)
+    Empty weight: 9,800 kg (21,605 lb)
+    Gross weight: 14,440 kg (31,835 lb)
+    Max takeoff weight: 19,300 kg (42,549 lb)
+    Powerplant: 2 × Soyuz/Tumansky R-195 turbojet engine, 44.18 kN (9,930 lbf) thrust each
+
+Performance
+
+    Maximum speed: 975 km/h (606 mph, 526 kn)
+    Maximum speed: Mach 0.79
+    Range: 1,000 km (620 mi, 540 nmi)
+    Combat range: 750 km (470 mi, 400 nmi) at sea level with 4,400 kg (9,700 lb) of ordnance and two external fuel tanks
+    Service ceiling: 7,000 m (23,000 ft)
+    g limits: +6.5
+    Rate of climb: 58 m/s (11,400 ft/min) -->
+
+<airplane mass="21605">
 
 <!-- Approach configuration -->
 
@@ -133,16 +155,18 @@ sweep="24">
     <control-speed control="FLAP1" transition-time="2"/>
 </mstab>
 
+<!-- 2 × Soyuz/Tumansky R-195 turbojet engine, 44.18 kN (9,930 lbf) thrust each -->
+
 <jet x="-0.7" y="0.8" z="1.7"
 mass="1784"
-thrust="9480" >
+thrust="9930" >
 <actionpt x="-3.561" y="0.8" z="1.3"/>
 <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
 </jet>
 
 <jet x="-0.7" y="-0.8" z="1.7"
 mass="1784"
-thrust="9480">
+thrust="9930">
 <actionpt x="-3.561" y="-0.8" z="1.3"/>
 <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
 </jet>
@@ -228,10 +252,10 @@ damp="3">
 
 <!-- Drop tanks -->
 
-<tank x="-0.6" y="3.66" z="1.40" jet="true" capacity="2692"/>
-<tank x="-0.0" y="2.06" z="1.35" jet="true" capacity="2692"/>
-<tank x="-0.0" y="-2.06" z="1.35" jet="true" capacity="2692"/>
-<tank x="-0.6" y="-3.66" z="1.40" jet="true" capacity="2692"/>
+<tank x="-0.6" y="3.66" z="1.40" jet="true" capacity="1415.96"/>
+<tank x="-0.0" y="2.06" z="1.35" jet="true" capacity="1415.96"/>
+<tank x="-0.0" y="-2.06" z="1.35" jet="true" capacity="1415.96"/>
+<tank x="-0.6" y="-3.66" z="1.40" jet="true" capacity="1415.96"/>
 
 <!-- Center of gravity placement -->
 <ballast x="3.3" y="0" z="0" mass="4900"/>
@@ -259,7 +283,7 @@ mass-prop="sim/weight[2]/weight-lb"/>
 <weight x="-0.4"
 y="2.86"
 z="1.4"
-size="4"
+size="0.6"
 mass-prop="sim/weight[3]/weight-lb"/>
 
 <weight x="0"
@@ -277,7 +301,7 @@ mass-prop="sim/weight[5]/weight-lb"/>
 <weight x="-0.4"
 y="-2.86"
 z="1.4"
-size="4"
+size="0.4"
 mass-prop="sim/weight[6]/weight-lb"/>
 
 <weight x="-0.6"

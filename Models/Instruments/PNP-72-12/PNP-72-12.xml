@@ -360,10 +360,6 @@
  <type>select</type>
  <object-name>PNP.BlenkerNIU</object-name>
  <condition>
-  <!--<equals>
-   <property>mig29/o/snv</property>
-   <value>1</value>
-  </equals>-->
      <not>
      <property>/controls/power/rsbn</property>
      </not>
@@ -373,7 +369,7 @@
 <animation>
  <type>translate</type>
  <object-name>PNP.Button</object-name>
- <property>mig21/controls/PNP-72-12/test</property>
+ <property>su25/controls/PNP-72-12/test</property>
  <factor>0.003</factor>
  <axis>
   <x>-1</x>

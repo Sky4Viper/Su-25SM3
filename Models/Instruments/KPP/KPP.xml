@@ -143,8 +143,8 @@
   <factor>25</factor>
   <center>
    <x-m> 0.000</x-m>
-   <y-m> 0.046</y-m>
-   <z-m>-0.046</z-m>
+   <y-m> 0.041069</y-m>
+   <z-m>-0.043143</z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -170,7 +170,8 @@
  <animation>
   <type>translate</type>
   <object-name>KPP.CourseDirector</object-name>
-  <property>mig29/instrumentation/KPP/course-director</property>
+  <!-- <property>mig29/instrumentation/KPP/course-director</property> -->
+  <property>instrumentation/nav/heading-needle-deflection</property>
   <factor>0.0155</factor>
   <min>-0.0155</min>
   <max> 0.0155</max>
@@ -184,24 +185,40 @@
  <animation>
   <type>translate</type>
   <object-name>KPP.PitchDirector</object-name>
-  <property>mig29/instrumentation/KPP/pitch-director</property>
+  <!-- <property>mig29/instrumentation/KPP/pitch-director</property> -->
+  <property>instrumentation/nav/gs-needle-deflection-norm</property>
   <factor>0.028</factor>
   <min>-0.028</min>
   <max> 0.028</max>
   <axis>
    <x>0</x>
-   <y>1</y>
-   <z>0</z>
+   <y>0</y>
+   <z>1</z>
   </axis>
  </animation>
 
  <animation>
   <type>rotate</type>
   <object-name>KPP.RollDirector</object-name>
-  <property>mig29/instrumentation/KPP/roll-director</property>
-  <factor>25</factor>
+  <!-- <property>/orientation/roll-deg</property> -->
+  <property>instrumentation/nav/heading-needle-deflection</property>
+  <interpolation>
+    <entry>
+      <ind>-10.0</ind>
+      <dep>13</dep>
+    </entry>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>10.0</ind>
+      <dep>-13</dep>
+    </entry>
+  </interpolation>
+  <!-- <factor>25</factor>
   <min>-25.0</min>
-  <max> 25.0</max>
+  <max> 25.0</max> -->
   <center>
    <x-m> 0.000</x-m>
    <y-m> 0.000</y-m>
@@ -214,7 +231,7 @@
   </axis>
  </animation>
 
- <animation>
+<!--  <animation>
   <type>pick</type>
   <object-name>KPP.cz1</object-name>
   <visible>false</visible>
@@ -226,7 +243,7 @@
     <property>instrumentation/attitude-indicator/caged-flag</property>
    </binding>
   </action>
- </animation>
+ </animation> -->
 
  <animation>
   <type>select</type>
@@ -263,7 +280,7 @@
   </condition>
  </animation>
 
- <animation>
+<!--  <animation>
   <type>pick</type>
   <object-name>KPP.cz2</object-name>
   <visible>false</visible>
@@ -294,6 +311,6 @@
     <max>10</max>
    </binding>
   </action>
- </animation>
+ </animation> -->
 
 </PropertyList>

@@ -25,7 +25,7 @@
 		<offsets>
 			<x-m>-3.89886</x-m>
 			<y-m>0</y-m>
-			<z-m>2.3738</z-m>
+			<z-m>2.3838</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -43,8 +43,8 @@
 			<type>scale</type>
 			<property>constants/zero</property>
 			<x-offset>1.0</x-offset>
-			<y-offset>1.22</y-offset>
-			<z-offset>1.22</z-offset>
+			<y-offset>1.48</y-offset>
+			<z-offset>1.48</z-offset>
 			</animation>
 		</overlay>
 	</model>
@@ -146,8 +146,19 @@
 		</offsets>
 	</model>
 
-	<model>
+	<!-- <model>
 		<path>Aircraft/Su-25/Models/Instruments/ISTR4-2/ISTR4-2.xml</path>
+		<offsets>
+			<x-m>-3.8895</x-m>
+			<y-m>0.192765</y-m>
+			<z-m>2.38662</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>-13</heading-deg>
+		</offsets>
+	</model> -->
+
+	<model>
+		<path>Aircraft/Su-25/Models/Instruments/fuel-indicator/fuel-indicator.xml</path>
 		<offsets>
 			<x-m>-3.8895</x-m>
 			<y-m>0.192765</y-m>
@@ -160,7 +171,7 @@
 	<model>
 		<path>Aircraft/Su-25/Models/Instruments/Hydro-PneumaticsIndicators/Hydro-pneu-indicator.xml</path>
 		<offsets>
-			<x-m>-3.87644</x-m>
+			<x-m>-3.87744</x-m>
 			<y-m>0.246901</y-m>
 			<z-m>2.40162</z-m>
 			<pitch-deg>0</pitch-deg>
@@ -240,7 +251,7 @@
         <name>Pedals</name>
         <path>Aircraft/Su-25/Models/Cockpit/Pedals/Pedals.xml</path>
         <offsets>
-            <x-m>-4.25014</x-m>
+            <x-m>-4.16014</x-m>
             <y-m> 0.00</y-m>
             <z-m>1.74368</z-m>
         </offsets>

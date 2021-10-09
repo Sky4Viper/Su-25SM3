@@ -552,9 +552,9 @@
       <condition>
         <or>
           <less-than>
-            <!-- G load > 2.0 -->
+            <!-- G load > 3.0 -->
             <property>/accelerations/pilot/z-accel-fps_sec</property>
-            <value>-64.3481</value>
+            <value>-93.52215</value>
           </less-than>
           <greater-than>
             <!-- G load < -1.0 -->

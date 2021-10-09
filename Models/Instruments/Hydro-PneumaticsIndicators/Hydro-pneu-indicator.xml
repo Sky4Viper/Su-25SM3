@@ -9,9 +9,9 @@
 	 <type>material</type>
 	 <object-name>IKZh-1.needle1</object-name>
 	 <object-name>IKZh-1.needle2</object-name>
-	 <object-name>IKZh-1.needle2.001</object-name>
 	 <object-name>IKZh-1.needle3</object-name>
-	 <object-name>IKZh-1.needle3.001</object-name>
+	 <object-name>IKZh-1.needle4</object-name>
+	 <object-name>IKZh-1.needle5</object-name>
 	 <object-name>seg1</object-name>
 	 <object-name>seg2</object-name>
 	 <object-name>seg3</object-name>
@@ -24,6 +24,101 @@
         <green>0.3</green>
         <blue>0.1</blue>
     </emission>
+	</animation>
+	
+	<animation>
+    		<type>noshadow</type>
+    		<object-name>IKZh-1.glass</object-name>
+  	</animation>
+  	
+  	<animation>
+    		<type>shader</type>
+    		<shader>chrome</shader>
+    		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    		<object-name>IKZh-1.glass</object-name>
+  	</animation>
+  	
+  	<animation>
+ 	<type>rotate</type>
+ 	<object-name>IKZh-1.needle4</object-name>
+ 	<property>/engines/engine[0]/rpm</property> 
+ 	<interpolation>
+  	<entry><ind>0</ind><dep>0</dep></entry>
+  	<entry><ind>100</ind><dep>35</dep></entry>
+ 	</interpolation>
+ 	<center>
+			<x-m>-0.063683</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+	</center>
+ 	<axis>
+  	<x>0</x>
+  	<y>-1</y>
+  	<z>0</z>
+ 	</axis>
+	</animation>
+	
+  	<animation>
+ 	<type>rotate</type>
+ 	<object-name>IKZh-1.needle5</object-name>
+ 	<property>/engines/engine[1]/rpm</property> 
+ 	<!-- <property>/engines/engine[1]/oil-pressure-psi</property> -->
+ 	<interpolation>
+  	<entry><ind>0</ind><dep>0</dep></entry>
+  	<entry><ind>100</ind><dep>35</dep></entry>
+ 	</interpolation>
+ 	<center>
+			<x-m>-0.063683</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+	</center>
+ 	<axis>
+  	<x>0</x>
+  	<y>-1</y>
+  	<z>0</z>
+ 	</axis>
+	</animation>
+	
+	<animation>
+ 	<type>rotate</type>
+ 	<object-name>IKZh-1.needle1</object-name>
+ 	<property>/controls/gear/brake-left</property> 
+ 	<interpolation>
+  	<entry><ind>0</ind><dep>0</dep></entry>
+  	<entry><ind>0.5</ind><dep>15</dep></entry>
+  	<entry><ind>1</ind><dep>10</dep></entry>
+ 	</interpolation>
+ 	<center>
+			<x-m>-0.063683</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+	</center>
+ 	<axis>
+  	<x>0</x>
+  	<y>-1</y>
+  	<z>0</z>
+ 	</axis>
+	</animation>
+	
+	<animation>
+ 	<type>rotate</type>
+ 	<object-name>IKZh-1.needle2</object-name>
+ 	<property>/controls/gear/brake-right</property> 
+ 	<interpolation>
+  	<entry><ind>0</ind><dep>0</dep></entry>
+  	<entry><ind>0.5</ind><dep>15</dep></entry>
+  	<entry><ind>1</ind><dep>10</dep></entry>
+ 	</interpolation>
+ 	<center>
+			<x-m>-0.063683</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+	</center>
+ 	<axis>
+  	<x>0</x>
+  	<y>-1</y>
+  	<z>0</z>
+ 	</axis>
 	</animation>
 
   

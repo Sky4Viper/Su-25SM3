@@ -51,12 +51,12 @@ changelog
       <property>sim/model/ground-equipment-e</property>
       <property>controls/gear/brake-parking</property>
       <property>/gear/gear[2]/wow</property>
-<!--       <not>
-        <property>/engines/engine/running</property>
+      <not>
+        <property>/engines/engine[0]/running</property>
       </not>
       <not>
         <property>/controls/engines/engine[0]/starter</property>
-      </not> -->
+      </not>
     </condition>
   </animation>
 

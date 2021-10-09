@@ -9,17 +9,20 @@
 		<description>Sukhoi Su-25SM3</description>
 		<author>Petar Jedvaj, Stuart Cassie, Raptor and Gary Brown, Sergei Solyshko</author>
 		<status>1.3.5</status>
+		<variant-of>Su-25</variant-of>
 		
 		<rating>
 			<FDM type="int">3</FDM>
-			<systems type="int">2</systems>
-			<cockpit type="int">2</cockpit>
+			<systems type="int">3</systems>
+			<cockpit type="int">4</cockpit>
 			<model type="int">5</model>
 		</rating>
 		
 		<flight-model>yasim</flight-model>
 		<aero>FDM-sm3-yasim</aero>
 		<fuel-fraction>1</fuel-fraction>
+		
+		
 		
 		<startup>
 			<splash-texture>Aircraft/Su-25/SplashSM3.png</splash-texture>
@@ -62,6 +65,7 @@
         		include="Aircraft/Su-25/Flightrecorder/Flightrecorder.xml">
       			<name type="string">Su-25SM3 Flight Recorder</name>
       	<!-- Custom properties examples-->
+
       			<!-- <signal>
         			<type>float</type>
         			<property type="string">/controls/gear/nosegear-steering-cmd-norm</property>
@@ -80,6 +84,7 @@
           			<type>bool</type>
           			<property type="string">/controls/panel/custom-switch</property>
         		</signal> -->
+
       	<!-- Add custom signals here -->
 		  		<signal>
           			<type>bool</type>
@@ -108,8 +113,6 @@
     		</config>
   		</flight-recorder>
 
-		  
-		
 		<sound>
 			<path>Aircraft/Su-25/Sounds/SoundsSM3.xml</path>
 		</sound>
@@ -233,7 +236,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>R-60 missile</name>
+				<name>R-60M</name>
 				<lbs>96</lbs>
 			</opt>
 			<opt>
@@ -251,7 +254,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -270,12 +273,12 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
 				<name>Kh-25 missile</name>
-				<lbs>660</lbs>
+				<lbs>659</lbs>
 			</opt>
 			<opt>
 				<name>FAB-250 bomb</name>
@@ -283,8 +286,8 @@
 			</opt>
 			<opt>
 				<name>Fuel droptank</name>
-				<lbs>2692</lbs>
-				<gals>396</gals>
+				<lbs>308.647</lbs>
+				<gals>211.34</gals>
 			</opt>
 		</weight>
 		
@@ -297,12 +300,12 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
 				<name>Kh-25 missile</name>
-				<lbs>660</lbs>
+				<lbs>659</lbs>
 			</opt>
 			<opt>
 				<name>FAB-250 bomb</name>
@@ -320,7 +323,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -333,12 +336,12 @@
 			</opt>
 			<opt>
 				<name>Kh-29T missile</name>
-				<lbs>1499</lbs>
+				<lbs>1512</lbs>
 			</opt>
 			<opt>
 				<name>Fuel droptank</name>
-				<lbs>2692</lbs>
-				<gals>396</gals>
+				<lbs>308.647</lbs>
+				<gals>211.34</gals>
 			</opt>
 		</weight>
 		
@@ -352,7 +355,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -365,12 +368,12 @@
 			</opt>
 			<opt>
 				<name>Kh-29T missile</name>
-				<lbs>1499</lbs>
+				<lbs>1512</lbs>
 			</opt>
 			<opt>
 				<name>Fuel droptank</name>
-				<lbs>2692</lbs>
-				<gals>396</gals>
+				<lbs>308.647</lbs>
+				<gals>211.34</gals>
 			</opt>
 		</weight>
 		
@@ -383,12 +386,12 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
 				<name>Kh-25 missile</name>
-				<lbs>660</lbs>
+				<lbs>659</lbs>
 			</opt>
 			<opt>
 				<name>FAB-250 bomb</name>
@@ -406,12 +409,12 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
 				<name>Kh-25 missile</name>
-				<lbs>660</lbs>
+				<lbs>659</lbs>
 			</opt>
 			<opt>
 				<name>FAB-250 bomb</name>
@@ -419,8 +422,8 @@
 			</opt>
 			<opt>
 				<name>Fuel droptank</name>
-				<lbs>2692</lbs>
-				<gals>396</gals>
+				<lbs>308.647</lbs>
+				<gals>211.34</gals>
 			</opt>
 		</weight>
 		
@@ -433,7 +436,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rocket pod</name>
+				<name>UB-32 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -451,7 +454,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>R-60 missile</name>
+				<name>R-60M</name>
 				<lbs>96</lbs>
 			</opt>
 			<opt>
@@ -473,6 +476,13 @@
 							<command>nasal</command>
 							<script>aircraft.livery.dialog.toggle()</script>
 						</binding>
+					</item>
+					<item>
+						<label>Pylons loads</label>
+							<binding>
+							<command>nasal</command>
+				 			<script>CanvasPylonsDlg.showPylonsDlg()</script>
+							</binding>
 					</item>
           <item>
             <label>Ground Equipment Toggle</label>
@@ -526,7 +536,7 @@
 			
 			<key>
 				<name>d</name>
-				<desc>Fire UB-32 rocket pod</desc>
+				<desc>Fire UB-32 rockets</desc>
 			</key>
 			
 			<key>
@@ -555,6 +565,33 @@
 		</help>
 		
 		<!-- Multiplayer -->
+    
+		<multiplay>
+			<chat_display>1</chat_display>
+			<generic> 
+				<int n="0" alias="/sim/crashed" />
+				<!-- Beacon on -->
+				<int n="1" alias="/controls/lighting/beacon-switch" />
+				<!-- Landing lights on -->
+				<int n="2" alias="/controls/lighting/landing-lights-switch" />
+				<!-- Taxi light on -->
+				<int n="3" alias="/controls/lighting/taxi-light" />
+				<!-- Nav lights on -->
+				<int n="4" alias="/controls/lighting/nav-lights-switch" />
+				<!-- Engine status -->
+				<int n="5" alias="/engines/engine[0]/state" />
+				<int n="6" alias="/engines/engine[1]/state" />
+				<int n="7" alias="/sim/crashed" />
+				<int n="8" alias="/controls/armament/trigger-GSh-30-2" />
+				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
+				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
+				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
+				<float n="3" alias="/surface-positions/right-flap-pos-norm"/>
+				<!-- <float n="4" alias="/sim/model/nozzle-animation"/> -->
+				<!-- <float n="8" alias="/engines/engine[0]/afterburner" /> Reheat left engine -->
+				<!-- <float n="9" alias="/engines/engine[1]/afterburner" />  Reheat right engine -->
+			</generic>
+		</multiplay>
 		
 		<mp-systems>
 			<combat-enabled type="bool">true</combat-enabled>
@@ -665,7 +702,7 @@
 			
 			<key n="100">
 				<name>d</name>
-				<desc>Fire UB-32 rocket pod</desc>
+				<desc>Fire UB-32 rockets</desc>
 				<binding>
 					<command>nasal</command>
 					<script>guns.fire_Rocket()</script>
@@ -758,23 +795,61 @@
 					</binding>
 				</mod-up>
 			</key>
+
+
+			<key n="123">
+     			<name>{</name>
+     			<desc>Engine 1 autostart</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						yasimengines.engine1.autostart();
+					</script>
+				</binding>
+  			</key>
+
+			<key n="125">
+				<name>}</name>
+				<desc>Engine 2 autostart</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						yasimengines.autostart();
+					</script>
+				</binding>
+			</key>
 			
 		</keyboard>
 	</input>
 	
 	<!-- System settings -->
 	
-	<engines>
+	<!-- <engines>
 		<engine n="0">
 			<engine-num type="int">0</engine-num>
 			<running>false</running>
 		</engine>
 		
-		<engine n="2">
+		<engine n="1">
 			<engine-num type="int">1</engine-num>
 			<running>false</running>
 		</engine>
-	</engines>
+	</engines> -->
+
+	<engines>
+    	<engine n="0">
+      	<running>false</running>
+    	</engine>
+    	<engine n="0">
+      	<spooldown>false</spooldown>
+    	</engine>
+		<engine n="1">
+      	<running>false</running>
+    	</engine>
+    	<engine n="1">
+      	<spooldown>false</spooldown>
+    	</engine>
+  	</engines>
 	
 	<controls>
 		<flight>
@@ -784,6 +859,10 @@
 		<!-- Power switches -->
 		<power>
 			<battery type="bool">true</battery>
+			<fuelpump3 type="bool">true</fuelpump3>
+      		<fuelpump1 type="bool">true</fuelpump1>
+      		<disppump type="bool">true</disppump>
+      		<rsbn type="bool">true</rsbn>
 		</power>
 	
 		<gear>
@@ -839,13 +918,20 @@
 		</armament>
 		
 		<lighting>
-			<instruments-norm>0.3</instruments-norm>
+			<instruments-norm>0.4</instruments-norm>
 			<panels-norm>0.1</panels-norm>
 			<strobe-switch type="bool">true</strobe-switch>
 			<beacon-switch type="bool">true</beacon-switch>
 			<landing-lights-switch type="bool">true</landing-lights-switch>
 			<nav-lights-switch type="bool">true</nav-lights-switch>
 		</lighting>
+
+		<ventilation>
+      		<windshield-antiice-lever type="bool">false</windshield-antiice-lever>
+      		<airconditioning-type type="int">0</airconditioning-type><!-- cold for 12s: -1 auto: 0 warm for 12s: 1 -->
+      		<airconditioning-enabled type="bool">true</airconditioning-enabled>
+      		<airconditioning-temperature type="double">16.0</airconditioning-temperature><!-- used for auto -->
+    	</ventilation>
 		
 	</controls>
 	
@@ -901,7 +987,7 @@
 	</limits>
 	
 	<canopy>
-		<canopy-pos-norm type="float">1.0</canopy-pos-norm>
+		<position-norm type="float">1.0</position-norm>
 	</canopy>
 	
 	<!-- Instrumentation -->
@@ -1012,14 +1098,36 @@
 	    <lights>
 	    	<file>Aircraft/Su-25/Nasal/lights.nas</file>
 	    </lights>
+
+		<eno>
+			<file>Aircraft/Su-25/Nasal/eno.nas</file>
+		</eno>
+
+		<maintenance>
+			<file>Aircraft/Su-25/Nasal/maintenance.nas</file>
+		</maintenance>
 		
 		<canopy>
 			<file>Aircraft/Su-25/Nasal/canopy.nas</file>
 		</canopy>
+
+		<!-- default values: (n, running = 0, idle_throttle = 0.01, max_start_n1 = 5.21, start_threshold = 5, spool_time = 43, start_time = 2, shutdown_time = 23) -->
+
+		<yasimengines>
+      		<file>Aircraft/Su-25/Nasal/yasim-engines.nas</file>
+			  <!-- <script>
+        		var engine1 = yasimengines.Jet.new(0, 0, 0.01, 5.21, 5, 13, 2, 23);
+				var engine2 = yasimengines.Jet.new(1, 0, 0.01, 5.21, 5, 13, 2, 23);
+			</script> -->
+     	</yasimengines>
+
+		<fuel>
+			<file>Aircraft/Su-25/Nasal/fuel.nas</file>
+		</fuel>
 		
-		<Eject>
+		<!-- <Eject>
 			<file>Aircraft/Su-25/Nasal/eject.nas</file>
-		</Eject>
+		</Eject> -->
 		
 		<tyresmoke>
 			<file>Aircraft/Su-25/Nasal/tyresmoke.nas</file>
@@ -1028,14 +1136,35 @@
 		<guns>
 			<file>Aircraft/Su-25/Nasal/weapons.nas</file>
 		</guns>
+
+		<!-- <payload>
+			<file>Aircraft/Su-25/Nasal/payload.nas</file>
+		</payload>
+
+		<mpencode>
+			<file>Aircraft/Su-25/Nasal/mpencode.nas</file>
+		</mpencode> -->
 		
-		<rwr>
+		<!-- <rwr>
 			<file>Aircraft/Su-25/Nasal/rwr.nas</file>
-		</rwr>
+		</rwr> -->
 
 		<low>
 			<file>Aircraft/Su-25/Nasal/low.nas</file>
 		</low>
+
+		<CanvasPylonsDlg>
+			<file>Aircraft/Su-25/Nasal/canvas-pylons-cfg.nas</file>
+		</CanvasPylonsDlg>
+
+		<su25>
+			<file>Aircraft/Su-25/Nasal/su-25.nas</file>
+		</su25>
+
+		<environment>
+      		<file>Aircraft/Su-25/Nasal/environment.nas</file>
+    	</environment>
+
 	</nasal>
 	
 </PropertyList>

@@ -6,9 +6,9 @@
 
 	<animation>
 		<type>translate</type>
-		<object-name>left-pedal</object-name>
+		<object-name>PedalLeft</object-name>
 		<property>controls/flight/rudder</property>
-		<factor>0.07</factor>
+		<factor>0.03</factor>
 		<axis>
 			<x>1</x>
 			<y>0</y>
@@ -18,13 +18,25 @@
 
 	<animation>
 		<type>translate</type>
-		<object-name>right-pedal</object-name>
+		<object-name>PedalRight</object-name>
 		<property>controls/flight/rudder</property>
-		<factor>0.07</factor>
+		<factor>0.03</factor>
 		<axis>
 			<x>-1</x>
 			<y>0</y>
 			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PedalC</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>6</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
 		</axis>
 	</animation>
 
