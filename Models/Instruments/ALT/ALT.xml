@@ -24,7 +24,10 @@
         <green>0.3</green>
         <blue>0.1</blue>
             <factor-prop>controls/lighting/instruments-norm</factor-prop>
-        </emission> 
+        </emission>
+        <condition>
+          <property>/controls/power/battery</property>
+         </condition>
     </animation>
 
     <animation>

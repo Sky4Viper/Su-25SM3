@@ -199,6 +199,17 @@
 		</offsets>
 	</model>
 
+	<model>
+		<path>Aircraft/Su-25/Models/Instruments/MecPnl/MecPnl.xml</path>
+		<offsets>
+      			<x-m>-3.74712</x-m>
+      			<y-m>-0.309576</y-m>
+      			<z-m>2.46758</z-m>
+      			<pitch-deg>-25.1404</pitch-deg>
+      			<roll-deg>-15.8</roll-deg>
+    		</offsets>
+	</model>
+
 <!-- Throttle -->
     
     <!-- <model>

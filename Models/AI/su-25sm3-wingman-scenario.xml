@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<scenario>
+
+		<name>Su-25SM3-Wingman</name>
+		<description>
+
+			Pair - non-tactical
+
+			This scenario formates 1 Su-25SM3 to the
+			parent ac at the position designated by
+			the x,y,z ofsets.
+
+		</description>
+
+		<entry>
+			<name>Red-2</name>
+			<type>wingman</type>
+			<model>Aircraft/Su-25/Models/AI/Su-25SM3-Wingman.xml</model>
+			<x-offset>-35</x-offset>
+			<y-offset>-63</y-offset>
+			<z-offset>0</z-offset>
+			<formate>true</formate>
+			<submodels>
+				<path type="string">/Aircraft/Su-25/SubmodelsSM3.xml</path>
+				<serviceable type="bool">true</serviceable>
+			</submodels>
+			<max-speed-kts>500</max-speed-kts>
+			<coefficients>
+				<heading>5.0</heading>
+				<pitch>4.0</pitch>
+				<bank>4.0</bank>
+				<speed>2.5</speed>
+			</coefficients>
+		</entry>
+
+
+	</scenario>
+
+</PropertyList>
+

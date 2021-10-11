@@ -4,7 +4,7 @@
 
 	<path>stick.ac</path>
 	
-   <animation>
+   <!-- animation>
 		<type>select</type>
 		<object-name>stick.cz1.001</object-name>
 		<object-name>stick.cz2.001</object-name>
@@ -24,12 +24,480 @@
 			<property>sim/current-view/internal</property>
 			</not>
 		</condition>
-	</animation>
+	</animation>-->
 
 	<animation>
 		<type>range</type>
 		<min-m>0</min-m>
 		<max-m>10</max-m>
 	</animation>
+	
+	<animation>
+    <type>material</type>
+    <object-name>stick.RUS</object-name>
+    <object-name>stick.Trigger1</object-name>
+    <object-name>stick.StrobMarker</object-name>
+    <object-name>stick.OtklSAU</object-name>
+    <object-name>stick.Trim</object-name>
+    <object-name>stick.PrivGor</object-name>
+    <object-name>stick.Zo</object-name>
+    <object-name>stick.Zapros</object-name>
+    <object-name>stick.SAUt</object-name>
+    <object-name>stick.RTK</object-name>
+    <object-name>stick.RST</object-name>
+    <object-name>stick.RTKs</object-name>
+    <object-name>stick.P1</object-name>
+    <object-name>stick.P2</object-name>
+    <object-name>stick.P3</object-name>
+    <object-name>stick.P4</object-name>
+    <object-name>stick.P5</object-name>
+    <object-name>stick.P6</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
+    <!--<texture-prop>mig29/systems/cockpitlighting/texture5</texture-prop>-->
+  </animation>
+
+  <!-- Ручка Управления Самолётом -->
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.RUS</object-name>
+    <object-name>stick.OtklSAU</object-name>
+    <object-name>stick.PrivGor</object-name>
+    <object-name>stick.PrivGorOn</object-name>
+    <object-name>stick.RST</object-name>
+    <object-name>stick.RTK</object-name>
+    <object-name>stick.RTKs</object-name>
+    <object-name>stick.RTKsa</object-name>
+    <object-name>stick.SAUt</object-name>
+    <object-name>stick.StrobMarker</object-name>
+    <object-name>stick.Trim</object-name>
+    <object-name>stick.Trigger1</object-name>
+    <object-name>stick.Zapros</object-name>
+    <object-name>stick.Zo</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 8.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>-8.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.RUS</object-name>
+    <object-name>stick.OtklSAU</object-name>
+    <object-name>stick.PrivGor</object-name>
+    <object-name>stick.PrivGorOn</object-name>
+    <object-name>stick.RST</object-name>
+    <object-name>stick.RTK</object-name>
+    <object-name>stick.RTKs</object-name>
+    <object-name>stick.RTKsa</object-name>
+    <object-name>stick.SAUt</object-name>
+    <object-name>stick.StrobMarker</object-name>
+    <object-name>stick.Trim</object-name>
+    <object-name>stick.Trigger1</object-name>
+    <object-name>stick.Zapros</object-name>
+    <object-name>stick.Zo</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-8.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 8.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+  <!-- Анимация пыльника -->
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P1</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>  2.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -1.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P1</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> -1.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>  1.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P2</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>  2.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -2.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P2</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> -3.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>  3.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P3</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>  4.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -4.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P3</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> -5.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>  5.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P4</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 6.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -6.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P4</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-6.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 6.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P5</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 7.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -7.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P5</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-7.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 7.5</dep>
+      </entry>
+    </interpolation>
+   <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P6</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 8.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>-8.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>stick.P6</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-8.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 8.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.012833</x-m>
+      <y-m>-0.000312</y-m>
+      <z-m>-0.00749</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
 
 </PropertyList>

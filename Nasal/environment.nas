@@ -26,18 +26,18 @@ var slope = 0.0;
 
 var splash_vec_loop = func
 {
-    var airspeed = getprop("/velocities/airspeed-kt");
+  var airspeed = getprop("/velocities/airspeed-kt");
 	var airspeed_max = 120;
 	var tempInside  = getprop("/environment/aircraft-effects/temperature-inside-degC");
 	var tempOutside = getprop("environment/temperature-degc");
-    var tempOutsideDew = getprop("environment/dewpoint-degc");
-    var tempInsideDew = getprop("/environment/aircraft-effects/dewpoint-inside-degC");
-    var tempIndex = getprop("/environment/aircraft-effects/glass-temperature-index"); # 0.80 = good window   0.45 = bad window
-    var tempGlass = getprop("/environment/aircraft-effects/temperature-glass-degC");
+  var tempOutsideDew = getprop("environment/dewpoint-degc");
+  var tempInsideDew = getprop("/environment/aircraft-effects/dewpoint-inside-degC");
+  var tempIndex = getprop("/environment/aircraft-effects/glass-temperature-index"); # 0.80 = good window   0.45 = bad window
+  var tempGlass = getprop("/environment/aircraft-effects/temperature-glass-degC");
 	var fogNormOutside = getprop("/environment/aircraft-effects/fog-outside");
-    var fogNormInside = getprop("/environment/aircraft-effects/fog-inside");
+  var fogNormInside = getprop("/environment/aircraft-effects/fog-inside");
 	var frostNormOutside = getprop("/environment/aircraft-effects/frost-outside");
-    var frostNormInside = getprop("/environment/aircraft-effects/frost-inside");
+  var frostNormInside = getprop("/environment/aircraft-effects/frost-inside");
 	var fogmask = getprop("/environment/aircraft-effects/use-mask");
 	var fogNorm = getprop("/environment/aircraft-effects/fog-level");
 	var IsRain = getprop("/environment/rain-norm");
@@ -87,11 +87,11 @@ var splash_vec_loop = func
     tempOutside = tempOutside + ramRise;
     tempACDew = 5;# aircondition dew point target. 5 = dry
 	
-	setprop("/environment/aircraft-effects/splash-vector-x", splash_x);
+	  setprop("/environment/aircraft-effects/splash-vector-x", splash_x);
     setprop("/environment/aircraft-effects/splash-vector-y", splash_y);
     setprop("/environment/aircraft-effects/splash-vector-z", splash_z);
 	
-    ACRunning = getprop("controls/power/dcgen") == TRUE and getprop("controls/ventilation/airconditioning-enabled") == TRUE;
+    ACRunning = getprop("controls/power/battery") == TRUE and getprop("controls/ventilation/airconditioning-enabled") == TRUE;
 	
 
 	
@@ -99,12 +99,12 @@ var splash_vec_loop = func
     hotAir_deg_min = 2.0;# how fast does the sources heat up cockpit.
     AC_deg_min     = 6.0;
     pilot_deg_min  = 0.2;
-	hotAirOnWindshield = 0.0;
+	  hotAirOnWindshield = 0.0;
     AntiIce = getprop("controls/ventilation/windshield-antiice-lever");
 	
 	
 	
-    hotAirOnWindshield = getprop("controls/power/dcgen")== TRUE?AntiIce:0;
+    hotAirOnWindshield = getprop("controls/power/battery")== TRUE?AntiIce:0;
 	
 	#if (AntiIce > 0 and getprop("controls/power/dcgen")== TRUE) {
     #  hotAirOnWindshield = 1.0;

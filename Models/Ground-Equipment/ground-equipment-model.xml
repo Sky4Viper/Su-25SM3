@@ -57,6 +57,10 @@ changelog
       <not>
         <property>/controls/engines/engine[0]/starter</property>
       </not>
+      <less-than>  
+        <property>/engines/engine[1]/rpm</property>
+        <value>0.01</value>
+      </less-than>
     </condition>
   </animation>
 

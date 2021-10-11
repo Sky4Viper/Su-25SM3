@@ -200,7 +200,7 @@ thrust="9930">
 <!-- Nose -->
 
 <gear x="2.9" y="0" z="0" 
-compression="0.3" upx="0" upy="0" upz="0.3"
+compression="0.4" upx="0" upy="0" upz="0.4"
 spring="0.8"
 damp="3.0">
 <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
@@ -212,7 +212,7 @@ damp="3.0">
 <!-- Left main -->
 
 <gear x="-0.7" y="1.351" z="0"
-compression="0.2" upx="-0.02" upy="-0.1" upz="0.19"
+compression="0.3" upx="-0.02" upy="-0.1" upz="0.29"
 spring="0.8"
 damp="3">
 <control-input axis="/controls/gear/brake-left" control="BRAKE"/><control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
@@ -224,7 +224,7 @@ damp="3">
 <!-- Right main -->
 
 <gear x="-0.7" y="-1.351" z="0"
-compression="0.2" upx="-0.02" upy="-0.1" upz="0.19"
+compression="0.3" upx="-0.02" upy="-0.1" upz="0.29"
 spring="0.8"
 damp="3">
 <control-input axis="/controls/gear/brake-right" control="BRAKE"/>

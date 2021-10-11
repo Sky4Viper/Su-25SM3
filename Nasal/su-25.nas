@@ -36,12 +36,8 @@
 	
 	 var engines = { 
          # Arguments: ( number, running, idle_throttle, max_start_n1, start_threshold, spool_time, start_time, shutdown_time)
-         #Jet.new(4 , 0 , 0.105 , 10 , 6 , 1 , 0.05 , 3);
-         #default values: (0, 0, 0.01, 5.21, 5, 43, 2, 23)
-         engine1: yasimengines.Jet.new(0, 0, 0.01, 5.21, 4, 6, 2, 4),
-         engine2: yasimengines.Jet.new(1, 0, 0.01, 5.21, 4, 6, 2, 4),
-         #engine1: yasimengines.Jet.new(0 , 0 , 0.005 , 12.8 , 10 , 6.9 , 0.05 , 1),
-         #engine2: yasimengines.Jet.new(1 , 0 , 0.005 , 12.8 , 10 , 6.9 , 0.05 , 1),
+         engine1: yasimengines.Jet.new(0 , 0 , 0.005 , 12.8 , 10 , 6.9 , 0.05 , 2),
+         engine2: yasimengines.Jet.new(1 , 0 , 0.005 , 12.8 , 10 , 6.9 , 0.05 , 2),
         };
 	
 	###

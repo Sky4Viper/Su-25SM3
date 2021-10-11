@@ -8,7 +8,7 @@
 	
 		<description>Sukhoi Su-25SM3</description>
 		<author>Petar Jedvaj, Stuart Cassie, Raptor and Gary Brown, Sergei Solyshko</author>
-		<status>1.3.5</status>
+		<status>1.3.6</status>
 		<variant-of>Su-25</variant-of>
 		
 		<rating>
@@ -796,21 +796,9 @@
 				</mod-up>
 			</key>
 
-
-			<key n="123">
-     			<name>{</name>
-     			<desc>Engine 1 autostart</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-						yasimengines.engine1.autostart();
-					</script>
-				</binding>
-  			</key>
-
 			<key n="125">
 				<name>}</name>
-				<desc>Engine 2 autostart</desc>
+				<desc>Engine start/stop</desc>
 				<binding>
 					<command>nasal</command>
 					<script>
@@ -863,6 +851,11 @@
       		<fuelpump1 type="bool">true</fuelpump1>
       		<disppump type="bool">true</disppump>
       		<rsbn type="bool">true</rsbn>
+
+		<sound>
+        	<click-switch type="bool">false</click-switch>
+     	</sound>
+
 		</power>
 	
 		<gear>
@@ -1116,9 +1109,14 @@
 		<yasimengines>
       		<file>Aircraft/Su-25/Nasal/yasim-engines.nas</file>
 			  <!-- <script>
-        		var engine1 = yasimengines.Jet.new(0, 0, 0.01, 5.21, 5, 13, 2, 23);
-				var engine2 = yasimengines.Jet.new(1, 0, 0.01, 5.21, 5, 13, 2, 23);
-			</script> -->
+			  var engine1 = engines.Jet.new(0, 0 , 0.005 , 12.8 , 10 , 6.9 , 0.05 , 2);
+			  var engine2 = engines.Jet.new(1, 0 , 0.005 , 12.8 , 10 , 6.9 , 0.05 , 2);
+        		setlistener("sim/signals/fdm-initialized", func
+        		{
+        		engine1.init();
+				engine2.init();
+        		}, 0, 0);
+      		</script> -->
      	</yasimengines>
 
 		<fuel>
@@ -1164,6 +1162,10 @@
 		<environment>
       		<file>Aircraft/Su-25/Nasal/environment.nas</file>
     	</environment>
+
+		<switchclicksound>
+      		<file>Aircraft/Su-25/Nasal/switchclicksound.nas</file>
+    	</switchclicksound>
 
 	</nasal>
 	

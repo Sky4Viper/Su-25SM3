@@ -592,9 +592,18 @@
 			<mode>once</mode>
             <condition>
 				<property>/controls/engines/engine[0]/cutoff</property>
-                <not>
-                    <property>/sim/current-view/internal</property>
-                </not>
+                <or>
+					<and>
+						<greater-than>  
+                        <property>/canopy/position-norm</property>
+                        <value>0.0</value>
+                		</greater-than>
+						<property>/sim/current-view/internal</property>
+					</and>
+					<not>
+                    	<property>/sim/current-view/internal</property>
+                	</not>
+				</or>
                 <equals>
                     <property>engines/engine[0]/running</property>
                     <value>false</value>
@@ -610,6 +619,8 @@
 				<min>0</min>
 				<max>1.0</max>
 			</volume>
+			<reference-dist>100</reference-dist>
+            <max-dist>1000</max-dist>
         </shutdown>
         
         
@@ -619,9 +630,18 @@
 			<mode>once</mode>
             <condition>
 				<property>/controls/engines/engine[1]/cutoff</property>
-                <not>
-                    <property>/sim/current-view/internal</property>
-                </not>
+                <or>
+					<and>
+						<greater-than>  
+                        <property>/canopy/position-norm</property>
+                        <value>0.0</value>
+                		</greater-than>
+						<property>/sim/current-view/internal</property>
+					</and>
+					<not>
+                    	<property>/sim/current-view/internal</property>
+                	</not>
+				</or>
                 <equals>
                     <property>engines/engine[1]/running</property>
                     <value>false</value>
@@ -637,6 +657,8 @@
 				<min>0</min>
 				<max>1.0</max>
 			</volume>
+			<reference-dist>100</reference-dist>
+            <max-dist>1000</max-dist>
         </shutdown>
 		
 		<engine>
@@ -915,8 +937,8 @@
 			</condition>
 			
 			<volume>
-				<factor>1.2</factor>
-				<max>1.2</max>
+				<factor>1.0</factor>
+				<max>3.0</max>
 			</volume>
 			
 			<reference-dist>100</reference-dist>
@@ -936,7 +958,7 @@
 			</condition>
 			
 			<volume>
-				<factor>1.2</factor>
+				<factor>1.0</factor>
 				<max>0.6</max>
 			</volume>
 			
@@ -1387,6 +1409,25 @@
                 <max>0.40</max>
             </volume>
         </rain-windshield>
+
+		<switch>
+            <name>switch-click</name>
+            <mode>once</mode>
+            <path>Aircraft/Su-25/Sounds/Samples/switchclick.wav</path>
+            <condition>
+              <and>
+                <property>/controls/power/sound/click-switch</property>
+                <property>/sim/current-view/internal</property>
+              </and>
+            </condition>
+            <!-- <position>
+                <x>-0.3660</x>
+                <y>0.3350</y>
+                <z>-0.3500</z>
+            </position>
+            <reference-dist>0.2</reference-dist>
+            <max-dist>5.0</max-dist> -->
+      	</switch>
 		
 	</fx>
 	

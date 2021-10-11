@@ -159,8 +159,8 @@ if(navStillOn) {
 
 #enable binding to gear
 if(gearBind) {
-	setlistener("/controls/gear/gear-down", func {
-		gearDown = getprop("/controls/gear/gear-down");
+	setlistener("gear/gear[0]/position-norm", func {
+		gearDown = getprop("gear/gear[0]/position-norm");
 		if(gearDown) {
 			if(landingSwitch!=nil) setprop(landingSwitch, 1);
 			if(taxiSwitch!=nil) setprop(taxiSwitch, 1);
