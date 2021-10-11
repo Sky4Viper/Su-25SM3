@@ -44,7 +44,7 @@ var setLoadInt = func(pylon_index) {
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 4);
 	else if( payload == "Kh-25 missile" )
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 5);
-	else if( payload == "Fuel droptank )
+	else if( payload == "Fuel droptank" )
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 6);
 	else if( payload == "KAB-500L bomb" )
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 7);

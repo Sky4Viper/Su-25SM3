@@ -1135,13 +1135,17 @@
 			<file>Aircraft/Su-25/Nasal/weapons.nas</file>
 		</guns>
 
-		<!-- <payload>
+		<payload>
 			<file>Aircraft/Su-25/Nasal/payload.nas</file>
 		</payload>
 
 		<mpencode>
 			<file>Aircraft/Su-25/Nasal/mpencode.nas</file>
-		</mpencode> -->
+		</mpencode>
+
+		<!-- 
+
+		 -->
 		
 		<!-- <rwr>
 			<file>Aircraft/Su-25/Nasal/rwr.nas</file>
