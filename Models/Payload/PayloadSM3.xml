@@ -67,7 +67,8 @@
 	<model>
 		<name>2LUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-1.xml</path>
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>-4.43</y-m>
@@ -95,8 +96,9 @@
 	</animation>
 	
 	<model>
-		<name>2LFAB-500</name>
+		<name>2LFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/fab-500-m54.ac</path> -->
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>-4.43</y-m>
@@ -108,7 +110,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>2LFAB-500</object-name>
+		<object-name>2LFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -157,7 +159,8 @@
 	<model>
 		<name>3LUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-2.xml</path>
 		<offsets>
 			<x-m>0.60</x-m>
 			<y-m>-3.66</y-m>
@@ -214,7 +217,7 @@
 	</animation>
 	
 	<model>
-		<name>3LFAB-500</name>
+		<name>3LFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
 		<offsets>
 			<x-m>0.60</x-m>
@@ -227,7 +230,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>3LFAB-500</object-name>
+		<object-name>3LFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -247,7 +250,8 @@
 	<model>
 		<name>4LUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-3.xml</path>
 		<offsets>
 			<x-m>0.40</x-m>
 			<y-m>-2.86</y-m>
@@ -304,7 +308,7 @@
 	</animation>
 	
 	<model>
-		<name>4LFAB-500</name>
+		<name>4LFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
 		<offsets>
 			<x-m>0.40</x-m>
@@ -317,7 +321,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>4LFAB-500</object-name>
+		<object-name>4LFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -366,7 +370,8 @@
 	<model>
 		<name>5LUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-4.xml</path>
 		<offsets>
 			<x-m>0.00</x-m>
 			<y-m>-2.06</y-m>
@@ -394,7 +399,7 @@
 	</animation>
 	
 	<model>
-		<name>5LFAB-500</name>
+		<name>5LFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
 		<offsets>
 			<x-m>0.00</x-m>
@@ -407,7 +412,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>5LFAB-500</object-name>
+		<object-name>5LFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -514,7 +519,8 @@
 	<model>
 		<name>5RUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-5.xml</path>
 		<offsets>
 			<x-m>0.00</x-m>
 			<y-m>2.06</y-m>
@@ -542,7 +548,7 @@
 	</animation>
 	
 	<model>
-		<name>5RFAB-500</name>
+		<name>5RFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
 		<offsets>
 			<x-m>0.00</x-m>
@@ -555,7 +561,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>5RFAB-500</object-name>
+		<object-name>5RFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -633,7 +639,8 @@
 	<model>
 		<name>4RUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-6.xml</path>
 		<offsets>
 			<x-m>0.40</x-m>
 			<y-m>2.86</y-m>
@@ -690,7 +697,7 @@
 	</animation>
 	
 	<model>
-		<name>4RFAB-500</name>
+		<name>4RFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
 		<offsets>
 			<x-m>0.40</x-m>
@@ -703,7 +710,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>4RFAB-500</object-name>
+		<object-name>4RFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -752,7 +759,8 @@
 	<model>
 		<name>3RUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-7.xml</path>
 		<offsets>
 			<x-m>0.60</x-m>
 			<y-m>3.66</y-m>
@@ -809,7 +817,7 @@
 	</animation>
 	
 	<model>
-		<name>3RFAB-500</name>
+		<name>3RFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
 		<offsets>
 			<x-m>0.60</x-m>
@@ -822,7 +830,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>3RFAB-500</object-name>
+		<object-name>3RFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -842,7 +850,8 @@
 	<model>
 		<name>2RUB-32</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
-		<path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path>
+		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
+		<path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-8.xml</path>
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>4.43</y-m>
@@ -870,7 +879,7 @@
 	</animation>
 	
 	<model>
-		<name>2RFAB-500</name>
+		<name>2RFAB-250</name>
 		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
 		<offsets>
 			<x-m>0.80</x-m>
@@ -883,7 +892,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>2RFAB-500</object-name>
+		<object-name>2RFAB-250</object-name>
 		<condition>
 			<and>
 				<equals>

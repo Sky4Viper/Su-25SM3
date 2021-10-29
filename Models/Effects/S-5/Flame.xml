@@ -36,18 +36,18 @@
     <object-name>Flame3</object-name>
   </effect>
 
-  <!--<animation>
+  <animation>
     <type>scale</type>
     <object-name>Flame1</object-name>
     <object-name>Flame3</object-name>
-    <property>sim/multiplay/generic/int[9]</property>
-    <x-min>0.2</x-min>
+    <property>velocities/groundspeed-kt</property>
+    <x-min>0.9</x-min>
     <y-min>0.9</y-min>
     <z-min>0.9</z-min>
-    <x-factor>1.8</x-factor>
+    <x-factor>0.006</x-factor>
     <y-factor>0.0</y-factor>
     <z-factor>0.0</z-factor>
-  </animation>-->
+  </animation>
 
   <animation>
     <type>material</type>
@@ -72,5 +72,39 @@
   <min>0.0</min>
   <max>1.0</max>
   </animation>
+  
+  <animation>
+		<type>rotate</type>
+		<object-name>Flame1</object-name>
+		<property>/sim/time/elapsed-sec</property>
+		<factor>-30</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Flame3</object-name>
+		<property>/sim/time/elapsed-sec</property>
+		<factor>40</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 
 </PropertyList>

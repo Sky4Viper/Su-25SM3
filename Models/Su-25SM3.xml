@@ -17,7 +17,7 @@
 	
 	<!-- Rembrandt auto switching for glass -->
 	
-	 <effect>
+	 <!-- <effect>
 		 <inherits-from>Effects/model-transparent</inherits-from>
 		 <condition>
 			 <greater-than>
@@ -29,7 +29,72 @@
 		 <object-name>FrontGlass</object-name>
 		 <object-name>CanopyGlass</object-name>
 		 <object-name>Optics</object-name>
-	 </effect>
+		 <object-name>Zahvat1Glass</object-name>
+		 <object-name>Zahvat2Glass</object-name>
+	 </effect> -->
+
+	<effect>
+    	<inherits-from>Aircraft/Su-25/Models/Effects/Fx/su-25sm3-glass-combined</inherits-from>
+			<!-- normals out -->
+    		<!-- material Glass-->
+    	<object-name>FrontGlassIn</object-name>
+		<object-name>CanopyGlassIn</object-name>
+  	</effect>
+  	
+  	<effect>
+    	<inherits-from>Aircraft/Su-25/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
+			<!-- normals in -->
+    		<!-- material GlassMat-->
+    	<object-name>FrontGlass</object-name>
+		<object-name>CanopyGlass</object-name>
+		<object-name>Optics</object-name>
+		<object-name>Zahvat1Glass</object-name>
+		<object-name>Zahvat2Glass</object-name>
+  	</effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>EngineNozzleLeft</object-name>
+    <emission>
+      <factor-prop>engines/engine[0]/rpm</factor-prop>
+      <red>0.0012</red>
+      <green>0.0005</green>
+      <blue>0.0000</blue>
+    </emission>
+  </animation>
+
+  <!-- <animation>
+    <type>material</type>
+    <object-name>EngineExhaustLeft</object-name>
+    <emission>
+      <factor-prop>engines/engine[0]/rpm</factor-prop>
+      <red>0.0006</red>
+      <green>0.0002</green>
+      <blue>0.0000</blue>
+    </emission>
+  </animation> -->
+
+  <animation>
+    <type>material</type>
+    <object-name>EngineNozzleRight</object-name>
+    <emission>
+      <factor-prop>engines/engine[1]/rpm</factor-prop>
+      <red>0.0012</red>
+      <green>0.0005</green>
+      <blue>0.0000</blue>
+    </emission>
+  </animation>
+
+  <!-- <animation>
+    <type>material</type>
+    <object-name>EngineExhaustRight</object-name>
+    <emission>
+      <factor-prop>engines/engine[1]/rpm</factor-prop>
+      <red>0.0006</red>
+      <green>0.0002</green>
+      <blue>0.0000</blue>
+    </emission>
+  </animation> -->
 	
 	<!-- Lights -->
 	
@@ -53,25 +118,6 @@
 		<object-name>FrontGlass</object-name>
 		<object-name>CanopyGlass</object-name>
 	</animation>-->
-	
-	<effect>
-    	<inherits-from>Aircraft/Su-25/Models/Effects/Fx/su-25sm3-glass-combined</inherits-from>
-			<!-- normals out -->
-    		<!-- material Glass-->
-    	<object-name>FrontGlassIn</object-name>
-		<object-name>CanopyGlassIn</object-name>
-		<object-name>Optics</object-name>
-		<object-name>Zahvat1Glass</object-name>
-		<object-name>Zahvat2Glass</object-name>
-  	</effect>
-  	
-  	<effect>
-    	<inherits-from>Aircraft/Su-25/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
-			<!-- normals in -->
-    		<!-- material GlassMat-->
-    	<object-name>FrontGlass</object-name>
-		<object-name>CanopyGlass</object-name>
-  	</effect>
 	
 	<animation>
 		<type>noshadow</type>
@@ -443,10 +489,12 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 		<type>material</type>
 		<object-name>Fuselage</object-name>
 		<object-name>FrontArch</object-name>
-		<object-name>FrontArchInner</object-name>
+		<object-name>FrontArchRubber</object-name>
+		<!-- <object-name>FrontArchInner</object-name> -->
 		<object-name>CanopyArch</object-name>
-		<object-name>CanopyArchInner</object-name>
-		<object-name>Cockpit</object-name>
+		<object-name>CanopyArchRubber</object-name>
+		<!-- <object-name>CanopyArchInner</object-name> -->
+		<!-- <object-name>Cockpit</object-name> -->
 		<object-name>Ladder</object-name>
 		<object-name>LadderExtract</object-name>
 		<object-name>Step</object-name>
@@ -1291,6 +1339,8 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 	<animation>
 		<type>rotate</type>
 		<object-name>CanopyArch</object-name>
+		<object-name>CanopyArchIn</object-name>
+		<object-name>CanopyArchRubber</object-name>
 		<object-name>CanopyArchInner</object-name>
 		<object-name>CanopyGlass</object-name>
 		<object-name>CanopyGlassIn</object-name>

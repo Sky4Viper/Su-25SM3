@@ -19,7 +19,7 @@
 		</rating>
 		
 		<flight-model>yasim</flight-model>
-		<aero>FDM-sm3-yasim</aero>
+		<aero>Su-25SM3-yasim</aero>
 		<fuel-fraction>1</fuel-fraction>
 		
 		
@@ -27,6 +27,34 @@
 		<startup>
 			<splash-texture>Aircraft/Su-25/SplashSM3.png</splash-texture>
 		</startup>
+
+		<previews>
+      		<preview>
+        		<type>panel</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview1.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview2.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview3.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview4.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview5.png</path>
+			</preview>
+		</previews>
 		
 		<!-- Models -->
 		
@@ -163,10 +191,10 @@
 			<internal archive="y">true</internal>
 			<config>
 				<x-offset-m archive="y">0.00</x-offset-m><!-- Right -->
-				<y-offset-m archive="y">2.69</y-offset-m><!-- Up    -->
-				<z-offset-m archive="y">-3.45</z-offset-m><!-- Back  -->
-				<pitch-offset-deg>-15</pitch-offset-deg>
-				<default-field-of-view-deg>95</default-field-of-view-deg>
+				<y-offset-m archive="y">2.695</y-offset-m><!-- Up    -->
+				<z-offset-m archive="y">-3.42</z-offset-m><!-- Back  -->
+				<pitch-offset-deg>-16</pitch-offset-deg>
+				<default-field-of-view-deg>90</default-field-of-view-deg>
 			</config>
 		</view>
 		
@@ -478,11 +506,18 @@
 						</binding>
 					</item>
 					<item>
-						<label>Pylons loads</label>
+						<label>Payload</label>
 							<binding>
 							<command>nasal</command>
 				 			<script>CanvasPylonsDlg.showPylonsDlg()</script>
 							</binding>
+					</item>
+					<item>
+						<label>Reload rockets</label>
+						<binding>
+							<command>nasal</command>
+							<script>rockets.reload()</script>
+						</binding>
 					</item>
           <item>
             <label>Ground Equipment Toggle</label>
@@ -518,10 +553,20 @@
 				<name>c</name>
 				<desc>Toggle canopy and ladder</desc>
 			</key>
+
+			<key>
+				<name>}</name>
+				<desc>Engines start/stop</desc>
+			</key>
 			
 			<key>
 				<name>N/n</name>
 				<desc>Toggle speedbrakes</desc>
+			</key>
+
+			<key>
+				<name>p</name>
+				<desc>Break chute deploy/retract</desc>
 			</key>
 			
 			<key>
@@ -583,6 +628,7 @@
 				<int n="6" alias="/engines/engine[1]/state" />
 				<int n="7" alias="/sim/crashed" />
 				<int n="8" alias="/controls/armament/trigger-GSh-30-2" />
+				<int n="9" alias="/controls/armament/trigger-S-5" />
 				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
 				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
 				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
@@ -707,11 +753,19 @@
 					<command>nasal</command>
 					<script>guns.fire_Rocket()</script>
 				</binding>
+				<binding>
+        			<command>nasal</command>
+        			<script>switchclicksound.click("switch2")</script>
+      			</binding>
 				<mod-up>
 					<binding>
 						<command>nasal</command>
 						<script>guns.stop_Rocket()</script>
 					</binding>
+					<binding>
+        				<command>nasal</command>
+        				<script>switchclicksound.click("switch")</script>
+      				</binding>
 				</mod-up>
 			</key>
 			
@@ -849,11 +903,12 @@
 			<battery type="bool">true</battery>
 			<fuelpump3 type="bool">true</fuelpump3>
       		<fuelpump1 type="bool">true</fuelpump1>
-      		<disppump type="bool">true</disppump>
+      		<fuelpump0 type="bool">true</fuelpump0>
       		<rsbn type="bool">true</rsbn>
 
 		<sound>
         	<click-switch type="bool">false</click-switch>
+			<click-switch2 type="bool">false</click-switch2>
      	</sound>
 
 		</power>
@@ -913,6 +968,7 @@
 		<lighting>
 			<instruments-norm>0.4</instruments-norm>
 			<panels-norm>0.1</panels-norm>
+			<nightmode type="bool">false</nightmode>
 			<strobe-switch type="bool">true</strobe-switch>
 			<beacon-switch type="bool">true</beacon-switch>
 			<landing-lights-switch type="bool">true</landing-lights-switch>
@@ -925,6 +981,16 @@
       		<airconditioning-enabled type="bool">true</airconditioning-enabled>
       		<airconditioning-temperature type="double">16.0</airconditioning-temperature><!-- used for auto -->
     	</ventilation>
+
+		<mfd>
+      		<mfdpage type="double">0</mfdpage>
+      		<hdgbugset type="double">0</hdgbugset>
+      		<displays>
+        		<live-map type="bool">true</live-map>
+        		<scale type="double">0</scale>
+				<brightness-mm type="double">0</brightness-mm>
+      		</displays>
+    	</mfd>
 		
 	</controls>
 	
@@ -989,6 +1055,53 @@
 		<enav>
 			<selected type="int">3</selected>
 		</enav>
+
+		<efis>
+			<ecam>
+				<display-mode type="string">FUEL</display-mode>
+			</ecam>
+			<nd>
+				<display-mode type="string">VOR</display-mode>
+				<display-mode-knob type="int">2</display-mode-knob>
+				<display-range type="int">40</display-range>
+			</nd>
+			<input>
+				<vor-adf-1 type="int">1</vor-adf-1>
+				<vor-adf-2 type="int">1</vor-adf-2>
+				<CSTR type="bool">1</CSTR>
+				<WPT type="bool">1</WPT>
+				<VORD type="bool">1</VORD>
+				<NDB type="bool">1</NDB>
+				<ARPT type="bool">1</ARPT>
+				<WX type="bool">1</WX>
+				<TERR type="bool">1</TERR>
+				<TRAF type="bool">1</TRAF>
+				<taxi type="bool">1</taxi>
+			</input>
+		</efis>
+
+    <tcas>
+      <!-- http://wiki.flightgear.org/index.php/TCAS -->
+
+      <serviceable type="bool">true</serviceable>
+      <!-- TCAS ENABLE -->
+
+      <inputs>
+        <mode type="int">3</mode>
+        <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+      </inputs>
+
+      <speaker>
+        <!-- Speaker Configuration -->
+        <max-dist> 2 </max-dist>
+        <!-- Max. distance where speaker is heard -->
+        <reference-dist> 1 </reference-dist>
+        <!-- Distance to pilot -->
+        <volume> 1.0 </volume>
+        <!-- Volume at reference distance -->
+      </speaker>
+
+    </tcas>
 	</instrumentation>
 	
 	<!-- Effects -->
@@ -1170,6 +1283,18 @@
 		<switchclicksound>
       		<file>Aircraft/Su-25/Nasal/switchclicksound.nas</file>
     	</switchclicksound>
+
+		<mm>
+      		<file>Aircraft/Su-25/Nasal/moving-map.nas</file>
+    	</mm>
+
+		<nd>
+      		<file>Aircraft/Su-25/Nasal/nd.nas</file>
+    	</nd>
+
+		<rockets>
+			<file>Aircraft/Su-25/Nasal/rockets.nas</file>
+		</rockets>
 
 	</nasal>
 	

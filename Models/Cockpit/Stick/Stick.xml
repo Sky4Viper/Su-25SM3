@@ -53,14 +53,15 @@
     <object-name>stick.P5</object-name>
     <object-name>stick.P6</object-name>
     <emission>
-      <red>0.1</red>
-      <green>0.1</green>
-      <blue>0.1</blue>
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      	<red>0.07</red>
+        <green>0.03</green>
+    	<blue>0.01</blue>
+      <factor-prop>controls/lighting/panels-norm</factor-prop>
     </emission>
-      <condition>
-        <property>/controls/power/battery</property>
-      </condition>
+    	<condition>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
     <!--<texture-prop>mig29/systems/cockpitlighting/texture5</texture-prop>-->
   </animation>
 

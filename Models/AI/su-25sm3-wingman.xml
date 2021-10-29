@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<!--
+from B-29 Superfortress for FlightGear
+Common definitions
+-->
+
+<PropertyList>
+
+	<!-- *************** set properties **********************-->
+	<controls>
+		<armament>
+				<release-all type="bool">false</release-all>
+		</armament>
+		<engines>
+			<wastegate type="double">1</wastegate>
+			<engine n="0">
+				<boost>0.8</boost>
+				<cowl-flaps-norm>0</cowl-flaps-norm>
+				<intercooler-norm>0</intercooler-norm>
+				<throttle>0</throttle>
+			</engine>
+			<engine n="1">
+				<boost>0.8</boost>
+				<cowl-flaps-norm>0</cowl-flaps-norm>
+				<intercooler-norm>0</intercooler-norm>
+				<throttle>0</throttle>
+			</engine>
+		</engines>
+		<gear>
+			<nosewheel-caster type="bool"
+												archive="y">true</nosewheel-caster>
+			<antiskid type="bool"
+								archive="y">false</antiskid>
+			<brake-parking>1</brake-parking>
+		</gear>
+		<lighting>
+			<nav-lights type="bool">false</nav-lights>
+		</lighting>
+	</controls>
+
+	<gear>
+		<gear n="0">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		</gear>
+		<gear n="1">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+		<gear n="2">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+	</gear>
+
+	<engines>
+		<engine n="0">
+			<running type="bool">0</running>
+		</engine>
+		<engine n="1">
+			<running type="bool">0</running>
+		</engine>
+		<engine n="2">
+			<running type="bool">0</running>
+		</engine>
+		<engine n="3">
+			<running type="bool">0</running>
+		</engine>
+	</engines>
+
+	<position>
+		<altitude-agl-ft type="double">0</altitude-agl-ft>
+	</position>
+
+	<sim include="help.xml">
+		<description type="string">Sukhoi Su-25SM3 Supergrach</description>
+
+		<weapons include="b29-weapons.xml"/>
+
+		<model>
+			<model>Aircraft/Su-25/Models/AI/Su-25SM3-Wingman.xml</model>
+			<!-- <doors>
+				<bombbay/>
+				<tail/>
+				<pilotwin/>
+				<copilotwin/>
+				<hatch/>
+			</doors> -->
+		</model>
+
+		<startup>
+			<splash-texture>Aircraft/Su-25/SplashSM3.png</splash-texture>
+		</startup>
+
+		<ai>
+			<scenario n="100">Su-25SM3-Wingman</scenario>
+			<!--<scenario n="101">wingman_b29_2_demo</scenario>
+			<scenario n="102">wingman_b29_3_demo</scenario>-->
+		</ai>
+
+		<submodels>
+			<servicable type="bool">true</servicable>
+			<path type="string">Aircraft/Su-25/SubmodelsSM3.xml</path>
+		</submodels>
+
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+		<allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+		<panel>
+			<visibility>false</visibility>
+		</panel>
+
+		<chase-distance-m type="double"
+											archive="y">-90.0</chase-distance-m>
+
+		<current-view>
+			<field-of-view-min>5</field-of-view-min>
+			<field-of-view-max>35</field-of-view-max>
+			<target-x-offset-m alias="/sim/view[0]/config/x-offset-m"/>
+			<target-y-offset-m alias="/sim/view[0]/config/y-offset-m"/>
+			<target-z-offset-min-m alias="/sim/view[0]/config/z-offset-m"/>
+			<target-z-offset-max-m archive="y">10</target-z-offset-max-m>
+		</current-view>
+
+		<view n="0">
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y"
+										type="double">-0.67</x-offset-m>
+				<y-offset-m archive="y"
+										type="double">0.9</y-offset-m>
+				<z-offset-m archive="y"
+										type="double">2.3</z-offset-m>
+				<pitch-offset-deg archive="y">-10.0</pitch-offset-deg>
+			</config>
+		</view>
+		
+		<view n="197">
+			<name>Model Cockpit View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">false</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+
+				<at-model type="bool">false</at-model>
+				<at-model-idx type="int">0</at-model-idx>
+
+				<eye-lat-deg-path>/sim/viewer/eye/latitude-deg</eye-lat-deg-path>
+				<eye-lon-deg-path>/sim/viewer/eye/longitude-deg</eye-lon-deg-path>
+				<eye-alt-ft-path>/sim/viewer/eye/altitude-ft</eye-alt-ft-path>
+				<eye-heading-deg-path>/sim/viewer/eye/heading-deg</eye-heading-deg-path>
+				<eye-pitch-deg-path>/sim/viewer/eye/pitch-deg</eye-pitch-deg-path>
+				<eye-roll-deg-path>/sim/viewer/eye/roll-deg</eye-roll-deg-path>
+
+				<ground-level-nearplane-m type="double">0.2f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+
+				<x-offset-m type="double">0</x-offset-m>
+				<y-offset-m
+					type="double">0</y-offset-m>
+				<z-offset-m
+					type="double">0</z-offset-m>
+				<heading-offset-deg>0</heading-offset-deg>
+				<pitch-offset-deg>0</pitch-offset-deg>
+				<roll-offset-deg>0</roll-offset-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
+
+		<viewer>
+			<eye>
+				<latitude-deg type="double">0</latitude-deg>
+				<longitude-deg type="double">0</longitude-deg>
+				<altitude-ft type="double">0</altitude-ft>
+				<heading-deg type="double">0</heading-deg>
+				<pitch-deg type="double">0</pitch-deg>
+				<roll-deg type="double">0</roll-deg>
+			</eye>
+			<target>
+				<latitude-deg type="double">0</latitude-deg>
+				<longitude-deg type="double">0</longitude-deg>
+				<altitude-ft type="double">0</altitude-ft>
+				<heading-deg type="double">0</heading-deg>
+				<pitch-deg type="double">0</pitch-deg>
+				<roll-deg type="double">0</roll-deg>
+			</target>
+		</viewer>
+
+		<sound>
+			<path>Aircraft/Su-25/Sounds/SoundsSM3.xml</path>
+		</sound>
+
+		<!-- <weapons n="0">
+			<current-loadout archive="y"
+											 type="int">0</current-loadout>
+		</weapons>
+
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>B-29</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Bomb Loadout 1</label>
+						<binding>
+							<command>property-assign</command>
+							<property type="string">/sim/weapons/current-loadout[0]</property>
+							<value type="int">1</value>
+						</binding>
+					</item>
+					<item>
+						<label>Bomb Loadout 2</label>
+						<binding>
+							<command>property-assign</command>
+							<property type="string">/sim/weapons/current-loadout[0]</property>
+							<value type="int">2</value>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar> -->
+
+		<multiplay>
+			<generic>
+				<string n="0"
+								alias="/sim/submodels/path"/>
+				<int n="0"
+						 alias="/engines/engine[0]/running"/>
+				<int n="1"
+						 alias="/gear/gear[0]/tyre-smoke"/>
+				<int n="2"
+						 alias="/gear/gear[1]/tyre-smoke"/>
+				<int n="3"
+						 alias="/gear/gear[2]/tyre-smoke"/>
+				<int n="4"
+						 alias="/controls/lighting/nav-lights"/>
+				<int n="5"
+						 alias="/controls/armament/trigger"/>
+				<int n="6"
+						 alias="/controls/lighting/landing-light"/>
+				<float n="0"
+							 alias="/gear/gear[0]/sprayspeed-ms"/>
+				<float n="1"
+							 alias="/gear/gear[1]/sprayspeed-ms"/>
+				<float n="2"
+							 alias="/gear/gear[2]/sprayspeed-ms"/>
+				<float n="3"
+							 alias="/gear/gear[0]/spray-density"/>
+				<float n="4"
+							 alias="/gear/gear[1]/spray-density"/>
+				<float n="5"
+							 alias="/gear/gear[2]/spray-density"/>
+				<float n="6"
+							 alias="/position/altitude-agl-ft"/>
+				<float n="7"
+							 alias="/gear/gear/caster-angle-deg"/>
+				<float n="8"
+							 alias="/controls/engines/engine[0]/throttle"/>
+				<float n="9"
+							 alias="/sim/model/doors/bombbay/position-norm"/>
+				<float n="10"
+							 alias="/controls/flight/door-position-norm"/>
+				<float n="11"
+							 alias="/sim/time/hobbs/engine[0]"/>
+				<float n="12"
+							 alias="/controls/engines/engine[0]/cowl-flaps-norm"/>
+				<float n="13"
+							 alias="/controls/engines/engine[1]/cowl-flaps-norm"/>
+				<float n="16"
+							 alias="/controls/engines/engine[0]/intercooler-norm"/>
+				<float n="17"
+							 alias="/controls/engines/engine[1]/intercooler-norm"/>
+			</generic>
+		</multiplay>
+
+	</sim>
+
+
+
+	<instrumentation>
+		<pdi>
+			<direction-norm>0</direction-norm>
+		</pdi>
+		<magnetic-compass>
+			<bug-heading-deg>0</bug-heading-deg>
+		</magnetic-compass>
+	</instrumentation>
+
+	<systems>
+		<electrical>
+			<!--path>b29-electrical.xml</path-->
+		</electrical>
+		<autopilot>
+			<path>b29-autopilot.xml</path>
+		</autopilot>
+	</systems>
+
+	<input>
+		<keyboard>
+			<key n="4">
+				<name>Ctrl-D</name>
+				<desc>Open/close bomb bay doors</desc>
+				<binding>
+					<command>nasal</command>
+					<script>b29.bombbay.toggle()</script>
+				</binding>
+			</key>
+			<key n="6">
+				<name>Ctrl-F</name>
+				<desc>Open/close cabin doors and windows</desc>
+				<binding>
+					<command>nasal</command>
+					<script>b29.togglecabindoors()</script>
+				</binding>
+			</key>
+			<key n="2">
+				<name>Ctrl-B</name>
+				<desc>Release all stores.</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/armament/release-all</property>
+				</binding>
+			</key>
+			<key n="106">
+				<name>j</name>
+				<desc>Jump to next seat</desc>
+				<binding>
+					<command>nasal</command>
+					<script>b29.nextPosition()</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+
+	<yasim>
+		<weights>
+			<bomb-bay>
+				<rack n="0"
+							type="double">0</rack>
+				<rack n="1"
+							type="double">0</rack>
+				<rack n="2"
+							type="double">0</rack>
+				<rack n="3"
+							type="double">0</rack>
+				<rack n="4"
+							type="double">0</rack>
+				<rack n="5"
+							type="double">0</rack>
+				<rack n="6"
+							type="double">0</rack>
+				<rack n="7"
+							type="double">0</rack>
+			</bomb-bay>
+		</weights>
+	</yasim>
+
+	<nasal>
+		<b29>
+			<file>Aircraft/b29/b29.nas</file>
+		</b29>
+		<model_cockpit_view>
+			<file>Aircraft/b29/model-cockpit-view.nas</file>
+		</model_cockpit_view>
+	</nasal>
+
+</PropertyList>

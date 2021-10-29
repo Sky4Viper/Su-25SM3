@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>right_control_panel.ac</path>
+
+<!-- right_control_panel_text
+ -->
+
+ <animation>
+  <type>material</type>
+  <object-name>right_control_panel_text</object-name>
+  <object-name>rp_button</object-name>
+   <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>right_control_panel_text</object-name>
+  <object-name>rp_button</object-name>
+   <emission>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        <and>
+        	<property>/controls/power/battery</property>
+          <property>/controls/lighting/nightmode</property>
+        </and>
+        </condition>
+ </animation>
+
+ <animation>
+    <type>material</type>
+    <object-name>rp_switch.001</object-name>
+    <object-name>rp_switch.002</object-name>
+    <object-name>rp_switch.003</object-name>
+    <object-name>rp_switch.004</object-name>
+    <object-name>rp_switch.005</object-name>
+    <object-name>rp_switch.006</object-name>
+    <object-name>rp_switch.007</object-name>
+    <object-name>rp_switch.008</object-name>
+    <object-name>rp_switch.009</object-name>
+    <object-name>rp_switch.010</object-name>
+    <object-name>rp_switch.011</object-name>
+    <object-name>rp_switch.012</object-name>
+    <object-name>rp_switch.013</object-name>
+    <object-name>rp_switch.014</object-name>
+    <object-name>rp_switch.015</object-name>
+    <object-name>rp_switch.016</object-name>
+    <object-name>rp_switch.017</object-name>
+    <object-name>rp_switch.018</object-name>
+    <object-name>rp_switch.019</object-name>
+    <object-name>rp_switch.020</object-name>
+    <object-name>rp_switch.021</object-name>
+    <object-name>rp_switch.022</object-name>
+    <object-name>rp_switch.023</object-name>
+    <object-name>rp_switch.024</object-name>
+    <object-name>rp_switch.025</object-name>
+    <object-name>rp_switch.026</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/panels-norm</factor-prop>
+    </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
+  </animation>
+
+ <animation>
+	 	<type>material</type> 
+	 	<object-name>rp_switchbase</object-name>
+	 	<object-name>rp_screws_round</object-name>
+  		<specular>
+   		<red>1.0</red>
+   		<green>1.0</green>
+   		<blue>1.0</blue>
+  		</specular>
+  		<shininess>105</shininess>
+	</animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>rp_panel</object-name>
+    <emission>
+      	<red>0.07</red>
+        <green>0.03</green>
+    	<blue>0.01</blue>
+      <factor-prop>controls/lighting/panels-norm</factor-prop>
+    </emission>
+    	<condition>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
+  	</animation>
+
+   <animation>
+    <type>translate</type>
+    <object-name>rp_button</object-name>
+    <property>controls/flight/eng_start_btn</property>
+    <factor>-0.0020</factor>
+    <center>
+      <x-m>-0.060636</x-m>
+      <y-m>-0.004935</y-m>
+      <z-m>-0.001049</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>rp_button</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/flight/eng_start_btn</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch2")</script>
+      </binding>
+      <binding>
+					<command>nasal</command>
+					<script>
+						yasimengines.autostart();
+					</script>
+			</binding>
+      <mod-up>
+        <binding>
+        <command>property-toggle</command>
+        <property>controls/flight/eng_start_btn</property>
+      </binding>
+      </mod-up>
+    </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>engines-start-stop</tooltip-id>
+                <label>Engines start/stop</label>
+        </binding>
+  </hovered>
+    </animation>
+
+
+</PropertyList>

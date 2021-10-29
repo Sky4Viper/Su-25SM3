@@ -28,6 +28,26 @@ mehpnl_txt -->
         </emission>
         <condition>
         	<property>/controls/power/battery</property>
+          <property>/controls/lighting/nightmode</property>
+        </condition>
+ </animation>
+
+<animation>
+  <type>material</type>
+  <object-name>mehpnl_txt</object-name>
+  <object-name>mehpnl_chute_button1</object-name>
+  <object-name>mehpnl_chute_button2</object-name>
+   <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
         </condition>
  </animation>
 
@@ -111,7 +131,7 @@ mehpnl_txt -->
     <entry><ind>1</ind><dep> 25</dep></entry>
    </interpolation>
   <center>
-   <x-m> 0.028289</x-m>
+   <x-m> 0.017664</x-m>
    <y-m> 0.000161</y-m>
    <z-m>-0.032866</z-m>
   </center>
@@ -194,6 +214,40 @@ mehpnl_txt -->
         </binding>
     </action>
  </animation>
+
+ <!-- <animation>
+  <type>pick</type>
+  <object-name>mehpnl_flaps_switch</object-name>
+  <visible>true</visible>
+   <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-cycle</command>
+        <property>controls/flight/flaps</property>
+        <value>0.0</value>
+        <value>0.5</value>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-cycle</command>
+        <property>controls/flight/flaps</property>
+        <value>0.5</value>
+        <value>1.0</value>
+      </binding>
+      <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+    </action>
+ </animation> -->
 
 <animation>
   <type>translate</type>

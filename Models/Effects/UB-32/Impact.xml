@@ -18,8 +18,8 @@
 		<x-max>2</x-max>
 		<y-max>2</y-max>
 		<z-max>2</z-max>
-		<x-factor>4</x-factor>
-		<y-factor>4</y-factor>
+		<x-factor>2</x-factor>
+		<y-factor>2</y-factor>
 	</animation>
 	
 	<animation>

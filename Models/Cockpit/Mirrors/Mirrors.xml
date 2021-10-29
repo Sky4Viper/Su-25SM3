@@ -4,12 +4,12 @@
     
 	<!-- Glass shader -->
     
-    <animation>
+    <!-- <animation>
         <type>shader</type>
         <shader>chrome</shader>
         <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
         <object-name>Mirrors</object-name>
-    </animation>
+    </animation> -->
 	
     <!-- Canopy -->
 
@@ -28,6 +28,13 @@
 			<z2-m>2.34</z2-m>
 		</axis>
      </animation>
+
+     <!-- ALS  mirror reflecton -->
+
+    <effect>
+        <inherits-from>Aircraft/Su-25/Models/Effects/Mirror/mirror</inherits-from>
+	    <object-name>Mirrors</object-name>
+    </effect>
 	
 
 	

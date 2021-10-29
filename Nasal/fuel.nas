@@ -66,9 +66,9 @@ var fuelTanks = func {
 		if(levelIntCentr0 == nil) { levelIntCentr0 = 0; }
 	var wingdroptanks = getprop("sim/weight[2]/weight-lb") + getprop("sim/weight[7]/weight-lb") + getprop("sim/weight[4]/weight-lb") + getprop("sim/weight[5]/weight-lb");
 
-	var fuelPump0 = getprop("controls/power/disppump");
+	var fuelPump0 = getprop("controls/power/fuelpump0");
 	var fuelPump1 = getprop("controls/power/fuelpump1");
-	var fuelPump3 = getprop("controls/power/fuelpump3");
+	#var fuelPump3 = getprop("controls/power/fuelpump3");
 		if (getprop("sim/freeze/fuel")) { return registerTimer(fuelTanks); }
 		if (getprop("systems/refuel/contact")) {return registerTimer(fuelTanks); }
 	
@@ -79,14 +79,18 @@ var fuelTanks = func {
 				}
 			}
 	# wingdroptanks	
-	if (levelDropStbd > 0 and levelDropPort > 0 and fuelPump0 ==1 and fuelPump1 ==1) { 
-		setprop("consumables/fuel/tank[7]/selected", 1);
-		setprop("consumables/fuel/tank[4]/selected", 1);
-	
-	# wingdroptanks2	
-	} elsif (levelDropStbd2 > 0 and levelDropPort2 > 0 and fuelPump0 ==1 and fuelPump1 ==1) { 
+	if (levelDropStbd2 > 0 and levelDropPort2 > 0 and fuelPump0 ==1 and fuelPump1 ==1) { 
+		#setprop("consumables/fuel/tank[7]/selected", 1);
+		#setprop("consumables/fuel/tank[4]/selected", 1);
 		setprop("consumables/fuel/tank[5]/selected", 1);
 		setprop("consumables/fuel/tank[6]/selected", 1);
+	
+	# wingdroptanks2	
+	} elsif (levelDropStbd > 0 and levelDropPort > 0 and fuelPump0 ==1 and fuelPump1 ==1) { 
+		#setprop("consumables/fuel/tank[5]/selected", 1);
+		#setprop("consumables/fuel/tank[6]/selected", 1);
+		setprop("consumables/fuel/tank[7]/selected", 1);
+		setprop("consumables/fuel/tank[4]/selected", 1);
 	
 	# centerdroptank
 	#} elsif (levelDropCentr > 0 and fuelPump0 ==1 and fuelPump1 ==1) {
@@ -103,7 +107,7 @@ var fuelTanks = func {
 	# internal: not ordered yet
 	} else {
 			foreach(f; fueltanks) {
-			if (f.getNode("level-lbs").getValue() > 0.01 and fuelPump0 ==1 and fuelPump3 ==1) {
+			if (f.getNode("level-lbs").getValue() > 0.01 and fuelPump0 ==1 and fuelPump1 ==1) {
 				f.getNode("selected", 0).setBoolValue(1);
 				} 
 			}

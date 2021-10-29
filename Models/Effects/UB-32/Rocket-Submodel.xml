@@ -17,7 +17,7 @@
 		<eda>10</eda>
 		<wind>false</wind>
 		<buoyancy>32</buoyancy>
-		<life>50</life>
+		<life>1.6</life>
 	</submodel>
 
 </PropertyList>

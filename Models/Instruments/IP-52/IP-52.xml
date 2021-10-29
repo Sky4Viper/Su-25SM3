@@ -22,6 +22,36 @@
         <green>0.3</green>
         <blue>0.1</blue>
     </emission>
+    <condition>
+		<property>/controls/power/battery</property>
+		<property>/controls/lighting/nightmode</property>
+	</condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>face</object-name>
+ <object-name>cp</object-name>
+ <object-name>slats</object-name>
+ <object-name>flaps1</object-name>
+ <object-name>flaps2</object-name>
+ <object-name>speedbrake</object-name>
+ <object-name>gearnose</object-name>
+ <object-name>gearleft</object-name>
+ <object-name>gearright</object-name>
+ <object-name>siluet</object-name>
+    <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
 </animation>
 
 <animation>

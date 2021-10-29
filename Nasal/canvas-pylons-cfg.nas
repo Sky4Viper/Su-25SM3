@@ -310,6 +310,8 @@ btn_P2_UB32.listen("clicked", func {
 		print("P2: UB-32");
 		setprop("sim/weight[1]/selected","UB-32 rockets");
 		setprop("sim/weight[1]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",580);  # need to change to B-8M1(empty weight 160kg, 20 tubes)
 		pylons_update();
 		});
@@ -368,6 +370,8 @@ btn_P3_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		setprop("sim/weight[2]/selected","UB-32 rockets");
 		setprop("sim/weight[2]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",580); # KG
 		pylons_update();
 		});
@@ -469,6 +473,8 @@ btn_P4_UB32.listen("clicked", func {
 		print("P4: UB-32");
 		setprop("sim/weight[3]/selected","UB-32 rockets");
 		setprop("sim/weight[3]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",580); # KG
 		pylons_update();
 		});
@@ -543,6 +549,8 @@ btn_P5_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
 		setprop("sim/weight[4]/selected","UB-32 rockets");
 		setprop("sim/weight[4]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",580); # KG
 		pylons_update();
 		});
@@ -659,6 +667,8 @@ btn_P6_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
 		setprop("sim/weight[5]/selected","UB-32 rockets");
 		setprop("sim/weight[5]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",580); # KG
 		pylons_update();
 		});
@@ -770,6 +780,8 @@ btn_P7_UB32.listen("clicked", func {
 		print("P7: UB-32");
 		setprop("sim/weight[6]/selected","UB-32 rockets");
 		setprop("sim/weight[6]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",580); # KG
 		pylons_update();
 		});
@@ -844,6 +856,8 @@ btn_P8_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[7]/level-gal_us", 0.0);
 		setprop("sim/weight[7]/selected","UB-32 rockets");
 		setprop("sim/weight[7]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",580); # KG
 		pylons_update();
 		});
@@ -936,6 +950,8 @@ btn_P9_UB32.listen("clicked", func {
 		print("P9: UB-32");
 		setprop("sim/weight[8]/selected","UB-32 rockets");
 		setprop("sim/weight[8]/weight-lb",580);
+		setprop("/controls/armament/rocketsLeft", 32);
+		setprop("/controls/armament/rocketsCount", 32);
 		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[8]",580); # KG
 		pylons_update();
 		});

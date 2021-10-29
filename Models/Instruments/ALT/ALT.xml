@@ -6,12 +6,19 @@
     <object-name>glass</object-name>
   </animation>
   
-  <animation>
+  <!--<animation>
     <type>shader</type>
     <shader>chrome</shader>
     <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
     <object-name>glass</object-name>
-  </animation>
+  </animation>-->
+  
+ <animation>
+ <type>shader</type>
+ <shader>chrome</shader>
+ <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+ <object-name>glass</object-name>
+</animation>
 
     <animation>
         <type>material</type>
@@ -27,7 +34,28 @@
         </emission>
         <condition>
           <property>/controls/power/battery</property>
-         </condition>
+          <property>/controls/lighting/nightmode</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>altimeterNeedle100</object-name>
+        <object-name>altimeterNeedle1k</object-name>
+        <object-name>altimeterFace</object-name>
+        <object-name>pressureGuage</object-name>
+        <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
     </animation>
 
     <animation>

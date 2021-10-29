@@ -38,7 +38,39 @@
    </emission>
    <condition>
      <property>/controls/power/battery</property>
+     <property>/controls/lighting/nightmode</property>
    </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>AltitudeScale</object-name>
+  <object-name>CourseScale</object-name>
+  <object-name>PitchScale</object-name>
+  <object-name>KPP.AltitudeDirector</object-name>
+  <object-name>KPP.BankDirector</object-name>
+  <object-name>KPP.BlenkerK</object-name>
+  <object-name>KPP.BlenkerT</object-name>
+  <object-name>KPP.CourseDirector</object-name>
+  <object-name>KPP.PitchDirector</object-name>
+  <object-name>KPP.PitchAngleScale</object-name>
+  <object-name>KPP.Roll</object-name>
+  <object-name>KPP.RollDirector</object-name>
+  <object-name>KPP.Rollscale</object-name>
+  <object-name>KPP.skidball</object-name>
+  <object-name>KPP.skidbase</object-name>
+   <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
  </animation>
 
  <!--<animation>

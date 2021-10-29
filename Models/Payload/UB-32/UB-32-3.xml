@@ -4,18 +4,30 @@
 
   <effect>
     <!--<inherits-from>Aircraft/MiG-21UPG/Models/Effects/Fx/ub32-shader</inherits-from>-->
+    <!--enabling bumpmap shader causing FG crash on linux, works ok on windows though :(-->
     <inherits-from>Effects/model-combined-deferred</inherits-from>
     <object-name>midpod</object-name>
     <object-name>tippod</object-name>
     <object-name>endpod</object-name>
   </effect>
 
+  <animation>
+    <type>material</type>
+    <object-name>endpod</object-name>
+    <emission>
+      <factor-prop>sim/multiplay/generic/int[9]</factor-prop>
+      <red>0.12</red>
+      <green>0.05</green>
+      <blue>0.00</blue>
+    </emission>
+</animation>
+
   <model>
-    <name>S5flameL3</name>
-    <path>Aircraft/MiG-21UPG/Models/Effects/S-5/Flame.xml</path>
+    <name>S5flameL1</name>
+    <path>Aircraft/Su-25/Models/Effects/S-5/Flame.xml</path>
     <condition>
       <and>
-        <property>controls/power/pln3-4</property>
+        <!-- <property>controls/power/pln1-2</property> -->
         <property>sim/multiplay/generic/int[9]</property>
       </and>
     </condition>
@@ -30,11 +42,11 @@
   </model>
 
   <model>
-    <name>S5flackL3</name>
-    <path>Aircraft/MiG-21UPG/Models/Effects/S-5/Flack.xml</path>
+    <name>S5flackL1</name>
+    <path>Aircraft/Su-25/Models/Effects/S-5/Flack.xml</path>
     <condition>
       <and>
-        <property>controls/power/pln3-4</property>
+        <!-- <property>controls/power/pln1-2</property> -->
         <property>sim/multiplay/generic/int[9]</property>
       </and>
     </condition>
@@ -48,12 +60,20 @@
     </offsets>
   </model>
 
+  <!--<animation>
+    <type>select</type>
+    <object-name>S13flameR1</object-name>
+    <condition>
+        <property>sim/multiplay/generic/int[9]</property>
+    </condition>
+  </animation>-->
+
 	<animation>
 		<object-name>s-5-32</object-name>
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>31</value>
 			</greater-than>
 		</condition>
@@ -64,7 +84,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>30</value>
 			</greater-than>
 		</condition>
@@ -75,7 +95,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>29</value>
 			</greater-than>
 		</condition>
@@ -86,7 +106,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>28</value>
 			</greater-than>
 		</condition>
@@ -97,7 +117,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>27</value>
 			</greater-than>
 		</condition>
@@ -108,7 +128,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>26</value>
 			</greater-than>
 		</condition>
@@ -119,7 +139,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>25</value>
 			</greater-than>
 		</condition>
@@ -130,7 +150,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>24</value>
 			</greater-than>
 		</condition>
@@ -141,7 +161,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>23</value>
 			</greater-than>
 		</condition>
@@ -152,7 +172,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>22</value>
 			</greater-than>
 		</condition>
@@ -163,7 +183,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>21</value>
 			</greater-than>
 		</condition>
@@ -174,7 +194,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
@@ -185,7 +205,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>19</value>
 			</greater-than>
 		</condition>
@@ -196,7 +216,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>18</value>
 			</greater-than>
 		</condition>
@@ -207,7 +227,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>17</value>
 			</greater-than>
 		</condition>
@@ -218,7 +238,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>16</value>
 			</greater-than>
 		</condition>
@@ -229,7 +249,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>15</value>
 			</greater-than>
 		</condition>
@@ -240,7 +260,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>14</value>
 			</greater-than>
 		</condition>
@@ -251,7 +271,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>13</value>
 			</greater-than>
 		</condition>
@@ -262,7 +282,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>12</value>
 			</greater-than>
 		</condition>
@@ -273,7 +293,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>11</value>
 			</greater-than>
 		</condition>
@@ -284,7 +304,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>10</value>
 			</greater-than>
 		</condition>
@@ -295,7 +315,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>9</value>
 			</greater-than>
 		</condition>
@@ -306,7 +326,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>8</value>
 			</greater-than>
 		</condition>
@@ -317,7 +337,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>7</value>
 			</greater-than>
 		</condition>
@@ -328,7 +348,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>6</value>
 			</greater-than>
 		</condition>
@@ -339,7 +359,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>5</value>
 			</greater-than>
 		</condition>
@@ -350,7 +370,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>4</value>
 			</greater-than>
 		</condition>
@@ -361,7 +381,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>3</value>
 			</greater-than>
 		</condition>
@@ -372,7 +392,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>2</value>
 			</greater-than>
 		</condition>
@@ -383,7 +403,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>1</value>
 			</greater-than>
 		</condition>
@@ -394,7 +414,7 @@
 		<type>select</type>
 		<condition>
 			<greater-than>
-        <property>/controls/armament/rocketsLeft</property>
+        <property>/controls/armament/rocketsCount</property>
 				<value>0</value>
 			</greater-than>
 		</condition>

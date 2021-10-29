@@ -210,6 +210,39 @@
     		</offsets>
 	</model>
 
+	<model>
+		<path>Aircraft/Su-25/Models/Instruments/SO-96/SO-96.xml</path>
+		<offsets>
+      			<x-m>-3.78528</x-m>
+      			<y-m>0.274012</y-m>
+      			<z-m>2.16423</z-m>
+      			<pitch-deg>16.1049</pitch-deg>
+    		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Instruments/LightPnl/LightPnl.xml</path>
+		<offsets>
+      			<x-m>-3.52589</x-m>
+      			<y-m>0.302956</y-m>
+      			<z-m>2.08923</z-m>
+      			<pitch-deg>16.1049</pitch-deg>
+    		</offsets>
+	</model>
+
+<!-- MFD1 -->
+
+  <model>
+    <path>Aircraft/Su-25/Models/Instruments/MFD/MFD1.xml</path>
+	<offsets>
+      <x-m>-3.89083</x-m>
+      <y-m>-0.228795</y-m>
+      <z-m>2.36297</z-m>
+	  <heading-deg>13.0916</heading-deg>
+    </offsets>
+  </model>
+
+
 <!-- Throttle -->
     
     <!-- <model>
@@ -283,6 +316,18 @@
       <y-m>0.0 </y-m>
       <z-m>0.0 </z-m>
 	  <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+<!-- Right Control Panel -->
+
+  <model>
+    <path>Aircraft/Su-25/Models/Cockpit/Panels/Right_Control_Panel.xml</path>
+	<offsets>
+      <x-m>-3.3925</x-m>
+      <y-m>0.326202</y-m>
+      <z-m>2.27878</z-m>
+	  <heading-deg>-2.03168</heading-deg>
     </offsets>
   </model>
 

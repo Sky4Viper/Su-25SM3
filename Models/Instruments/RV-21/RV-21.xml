@@ -16,6 +16,30 @@
         <green>0.3</green>
         <blue>0.1</blue>
     </emission>
+    <condition>
+		<property>/controls/power/battery</property>
+		<property>/controls/lighting/nightmode</property>
+	</condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>scale</object-name>
+ <object-name>RV-21.Needle</object-name>
+ <object-name>RV-21.DAM</object-name>
+ <object-name>RV-21.blenker</object-name>
+    <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
 </animation>
 
 <animation>
@@ -41,7 +65,8 @@
 <animation>
  <type>rotate</type>
  <object-name>RV-21.Needle</object-name>
- <property>mig29/instrumentation/RV-21/indicated-altitude-m</property>
+ <!--<property>mig29/instrumentation/RV-21/indicated-altitude-m</property>-->
+ <property>instrumentation/altimeter/indicated-altitude-ft</property>
  <interpolation>
   <entry><ind>  -5</ind><dep>-5.375</dep></entry>  <!--   -5 -->
   <entry><ind>   0</ind><dep> 0.0  </dep></entry>  <!--    0 -->

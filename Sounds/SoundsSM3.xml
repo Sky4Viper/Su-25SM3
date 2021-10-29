@@ -787,12 +787,13 @@
 					<or>
 					<greater-than>
 						<property>/orientation/alpha-deg</property>
-						<value>10.2</value>
+						<value>14.8</value>
 					</greater-than>
 					<less-than>
             			<!-- G load > 3.0 = -93.52215-->
+						<!-- G load > 5.0 = -155.87025-->
             			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>-92.52215</value>
+            			<value>-155.87025</value>
           			</less-than>
           			<greater-than>
             			<!-- G load < -1.0 = 31.17405-->
@@ -994,104 +995,121 @@
 		
 		<UB-32>
 			<name>ub-32</name>
+			<mode>looped</mode>
+			<path>Aircraft/Su-25/Sounds/Samples/rockets_ripple2.wav</path>
 			
 			<condition>
-				<property>controls/armament/trigger1</property><!-- 
-                    <or>   
-                         <and>
-                          <equals>
-				       <property>controls/armament/station1/release</property>
-				        <value>true</value>
-                          </equals>
-                          <equals> 
-                                 <property>/sim/weight1/opt/lbs</property>
-				         <value>580</value>
-                          </equals>
-                       </and>
-                    
-                       <and> 
-				  <equals>
-				   <property>controls/armament/station8/release</property>
-				          <value>true</value>  
-                             </equals>
-
-                             <equals>
-                            <property>/sim/weight8/opt/lbs</property>
-				          <value>580</value>
-                             </equals>
-                       </and>
-               
-                       <and>
-				   <property>controls/armament/station3/release</property>
-				          <value>true</value>
-                            <property>/sim/weight3/weight-lb</property>
-				          <value>580</value>
-                       </and>
-                        <and>
-				   <property>controls/armament/station4/release</property>
-				          <value>true</value>
-                            <property>/sim/weight4/weight-lb</property>
-				          <value>580</value>
-                       </and>
-                       <and>
-				   <property>controls/armament/station5/release</property>
-				          <value>true</value>
-                            <property>/sim/weight5/weight-lb</property>
-				          <value>580</value>
-                       </and>
-                       <and>
-				   <property>controls/armament/station6/release</property>
-				          <value>true</value>
-                            <property>/sim/weight6/weight-lb</property>
-				          <value>580</value>
-                       </and>
-                        <and>
-				   <property>controls/armament/station7/release</property>
-				          <value>true</value>
-                            <property>/sim/weight7/weight-lb</property>
-				          <value>580</value>
-                       </and>                    
-                        <and>
-				   <property>controls/armament/station8/release</property>
-				          <value>true</value>
-                            <property>/sim/weight8/opt/lbs</property>
-				          <value>580</value>
-                       </and>
-	                   
+				<property>controls/armament/trigger1</property>
+                    <or>
+					<property>controls/armament/trigger-UB32-1-L</property>
+					<property>controls/armament/trigger-UB32-2-L</property>
+					<property>controls/armament/trigger-UB32-3-L</property>
+					<property>controls/armament/trigger-UB32-4-L</property>
+					<property>controls/armament/trigger-UB32-5-R</property>
+					<property>controls/armament/trigger-UB32-6-R</property>
+					<property>controls/armament/trigger-UB32-7-R</property>
+					<property>controls/armament/trigger-UB32-8-R</property>  
                     </or>
-                     -->
+                    
 			</condition>
+
+			<volume>
+				<factor>1.0</factor>
+				<max>3.0</max>
+			</volume>
 			
-			<path>Aircraft/Su-25/Sounds/Samples/Missile.wav</path>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+
 		</UB-32>
+
+		<UB-32-Single>
+			<name>ub-32-Single</name>
+			<mode>once</mode>
+			<path>Aircraft/Su-25/Sounds/Samples/rockets.wav</path>
+			
+			<condition>
+				<property>controls/armament/trigger1</property>
+                    <or>
+					<property>controls/armament/trigger-UB32-1-L</property>
+					<property>controls/armament/trigger-UB32-2-L</property>
+					<property>controls/armament/trigger-UB32-3-L</property>
+					<property>controls/armament/trigger-UB32-4-L</property>
+					<property>controls/armament/trigger-UB32-5-R</property>
+					<property>controls/armament/trigger-UB32-6-R</property>
+					<property>controls/armament/trigger-UB32-7-R</property>
+					<property>controls/armament/trigger-UB32-8-R</property>  
+                    </or>
+                    
+			</condition>
+
+			<volume>
+				<factor>1.0</factor>
+				<max>3.0</max>
+			</volume>
+			
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			
+		</UB-32-Single>
 		
 		<!-- Bomb release -->
 		
-		<crash>
-			<name>Bomb_on_hardpoint3</name>
+		<bomb>
+			<name>Bomb_on_hardpoints29</name>
+			<mode>once</mode>
 			
 			<condition>
-				<equals>
-					<property>controls/armament/station[2]/release</property>
-					<value>true</value>
-				</equals>
+				<or>
+					<property>controls/armament/station[1]/release</property>
+					<property>controls/armament/station[8]/release</property>
+				</or>
 			</condition>
-			
+				
 			<path>Aircraft/Su-25/Sounds/Samples/Bomb.wav</path>
-		</crash>
+		</bomb>
 		
-		<crash>
-			<name>Bomb_on_hardpoint8</name>
+		<bomb>
+			<name>Bomb_on_hardpoints38</name>
+			<mode>once</mode>
 			
 			<condition>
-				<equals>
+				<or>
+					<property>controls/armament/station[2]/release</property>
 					<property>controls/armament/station[7]/release</property>
-					<value>true</value>
-				</equals>
+				</or>
 			</condition>
 			
 			<path>Aircraft/Su-25/Sounds/Samples/Bomb.wav</path>
-		</crash>
+		</bomb>
+
+		<bomb>
+			<name>Bomb_on_hardpoints47</name>
+			<mode>once</mode>
+			
+			<condition>
+				<or>
+					<property>controls/armament/station[3]/release</property>
+					<property>controls/armament/station[6]/release</property>
+				</or>
+			</condition>
+			
+			<path>Aircraft/Su-25/Sounds/Samples/Bomb.wav</path>
+		</bomb>
+
+		<bomb>
+			<name>Bomb_on_hardpoints56</name>
+			<mode>once</mode>
+			
+			<condition>
+				<or>
+					<property>controls/armament/station[4]/release</property>
+					<property>controls/armament/station[5]/release</property>
+				</or>
+			</condition>
+			
+			<path>Aircraft/Su-25/Sounds/Samples/Bomb.wav</path>
+		</bomb>
 		
 		<!-- Tank release -->
 		
@@ -1417,6 +1435,25 @@
             <condition>
               <and>
                 <property>/controls/power/sound/click-switch</property>
+                <property>/sim/current-view/internal</property>
+              </and>
+            </condition>
+            <!-- <position>
+                <x>-0.3660</x>
+                <y>0.3350</y>
+                <z>-0.3500</z>
+            </position>
+            <reference-dist>0.2</reference-dist>
+            <max-dist>5.0</max-dist> -->
+      	</switch>
+
+		<switch>
+            <name>mfd-click</name>
+            <mode>once</mode>
+            <path>Aircraft/Su-25/Sounds/Samples/mfdclick.wav</path>
+            <condition>
+              <and>
+                <property>/controls/power/sound/click-switch2</property>
                 <property>/sim/current-view/internal</property>
               </and>
             </condition>

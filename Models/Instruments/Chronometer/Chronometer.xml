@@ -23,7 +23,37 @@
         <green>0.3</green>
         <blue>0.1</blue>
     </emission>
+    <condition>
+        	<property>/controls/power/battery</property>
+          <property>/controls/lighting/nightmode</property>
+    </condition>
  </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>mode_ind_flag</object-name>
+   <object-name>achs-face</object-name>
+   <object-name>achs-housing</object-name>
+   <object-name>hour_needle</object-name>
+   <object-name>min_needle</object-name>
+   <object-name>sec_needle</object-name>
+   <object-name>ft_hour_needle</object-name>
+   <object-name>ft_min_needle</object-name>
+   <object-name>timer_sec_needle</object-name>
+   <object-name>timer_min_needle</object-name>
+   <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
+</animation>
 
 <!-- *********************** Left knob; ********************************************
 	Neutral: Wind-up (only CCW)

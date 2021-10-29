@@ -14,9 +14,31 @@
         <green>0.3</green>
         <blue>0.1</blue>
     </emission>
+    <condition>
+		<property>/controls/power/battery</property>
+		<property>/controls/lighting/nightmode</property>
+	</condition>
 </animation>
 
 <animation>
+  <type>material</type>
+  <object-name>ITG-1.needle</object-name>
+ <object-name>ITG-1.face</object-name>
+    <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
+</animation>
+
+<!--<animation>
  <type>material</type>
  <object-name>screws</object-name>
  <emission>
@@ -25,7 +47,7 @@
         <blue>0.1</blue>
   <factor-prop>controls/lighting/panel-norm</factor-prop>
  </emission>
-</animation>
+</animation>-->
 
 <animation>
  <type>shader</type>

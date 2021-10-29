@@ -32,7 +32,7 @@
         </images>
         <filter>linear</filter>
       </texture>
-      <texture n="5">
+      <!--<texture n="5">
         <type>cubemap</type>
         <images>
           <positive-x>Models/Effects/Fx/su25-glass-reflect.png</positive-x>
@@ -43,7 +43,7 @@
           <negative-z>Models/Effects/Fx/su25-glass-reflect.png</negative-z>
         </images>
         <filter>linear</filter>
-      </texture>
+      </texture> -->
       <rendering-hint>transparent</rendering-hint>
       <transparent>true</transparent>
       <render-bin>

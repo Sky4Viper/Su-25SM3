@@ -50,8 +50,50 @@
   </emission>
   <condition>
     <property>/controls/power/battery</property>
+    <property>/controls/lighting/nightmode</property>
   </condition>
 </animation>
+
+<animation>
+  <type>material</type>
+  <object-name>PNP.CourseDisc</object-name>
+ <object-name>PNP.BlenkerNID</object-name>
+ <object-name>PNP.BlenkerNIU</object-name>
+ <object-name>PNP.CN1</object-name>
+ <object-name>PNP.CN2</object-name>
+ <object-name>PNP.CN3</object-name>
+ <object-name>PNP.CN4</object-name>
+ <object-name>PNP.CN5</object-name>
+ <object-name>PNP.CN6</object-name>
+ <object-name>CurrentCourseMarker</object-name>
+ <object-name>UpFace</object-name>
+ <object-name>PNP.BlenkerK</object-name>
+ <object-name>PNP.BlenkerG</object-name>
+ <object-name>PNP.BlenkerKS</object-name>
+ <object-name>PNP.CourseDisc</object-name>
+ <object-name>PNP.IDCourse</object-name>
+ <object-name>PNP.NeedleCourseAngle</object-name>
+ <object-name>PNP.NCAngleRC</object-name>
+ <object-name>PNP.NSetPathAngle</object-name>
+ <object-name>ScaleDCGRM</object-name>
+ <object-name>PlaneDCRM</object-name>
+ <object-name>PlaneDGRM</object-name>
+ <object-name>PNP.NCAngleRC</object-name>
+ <object-name>PNP.AngleDerivIndex</object-name>
+ <object-name>Face</object-name>
+   <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
+ </animation>
 
   <animation>
     <type>shader</type>

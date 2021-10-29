@@ -5,6 +5,21 @@
 	<path>Pedals.ac</path>
 
 	<animation>
+    <type>material</type>
+    <object-name>PedalLeft</object-name>
+    <object-name>PedalRight</object-name>
+    	<emission>
+      		<red>0.1</red>
+      		<green>0.1</green>
+      		<blue>0.1</blue>
+      		<factor-prop>controls/lighting/panels-norm</factor-prop>
+    	</emission>
+      	<condition>
+        	<property>/controls/power/battery</property>
+      	</condition>
+  	</animation>
+
+	<animation>
 		<type>translate</type>
 		<object-name>PedalLeft</object-name>
 		<property>controls/flight/rudder</property>

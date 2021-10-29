@@ -33,7 +33,31 @@
         <green>0.3</green>
         <blue>0.1</blue>
     </emission>
+    <condition>
+          <property>/controls/power/battery</property>
+          <property>/controls/lighting/nightmode</property>
+    </condition>
  </animation>
+
+<animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>DA-200.Needle1</object-name>
+  <object-name>DA-200.Needle2</object-name>
+  <object-name>DA-200.skidball</object-name>
+    <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
+</animation>
 
  <animation>
   <type>shader</type>

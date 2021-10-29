@@ -11,7 +11,7 @@ var flash_trigger1 = props.globals.getNode("controls/armament/trigger1", 0);
 
 
 
-# for GSh-23
+# for GSh-30-2
 fire_MG = func {
 	            setprop("/controls/armament/trigger", 1);
 		   }
