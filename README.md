@@ -1,5 +1,8 @@
 # Su-25SM3
 FG Aircraft  |  Su-25
+<img src=https://github.com/Sky4Viper/Su-25SM3/blob/master/gui/Previews/Preview2.png  alt=Su-25SM3_splashscreen1><br>
+<img src=https://github.com/Sky4Viper/Su-25SM3/blob/master/gui/Previews/Preview5.png  alt=Su-25SM3_splashscreen2><br>
+
 
 ## Historical background
 
