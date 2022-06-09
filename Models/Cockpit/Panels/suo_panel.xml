@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>suo_panel.ac</path>
+
+ <animation>
+    <type>material</type>
+	  <object-name>suo_base</object-name>
+    <object-name>suo_switch.001</object-name>
+    <object-name>suo_switch.002</object-name>
+    <object-name>suo_switch.003</object-name>
+    <object-name>suo_switch.004</object-name>
+    <object-name>suo_switch.005</object-name>
+    <object-name>suo_switch.006</object-name>
+    <object-name>suo_switch.007</object-name>
+    <object-name>suo_switch.008</object-name>
+    <object-name>suo_switch.009</object-name>
+    <object-name>suo_switch.010</object-name>
+    <object-name>suo_switch.011</object-name>
+    <object-name>suo_switch.012</object-name>
+    <object-name>suo_knob.001</object-name>
+    <object-name>suo_knob.002</object-name>
+    <emission>
+		    <red>0.05</red>
+      	<green>0.03</green>
+      	<blue>0.02</blue>
+	  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    	<condition>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
+  	</animation>
+
+ <animation>
+	 	<type>material</type> 
+	 	<object-name>suo_screws</object-name>
+  		<specular>
+   		<red>1.0</red>
+   		<green>1.0</green>
+   		<blue>1.0</blue>
+  		</specular>
+  		<shininess>105</shininess>
+	</animation>
+
+  <animation>
+        <type>pick</type>
+        <object-name>suo_knob.001</object-name>
+        <action>
+            <button>3</button>
+            <binding>
+            <command>property-adjust</command>
+            <property>/controls/armament/releasei</property>
+            <step>0.1</step>
+            <min>0</min>
+            <max>0.5</max>
+            <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>suo_knob.001</object-name>
+        <action>
+            <button>4</button>
+            <binding>
+            <command>property-adjust</command>
+            <property>/controls/armament/releasei</property>
+            <step>-0.1</step>
+            <min>0</min>
+            <max>0.5</max>
+            <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>pick</type>
+        <object-name>suo_knob.002</object-name>
+        <action>
+            <button>3</button>
+            <binding>
+            <command>property-adjust</command>
+            <property>/controls/armament/releaseq</property>
+            <step>1</step>
+            <min>0</min>
+            <max>4</max>
+            <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>suo_knob.002</object-name>
+        <action>
+            <button>4</button>
+            <binding>
+            <command>property-adjust</command>
+            <property>/controls/armament/releaseq</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>4</max>
+            <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>suo_knob.001</object-name>
+      <property>/controls/armament/releasei</property>
+      <interpolation>
+        <entry><ind> 0</ind><dep> -30</dep></entry>
+			  <entry><ind> 0.1</ind><dep> 30</dep></entry>
+			  <entry><ind> 0.2</ind><dep> 60</dep></entry>
+			  <entry><ind> 0.3</ind><dep> 90</dep></entry>
+			  <entry><ind> 0.4</ind><dep> 120</dep></entry>
+			  <entry><ind> 0.5</ind><dep> 150</dep></entry>
+		  </interpolation>
+      <center>
+        <x-m>0.067398</x-m>
+	      <y-m>-0.042509</y-m>
+	      <z-m>0.010198</z-m>
+      </center>
+      <axis>
+        <x>  0 </x>
+        <y> 0 </y>
+        <z> -1 </z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>suo_knob.002</object-name>
+      <property>/controls/armament/releaseq</property>
+      <interpolation>
+        <entry><ind> 0</ind><dep> 0</dep></entry>
+			  <entry><ind> 1</ind><dep> 52</dep></entry>
+			  <entry><ind> 2</ind><dep> 86</dep></entry>
+			  <entry><ind> 3</ind><dep> 122</dep></entry>
+			  <entry><ind> 4</ind><dep> 152</dep></entry>
+		  </interpolation>
+    <center>
+      <x-m>0.067398</x-m>
+	    <y-m>0.001628</y-m>
+	    <z-m>0.010198</z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

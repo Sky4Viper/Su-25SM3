@@ -97,9 +97,9 @@ camber="-0.05">
 <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
 <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
 
-<control-speed control="FLAP0" transition-time="1.25"/>
+<control-speed control="FLAP0" transition-time="5.25"/>
 <control-speed control="SLAT" transition-time="1.4"/>
-<control-speed control="FLAP1" transition-time="l.25"/>
+<control-speed control="FLAP1" transition-time="1.25"/>
 
 </wing>
 
@@ -111,14 +111,14 @@ sweep="8"
 dihedral="3"
 camber="0">
 <stall aoa="16" width="5" peak="1.3"/>
-<flap0 start="0" end="1.78" lift="1.7" drag="1.1"/>
+<flap0 start="0" end="1.0" lift="1.8" drag="1.1"/>
 <control-input axis="/controls/flight/elevator" control="FLAP0" square="false"/>
 <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 <control-output control="FLAP0" side="left" prop="surface-positions/left-elevator-pos-norm"/>
 <control-output control="FLAP0" side="right" prop="surface-positions/right-elevator-pos-norm"/>
 <control-output control="FLAP0" prop="surface-positions/elevator-pos-norm"/>
 <control-speed control="FLAP0" transition-time="1"/>
-<control-input axis="/accelerations/pilot-g" control="FLAP0" invert="true" src0="6.5" src1="7.2" dst0="0" dst1="1" />
+<!-- <control-input axis="/accelerations/pilot-g" control="FLAP0" invert="true" src0="6.5" src1="7.2" dst0="0" dst1="1" /> -->
 </hstab>
 
 <vstab x="-4.7" y="0" z="2.438"
@@ -192,16 +192,16 @@ thrust="9930">
   </thruster>-->
   <!-- Z axis - force up -->
   <thruster x="-7.015"  y="0" z="2.0" vx="-0.3" vy="0" vz="1"
-        thrust="700">
-        <control-input axis="/controls/flight/chute_deploy" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+        thrust="600">
+        <control-input axis="controls/flight/chute_deploy" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
   </thruster>
 
 <!-- Landing gear -->
 
 <!-- Nose -->
 
-<gear x="2.9" y="0" z="0" 
-compression="0.4" upx="0" upy="0" upz="0.4"
+<gear x="2.9" y="0" z="-0.003" 
+compression="0.41" upx="0" upy="0" upz="0.41"
 spring="0.8"
 damp="3.0">
 <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
@@ -212,11 +212,12 @@ damp="3.0">
 
 <!-- Left main -->
 
-<gear x="-0.7" y="1.351" z="0"
+<gear x="-0.62964" y="1.351" z="0"
 compression="0.3" upx="-0.02" upy="-0.1" upz="0.29"
 spring="0.8"
 damp="3">
-<control-input axis="/controls/gear/brake-left" control="BRAKE"/><control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+<control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+<control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
 <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 <control-output control="EXTEND" prop="gear/gear[1]/position-norm"/>
 <control-speed control="EXTEND" transition-time="7"/>
@@ -224,8 +225,8 @@ damp="3">
 
 <!-- Right main -->
 
-<gear x="-0.7" y="-1.351" z="0"
-compression="0.3" upx="-0.02" upy="-0.1" upz="0.29"
+<gear x="-0.62964" y="-1.351" z="0"
+compression="0.3" upx="-0.02" upy="0.1" upz="0.29"
 spring="0.8"
 damp="3">
 <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
@@ -239,7 +240,7 @@ damp="3">
 
 <!-- Internal tanks -->
 
-<tank x="2.7" y="0" z="2" jet="true" capacity="2278"/>
+<tank x="1.7" y="0" z="2" jet="true" capacity="2278"/>
 
 <tank x="-1.3" y="0.0" z="2" jet="true" capacity="2278"/>
 
@@ -259,7 +260,7 @@ damp="3">
 <tank x="-0.6" y="-3.66" z="1.40" jet="true" capacity="1415.96"/>
 
 <!-- Center of gravity placement -->
-<ballast x="3.3" y="0" z="0" mass="4900"/>
+<ballast x="3.3" y="0" z="1.4176" mass="7450"/>
 
 <!-- External loads -->
 
@@ -302,7 +303,7 @@ mass-prop="sim/weight[5]/weight-lb"/>
 <weight x="-0.4"
 y="-2.86"
 z="1.4"
-size="0.4"
+size="0.6"
 mass-prop="sim/weight[6]/weight-lb"/>
 
 <weight x="-0.6"

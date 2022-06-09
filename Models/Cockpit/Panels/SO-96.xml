@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>so-96.ac</path>
+
+<!-- base1
+base2
+kontrlightbase
+kontrlightbutton
+knob1
+knob2
+knob3
+switch1
+switch2
+switch3
+switch4
+so96-screws -->
+
+ <animation>
+  <type>material</type>
+  <object-name>kontrlightbutton</object-name>
+  <object-name>switchtext</object-name>
+  <object-name>button_restart</object-name>
+   <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>kontrlightbutton</object-name>
+  <object-name>switchtext</object-name>
+  <object-name>button_restart</object-name>
+   <emission>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        <and>
+        	<property>/controls/power/battery</property>
+          <property>/controls/lighting/nightmode</property>
+        </and>
+        </condition>
+ </animation>
+
+ <animation>
+    <type>material</type>
+    <object-name>base1</object-name>
+    <object-name>base2</object-name>
+    <object-name>base3</object-name>
+    	<emission>
+      		<red>0.05</red>
+      		<green>0.03</green>
+      		<blue>0.02</blue>
+      		<!-- <factor-prop>controls/lighting/panels-norm</factor-prop> -->
+	        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    	</emission>
+      	<condition>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
+  	</animation>
+
+ <!-- <animation>
+    <type>material</type>
+    <object-name>knob1</object-name>
+    <object-name>knob2</object-name>
+    <object-name>knob3</object-name>
+    <object-name>knob_volume</object-name>
+    <object-name>knob_volume2</object-name>
+    <object-name>switch1</object-name>
+    <object-name>switch2</object-name>
+    <object-name>switch3</object-name>
+    <object-name>switch4</object-name>
+    <object-name>switches2</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>0.1</blue>
+	    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
+  </animation> -->
+
+  <animation>
+	 	<type>material</type> 
+	 	<object-name>switchesbase</object-name>
+	 	<object-name>switchesbase2</object-name>
+     <object-name>so96-screws</object-name>
+     <object-name>so96-screws.001</object-name>
+  		<specular>
+   		<red>1.0</red>
+   		<green>1.0</green>
+   		<blue>1.0</blue>
+  		</specular>
+  		<shininess>105</shininess>
+	</animation>
+ 
+   <text>
+    <name>transponder_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-0.03017</x-m>
+      <y-m>0.0235</y-m>
+      <z-m>0.00868</z-m>
+      <pitch-deg>-75</pitch-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%3.0f</format>
+    <truncate type="bool">false</truncate>
+    <!--<property>instrumentation/nav[0]/frequencies/standby-mhz</property>-->
+    <property>instrumentation/transponder/id-code</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>
+
+
+</PropertyList>

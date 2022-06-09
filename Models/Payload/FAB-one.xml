@@ -13,7 +13,7 @@
 		<object-name>OFAB-250-270</object-name>
 		<condition>
 			<not>
-				<property>controls/armament/station8/release</property>
+				<property>controls/armament/station[8]/release</property>
 			</not>
 		</condition>
 	</animation>

@@ -102,6 +102,25 @@
 		<path>Aircraft/Su-25/Models/Lights/Lights.xml</path>
 	</model> -->
 
+	<animation>
+    <type>material</type>
+	<object-name>FrontArchInner</object-name>
+	<object-name>Cockpit</object-name>
+	<object-name>CanopyArchIn</object-name>
+	<object-name>CanopyArchInner</object-name>
+	<object-name>FrontArchIn</object-name>
+    <emission>
+      	<red>0.05</red>
+      	<green>0.03</green>
+      	<blue>0.02</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    	<condition>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
+  	</animation>
+
 	<model>
     		<name>LightPack</name>
     		<path>Aircraft/Su-25/Models/Lights/LightPack.xml</path>
@@ -505,6 +524,7 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 		<object-name>Chaffs</object-name>
 		<object-name>FlaresLeft</object-name>
 		<object-name>FlaresRight</object-name>
+		<object-name>FlaresBottom</object-name>
 		<object-name>EngineLeft</object-name>
 		<object-name>EngineRight</object-name>
 		<object-name>IntakeLeft</object-name>
@@ -1835,5 +1855,58 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 			<z>0</z>
 		</axis>
 	</animation>
+
+	<!-- Spin wheels -->
+
+  <animation>
+    <type>spin</type>
+    <object-name>WheelNose</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>-2.87359 </x-m>
+      <y-m> 0.000000 </y-m>
+      <z-m> 0.316292 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>WheelLeft</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+	    <x-m> 0.629634 </x-m>
+        <y-m> -1.24773 </y-m>
+        <z-m> 0.45006 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>WheelRight</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+	    <x-m> 0.629634 </x-m>
+        <y-m> 1.24773 </y-m>
+        <z-m> 0.45006 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
 	
 </PropertyList>

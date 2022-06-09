@@ -4,6 +4,11 @@
 
 <path>PNP-72-12.ac</path>
 
+<effect>
+            <inherits-from>Effects/model-transparent</inherits-from>
+            <object-name>pnp_glass</object-name>
+</effect>
+
 <animation>
  <type>material</type>
  <object-name>PNP.CourseDisc</object-name>
@@ -31,17 +36,6 @@
  <object-name>PNP.NCAngleRC</object-name>
  <object-name>PNP.AngleDerivIndex</object-name>
  <object-name>Face</object-name>
- <!--<emission>
-  <red>0.8</red>
-  <green>0.8</green>
-  <blue>0.8</blue> 
- </emission>-->
-  <!--<emission>
-      <red>1.1</red>
-      <green>0.3</green>
-      <blue>0.1</blue>
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-    </emission>-->
   <emission>
     <factor-prop>controls/lighting/instruments-norm</factor-prop>
         <red>0.8</red>
@@ -96,13 +90,6 @@
  </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>pnp_glass</object-name>
-  </animation>
-
-  <animation>
     <type>noshadow</type>
     <object-name>pnp_glass</object-name>
   </animation>
@@ -138,7 +125,7 @@
   <center>
     <x-m> 0.0</x-m>
     <y-m> 0.0</y-m>
-    <z-m>-0.00583</z-m>
+    <z-m>-0.00863</z-m>
   </center>
  <axis>
   <x>-1</x>
@@ -170,7 +157,7 @@
   <center>
     <x-m> 0.0</x-m>
     <y-m> 0.0</y-m>
-    <z-m>-0.00583</z-m>
+    <z-m>-0.00863</z-m>
   </center>
  <axis>
   <x>-1</x>
@@ -237,7 +224,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>PNP.CN3</object-name>
-    <property>instrumentation/dme/indicated-distance-nm</property>
+    <property>su25/instrumentation/dme/indicated-distance-km</property>
     <factor>0.1</factor>
     <offset>-1</offset>
     <axis>
@@ -250,7 +237,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>PNP.CN2</object-name>
-    <property>instrumentation/dme/indicated-distance-nm</property>
+    <property>su25/instrumentation/dme/indicated-distance-km</property>
     <factor>0.01</factor>
     <offset>-10</offset>
     <step>10</step>
@@ -265,7 +252,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>PNP.CN1</object-name>
-    <property>instrumentation/dme/indicated-distance-nm</property>
+    <property>su25/instrumentation/dme/indicated-distance-km</property>
     <factor>0.001</factor>
     <offset>-100</offset>
     <step>100</step>
@@ -276,6 +263,8 @@
       <z> 0</z>
     </axis>
   </animation>
+
+
 
 <animation>
  <type>textranslate</type>
@@ -425,10 +414,15 @@
  <object-name>PNP.knobSetPathAngle</object-name>
  <property>instrumentation/nav/radials/selected-deg</property>
  <factor>5</factor>
- <center>
+ <!-- <center>
   <x-m> 0.01236</x-m>
   <y-m> 0.03020</y-m>
   <z-m>-0.03308</z-m>
+ </center> -->
+ <center>
+  <x-m> 0.009772</x-m>
+  <y-m> 0.044696</y-m>
+  <z-m>-0.048964</z-m>
  </center>
  <axis>
   <x>-1</x>
@@ -442,10 +436,15 @@
     <object-name>PNP.heading_bg</object-name>
     <property>autopilot/settings/heading-bug-deg</property>
     <factor>5</factor>
-    <center>
+    <!-- <center>
       <x-m> 0.01236</x-m>
       <y-m>-0.02677</y-m>
       <z-m>-0.03308</z-m>
+    </center> -->
+    <center>
+      <x-m> 0.009772</x-m>
+      <y-m>-0.039614</y-m>
+      <z-m>-0.048964</z-m>
     </center>
     <axis>
       <x>-1</x>

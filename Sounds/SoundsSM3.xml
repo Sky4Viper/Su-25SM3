@@ -776,42 +776,6 @@
 				<factor>0.9</factor>
 			</volume>
 		</voice>
-
-		<voice>
-			<name>Rita Warning</name>
-			<mode>looped</mode>
-			<path>Aircraft/Su-25/Sounds/Samples/RitaHighAoA.wav</path>
-			<condition>
-				<and>
-					<property>/sim/current-view/internal</property>
-					<or>
-					<greater-than>
-						<property>/orientation/alpha-deg</property>
-						<value>14.8</value>
-					</greater-than>
-					<less-than>
-            			<!-- G load > 3.0 = -93.52215-->
-						<!-- G load > 5.0 = -155.87025-->
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>-155.87025</value>
-          			</less-than>
-          			<greater-than>
-            			<!-- G load < -1.0 = 31.17405-->
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>30.17405</value>
-          			</greater-than>
-					</or>
-					<not>
-					<property>/gear/gear[0]/wow</property>
-					<property>/gear/gear[1]/wow</property>
-					<property>/gear/gear[2]/wow</property>
-					</not>
-				</and>
-			</condition>
-			<volume>
-				<factor>0.6</factor>
-			</volume>
-		</voice>
 		
 		<!-- Flaps -->
 		
@@ -1166,15 +1130,35 @@
 				<property>controls/armament/trigger2</property>
 			</condition>
 			
-			<path>Aircraft/Su-25/Sounds/Samples/Flare.wav</path>
+			<path>Aircraft/Su-25/Sounds/Samples/Flare2.wav</path>
+			<mode>once</mode>
 		</flare>
+
+		<!-- Weapons in-range beep -->
+
+		<inrange>
+      		<name>inrange beep</name>
+      		<mode>once</mode>
+      		<path>Aircraft/Su-25/Sounds/Samples/inrange.wav</path>
+      		<type>avionics</type>
+      		<condition>
+        		<and>
+          			<property>/controls/armament/masterarm</property>
+		  			<property>/controls/armament/LAMarkerON</property>
+        		</and>
+      		</condition>
+      		<volume>
+        		<property>/sim/current-view/internal</property>
+        		<factor>1.0</factor>
+      		</volume>
+    	</inrange>
 		
 		<!-- Stall warning -->
 		
 		<stall>
 			<name>Stall</name>
 			<mode>looped</mode>
-			<!-- <path>Aircraft/Su-25/Sounds/Samples/Stall.wav</path> -->Cockpit-warning
+			<!-- <path>Aircraft/Su-25/Sounds/Samples/Stall.wav</path> -->
 			<!-- <path>Aircraft/Su-25/Sounds/Samples/RitaHighAoA.wav</path> -->
 			<path>Aircraft/Su-25/Sounds/Samples/Cockpit-warning.wav</path>
 			
@@ -1274,6 +1258,66 @@
 			<reference-dist>1.0</reference-dist>
 			<max-dist>2.0</max-dist>
 		</stall>
+
+		<rita>
+			<name>danger-altitude</name>
+			<mode>once</mode>
+			<path>Aircraft/Su-25/Sounds/Samples/RitaAltitude.wav</path>
+			<type>avionics</type>
+			
+			<condition>
+				<property>/sim/current-view/internal</property>
+				<less-than-equals>
+          			<property>position/altitude-agl-ft</property>
+          			<value>2900</value>
+        		</less-than-equals>
+				<not>
+					<property>/controls/gear/gear-down</property>
+				</not>
+			</condition>
+			<volume>
+        		<property>/sim/current-view/internal</property>
+        		<factor>1.0</factor>
+      		</volume>
+		</rita>
+
+		<rita>
+			<name>Rita Warning</name>
+			<mode>looped</mode>
+			<path>Aircraft/Su-25/Sounds/Samples/RitaHighAoA.wav</path>
+			<type>avionics</type>
+			<condition>
+				<and>
+					<property>/sim/current-view/internal</property>
+					<or>
+					<greater-than>
+						<property>/orientation/alpha-deg</property>
+						<value>14.8</value>
+					</greater-than>
+					<less-than>
+            			<!-- G load > 3.0 = -93.52215-->
+						<!-- G load > 5.0 = -155.87025-->
+            			<property>/accelerations/pilot/z-accel-fps_sec</property>
+            			<value>-155.87025</value>
+          			</less-than>
+          			<greater-than>
+            			<!-- G load < -1.0 = 31.17405-->
+            			<property>/accelerations/pilot/z-accel-fps_sec</property>
+            			<value>30.17405</value>
+          			</greater-than>
+					</or>
+					<not>
+					<property>/gear/gear[0]/wow</property>
+					<property>/gear/gear[1]/wow</property>
+					<property>/gear/gear[2]/wow</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+        		<property>/sim/current-view/internal</property>
+        		<factor>1.0</factor>
+      		</volume>
+		</rita>
 		
 		<!-- Chute -->
 		
@@ -1431,7 +1475,7 @@
 		<switch>
             <name>switch-click</name>
             <mode>once</mode>
-            <path>Aircraft/Su-25/Sounds/Samples/switchclick.wav</path>
+            <path>Aircraft/Su-25/Sounds/Samples/switchclick2.wav</path>
             <condition>
               <and>
                 <property>/controls/power/sound/click-switch</property>

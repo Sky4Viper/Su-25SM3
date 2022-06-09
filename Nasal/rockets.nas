@@ -17,19 +17,25 @@ props.globals.initNode("/controls/armament/trigger-UB16-8-R", 0, "BOOL");
 #props.globals.initNode("/sim/multiplay/generic/int[9]", 0, "INT");
 
 #ammo counter
-props.globals.initNode("/controls/armament/rocketsLeft", 32, "INT");
-props.globals.initNode("/controls/armament/rocketsCount", 32, "DOUBLE");
-props.globals.initNode("/controls/armament/UB32rocketsLeft", 32, "INT");
-props.globals.initNode("/controls/armament/UB32rocketsCount", 32, "DOUBLE");
+props.globals.initNode("/controls/armament/rocketsLeft", 20, "INT");
+props.globals.initNode("/controls/armament/rocketsCount", 20, "DOUBLE");
+#props.globals.initNode("/controls/armament/UB32rocketsLeft", 32, "INT");
+#props.globals.initNode("/controls/armament/UB32rocketsCount", 32, "DOUBLE");
+#var reload = func {
+#	if( getprop("/gear/gear[0]/wow") and getprop("/gear/gear[1]/wow") and getprop("/gear/gear[2]/wow") and (getprop("/velocities/groundspeed-kt") < 2) ) {
+#		setprop("/controls/armament/rocketsLeft", 32);
+#		setprop("/controls/armament/rocketsCount", 32);
+#		screen.log.write("UB-32 rocket pods reloaded (32 rockets per pod)", 1, 0.6, 0.1);
+#	}
+#	else {
+#		screen.log.write("You must be still on the ground to reload! ", 1, 0.6, 0.1);
+#	}
+#}
+
 var reload = func {
-	if( getprop("/gear/gear[0]/wow") and getprop("/gear/gear[1]/wow") and getprop("/gear/gear[2]/wow") and (getprop("/velocities/groundspeed-kt") < 2) ) {
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		screen.log.write("UB-32 rocket pods reloaded (32 rockets per pod)", 1, 0.6, 0.1);
-	}
-	else {
-		screen.log.write("You must be still on the ground to reload! ", 1, 0.6, 0.1);
-	}
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		screen.log.write("B-8M1 rocket pods reloaded (20 rockets per pod)", 1, 0.6, 0.1);
 }
 
 #A resource friendly way of ammo counting: Instead of counting every bullet, I set an interpolate on float variant of ammo counter. But I need a timer to cut off fire when out of ammo. 
@@ -69,7 +75,7 @@ var triggerControl = func {
 		var UB32mounted8R = (getprop("/sim/weight[8]/payload-int") == 3);
 		
 		if(UB32mounted1L or UB32mounted2L or UB32mounted3L or UB32mounted4L or UB32mounted5R or UB32mounted6R or UB32mounted7R or UB32mounted8R) {
-			var fireTime = 1.5; #continuous fire for 0.15s intervals
+			var fireTime = 1.0; #continuous fire for 0.15s intervals
 			if(UB32mounted1L) {
 				setprop("/controls/armament/trigger-UB32-1-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
@@ -105,8 +111,8 @@ var triggerControl = func {
 			var rocketsLeft = getprop("/controls/armament/rocketsLeft");
 			setprop("/controls/armament/rocketsCount", rocketsLeft);
 			interpolate("/controls/armament/rocketsCount", 0, 
-				fireTime*(rocketsLeft/32));
-			outOfAmmo.restart(fireTime*(rocketsLeft/32));
+				fireTime*(rocketsLeft/20));
+			outOfAmmo.restart(fireTime*(rocketsLeft/20));
 		}
 	}
 	else {
@@ -129,7 +135,7 @@ var triggerControl = func {
 		outOfAmmo.stop();
 		#ammo count report on trigger release
 		if(getprop("/controls/armament/report-ammo"))
-			screen.log.write("S-5 rockets left: " ~ getprop("/controls/armament/rocketsLeft") ~ ((getprop("/sim/weight[1]/payload-int") == 3 and  getprop("/sim/weight[8]/payload-int") == 3)?" x2":""), 1, 0.6, 0.1);
+			screen.log.write("S-8 rockets left: " ~ getprop("/controls/armament/rocketsLeft") ~ ((getprop("/sim/weight[1]/payload-int") == 3 and  getprop("/sim/weight[8]/payload-int") == 3)?" x2":""), 1, 0.6, 0.1);
 	}
 }
 

@@ -26,4 +26,33 @@
     <signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
         <count type="int">3</count>
     </signals>
+
+    <!-- Add custom signals here -->
+
+	<signal>
+        <type>bool</type>
+        <property type="string">/controls/flight/chute_deploy</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">lightpack/landing-lights-intensity</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">lightpack/beacon-state/state</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">/controls/lighting/beacon-switch</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">lightpack/nav-lights-intensity</property>
+    </signal>
+	<signal>
+        <type>bool</type>
+        <property type="string">/controls/armament/trigger</property>
+    </signal>
+
+    
 </PropertyList>

@@ -46,6 +46,25 @@ changelog
     <type>select</type>
     <object-name>ge-engine-cover</object-name>
     <object-name>ge-cone-cover</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-e</property>
+      <property>controls/gear/brake-parking</property>
+      <property>/gear/gear[2]/wow</property>
+      <not>
+        <property>/engines/engine[0]/running</property>
+      </not>
+      <not>
+        <property>/controls/engines/engine[0]/starter</property>
+      </not>
+      <less-than>  
+        <property>/engines/engine[1]/rpm</property>
+        <value>0.01</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
     <object-name>ge-flags</object-name>
     <condition>
       <property>sim/model/ground-equipment-e</property>
@@ -61,6 +80,10 @@ changelog
         <property>/engines/engine[1]/rpm</property>
         <value>0.01</value>
       </less-than>
+      <equals>
+        <property>controls/flight/flaps</property>
+        <value>0.00</value>
+      </equals>
     </condition>
   </animation>
 

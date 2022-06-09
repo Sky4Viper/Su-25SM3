@@ -8,7 +8,7 @@
  <type>material</type>
  <object-name>face</object-name>
  <object-name>cp</object-name>
- <object-name>slats</object-name>
+ <!-- <object-name>slats</object-name> -->
  <object-name>flaps1</object-name>
  <object-name>flaps2</object-name>
  <object-name>speedbrake</object-name>
@@ -32,7 +32,7 @@
   <type>material</type>
   <object-name>face</object-name>
  <object-name>cp</object-name>
- <object-name>slats</object-name>
+ <!-- <object-name>slats</object-name> -->
  <object-name>flaps1</object-name>
  <object-name>flaps2</object-name>
  <object-name>speedbrake</object-name>
@@ -54,7 +54,12 @@
         </condition>
 </animation>
 
-<animation>
+<effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>IP-52.glass</object-name>
+</effect>
+
+<!-- <animation>
  <type>material</type>
  <object-name>screws</object-name>
  <emission>
@@ -63,7 +68,7 @@
   <blue>0.8</blue>
   <factor-prop>mig29/systems/cockpitlighting/panel-norm</factor-prop>
  </emission>
-</animation>
+</animation> -->
 
 <!--
 <animation>
@@ -80,16 +85,14 @@
  <condition>
   <and>
    <property>/controls/power/battery</property>
-   <or>
-    <equals>
-     <property>mig29/controls/lighting/kontr_lamp</property>
-     <value>1</value>
-    </equals>
-    <equals>
-     <property>mig29/instrumentation/IP-52/rl</property>
-     <value>1</value>
-    </equals>
-   </or>
+   <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0</value>
+  </greater-than>
+  <less-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>1</value>
+  </less-than>
   </and>
  </condition>
 </animation>
@@ -251,7 +254,7 @@
  </condition>
 </animation>
 
-<animation>
+<!-- <animation>
  <type>select</type>
  <object-name>IP-52.slats</object-name>
  <condition>
@@ -269,7 +272,7 @@
    </or>
   </and>
  </condition>
-</animation>
+</animation> -->
 
 <animation>
  <type>select</type>

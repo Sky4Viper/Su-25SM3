@@ -7,7 +7,7 @@
   <!-- Smoke -->
 
   <model>
-    <path>Aircraft/Su-25/Models/Effects/UB-32/Smoke.xml</path>
+    <path>Aircraft/Su-25/Models/Effects/Rocket/Smoke.xml</path>
     <offsets>
       <x-m>2</x-m>
       <y-m>0</y-m>

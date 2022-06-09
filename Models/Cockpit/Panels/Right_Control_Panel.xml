@@ -7,7 +7,7 @@
 <!-- right_control_panel_text
  -->
 
- <animation>
+ <!-- <animation>
   <type>material</type>
   <object-name>right_control_panel_text</object-name>
   <object-name>rp_button</object-name>
@@ -24,7 +24,7 @@
           </not>
         </condition>
  </animation>
-
+ -->
  <animation>
   <type>material</type>
   <object-name>right_control_panel_text</object-name>
@@ -43,7 +43,7 @@
         </condition>
  </animation>
 
- <animation>
+ <!-- <animation>
     <type>material</type>
     <object-name>rp_switch.001</object-name>
     <object-name>rp_switch.002</object-name>
@@ -75,12 +75,13 @@
       <red>0.1</red>
       <green>0.1</green>
       <blue>0.1</blue>
-      <factor-prop>controls/lighting/panels-norm</factor-prop>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
       <condition>
-        <property>/controls/power/battery</property>
-      </condition>
-  </animation>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
+  </animation> -->
 
  <animation>
 	 	<type>material</type> 
@@ -101,7 +102,7 @@
       	<red>0.07</red>
         <green>0.03</green>
     	<blue>0.01</blue>
-      <factor-prop>controls/lighting/panels-norm</factor-prop>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
     	<condition>
     		<property>/controls/power/battery</property>

@@ -90,7 +90,7 @@
 
   <model>
     <name>LandingLight3</name>
-    <path>Aircraft/Su-25/Models/Lights/LandingLight.xml</path>
+    <path>Aircraft/Su-25/Models/Lights/TaxiLight.xml</path>
     <offsets>
       <x-m> -3.31891</x-m>
 			<y-m>-0.058129</y-m>

@@ -11,7 +11,7 @@
 	</animation>
 
 	<model>
-		<path>Aircraft/Su-25/Models/Instruments/HUD/HUDSM3.xml</path>
+		<path>Aircraft/Su-25/Models/Instruments/HUD/HUDSM3-4.xml</path>
 		<offsets>
       <x-m>-3.98922</x-m>
       <y-m>0.0</y-m>
@@ -38,7 +38,7 @@
 			<z-m>2.25181</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
-		<overlay>
+		<!-- <overlay>
 			<animation n="100">
 			<type>scale</type>
 			<property>constants/zero</property>
@@ -46,7 +46,7 @@
 			<y-offset>1.48</y-offset>
 			<z-offset>1.48</z-offset>
 			</animation>
-		</overlay>
+		</overlay> -->
 	</model>
 
 	<model>
@@ -197,37 +197,6 @@
 			<pitch-deg>0</pitch-deg>
 			<heading-deg>12.74</heading-deg>
 		</offsets>
-	</model>
-
-	<model>
-		<path>Aircraft/Su-25/Models/Instruments/MecPnl/MecPnl.xml</path>
-		<offsets>
-      			<x-m>-3.74712</x-m>
-      			<y-m>-0.309576</y-m>
-      			<z-m>2.46758</z-m>
-      			<pitch-deg>-25.1404</pitch-deg>
-      			<roll-deg>-15.8</roll-deg>
-    		</offsets>
-	</model>
-
-	<model>
-		<path>Aircraft/Su-25/Models/Instruments/SO-96/SO-96.xml</path>
-		<offsets>
-      			<x-m>-3.78528</x-m>
-      			<y-m>0.274012</y-m>
-      			<z-m>2.16423</z-m>
-      			<pitch-deg>16.1049</pitch-deg>
-    		</offsets>
-	</model>
-
-	<model>
-		<path>Aircraft/Su-25/Models/Instruments/LightPnl/LightPnl.xml</path>
-		<offsets>
-      			<x-m>-3.52589</x-m>
-      			<y-m>0.302956</y-m>
-      			<z-m>2.08923</z-m>
-      			<pitch-deg>16.1049</pitch-deg>
-    		</offsets>
 	</model>
 
 <!-- MFD1 -->

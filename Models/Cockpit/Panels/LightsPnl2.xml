@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>LightsPnl2.ac</path>
+
+ <animation>
+    <type>material</type>
+	  <object-name>LPbase</object-name>
+    <object-name>LPSbase</object-name>
+	  <object-name>LPswitch1</object-name>
+    <object-name>LPswitch2</object-name>
+    <object-name>LPswitch3</object-name>
+    <emission>
+		    <red>0.05</red>
+      	<green>0.03</green>
+      	<blue>0.02</blue>
+      <!-- <factor-prop>controls/lighting/panels-norm</factor-prop> -->
+	  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    	<condition>
+      <and>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+      </and>
+  		</condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LPswitch1</object-name>
+    <property>/controls/lighting/nav-lights-switch</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.001583</x-m>
+      <y-m>-0.00002</y-m>
+      <z-m>0.035087</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LPswitch2</object-name>
+    <property>/controls/lighting/beacon-switch</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.001583</x-m>
+      <y-m>-0.00002</y-m>
+      <z-m>-0.014913</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LPswitch3</object-name>
+    <property>/controls/lighting/landing-lights-switch</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.001583</x-m>
+      <y-m>-0.00002</y-m>
+      <z-m>-0.064913</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LPswitch1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/nav-lights-switch</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>nav-lights-switch</tooltip-id>
+        <label>Nav Lights</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LPswitch2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/beacon-switch</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>beacon-lights-switch</tooltip-id>
+        <label>Beacon Lights</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LPswitch3</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-switch</property>
+      </binding>
+	<binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/taxi-lights-switch</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>landing-lights-switch</tooltip-id>
+        <label>Landing Lights</label>
+      </binding>
+    </hovered>
+  </animation>
+
+</PropertyList>

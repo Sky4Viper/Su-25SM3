@@ -18,7 +18,7 @@
 		<entry>
 			<name>Red-2</name>
 			<type>wingman</type>
-			<model>Aircraft/Su-25/Models/AI/Su-25SM3-Wingman.xml</model>
+			<model>Aircraft/Su-25/Models/AI/Su-25SM3-Wingman2.xml</model>
 			<x-offset>-35</x-offset>
 			<y-offset>-63</y-offset>
 			<z-offset>0</z-offset>

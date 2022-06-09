@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="81.919998"
+   height="81.919998"
+   viewBox="0 0 81.919998 81.919998"
+   sodipodi:docname="Sight1.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <linearGradient
+       id="linearGradient1013"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ffdd55;stop-opacity:1;"
+         offset="0"
+         id="stop1011" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1316" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="7.1729216"
+     inkscape:cx="12.059242"
+     inkscape:cy="39.175111"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g8">
+    <path
+       style="fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+       id="path1066"
+       sodipodi:type="arc"
+       sodipodi:cx="42.0303"
+       sodipodi:cy="40.781124"
+       sodipodi:rx="0.96178395"
+       sodipodi:ry="0.98694342"
+       sodipodi:start="1.5768107"
+       sodipodi:end="1.568386"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       inkscape:export-filename="/home/sergei/Flightgear/Aircraft/Su-25/Models/Instruments/Gunsight/Sight2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       d="m 42.024516,41.76805 a 0.96178395,0.98694342 0 0 1 -0.955992,-0.990783 0.96178395,0.98694342 0 0 1 0.963509,-0.983085 0.96178395,0.98694342 0 0 1 0.960051,0.986642 0.96178395,0.98694342 0 0 1 -0.959466,0.987241" />
+    <path
+       id="path4500"
+       style="fill:none;stroke:#ffdd55;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+       d="M 42.189407 63.716315 A 22.941843 22.937208 0 0 0 64.972656 40.773438 A 22.941843 22.937208 0 0 0 42.189796 17.84231 " />
+    <path
+       id="path4500-3"
+       style="fill:none;stroke:#ffdd55;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1;paint-order:markers stroke fill"
+       d="M 42.049556,17.851737 A 22.941843,22.937208 0 0 0 19.266307,40.794614 22.941843,22.937208 0 0 0 42.049167,63.725742" />
+    <rect
+       style="fill:#ffdd55;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2340-6-7"
+       width="0.901784"
+       height="6.9674697"
+       x="40.363743"
+       y="-25.825979"
+       ry="0.2700837"
+       transform="rotate(90)"
+       rx="0" />
+    <rect
+       style="fill:#ffdd55;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2340-6-7-5"
+       width="0.901784"
+       height="6.9674697"
+       x="40.358585"
+       y="-64.474548"
+       ry="0.2700837"
+       transform="rotate(90)"
+       rx="0" />
+    <rect
+       style="fill:#ffdd55;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2340-6-7-6"
+       width="0.901784"
+       height="6.9674697"
+       x="-42.642395"
+       y="-63.686985"
+       ry="0.2700837"
+       transform="scale(-1)"
+       rx="0" />
+    <rect
+       style="fill:#ffdd55;stroke:none;stroke-width:2.72123;stroke-linecap:square;stroke-dasharray:5.44247, 10.8849;stroke-dashoffset:2.72123;paint-order:markers stroke fill"
+       id="rect2340-6-7-6-2"
+       width="0.901784"
+       height="6.9674697"
+       x="-42.509026"
+       y="-25.004166"
+       ry="0.2700837"
+       transform="scale(-1)"
+       rx="0" />
+  </g>
+</svg>

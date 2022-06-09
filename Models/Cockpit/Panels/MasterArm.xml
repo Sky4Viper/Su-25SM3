@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>MasterArm.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>MAlight</object-name>
+   <emission>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+          <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+          <and>
+        	  <property>/controls/power/battery</property>
+            <property>/controls/lighting/nightmode</property>
+            <not>
+              <property>controls/armament/masterarm</property>
+            </not>
+          </and>
+        </condition>
+ </animation>
+
+ <animation>
+    <type>material</type>
+    <object-name>MAlight</object-name>
+    <emission>
+      <red>0</red>
+      <green>1.6</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+      <and>
+        <property>/controls/power/battery</property>
+        <property>controls/armament/masterarm</property>
+      </and>
+    </condition>
+  </animation>
+
+ <animation>
+    <type>material</type>
+	  <object-name>MAbase</object-name>
+    <object-name>MASbase</object-name>
+	  <object-name>MAswitch</object-name>
+    <emission>
+		    <red>0.05</red>
+      	<green>0.03</green>
+      	<blue>0.02</blue>
+      <!-- <factor-prop>controls/lighting/panels-norm</factor-prop> -->
+	  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    	<condition>
+      <and>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+      </and>
+  		</condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>MAswitch</object-name>
+    <property>controls/armament/masterarm</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.001599</x-m>
+      <y-m>-0.000039</y-m>
+      <z-m>-0.000044</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>MAswitch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/armament/masterarm</property>
+      </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+        <value>0</value>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-marm-switch</tooltip-id>
+        <label>Master Arm</label>
+      </binding>
+    </hovered>
+  </animation>
+
+</PropertyList>

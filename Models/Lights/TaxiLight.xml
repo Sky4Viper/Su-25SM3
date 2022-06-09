@@ -21,7 +21,7 @@
     <type>select</type>
     <object-name>TaxiLightFlash</object-name>
     <object-name>TaxiLightRemb</object-name>
-    <object-name>Su-25</object-name> <!-- uncomment for fake non-rembrandt cones -->
+    <object-name>TaxiLightCone</object-name> <!-- uncomment for fake non-rembrandt cones -->
     <condition>
       <and>
         <property>lightpack/taxi-light-intensity</property>

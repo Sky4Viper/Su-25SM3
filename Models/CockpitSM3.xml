@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-    <path>CockpitSM3-7.ac</path>
+    <path>CockpitSM3-8.ac</path>
 
 
 	<!-- Pilot -->
@@ -28,15 +28,103 @@
 		<path>Aircraft/Su-25/Models/Instruments/InstrumentsSM3.xml</path>
 	</model>
 
+	<model>
+		<path>Aircraft/Su-25/Models/Cockpit/Panels/MasterArm.xml</path>
+		<offsets>
+			<x-m>-3.86951</x-m>
+			<y-m>-0.226627</y-m>
+			<z-m>2.50031</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>4.32</heading-deg>
+		</offsets>
+		<condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Cockpit/Panels/LightPnl.xml</path>
+		<offsets>
+      		<x-m>-3.52589</x-m>
+      		<y-m>0.302956</y-m>
+      		<z-m>2.08923</z-m>
+      		<pitch-deg>16.1049</pitch-deg>
+    	</offsets>
+		<condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Cockpit/Panels/LightsPnl2.xml</path>
+		<offsets>
+			<x-m>-3.86839</x-m>
+			<y-m>-0.303455</y-m>
+			<z-m>2.36798</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>12.7</heading-deg>
+		</offsets>
+		<condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Cockpit/Panels/MecPnl.xml</path>
+		<offsets>
+      		<x-m>-3.74712</x-m>
+      		<y-m>-0.309576</y-m>
+      		<z-m>2.46758</z-m>
+      		<pitch-deg>-25.1404</pitch-deg>
+      		<roll-deg>-15.8</roll-deg>
+    	</offsets>
+		<condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Cockpit/Panels/SO-96.xml</path>
+		<offsets>
+      		<x-m>-3.78528</x-m>
+      		<y-m>0.274012</y-m>
+      		<z-m>2.16423</z-m>
+      		<pitch-deg>16.1049</pitch-deg>
+    	</offsets>
+		<condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Cockpit/Panels/suo_panel.xml</path>
+		<offsets>
+      		<x-m>-3.64098</x-m>
+      		<y-m>-0.309497</y-m>
+      		<z-m>2.12255</z-m>
+      		<pitch-deg>16.0375</pitch-deg>
+    	</offsets>
+		<condition>
+				<property>/sim/current-view/internal</property>
+		</condition>
+	</model>
+
 	<animation>
     <type>material</type>
     <object-name>Panel</object-name>
     <object-name>Panel.Side</object-name>
+	<object-name>Cylinder.026</object-name>
+	<object-name>PNK-panel.screen</object-name>
+	<object-name>Plane.001</object-name>
+	<object-name>PNK-panel.002</object-name>
+	<object-name>PNK-panel.004</object-name>
+	<object-name>WarningLights</object-name>
     <emission>
-      	<red>0.07</red>
-        <green>0.03</green>
-    	<blue>0.01</blue>
-      <factor-prop>controls/lighting/panels-norm</factor-prop>
+		<red>0.05</red>
+      	<green>0.03</green>
+      	<blue>0.02</blue>
+      <!-- <factor-prop>controls/lighting/panels-norm</factor-prop> -->
+	  <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
     	<condition>
     		<property>/controls/power/battery</property>
@@ -52,7 +140,7 @@
 
 	<animation>
 	 	<type>material</type> 
-	 	<object-name>screw_slot_round_hq.002</object-name>
+	 	<object-name>cockpit_screws</object-name>
   		<specular>
    		<red>1.0</red>
    		<green>1.0</green>

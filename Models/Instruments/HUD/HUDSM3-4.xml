@@ -1,0 +1,888 @@
+<PropertyList>
+    
+    <path>HUDSM3-3.ac</path>
+	
+	<!-- Glass shader -->
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+		    <object-name>HUD.Glass</object-name>
+        <object-name>Projector</object-name>
+        <!-- <object-name>hud_indic_glass</object-name> -->
+        <object-name>sunscreen</object-name>
+        <!--<object-name>hmsreflectors</object-name>-->
+    </animation>
+    
+	  <animation>
+		  <type>noshadow</type>
+		  <object-name>HUD.Glass</object-name>
+      <object-name>Projector</object-name>
+	  </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>pipper</object-name>
+      <object-name>pipper_tick.001</object-name>
+      <object-name>pipper_tick.002</object-name>
+      <condition>
+        <equals>
+          <property>controls/armament/masterarm</property>
+          <value>1</value>
+        </equals>
+        <less-than>
+          <property>controls/armament/pipperoffset</property>
+          <value>0.1</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>pipper_arrow</object-name>
+      <object-name>range_digit.002</object-name>
+      <object-name>range_digit.003</object-name>
+      <object-name>range_decimal</object-name>
+      <condition>
+        <equals>
+          <property>controls/armament/masterarm</property>
+          <value>1</value>
+        </equals>
+        <less-than>
+          <property>controls/armament/laserrange</property>
+          <value>15000.0</value>
+        </less-than>
+        <greater-than>
+          <property>controls/armament/laserrange</property>
+          <value>1.0</value>
+        </greater-than>
+        <less-than>
+          <property>controls/armament/pipperoffset</property>
+          <value>0.1</value>
+        </less-than>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>range_digit.001</object-name>
+      <condition>
+        <equals>
+          <property>controls/armament/masterarm</property>
+          <value>1</value>
+        </equals>
+        <greater-than>
+          <property>controls/armament/laserrange</property>
+          <value>10000.0</value>
+        </greater-than>
+        <less-than>
+          <property>controls/armament/laserrange</property>
+          <value>15000.0</value>
+        </less-than>
+        <less-than>
+          <property>controls/armament/pipperoffset</property>
+          <value>0.1</value>
+        </less-than>
+      </condition>
+    </animation>
+    
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>/sim/rendering/rembrandt/enabled</property>
+        </condition>
+       <object-name>HUD.Glass</object-name>
+       <object-name>Projector</object-name>
+       <object-name>HUD.Glass</object-name>
+       <object-name>sunscreen</object-name>
+       <object-name>pipper</object-name>
+       <object-name>pipper_tick.001</object-name>
+       <object-name>pipper_tick.002</object-name>
+       <object-name>pipper_arrow</object-name>
+       <object-name>range_digit.001</object-name>
+       <object-name>range_digit.002</object-name>
+       <object-name>range_digit.003</object-name>
+       <object-name>range_decimal</object-name>
+       <object-name>comm1</object-name>
+       <object-name>comm2</object-name>
+       <object-name>nav1</object-name>
+       <object-name>nav2</object-name> 
+    </effect>
+
+    <animation>
+      <type>material</type>
+      <object-name>sunscreen</object-name>
+      <object-name>HUD.Glass</object-name>
+      <emission>
+        <red>0.05</red>
+      	<green>0.01</green>
+      	<blue>0.01</blue>
+          <!-- <factor-prop>sim/hud/pallette/color[0]/brightness/</factor-prop> -->
+      </emission>
+      <condition>
+        <and>
+        	<property>/controls/power/battery</property>
+          <property>/sim/hud/current-color</property>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>sunscreen</object-name>
+      <object-name>HUD.Glass</object-name>
+      <emission>
+        <red>0.01</red>
+      	<green>0.05</green>
+      	<blue>0.01</blue>
+          <!-- <factor-prop>sim/hud/pallette/color[0]/brightness/</factor-prop> -->
+      </emission>
+      <condition>
+        <and>
+        	<property>/controls/power/battery</property>
+          <equals>
+          <property>/sim/hud/current-color</property>
+          <value>0</value>
+          </equals>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>Projector</object-name>
+      <emission>
+        <red>0.75</red>
+      	<green>0.15</green>
+      	<blue>0.01</blue>
+          <!-- <factor-prop>sim/hud/pallette/color[0]/brightness/</factor-prop> -->
+      </emission>
+      <condition>
+        <and>
+        	<property>/controls/power/battery</property>
+          <property>/sim/hud/current-color</property>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>Projector</object-name>
+      <emission>
+        <red>0.15</red>
+      	<green>0.75</green>
+      	<blue>0.01</blue>
+          <!-- <factor-prop>sim/hud/pallette/color[0]/brightness/</factor-prop> -->
+      </emission>
+      <condition>
+        <and>
+        	<property>/controls/power/battery</property>
+          <equals>
+          <property>/sim/hud/current-color</property>
+          <value>0</value>
+          </equals>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>marm_sw</object-name>
+      <object-name>hud_sw1</object-name>
+      <object-name>hud_sw2</object-name>
+      <object-name>hud_bright_knob</object-name>
+      <emission>
+        <red>0.1</red>
+        <green>0.1</green>
+        <blue>0.1</blue>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>hud_lights</object-name>
+      <emission>
+        <red>1.1</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>marm_light_on</object-name>
+      <emission>
+        <red>0</red>
+        <green>1.6</green>
+        <blue>0</blue>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>marm_light_off</object-name>
+      <emission>
+        <red>2.6</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>pipper</object-name>
+      <object-name>pipper_tick.001</object-name>
+      <object-name>pipper_tick.002</object-name>
+      <object-name>pipper_arrow</object-name>
+      <object-name>range_digit.001</object-name>
+       <object-name>range_digit.002</object-name>
+       <object-name>range_digit.003</object-name>
+       <object-name>range_decimal</object-name>
+      <emission>
+        <red>0.32</red>
+      	<green>0.85</green>
+      	<blue>0.2</blue>
+        <factor-prop>controls/lighting/sight-norm</factor-prop>
+      </emission>
+      <ambient>
+        <red>0.32</red>
+      	<green>0.85</green>
+      	<blue>0.2</blue>
+      </ambient>
+      <diffuse>
+        <red>0.32</red>
+      	<green>0.85</green>
+      	<blue>0.2</blue>
+      </diffuse>
+      <condition>
+        <and>
+          <property>/controls/power/battery</property>
+          <equals>
+          <property>/sim/hud/current-color</property>
+          <value>0</value>
+          </equals>
+        </and>
+      </condition>
+    </animation>
+  
+    <animation>
+      <type>material</type>
+      <object-name>pipper</object-name>
+      <object-name>pipper_tick.001</object-name>
+      <object-name>pipper_tick.002</object-name>
+      <object-name>pipper_arrow</object-name>
+      <object-name>range_digit.001</object-name>
+       <object-name>range_digit.002</object-name>
+       <object-name>range_digit.003</object-name>
+       <object-name>range_decimal</object-name>
+      <emission>
+        <red>1.0</red>
+      	<green>0.2</green>
+      	<blue>0.0</blue>
+        <factor-prop>controls/lighting/sight-norm</factor-prop>
+      </emission>
+      <ambient>
+        <red>1.0</red>
+      	<green>0.2</green>
+      	<blue>0.0</blue>
+      </ambient>
+      <diffuse>
+        <red>1.0</red>
+      	<green>0.2</green>
+      	<blue>0.0</blue>
+      </diffuse>
+      <condition>
+        <and>
+          <property>/controls/power/battery</property>
+          <property>/sim/hud/current-color</property>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>comm1</object-name>
+        <object-name>comm1-label</object-name>
+        <object-name>comm2</object-name>
+        <object-name>comm2-label</object-name>
+        <object-name>nav1</object-name>
+        <object-name>nav1-label</object-name>
+        <object-name>nav2</object-name>
+        <object-name>nav2-label</object-name>
+        <ambient>
+            <red>0.3</red>
+            <green>1.0</green>
+            <blue>0.3</blue>
+        </ambient>
+        <diffuse>
+            <red>0.3</red>
+            <green>1.0</green>
+            <blue>0.3</blue>
+        </diffuse>
+        <emission>
+            <red>0.3</red>
+            <green>1.0</green>
+            <blue>0.3</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        <and>
+          <property>/controls/power/battery</property>
+          <equals>
+          <property>/sim/hud/current-color</property>
+          <value>0</value>
+          </equals>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>comm1</object-name>
+        <object-name>comm1-label</object-name>
+        <object-name>comm2</object-name>
+        <object-name>comm2-label</object-name>
+        <object-name>nav1</object-name>
+        <object-name>nav1-label</object-name>
+        <object-name>nav2</object-name>
+        <object-name>nav2-label</object-name>
+        <ambient>
+            <red>1.0</red>
+            <green>0.3</green>
+            <blue>0.3</blue>
+        </ambient>
+        <diffuse>
+            <red>1.0</red>
+            <green>0.3</green>
+            <blue>0.3</blue>
+        </diffuse>
+        <emission>
+            <red>1.0</red>
+            <green>0.3</green>
+            <blue>0.3</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        <and>
+          <property>/controls/power/battery</property>
+          <property>/sim/hud/current-color</property>
+        </and>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>marm_light_on</object-name>
+      <condition>
+        <equals>
+          <property>controls/armament/masterarm</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>marm_light_off</object-name>
+      <condition>
+        <equals>
+          <property>controls/armament/masterarm</property>
+          <value>0</value>
+        </equals>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>sunscreen</object-name>
+      <object-name>sunscreenarm</object-name>
+      <property>su25/controls/hud/sunscreen</property>
+      <factor>-90</factor>
+      <center>
+        <x-m>0.11365</x-m>
+        <y-m>-0.26279</y-m>
+        <z-m>0.02691</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>translate</type>
+      <object-name>pipper</object-name>
+      <object-name>pipper_tick.001</object-name>
+      <object-name>pipper_tick.002</object-name>
+      <object-name>pipper_arrow</object-name>
+      <object-name>range_digit.001</object-name>
+      <object-name>range_digit.002</object-name>
+      <object-name>range_digit.003</object-name>
+      <object-name>range_decimal</object-name>
+      <property>/controls/armament/pipperoffset</property>
+      <factor>-1.0</factor>
+      <min>0</min>
+      <max>0.06</max>
+      <axis> 
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+      </axis>
+    </animation>
+  
+    <animation>
+      <type>translate</type>
+      <object-name>pipper</object-name>
+      <object-name>pipper_tick.001</object-name>
+      <object-name>pipper_tick.002</object-name>
+      <object-name>pipper_arrow</object-name>
+      <object-name>range_digit.001</object-name>
+      <object-name>range_digit.002</object-name>
+      <object-name>range_digit.003</object-name>
+      <object-name>range_decimal</object-name>
+      <!-- <property>accelerations/nlf</property> -->
+      <!-- <property>/orientation/pitch-rate-degps</property> -->
+      <property>/accelerations/pilot/z-accel-fps_sec</property>
+      <factor>0.0004</factor>
+      <min>0</min>
+      <axis> 
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+      </axis>
+    </animation>
+
+    <animation> 
+      <type>translate</type>
+      <object-name>pipper</object-name>
+      <object-name>pipper_tick.001</object-name>
+      <object-name>pipper_tick.002</object-name>
+      <object-name>pipper_arrow</object-name>
+      <object-name>range_digit.001</object-name>
+      <object-name>range_digit.002</object-name>
+      <object-name>range_digit.003</object-name>
+      <object-name>range_decimal</object-name>
+      <!-- <property>accelerations/nlf</property> -->
+      <!-- <property>/accelerations/pilot/x-accel-fps_sec</property> -->
+      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+      <factor>-0.005</factor>
+      <min>0</min>
+      <axis> 
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>pipper_tick.002</object-name>
+      <property>/controls/armament/larange</property>
+      <!-- <property>/position/altitude-ft</property> -->
+      <factor>0.018</factor>
+      <min>0</min>
+      <max>10000</max>
+      <center>
+        <x-m>0.188882</x-m>
+        <y-m>0.000165</y-m>
+        <z-m>0.007115</z-m>
+      </center>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>pipper_arrow</object-name>
+      <property>/controls/armament/laserrange</property>
+      <factor>0.018</factor>
+      <min>0</min>
+      <max>15000</max>
+      <center>
+        <x-m>0.188882</x-m>
+        <y-m>0.000165</y-m>
+        <z-m>0.007115</z-m>
+      </center>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <!-- Range digits -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>range_digit.001</object-name>
+    <property>/controls/armament/laserrange</property>
+    <step> 10000 </step>
+    <!-- <bias>0.0005</bias> -->
+    <factor> -0.00001 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>range_digit.002</object-name>
+    <property>/controls/armament/laserrange</property>
+    <step> 1000 </step>
+    <!-- <bias>0.0005</bias> -->
+    <factor> -0.0001 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>range_digit.003</object-name>
+    <property>/controls/armament/laserrange</property>
+    <step> 100 </step>
+    <!-- <bias>0.0005</bias> -->
+    <factor> -0.001 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>sunscreen</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>su25/controls/hud/sunscreen</property>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+    </animation>
+
+  <!-- <animation>
+    <type>rotate</type>
+    <object-name>marm_sw</object-name>
+    <property>controls/armament/masterarm</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.17677</x-m>
+      <y-m>-0.04464</y-m>
+      <z-m>-0.12964</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation> -->
+
+  <!-- <animation>
+    <type>rotate</type>
+    <object-name>KNB.day</object-name>
+    <property>/sim/hud/current-color</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.17949 0.085645 m</x-m>
+      <y-m>0.04817 0.002161 m</y-m>
+      <z-m>-0.12824 0.070337 m</z-m>
+    </center> 
+    <center>
+      <x-m>0.164901</x-m>
+      <y-m>0.070337</y-m>
+      <z-m>-0.117007</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>-->
+
+<!--   <animation>
+    <type>pick</type>
+    <object-name>marm_sw</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/armament/masterarm</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-marm-switch</tooltip-id>
+        <label>Master Arm</label>
+      </binding>
+    </hovered>
+  </animation> -->
+  
+  <animation>
+    <type>pick</type>
+    <object-name>KNB.brt</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>aircraft.HUD.cycle_brightness()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-brightness-knob</tooltip-id>
+        <label>Hud Brightness</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hud_sw1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/armament/selectedweapon</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/hud/hudmode</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-mode-switch</tooltip-id>
+        <label>Hud Mode</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>KNB.day</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/hud/current-color</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-color-switch</tooltip-id>
+        <label>Hud Color</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <!-- COM and NAV texts -->
+    
+    <text>
+        <name>comm1-label</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m>-0.045</y-m>
+            <z-m>-0.065524</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">literal</type>
+        <text type="string">-COM1</text>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
+    
+    <text>
+        <name>comm1</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.045</y-m>
+            <z-m>-0.065524</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%3.3f-</format>
+        <truncate type="bool">false</truncate>
+        <property>instrumentation/comm/frequencies/selected-mhz</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
+    </text>
+    
+    <text>
+        <name>comm2-label</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m>-0.045</y-m>
+            <z-m>-0.080507</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">literal</type>
+        <text type="string">-COM2</text>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
+    
+    <text>
+        <name>comm2</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.045</y-m>
+            <z-m>-0.080507</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%3.3f-</format>
+        <truncate type="bool">false</truncate>
+        <property>instrumentation/comm[1]/frequencies/selected-mhz</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
+    </text>
+    
+    <text>
+        <name>nav1-label</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m>-0.045</y-m>
+            <z-m>-0.095491</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">literal</type>
+        <text type="string">-NAV1</text>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
+    
+    <text>
+        <name>nav1</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.045</y-m>
+            <z-m>-0.095491</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%3.3f-</format>
+        <truncate type="bool">false</truncate>
+        <property>instrumentation/nav/frequencies/selected-mhz</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
+    </text>
+    
+    <text>
+        <name>nav2-label</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m>-0.045</y-m>
+            <z-m>-0.111475</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">literal</type>
+        <text type="string">-NAV2</text>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
+    
+    <text>
+        <name>nav2</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.045</y-m>
+            <z-m>-0.111475</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%3.3f-</format>
+        <truncate type="bool">false</truncate>
+        <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
+    </text>
+
+
+</PropertyList>

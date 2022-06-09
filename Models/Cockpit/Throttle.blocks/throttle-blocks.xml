@@ -75,7 +75,7 @@
 	   <value>0</value>
 	   </equals>
 	 </condition> -->
-  <property>controls/engines/engine[0]/throttle</property>
+  <property>controls/engines/engine[1]/throttle</property>
   <factor>0.1150</factor>
   <offset-m>0.0100</offset-m>
   <axis>

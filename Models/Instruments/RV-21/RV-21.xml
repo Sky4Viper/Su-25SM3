@@ -53,6 +53,11 @@
  </emission>
 </animation>
 
+<effect>
+            <inherits-from>Effects/model-transparent</inherits-from>
+            <object-name>RV-21.glass</object-name>
+</effect>
+
 <!--
 <animation>
  <type>shader</type>

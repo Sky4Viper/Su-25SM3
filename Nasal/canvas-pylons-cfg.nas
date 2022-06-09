@@ -18,7 +18,7 @@ var mainVBox = canvas.VBoxLayout.new();
 myCanvas.setLayout(mainVBox);
 
 var pylonsMap = canvas.gui.widgets.Label.new(root, canvas.style, {} )
-	.setImage("Aircraft/Su-25/Dialogs/Su-25-Pylons.png")
+	.setImage("Aircraft/Su-25/Dialogs/Su-25-Pylons.svg")
 	.setFixedSize(697,197); # image dimensions
 mainVBox.addItem(pylonsMap);
 
@@ -170,8 +170,11 @@ var P8_PTB = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 1} )
 	.setText("kg:" ~ getprop("consumables/fuel/tank[7]/level-kg"))
 	.setFixedSize(90, 25);
 var TotalFuelKg = canvas.gui.widgets.Label.new(root, canvas.style, {} )
-	.setText("Total Fuel (kg):" ~ getprop("consumables/fuel/total-fuel-kg"))
+	#.setText("Total Fuel (kg):" ~ getprop("consumables/fuel/total-fuel-kg"))
+	.setText(sprintf("Total Fuel (kg): %5d", getprop("consumables/fuel/total-fuel-kg")))
 	.setFixedSize(200, 25);
+
+
 
 
 var pylons_update = func{
@@ -186,11 +189,11 @@ var pylons_update = func{
 	Lbl_pyln9.setText("P9: "~getprop("sim/weight[8]/selected"));
 	Lbl_pyln10.setText("P10: "~getprop("sim/weight[9]/selected"));
 
-	P3_PTB.setText("kg:" ~getprop("consumables/fuel/tank[4]/level-kg"));
-	P5_PTB.setText("kg:" ~getprop("consumables/fuel/tank[5]/level-kg"));
-	P6_PTB.setText("kg:" ~getprop("consumables/fuel/tank[6]/level-kg"));
-	P8_PTB.setText("kg:" ~getprop("consumables/fuel/tank[7]/level-kg"));
-	TotalFuelKg.setText("Total Fuel (kg):" ~getprop("consumables/fuel/total-fuel-kg"));
+	P3_PTB.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[4]/level-kg")));
+	P5_PTB.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[5]/level-kg")));
+	P6_PTB.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[6]/level-kg")));
+	P8_PTB.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[7]/level-kg")));
+	TotalFuelKg.setText(sprintf("Total Fuel (kg): %4d", getprop("consumables/fuel/total-fuel-kg")));
 	}
 
 #sim/weight[0]/weight-lb
@@ -219,7 +222,7 @@ btn_P1_empty.listen("clicked", func {
         # add code here to react on click on button.
 		print("P1: none");
 		setprop("sim/weight/selected","none");
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",0.0);
 		pylons_update();
 		});
 P1Ctls.addItem(btn_P1_empty);
@@ -235,7 +238,7 @@ btn_P1_R60.listen("clicked", func {
 		print("P1: R-60M");
 		setprop("sim/weight/selected","R-60M");
 		setprop("sim/weight/weight-lb",96);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # R-60 = 43.5 kg (96 lb)
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # R-60 = 43.5 kg (96 lb)
 		pylons_update();
 		});
 P1Ctls.addItem(btn_P1_R60);
@@ -251,7 +254,7 @@ btn_P1_L3703S.listen("clicked", func {
 		print("P1: L-370-3S");
 		setprop("sim/weight/selected","L-370-3S pod");
 		setprop("sim/weight/weight-lb",96);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # set the same weight as R-60 for now
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # set the same weight as R-60 for now
 		pylons_update();
 		});
 P1Ctls.addItem(btn_P1_L3703S);
@@ -273,7 +276,7 @@ btn_P2_empty.listen("clicked", func {
 		print("P2: none");
 		setprop("sim/weight[1]/selected","none");
 		setprop("sim/weight[1]/weight-lb",0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",0.0);
 		pylons_update();
 		});
 P2Ctls.addItem(btn_P2_empty);
@@ -281,14 +284,14 @@ P2Ctls.addItem(btn_P2_empty);
 # click button P2:UB-32
 
 #var btn_P2_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-#        .setText("UB-32")
+#        .setText("B-8M1")
 #        .setCheckable(1) # this indicates that is should be a toggle button
 #        .setChecked(0) # depressed by default
 #        .setFixedSize(90, 25);
 
 #btn_P2_UB32.listen("toggled", func (e) {
 #        if( e.detail.checked ) {
-#		print("P2: UB-32");
+#		print("P2: B-8M1");
 #		setprop("sim/weight[1]/selected","UB-32 rockets");
 #		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",580); # KG
 #		pylons_update();
@@ -301,18 +304,18 @@ P2Ctls.addItem(btn_P2_empty);
 #    });
 
 var btn_P2_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P2_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P2: UB-32");
+		print("P2: B-8M1");
 		setprop("sim/weight[1]/selected","UB-32 rockets");
 		setprop("sim/weight[1]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",580);  # need to change to B-8M1(empty weight 160kg, 20 tubes)
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",580);  # need to change to B-8M1(empty weight 160kg, 20 tubes)
 		pylons_update();
 		});
 P2Ctls.addItem(btn_P2_UB32);
@@ -328,7 +331,8 @@ btn_P2_FAB250.listen("clicked", func {
 		print("P2: FAB-250");
 		setprop("sim/weight[1]/selected","FAB-250 bomb");
 		setprop("sim/weight[1]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",590); # KG
+		setprop("controls/armament/station[1]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",590); # KG
 		pylons_update();
 		});
 P2Ctls.addItem(btn_P2_FAB250);
@@ -351,28 +355,28 @@ btn_P3_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		setprop("sim/weight[2]/selected","none");
 		setprop("sim/weight[2]/weight-lb",0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",0.0);
 		pylons_update();
 		});
 P3Ctls.addItem(btn_P3_empty);
 
 # click button P3:UB-32
 var btn_P3_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P3_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P3: UB-32");
+		print("P3: B-8M1");
 		setprop("/consumables/fuel/tank[4]/selected", 0);
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		setprop("sim/weight[2]/selected","UB-32 rockets");
 		setprop("sim/weight[2]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",580); # KG
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",580); # KG
 		pylons_update();
 		});
 P3Ctls.addItem(btn_P3_UB32);
@@ -391,7 +395,8 @@ btn_P3_FAB250.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		setprop("sim/weight[2]/selected","FAB-250 bomb");
 		setprop("sim/weight[2]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",590); # KG
+		setprop("controls/armament/station[2]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",590); # KG
 		pylons_update();
 		});
 P3Ctls.addItem(btn_P3_FAB250);
@@ -410,7 +415,7 @@ btn_P3_KH25.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
 		setprop("sim/weight[2]/selected","Kh-25 missile");
 		setprop("sim/weight[2]/weight-lb",659);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",659); # Kh-25ML :299 kg (659 lb) and Kh-25MP :315 kg (694 lb)
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",659); # Kh-25ML :299 kg (659 lb) and Kh-25MP :315 kg (694 lb)
 		pylons_update();
 		});
 P3Ctls.addItem(btn_P3_KH25);
@@ -457,25 +462,25 @@ btn_P4_empty.listen("clicked", func {
 		print("P4: none");
 		setprop("sim/weight[3]/selected","none");
 		setprop("sim/weight[3]/weight-lb",0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",0.0);
 		pylons_update();
 		});
 P4Ctls.addItem(btn_P4_empty);
 
 # click button P4:UB-32
 var btn_P4_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P4_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P4: UB-32");
+		print("P4: B-8M1");
 		setprop("sim/weight[3]/selected","UB-32 rockets");
 		setprop("sim/weight[3]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",580); # KG
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",580); # KG
 		pylons_update();
 		});
 P4Ctls.addItem(btn_P4_UB32);
@@ -491,7 +496,8 @@ btn_P4_FAB250.listen("clicked", func {
 		print("P4: FAB-250");
 		setprop("sim/weight[3]/selected","FAB-250 bomb");
 		setprop("sim/weight[3]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",590); # KG
+		setprop("controls/armament/station[3]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",590); # KG
 		pylons_update();
 		});
 P4Ctls.addItem(btn_P4_FAB250);
@@ -507,7 +513,7 @@ btn_P4_KH25.listen("clicked", func {
 		print("P4: Kh-25");
 		setprop("sim/weight[3]/selected","Kh-25 missile");
 		setprop("sim/weight[3]/weight-lb",659);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",659); # KG
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",659); # KG
 		pylons_update();
 		});
 P4Ctls.addItem(btn_P4_KH25);
@@ -530,28 +536,28 @@ btn_P5_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/selected", 0);
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",0.0);
 		pylons_update();
 		});
 P5Ctls.addItem(btn_P5_empty);
 
 # click button P5:UB-32
 var btn_P5_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P5_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P5: UB-32");
+		print("P5: B-8M1");
 		setprop("/consumables/fuel/tank[5]/selected", 0);
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
 		setprop("sim/weight[4]/selected","UB-32 rockets");
 		setprop("sim/weight[4]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",580); # KG
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",580); # KG
 		pylons_update();
 		});
 P5Ctls.addItem(btn_P5_UB32);
@@ -570,7 +576,8 @@ btn_P5_FAB250.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
 		setprop("sim/weight[4]/selected","FAB-250 bomb");
 		setprop("sim/weight[4]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",590); # KG
+		setprop("controls/armament/station[4]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",590); # KG
 		pylons_update();
 		});
 P5Ctls.addItem(btn_P5_FAB250);
@@ -589,7 +596,7 @@ btn_P5_KAB500L.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
 		setprop("sim/weight[4]/selected","KAB-500L bomb");
 		setprop("sim/weight[4]/weight-lb",1157);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",1157); # KG
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",1157); # KG
 		pylons_update();
 		});
 P5Ctls.addItem(btn_P5_KAB500L);
@@ -607,7 +614,7 @@ btn_P5_KH29T.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
 		setprop("sim/weight[4]/selected","Kh-29T missile");
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",1512); # KG
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",1512); # KG
 		pylons_update();
 		});
 P5Ctls.addItem(btn_P5_KH29T);
@@ -648,28 +655,28 @@ btn_P6_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/selected", 0);
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",0.0);
 		pylons_update();
 		});
 P6Ctls.addItem(btn_P6_empty);
 
 # click button P6:UB-32
 var btn_P6_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P6_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P6: UB-32");
+		print("P6: B-8M1");
 		setprop("/consumables/fuel/tank[6]/selected", 0);
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
 		setprop("sim/weight[5]/selected","UB-32 rockets");
 		setprop("sim/weight[5]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",580); # KG
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",580); # KG
 		pylons_update();
 		});
 P6Ctls.addItem(btn_P6_UB32);
@@ -688,7 +695,8 @@ btn_P6_FAB250.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
 		setprop("sim/weight[5]/selected","FAB-250 bomb");
 		setprop("sim/weight[5]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",590); # KG
+		setprop("controls/armament/station[5]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",590); # KG
 		pylons_update();
 		});
 P6Ctls.addItem(btn_P6_FAB250);
@@ -707,7 +715,7 @@ btn_P6_KAB500L.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
 		setprop("sim/weight[5]/selected","KAB-500L bomb");
 		setprop("sim/weight[5]/weight-lb",1157);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1157); # KG
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1157); # KG
 		pylons_update();
 		});
 P6Ctls.addItem(btn_P6_KAB500L);
@@ -726,7 +734,7 @@ btn_P6_KH29T.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
 		setprop("sim/weight[5]/selected","Kh-29T missile");
 		setprop("sim/weight[5]/weight-lb",1512);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1512); # KG
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1512); # KG
 		pylons_update();
 		});
 P6Ctls.addItem(btn_P6_KH29T);
@@ -764,25 +772,25 @@ btn_P7_empty.listen("clicked", func {
 		print("P7: none");
 		setprop("sim/weight[6]/selected","none");
 		setprop("sim/weight[6]/weight-lb",0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",0.0);
 		pylons_update();
 		});
 P7Ctls.addItem(btn_P7_empty);
 
 # click button P7:UB-32
 var btn_P7_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P7_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P7: UB-32");
+		print("P7: B-8M1");
 		setprop("sim/weight[6]/selected","UB-32 rockets");
 		setprop("sim/weight[6]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",580); # KG
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",580); # KG
 		pylons_update();
 		});
 P7Ctls.addItem(btn_P7_UB32);
@@ -798,7 +806,8 @@ btn_P7_FAB250.listen("clicked", func {
 		print("P7: FAB-250");
 		setprop("sim/weight[6]/selected","FAB-250 bomb");
 		setprop("sim/weight[6]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",590); # KG
+		setprop("controls/armament/station[6]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",590); # KG
 		pylons_update();
 		});
 P7Ctls.addItem(btn_P7_FAB250);
@@ -814,7 +823,7 @@ btn_P7_KH25.listen("clicked", func {
 		print("P7: Kh-25");
 		setprop("sim/weight[6]/selected","Kh-25 missile");
 		setprop("sim/weight[6]/weight-lb",659);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",659); # KG
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",659); # KG
 		pylons_update();
 		});
 P7Ctls.addItem(btn_P7_KH25);
@@ -837,28 +846,28 @@ btn_P8_empty.listen("clicked", func {
 		setprop("/consumables/fuel/tank[7]/level-gal_us", 0.0);
 		setprop("sim/weight[7]/selected","none");
 		setprop("sim/weight[7]/weight-lb",0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",0.0);
 		pylons_update();
 		});
 P8Ctls.addItem(btn_P8_empty);
 
 # click button P8:UB-32
 var btn_P8_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P8_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P8: UB-32");
+		print("P8: B-8M1");
 		setprop("/consumables/fuel/tank[7]/selected", 0);
 		setprop("/consumables/fuel/tank[7]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[7]/level-gal_us", 0.0);
 		setprop("sim/weight[7]/selected","UB-32 rockets");
 		setprop("sim/weight[7]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",580); # KG
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",580); # KG
 		pylons_update();
 		});
 P8Ctls.addItem(btn_P8_UB32);
@@ -877,7 +886,8 @@ btn_P8_FAB250.listen("clicked", func {
 		setprop("/consumables/fuel/tank[7]/level-gal_us", 0.0);
 		setprop("sim/weight[7]/selected","FAB-250 bomb");
 		setprop("sim/weight[7]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",590); # KG
+		setprop("controls/armament/station[7]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",590); # KG
 		pylons_update();
 		});
 P8Ctls.addItem(btn_P8_FAB250);
@@ -896,7 +906,7 @@ btn_P8_KH25.listen("clicked", func {
 		setprop("/consumables/fuel/tank[7]/level-gal_us", 0.0);
 		setprop("sim/weight[7]/selected","Kh-25 missile");
 		setprop("sim/weight[7]/weight-lb",659);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",659); # KG
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[7]",659); # KG
 		pylons_update();
 		});
 P8Ctls.addItem(btn_P8_KH25);
@@ -934,25 +944,25 @@ btn_P9_empty.listen("clicked", func {
 		print("P9: none");
 		setprop("sim/weight[8]/selected","none");
 		setprop("sim/weight[8]/weight-lb",0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[8]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[8]",0.0);
 		pylons_update();
 		});
 P9Ctls.addItem(btn_P9_empty);
 
 # click button P9:UB-32
 var btn_P9_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
-        .setText("UB-32")
+        .setText("B-8M1")
         #.move(300, 300)
         .setFixedSize(90, 25);
 
 btn_P9_UB32.listen("clicked", func {
         # add code here to react on click on button.
-		print("P9: UB-32");
+		print("P9: B-8M1");
 		setprop("sim/weight[8]/selected","UB-32 rockets");
 		setprop("sim/weight[8]/weight-lb",580);
-		setprop("/controls/armament/rocketsLeft", 32);
-		setprop("/controls/armament/rocketsCount", 32);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[8]",580); # KG
+		setprop("/controls/armament/rocketsLeft", 20);
+		setprop("/controls/armament/rocketsCount", 20);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[8]",580); # KG
 		pylons_update();
 		});
 P9Ctls.addItem(btn_P9_UB32);
@@ -968,7 +978,8 @@ btn_P9_FAB250.listen("clicked", func {
 		print("P9: FAB-250");
 		setprop("sim/weight[8]/selected","FAB-250 bomb");
 		setprop("sim/weight[8]/weight-lb",590);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[8]",590); # KG
+		setprop("controls/armament/station[8]/release",0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[8]",590); # KG
 		pylons_update();
 		});
 P9Ctls.addItem(btn_P9_FAB250);
@@ -989,7 +1000,7 @@ btn_P10_empty.listen("clicked", func {
 		print("P10: none");
 		setprop("sim/weight[9]/selected","none");
 		setprop("sim/weight[9]/weight-lb",0.0);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[9]",0.0);
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[9]",0.0);
 		pylons_update();
 		});
 P10Ctls.addItem(btn_P10_empty);
@@ -1005,7 +1016,7 @@ btn_P10_R60.listen("clicked", func {
 		print("P10: R-60M");
 		setprop("sim/weight[9]/selected","R-60M");
 		setprop("sim/weight[9]/weight-lb",96);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # R-60 = 43.5 kg (96 lb)
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # R-60 = 43.5 kg (96 lb)
 		pylons_update();
 		});
 P10Ctls.addItem(btn_P10_R60);
@@ -1021,7 +1032,7 @@ btn_P10_L3703S.listen("clicked", func {
 		print("P10: L-370-3S");
 		setprop("sim/weight[9]/selected","L-370-3S pod");
 		setprop("sim/weight[9]/weight-lb",96);
-		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # set the same weight as R-60 for now
+		#setprop("fdm/jsbsim/inertia/pointmass-weight-lbs",96); # set the same weight as R-60 for now
 		pylons_update();
 		});
 P10Ctls.addItem(btn_P10_L3703S);

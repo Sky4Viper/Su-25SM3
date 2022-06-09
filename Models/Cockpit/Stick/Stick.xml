@@ -53,10 +53,10 @@
     <object-name>stick.P5</object-name>
     <object-name>stick.P6</object-name>
     <emission>
-      	<red>0.07</red>
-        <green>0.03</green>
-    	<blue>0.01</blue>
-      <factor-prop>controls/lighting/panels-norm</factor-prop>
+      	<red>0.05</red>
+      	<green>0.03</green>
+      	<blue>0.02</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
     	<condition>
     		<property>/controls/power/battery</property>

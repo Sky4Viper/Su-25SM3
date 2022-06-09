@@ -1,0 +1,1555 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <enable3d>true</enable3d>
+
+
+  <tape>
+    <name>Gyrocompass</name>
+    <x>-25</x>
+    <y>69</y>
+    <width>50</width>
+    <height>12</height>
+    <input>
+      <!--<property>orientation/heading-deg</property>-->
+      <property>orientation/heading-magnetic-deg</property>
+      <factor>0.1</factor>
+      <max>85</max>
+      <min>0</min>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
+    <display-span>3</display-span>
+    <option>top</option>
+    <major-divisions>1</major-divisions>
+    <minor-divisions>0.5</minor-divisions>
+    <tick-bottom>false</tick-bottom>
+    <tick-top>false</tick-top>
+    <tick-right>false</tick-right>
+    <tick-left>false</tick-left>
+    <cap-bottom>true</cap-bottom>
+    <cap-top>false</cap-top>
+    <cap-right>true</cap-right>
+    <cap-left>true</cap-left>
+    <marker-offset>0</marker-offset>
+    <enable-pointer>false</enable-pointer>
+    <pointer-type>fixed</pointer-type>
+    <tick-type>line</tick-type>
+    <tick-length>variable</tick-length>
+  </tape>
+
+  <label>
+    <name>Gyro Heading Marker</name>
+    <x>0</x>
+    <y>62</y>
+    <width>1</width>
+    <height>1</height>
+    <format>^</format>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
+  </label>
+
+  <!-- <label>
+    <name>Gyro Heading Label</name>
+    <x>-9</x>
+    <y>78</y>
+    <width>18</width>
+    <height>8</height>
+    <input>
+      <property>orientation/heading-magnetic-deg</property>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
+    <format>%4.0f</format>
+    <halign>center</halign>
+    <box>true</box>
+  </label> -->
+
+  <label>
+    <name>KIAS</name>
+    <x>-58</x>
+    <y>70</y>
+    <width>25</width>
+    <height>10</height>
+    <input>
+      <property>/velocities/airspeed-kt</property>
+      <factor>1.852</factor>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
+    <format>%4.0f</format>
+    <halign>center</halign>
+    <box>false</box>
+    <option>right</option>
+  </label>
+
+  <label>
+    <name>Altitude</name>
+    <x>30</x>
+    <y>70</y>
+    <width>28</width>
+    <height>10</height>
+    <input>
+      <property>/position/altitude-ft</property>
+      <factor>0.305</factor>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
+    <format>%4.0f</format>
+    <halign>center</halign>
+    <box>false</box>
+    <option>left</option>
+  </label>
+
+  <label>
+    <name>AutopilotAltitude</name>
+    <x>30</x>
+    <y>58</y>
+    <width>28</width>
+    <height>10</height>
+    <input>
+      <property>/autopilot/settings/target-altitude-ft</property>
+      <factor>0.305</factor>
+    </input>
+    <condition>
+        <property>/controls/power/battery</property>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value>altitude-hold</value>
+      </equals>
+    </condition>
+    <format>%04d</format>
+    <halign>right</halign>
+    <box>false</box>
+    <option>left</option>
+  </label>
+
+  <label>
+    <name>AutopilotAltitudeR</name>
+    <x>30</x>
+    <y>58</y>
+    <width>28</width>
+    <height>10</height>
+    <input>
+      <property>/autopilot/settings/target-agl-ft</property>
+      <factor>0.305</factor>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value>agl-hold</value>
+      </equals>
+    </condition>
+    <format>%04d p</format>
+    <halign>right</halign>
+    <box>false</box>
+    <option>left</option>
+  </label>
+
+  <label>
+    <name>AutopilotSpeed</name>
+    <x>-58</x>
+    <y>58</y>
+    <width>28</width>
+    <height>10</height>
+    <input>
+      <property>/autopilot/settings/target-speed-kt</property>
+      <factor>1.852</factor>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>/autopilot/locks/speed</property>
+        <value>speed-with-throttle</value>
+      </equals>
+    </condition>
+    <format>%04d</format>
+    <halign>left</halign>
+    <box>false</box>
+    <option>right</option>
+  </label>
+
+  <ladder>
+    <name>Target Marker</name>
+    <type>pitch</type>
+    <x>-15</x>
+    <y>5</y>
+    <width>30</width>
+    <height>20</height>
+    <roll-input>
+      <property>/orientation/roll-deg</property>
+    </roll-input>
+    <pitch-input>
+      <property>/orientation/pitch-deg</property>
+    </pitch-input>
+    <compression-factor>7.8</compression-factor>
+
+    <screen-hole>16</screen-hole>
+    <zero-bar-overlength>15</zero-bar-overlength>
+    <enable-dive-bar-angle>0</enable-dive-bar-angle>
+    <enable-dynamic-origin>0</enable-dynamic-origin>
+    <enable-fuselage-ref-line>0</enable-fuselage-ref-line>
+    <enable-target-spot>false</enable-target-spot>
+    <enable-target-markers>true</enable-target-markers>
+    <enable-velocity-vector>0</enable-velocity-vector>
+    <enable-drift-marker>0</enable-drift-marker>
+    <enable-alpha-bracket>0</enable-alpha-bracket>
+    <enable-energy-marker>0</enable-energy-marker>
+    <enable-climb-dive-marker>0</enable-climb-dive-marker>
+    <enable-glide-slope-marker>0</enable-glide-slope-marker>
+    <glide-slope>0.0</glide-slope>
+    <enable-energy-worm>0</enable-energy-worm>
+    <enable-waypoint-marker>0</enable-waypoint-marker>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <or>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </equals>
+      </or>
+    </condition>
+    
+  </ladder>
+
+  <ladder>
+    <name>Nav Pitch Ladder</name>
+    <type>pitch</type>
+    <x>-40</x>
+    <y>10</y>
+    <width>80</width>
+    <height>20</height>
+    <roll-input>
+      <property>/orientation/roll-deg</property>
+    </roll-input>
+    <pitch-input>
+      <property>/orientation/pitch-deg</property>
+    </pitch-input>
+    <compression-factor>7.8</compression-factor>
+    <display-span>7.5</display-span>
+    <divisions>10.0</divisions>
+    <screen-hole>40</screen-hole>
+    <zero-bar-overlength>30</zero-bar-overlength>
+    <enable-dive-bar-angle>0</enable-dive-bar-angle>
+    <enable-dynamic-origin>0</enable-dynamic-origin>
+    <enable-fuselage-ref-line>false</enable-fuselage-ref-line>
+    <enable-target-spot>0</enable-target-spot>
+    <enable-target-markers>false</enable-target-markers>
+    <enable-velocity-vector>true</enable-velocity-vector>
+    <enable-drift-marker>0</enable-drift-marker>
+    <enable-alpha-bracket>0</enable-alpha-bracket>
+    <enable-energy-marker>0</enable-energy-marker>
+    <enable-climb-dive-marker>false</enable-climb-dive-marker>
+    <enable-glide-slope-marker>false</enable-glide-slope-marker>
+    <glide-slope>0.0</glide-slope>
+    <enable-energy-worm>0</enable-energy-worm>
+    <enable-waypoint-marker>true</enable-waypoint-marker>
+    <enable-zenith>true</enable-zenith>
+    <enable-nadir>true</enable-nadir>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <less-than>
+        <property>controls/hud/hudmode</property>
+        <value>3</value>
+      </less-than>
+    </condition>
+
+  </ladder>
+
+   <!-- <turn-bank-indicator>
+      <name>Turn Bank Indicator</name>
+      <x>-70</x>
+      <y>-5</y>
+      <width>140</width>
+      <height>140</height>
+      <bank-input>
+        <property>/orientation/roll-deg</property>
+      </bank-input>
+      <sideslip-input>
+        <property>/orientation/side-slip-deg</property>
+      </sideslip-input>
+      <enable-side-slip-marker>false</enable-side-slip-marker>
+      <bank-scale>true</bank-scale>
+      <bank-scale-radius>180</bank-scale-radius>
+      <option>false</option>
+
+      <condition>
+      <property>/controls/power/battery</property>
+      <less-than>
+        <property>controls/hud/hudmode</property>
+        <value>3</value>
+      </less-than>
+    </condition>
+
+  </turn-bank-indicator> -->
+
+  <label>
+    <name>VSup</name>
+    <x>41</x>
+    <y>40</y>
+    <width>12</width>
+    <height>10</height>
+    <input>
+      <property>autopilot/internal/vert-speed-fpm</property>
+      <factor>0.000305</factor>
+      <max>10</max>
+      <min>-10</min>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+      <greater-than>
+        <property>autopilot/internal/vert-speed-fpm</property>
+        <value>0</value>
+      </greater-than>
+    </condition>
+    <format>%02d</format>
+    <halign>right</halign>
+    <box>true</box>
+    <option>top</option>
+  </label>
+
+  <label>
+    <name>VSdown</name>
+    <x>41</x>
+    <y>40</y>
+    <width>12</width>
+    <height>10</height>
+    <input>
+      <property>autopilot/internal/vert-speed-fpm</property>
+      <factor>0.000305</factor>
+      <max>10</max>
+      <min>-10</min>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+      <less-than>
+        <property>autopilot/internal/vert-speed-fpm</property>
+        <value>0</value>
+      </less-than>
+    </condition>
+    <format>%02d</format>
+    <halign>right</halign>
+    <box>true</box>
+    <option>bottom</option>
+  </label>
+
+  <tape>
+        <name>PITCH</name>
+        <x>-50</x>
+        <y>-10</y>
+        <width>10</width>
+        <height>50</height>
+        <input>
+            <property>/orientation/pitch-deg</property>
+            <factor>1</factor>
+            <max>90</max>
+            <min>-90</min>
+        </input>
+        <major-divisions>10</major-divisions>
+        <minor-divisions>5</minor-divisions>
+        <display-span>30</display-span>
+        <option>left</option>
+        <option>vertical</option>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>true</cap-right>
+        <cap-left>false</cap-left>
+        <marker-offset>4</marker-offset>
+        <enable-pointer>true</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+
+      <condition>
+        <property>/controls/power/battery</property>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </equals>
+      </condition>
+      
+    </tape>
+
+  <tape>
+    <name>VS</name>
+    <x>40</x>
+    <y>-10</y>
+    <width>10</width>
+    <height>50</height>
+    <input>
+      <property>autopilot/internal/vert-speed-fpm</property>
+      <factor>0.000305</factor>
+      <max>10</max>
+      <min>-10</min>
+    </input>
+    <major-divisions>1</major-divisions>
+    <minor-divisions>0.5</minor-divisions>
+    <display-span>3</display-span>
+    <option>right</option>
+    <option>vertical</option>
+    <tick-bottom>false</tick-bottom>
+    <tick-top>false</tick-top>
+    <tick-right>false</tick-right>
+    <tick-left>false</tick-left>
+    <cap-bottom>false</cap-bottom>
+    <cap-top>false</cap-top>
+    <cap-right>false</cap-right>
+    <cap-left>true</cap-left>
+    <marker-offset>4</marker-offset>
+    <enable-pointer>true</enable-pointer>
+    <pointer-type>fixed</pointer-type>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+    </condition>
+
+  </tape>
+
+  <!-- Aiming Cross -->
+
+<label>
+    <name>ACBOX 0</name>
+	<x>-12</x>
+	<y>3</y>
+	<width>24</width>
+	<height>24</height>
+    <format>--v-o-v--</format>
+	<halign>center</halign>
+    <box>false</box>
+
+	<condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>0</value>
+      </equals>
+  </condition>
+</label>
+
+<!-- <label>
+    <name>ACBOX 1</name>
+	<x>-11</x>
+	<y>-6</y>
+	<width>24</width>
+	<height>24</height>
+    <format>/ | \</format>
+	<halign>center</halign>
+    <box>false</box>
+</label>
+
+<label>
+    <name>TGTBOX 1</name>
+	<x>-10</x>
+	<y>5</y>
+	<width>20</width>
+	<height>20</height>
+    <format></format>
+	<halign>left</halign>
+    <box>true</box>
+	<option>bottom</option>
+	<pointer-width>0</pointer-width>
+	<pointer-length>30</pointer-length>
+
+	<condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+  </condition>
+</label>
+
+<label>
+    <name>TGTBOX 2</name>
+	<x>-10</x>
+	<y>-10</y>
+	<width>20</width>
+	<height>20</height>
+    <format></format>
+	<halign>left</halign>
+    <box>true</box>
+	<option>top</option>
+	<pointer-width>0</pointer-width>
+	<pointer-length>40</pointer-length>
+
+	<condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+  </condition>
+</label> 
+
+<label>
+    <name>TGTBOX 3</name>
+	<x>-10</x>
+	<y>5</y>
+	<width>20</width>
+	<height>20</height>
+    <format></format>
+	<halign>left</halign>
+    <box>true</box>
+	<option>right</option>
+	<pointer-width>0</pointer-width>
+	<pointer-length>30</pointer-length>
+
+	<condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+  </condition>
+</label>
+
+<label>
+    <name>TGTBOX 4</name>
+	<x>-10</x>
+	<y>5</y>
+	<width>20</width>
+	<height>20</height>
+    <format></format>
+	<halign>left</halign>
+    <box>true</box>
+	<option>left</option>
+	<pointer-width>0</pointer-width>
+	<pointer-length>30</pointer-length>
+
+	<condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+  </condition>
+</label>-->
+
+  <!--<label>
+    <name>WP Bearing Label</name>
+    <x>-5</x>
+    <y>0</y>
+    <width>-5</width>
+    <height>2</height>
+    <format>BRG:%03d</format>
+    <halign>left</halign>
+    <input>
+      <property>/instrumentation/gps/wp/wp[1]/bearing-mag-deg</property>
+    </input>
+    <condition>
+      <property>/instrumentation/gps/wp/wp[1]/valid</property>
+    </condition>
+  </label>-->
+
+  <label>
+    <name>Alpha Label</name>
+    <x>-55</x>
+    <y>-21</y>
+    <width>2</width>
+    <height>2</height>
+    <input>
+      <property>/orientation/alpha-deg</property>
+    </input>
+    <format>a:%2.0f</format>
+    <halign>left</halign>
+    <box>false</box>
+    <option>left</option>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <not-equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </not-equals>
+    </condition>
+  </label>
+
+  <label>
+        <name>MACH Number</name>
+        <x>-55</x>
+        <y>-31</y>
+       <width>2</width>
+        <height>2</height>
+        <input>
+            <property>/velocities/mach</property>
+        </input>
+        <format>M:%4.2f</format>
+        <halign>left</halign>
+      
+      <condition>
+        <property>/controls/power/battery</property>
+        <not-equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </not-equals>
+      </condition>
+      
+  </label>
+
+  <label>
+    <name>G Load</name>
+    <x>-55</x>
+    <y>-41</y>
+    <width>2</width>
+    <height>2</height>
+    <input>
+      <property>/accelerations/pilot/z-accel-fps_sec</property>
+      <factor>-0.03108095</factor>
+      <damp>1.0</damp>
+    </input>
+    <format>G:%2.1f</format>
+    <halign>left</halign>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <not-equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </not-equals>
+    </condition>
+
+    <blinking>
+      <interval>0.25</interval>
+      <condition>
+        <or>
+          <less-than>
+            <!-- G load > 3.0 -->
+            <property>/accelerations/pilot/z-accel-fps_sec</property>
+            <value>-93.52215</value>
+          </less-than>
+          <greater-than>
+            <!-- G load < -1.0 -->
+            <property>/accelerations/pilot/z-accel-fps_sec</property>
+            <value>31.17405</value>
+          </greater-than>
+        </or>
+      </condition>
+    </blinking>
+
+  </label>
+
+  <label>
+    <width>1</width>
+    <height>1</height>
+    <x>-1</x>
+    <y>-48</y>
+    <format>%4s</format>
+    <halign>right</halign>
+    <input>
+      <property>/instrumentation/gps/wp/wp[1]/ID</property>
+    </input>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <property>/instrumentation/gps/wp/wp[1]/valid</property>
+        <equals>
+          <property>/instrumentation/gps/mode</property>
+          <value>leg</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+
+  </label>
+
+  <label>
+    <width>1</width>
+    <height>1</height>
+    <x>1</x>
+    <y>-48</y>
+    <format>%4.1f</format>
+    <halign>left</halign>
+    <input>
+      <property>/instrumentation/gps/wp/wp[1]/distance-nm</property>
+    </input>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <property>/instrumentation/gps/wp/wp[1]/valid</property>
+        <equals>
+          <property>/instrumentation/gps/mode</property>
+          <value>leg</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+    
+  </label>
+
+  <label>
+        <name>Radio Alt</name>
+        <x>58</x>
+        <y>-21</y>
+        <width>2</width>
+        <height>2</height>
+        <input>
+          <property>/position/altitude-agl-ft</property>
+          <factor>0.305</factor>
+          <min>0.0</min>
+        </input>
+        <format>%4.0f p</format>
+        <halign>right</halign>
+      
+      <condition>
+        <property>/controls/power/battery</property>
+        <and>
+        <not-equals>
+          <property>controls/hud/hudmode</property>
+          <value>3</value>
+        </not-equals>
+        <not>
+          <or>
+            <less-than>
+              <property>orientation/roll-deg</property>
+              <value>-60</value>
+            </less-than>
+            <greater-than>
+              <property>orientation/roll-deg</property>
+              <value>60</value>
+            </greater-than>
+            <less-than>
+              <property>orientation/pitch-deg</property>
+              <value>-60</value>
+            </less-than>
+            <greater-than>
+              <property>orientation/pitch-deg</property>
+              <value>60</value>
+            </greater-than>
+            <greater-than>
+              <property>position/altitude-agl-ft</property>
+              <value>3000</value>
+            </greater-than>
+          </or>
+        </not>
+        </and>
+      </condition>
+  </label>
+
+  <!--STATION MARKERS-->
+
+
+  <label>
+    <name> Pylon 2</name>
+    <x>-59</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>2</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[1]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[1]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[1]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name> Pylon 3</name>
+    <x>-44</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>3</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[2]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[2]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[2]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name> Pylon 4</name>
+    <x>-29</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>4</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[3]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[3]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[3]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name> Pylon 5</name>
+    <x>-14</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>5</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[4]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[4]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[4]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name> Pylon 6</name>
+    <x>4</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>6</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[5]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[5]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[5]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name> Pylon 7</name>
+    <x>19</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>7</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[6]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[6]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[6]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name> Pylon 8</name>
+    <x>34</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>8</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[7]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[7]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[7]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name> Pylon 9</name>
+    <x>49</x>
+    <y>-58</y>
+    <width>11</width>
+    <height>8</height>
+    <format>9</format>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <not-equals>
+          <property>sim/weight[8]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <greater-than>
+          <property>controls/hud/hudmode</property>
+          <value>1</value>
+        </greater-than>
+          <or>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>2</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[8]/selected</property>
+                <value>UB-32 rockets</value>
+              </equals>
+	          </and>
+	          <and>
+              <equals>
+                <property>controls/armament/selectedweapon</property>
+                <value>3</value>
+              </equals>
+	            <equals>
+                <property>sim/weight[8]/selected</property>
+                <value>FAB-250 bomb</value>
+              </equals>
+	          </and>
+	        </or>
+      </and>
+    </condition>
+  </label>
+  
+
+  
+  <!-- <label>
+    <name>Station 3 Marker</name>
+    <x>-45</x>
+    <y>-56</y>
+    <width>10</width>
+    <height>8</height>
+    <format>3</format>
+    <box>true</box>
+
+      <condition>
+        <property>/controls/power/battery</property>
+        <or>
+          <and>
+            <equals>
+              <property>controls/hud/hudmode</property>
+              <value>4</value>
+            </equals>
+            <equals>
+              <property>controls/armament/selectedweapon</property>
+              <value>4</value>
+            </equals>
+            <or>
+              <equals>
+                <property>sim/weight[0]/selected</property>
+                <value>R-60 missile</value>
+              </equals>
+              <equals>
+                <property>sim/weight[0]/selected</property>
+                <value>R-73 missile</value>
+              </equals>
+            </or>
+          </and>
+          <and>
+            <equals>
+              <property>controls/hud/hudmode</property>
+              <value>2</value>
+            </equals>
+            <equals>
+              <property>controls/armament/selectedweapon</property>
+              <value>2</value>
+            </equals>
+            <or>
+              <and>
+                  <or>
+                    <equals>
+                      <property>sim/weight[0]/selected</property>
+                      <value>FAB-250 bomb</value>
+                    </equals>
+                    <equals>
+                      <property>sim/weight[0]/selected</property>
+                      <value>FAB-500 bomb</value>
+                    </equals>
+                  </or>
+                  <equals>
+                    <property>controls/power/mslrkt</property>
+                    <value>0</value>
+                  </equals>
+              </and>
+              <and>
+                <equals>
+                   <property>sim/weight[0]/selected</property>
+                   <value>UB-32 rockets</value>
+                </equals>
+                <equals>
+                  <property>controls/power/mslrkt</property>
+                  <value>1</value>
+                </equals>
+              </and>
+            </or>
+          </and>
+        </or>
+      </condition>
+
+    <blinking>
+      <interval>0.5</interval>
+      <condition>
+        <property>/controls/power/battery</property>
+        <or>
+          <and>
+            <equals>
+              <property>controls/armament/masterarm</property>
+              <value>true</value>
+            </equals>
+            <not-equals>
+              <property>sim/weight[0]/selected</property>
+              <value>UB-32 rockets</value>
+            </not-equals>
+          </and>
+          <and>
+            <equals>
+              <property>controls/armament/masterarm</property>
+              <value>true</value>
+            </equals>
+            <equals>
+              <property>sim/weight[0]/selected</property>
+              <value>UB-32 rockets</value>
+            </equals>
+            <greater-than>
+              <property>/controls/armament/rocketsLeft</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+        </or>
+      </condition>
+    </blinking>
+
+  </label> -->
+
+  
+  <gauge>
+    <name>RadarRange120</name>
+    <x>-50</x>
+    <y>-10</y>
+    <width>10</width>
+    <height>50</height>
+    <option>vertical</option>
+    <option>right</option>
+    <option>notext</option>
+    <major-divisions>120</major-divisions>
+    <minor-divisions>30</minor-divisions>
+    <compression-factor>30</compression-factor>
+    <display-span>120</display-span>
+    <marker-offset>4</marker-offset>
+    <tick-bottom>true</tick-bottom>
+    <tick-top>true</tick-top>
+    <tick-right>false</tick-right>
+    <tick-left>false</tick-left>
+    <cap-bottom>false</cap-bottom>
+    <cap-top>false</cap-top>
+    <cap-right>false</cap-right>
+    <cap-left>true</cap-left>
+    <enable-pointer>false</enable-pointer>
+    <pointer-type>fixed</pointer-type>
+    <input>
+      <property>instrumentation/radar/range-selected</property>
+      <max>120</max>
+      <min>0</min>
+    </input>
+    <condition>
+      <property>/controls/power/battery</property>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>3</value>
+        </equals>
+    </condition>
+  </gauge>
+
+  <label>
+    <name>RadarRng Label</name>
+    <x>-50</x>
+    <y>41</y>
+    <width>12</width>
+    <height>8</height>
+    <input>
+      <property>instrumentation/radar/range-selected</property>
+    </input>
+    <format>R:%2d</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>3</value>
+      </equals>
+    </condition>
+
+  </label>
+
+  <label>
+    <name>RDR SCN MODE</name>
+    <x>-50</x>
+    <y>-18</y>
+    <width>12</width>
+    <height>8</height>
+    <format>SCN</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>3</value>
+      </equals>
+    </condition>
+  </label>
+
+  <!--SELECTED WEAPONS-->
+
+  
+
+  <label>
+    <name>LA marker</name>
+    <x>-34</x>
+    <y>11</y>
+    <width>12</width>
+    <height>8</height>
+    <format>LA</format>
+    <halign>right</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <equals>
+            <property>controls/hud/hudmode</property>
+            <value>4</value>
+        </equals>
+        <or>
+          <equals>
+            <property>controls/armament/selectedweapon</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>controls/armament/selectedweapon</property>
+            <value>2</value>
+          </equals>
+        </or>
+        <equals>
+          <property>controls/armament/LAMarkerON</property>
+          <value>1</value>
+        </equals>
+      </and>
+    </condition>
+
+    <blinking>
+      <interval>0.5</interval>
+    </blinking>
+    
+  </label>
+
+  <label>
+    <name>GSh-302</name>
+    <!-- <x>38</x> -->
+    <x>-55</x>
+    <y>-43</y>
+    <width>12</width>
+    <height>8</height>
+    <format>30-2</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+      <equals>
+        <property>controls/armament/selectedweapon</property>
+        <value>1</value>
+      </equals>
+    </condition>
+
+  </label>
+
+  <label>
+    <name>S-5 Rockets</name>
+    <!-- <x>38</x> -->
+    <x>-55</x>
+    <y>-43</y>
+    <width>12</width>
+    <height>8</height>
+    <format>C-8</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+      <equals>
+        <property>controls/armament/selectedweapon</property>
+        <value>2</value>
+      </equals>
+    </condition>
+  </label>
+
+  <label>
+    <name>FAB-250</name>
+    <!-- <x>48</x> -->
+    <x>-55</x>
+    <y>-43</y>
+    <width>12</width>
+    <height>8</height>
+    <format>250</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+      <equals>
+        <property>controls/armament/selectedweapon</property>
+        <value>3</value>
+      </equals>
+    </condition>
+  </label>
+
+  <label>
+    <name>FAB-500</name>
+    <!-- <x>48</x> -->
+    <x>-55</x>
+    <y>-43</y>
+    <width>12</width>
+    <height>8</height>
+    <format>500</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>4</value>
+      </equals>
+      <equals>
+        <property>controls/armament/selectedweapon</property>
+        <value>4</value>
+      </equals>
+    </condition>
+  </label>
+
+  <label>
+    <name>R-60</name>
+    <!-- <x>58</x> -->
+    <x>-55</x>
+    <y>-43</y>
+    <width>12</width>
+    <height>8</height>
+    <format>P-60</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <equals>
+          <property>controls/armament/selectedweapon</property>
+          <value>4</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </equals>
+        <or>
+          <equals>
+            <property>sim/weight[0]/selected</property>
+            <value>R-60 missile</value>
+          </equals>
+          <equals>
+            <property>sim/weight[7]/selected</property>
+            <value>R-60 missile</value>
+          </equals>
+        </or>
+      </and>
+    </condition>
+  </label>
+
+<!--AMMO COUNTERS (4=full, 3=3/4, 2=1/2, 1=1/4)-->
+
+  <label>
+    <name>Cannon rounds left</name>
+    <x>52</x>
+    <y>-43</y>
+    <width>8</width>
+    <height>8</height>
+    <input>
+      <property>/controls/armament/roundsLeft</property>
+      <factor>0.02</factor>
+    </input>
+    <format>%1d</format>
+    <halign>right</halign>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <equals>
+          <property>controls/armament/selectedweapon</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </equals>
+      </and> 
+    </condition>
+  </label>
+
+  <label>
+    <name>Rockets left</name>
+    <x>52</x>
+    <y>-43</y>
+    <width>8</width>
+    <height>8</height>
+    <input>
+      <property>/controls/armament/rocketsLeft</property>
+      <factor>0.2</factor>
+    </input>
+    <format>%1d</format>
+    <halign>right</halign>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <equals>
+          <property>controls/armament/selectedweapon</property>
+          <value>2</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </equals>
+      </and>
+    </condition>
+  </label>
+
+
+</PropertyList>

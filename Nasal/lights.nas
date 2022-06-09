@@ -7,7 +7,7 @@ var navSwitch = "/controls/lighting/nav-lights-switch";
 var beaconSwitch = "/controls/lighting/beacon-switch";
 var strobeSwitch = nil;
 var landingSwitch = "/controls/lighting/landing-lights-switch";
-var taxiSwitch = nil;
+var taxiSwitch = "/controls/lighting/taxi-lights-switch";
 var probeSwitch = nil;
 var whiteSwitch = nil;
 
@@ -162,12 +162,12 @@ if(gearBind) {
 	setlistener("/controls/gear/gear-down", func {
 		gearDown = getprop("/controls/gear/gear-down");
 		if(gearDown) {
-			if(landingSwitch!=nil) setprop(landingSwitch, 1);
-			if(taxiSwitch!=nil) setprop(taxiSwitch, 1);
+			if(landingSwitch!=nil and landingSwitch!=0) setprop(landingSwitch, 1);
+			if(taxiSwitch!=nil and taxiSwitch!=0) setprop(taxiSwitch, 1);
 		}
 		else{
-			if(landingSwitch!=nil) setprop(landingSwitch, 0);
-			if(taxiSwitch!=nil) setprop(taxiSwitch, 0);
+			if(landingSwitch!=nil and landingSwitch!= 0) setprop(landingSwitch, 0);
+			if(taxiSwitch!=nil and taxiSwitch!=0) setprop(taxiSwitch, 0);
 		}
 	});
 }

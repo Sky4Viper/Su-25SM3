@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>LightPnl.ac</path>
+
+<!-- Button_test
+Button_test_base
+Knob_left
+Knob_bright
+Lighting_panel
+Lighting_panel_text
+Screws_round
+Switch_day_night
+Switch_test
+Switch_test_base -->
+
+ <!-- <animation>
+  <type>material</type>
+  <object-name>Lighting_panel_text</object-name>
+  <object-name>Button_test</object-name>
+  <object-name>Arc-digit-cents</object-name>
+  <object-name>Arc-digit-tens</object-name>
+  <object-name>Arc-digit-ones</object-name>
+  <object-name>Disp-digit-cents</object-name>
+  <object-name>Disp-digit-tens</object-name>
+  <object-name>Disp-digit-ones</object-name>
+   <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        	<property>/controls/power/battery</property>
+          <not>
+           <property>/controls/lighting/nightmode</property>
+          </not>
+        </condition>
+ </animation> -->
+
+ <animation>
+  <type>material</type>
+  <object-name>Lighting_panel_text</object-name>
+  <object-name>Button_test</object-name>
+  <object-name>Arc-digit-cents</object-name>
+  <object-name>Arc-digit-tens</object-name>
+  <object-name>Arc-digit-ones</object-name>
+  <object-name>Disp-digit-cents</object-name>
+  <object-name>Disp-digit-tens</object-name>
+  <object-name>Disp-digit-ones</object-name>
+   <emission>
+        <red>0.8</red>
+        <green>0.3</green>
+        <blue>0.1</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+        <condition>
+        <and>
+        	<property>/controls/power/battery</property>
+          <property>/controls/lighting/nightmode</property>
+        </and>
+        </condition>
+ </animation>
+
+ <animation>
+    <type>material</type>
+    <object-name>Knob_left</object-name>
+    <object-name>Knob_right</object-name>
+    <object-name>Knob_flood</object-name>
+    <object-name>Knob_instruments</object-name>
+    <object-name>Knob_bright</object-name>
+    <object-name>Switch_test</object-name>
+    <object-name>Switch_day_night</object-name>
+    <emission>
+      <red>0.05</red>
+      <green>0.03</green>
+      <blue>0.02</blue>
+      <factor-prop>controls/lighting/panels-norm</factor-prop>
+    </emission>
+      <condition>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Lighting_panel</object-name>
+    <object-name>Cylinder.035</object-name>
+    <object-name>Plane.026</object-name>
+    <object-name>Knob-channel</object-name>
+    <object-name>Knob-hg</object-name>
+    	<emission>
+      		<red>0.05</red>
+      		<green>0.03</green>
+      		<blue>0.02</blue>
+      		<!-- <factor-prop>controls/lighting/panels-norm</factor-prop> -->
+	        <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    	</emission>
+      	<condition>
+    		<property>/controls/power/battery</property>
+    		<property>/controls/lighting/nightmode</property>
+  		</condition>
+  	</animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Knob_bright</object-name>
+    <property>controls/lighting/instruments-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind><dep>0</dep>
+      </entry>
+      <entry>
+        <ind>0.9</ind><dep>120</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.030858</x-m>
+      <y-m>0.057141</y-m>
+      <z-m>0.00394</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Knob_flood</object-name>
+    <property>controls/lighting/panels-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind><dep>0</dep>
+      </entry>
+      <entry>
+        <ind>0.9</ind><dep>120</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>0.062146</x-m>
+      <y-m>-0.009982</y-m>
+      <z-m>0.00442</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch_day_night</object-name>
+    <property>controls/lighting/nightmode</property>
+    <offset-deg>-15</offset-deg>
+    <factor>30</factor>
+    <center>
+      <x-m>0.086284</x-m>
+      <y-m>0.057071</y-m>
+      <z-m>0.000816</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+ <animation>
+ <type>knob</type>
+ <object-name>Knob_bright</object-name>
+         <increase>
+             <binding>
+          <command>property-adjust</command>
+          <property>controls/lighting/instruments-norm</property>
+            <step>0.1</step>
+            <min>0.0</min>
+            <max>0.9</max>
+          <wrap>false</wrap>
+        </binding>
+        </increase>
+        <decrease>
+             <binding>
+          <command>property-adjust</command>
+          <property>controls/lighting/instruments-norm</property>
+            <step>-0.1</step>
+            <min>0.0</min>
+            <max>0.9</max>
+          <wrap>false</wrap>
+        </binding>
+        </decrease>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>instruments-lighting-adj</tooltip-id>
+                <label>Instruments lights</label>
+        </binding>
+  </hovered>
+</animation>
+
+<animation>
+ <type>knob</type>
+ <object-name>Knob_flood</object-name>
+         <increase>
+             <binding>
+          <command>property-adjust</command>
+          <property>controls/lighting/panels-norm</property>
+            <step>0.1</step>
+            <min>0.0</min>
+            <max>0.9</max>
+          <wrap>false</wrap>
+        </binding>
+        </increase>
+        <decrease>
+             <binding>
+          <command>property-adjust</command>
+          <property>controls/lighting/panels-norm</property>
+            <step>-0.1</step>
+            <min>0.0</min>
+            <max>0.9</max>
+          <wrap>false</wrap>
+        </binding>
+        </decrease>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>panels-lighting-adj</tooltip-id>
+                <label>Flood lights</label>
+        </binding>
+  </hovered>
+</animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>Switch_day_night</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/nightmode</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>instruments-lighting-night</tooltip-id>
+                <label>Instruments night mode</label>
+        </binding>
+  </hovered>
+  </animation>
+
+ <!--  <animation>
+    <type>textranslate</type>
+    <object-name>Arc-digit-ones</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.1852</factor>
+    <axis>
+      <x> 0</x>
+      <y>-1</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Arc-digit-tens</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.01852</factor>
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <axis>
+      <x> 0</x>
+      <y>-1</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Arc-digit-cents</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.001852</factor>
+    <step>100</step>
+    <scroll>0.5</scroll>
+    <axis>
+      <x> 0</x>
+      <y>-1</y>
+      <z> 0</z>
+    </axis>
+  </animation> -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Arc-digit-ones</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.1</factor>
+    <!-- <offset>-1</offset> -->
+    <axis>
+      <x> 0</x>
+      <y>-1</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Arc-digit-tens</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.01</factor>
+    <!-- <offset>-10</offset> -->
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <axis>
+      <x> 0</x>
+      <y>-1</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Arc-digit-cents</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.001</factor>
+    <!-- <offset>-100</offset> -->
+    <step>100</step>
+    <scroll>0.5</scroll>
+    <axis>
+      <x> 0</x>
+      <y>-1</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+
+</PropertyList>
