@@ -7,7 +7,7 @@
 
 #R-60M
 #L-370-3S pod
-#UB-32 rockets
+#S-8 rockets
 #FAB-250 bomb
 #Kh-25 missile
 #Fuel droptank
@@ -38,7 +38,7 @@ var setLoadInt = func(pylon_index) {
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 1);
 	else if( payload == "L-370-3S pod" )
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 2);
-	else if( payload == "UB-32 rockets" )
+	else if( payload == "S-8 rockets" )
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 3);
 	else if( payload == "FAB-250 bomb" )
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 4);

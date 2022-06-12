@@ -65,7 +65,7 @@
 	<!-- 2 Pylon 2 L -->
 	
 	<model>
-		<name>2LUB-32</name>
+		<name>2LB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-1.xml</path> -->
@@ -73,7 +73,7 @@
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>-4.43</y-m>
-			<z-m>1.38</z-m>
+			<z-m>1.37</z-m>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>3</pitch-deg>
 		</offsets>
@@ -81,12 +81,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>2LUB-32</object-name>
+		<object-name>2LB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[1]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[1]/release</property>
@@ -158,13 +158,13 @@
 	</animation>
 	
 	<model>
-		<name>3LUB-32</name>
+		<name>3LB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-2.xml</path> -->
 		<path>Aircraft/Su-25/Models/Payload/B-8M1/B-8M1-2.xml</path>
 		<offsets>
-			<x-m>0.60</x-m>
+			<x-m>0.50</x-m>
 			<y-m>-3.66</y-m>
 			<z-m>1.43</z-m>
 			<roll-deg>0</roll-deg>
@@ -174,12 +174,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>3LUB-32</object-name>
+		<object-name>3LB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[2]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[2]/release</property>
@@ -250,15 +250,15 @@
 	<!-- 4 Pylon 4 L -->
 	
 	<model>
-		<name>4LUB-32</name>
+		<name>4LB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-3.xml</path> -->
 		<path>Aircraft/Su-25/Models/Payload/B-8M1/B-8M1-3.xml</path>
 		<offsets>
-			<x-m>0.40</x-m>
+			<x-m>0.14</x-m>
 			<y-m>-2.86</y-m>
-			<z-m>1.48</z-m>
+			<z-m>1.50</z-m>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>3</pitch-deg>
 		</offsets>
@@ -266,12 +266,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>4LUB-32</object-name>
+		<object-name>4LB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[3]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[3]/release</property>
@@ -371,15 +371,15 @@
 	</animation>
 	
 	<model>
-		<name>5LUB-32</name>
+		<name>5LB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-4.xml</path> -->
 		<path>Aircraft/Su-25/Models/Payload/B-8M1/B-8M1-4.xml</path>
 		<offsets>
-			<x-m>0.00</x-m>
+			<x-m>-0.10</x-m>
 			<y-m>-2.06</y-m>
-			<z-m>1.53</z-m>
+			<z-m>1.54</z-m>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>3</pitch-deg>
 		</offsets>
@@ -387,12 +387,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>5LUB-32</object-name>
+		<object-name>5LB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[4]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[4]/release</property>
@@ -521,15 +521,15 @@
 	</animation>
 	
 	<model>
-		<name>5RUB-32</name>
+		<name>5RB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-5.xml</path> -->
 		<path>Aircraft/Su-25/Models/Payload/B-8M1/B-8M1-5.xml</path>
 		<offsets>
-			<x-m>0.00</x-m>
+			<x-m>-0.10</x-m>
 			<y-m>2.06</y-m>
-			<z-m>1.53</z-m>
+			<z-m>1.54</z-m>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>3</pitch-deg>
 		</offsets>
@@ -537,12 +537,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>5RUB-32</object-name>
+		<object-name>5RB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[5]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[5]/release</property>
@@ -642,15 +642,15 @@
 	<!-- 7 Pylon 4 R -->
 	
 	<model>
-		<name>4RUB-32</name>
+		<name>4RB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-6.xml</path> -->
 		<path>Aircraft/Su-25/Models/Payload/B-8M1/B-8M1-6.xml</path>
 		<offsets>
-			<x-m>0.40</x-m>
+			<x-m>0.14</x-m>
 			<y-m>2.86</y-m>
-			<z-m>1.48</z-m>
+			<z-m>1.50</z-m>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>3</pitch-deg>
 		</offsets>
@@ -658,12 +658,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>4RUB-32</object-name>
+		<object-name>4RB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[6]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[6]/release</property>
@@ -763,13 +763,13 @@
 	</animation>
 	
 	<model>
-		<name>3RUB-32</name>
+		<name>3RB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-7.xml</path> -->
 		<path>Aircraft/Su-25/Models/Payload/B-8M1/B-8M1-7.xml</path>
 		<offsets>
-			<x-m>0.60</x-m>
+			<x-m>0.50</x-m>
 			<y-m>3.66</y-m>
 			<z-m>1.43</z-m>
 			<roll-deg>0</roll-deg>
@@ -779,12 +779,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>3RUB-32</object-name>
+		<object-name>3RB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[7]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[7]/release</property>
@@ -855,7 +855,7 @@
 	<!-- 9 Pylon 2 R -->
 	
 	<model>
-		<name>2RUB-32</name>
+		<name>2RB-8M1</name>
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/ub-32.ac</path> -->
 		<!-- <path>Aircraft/Su-25/Models/Payload/UB-32/UB-32-8.xml</path> -->
@@ -863,7 +863,7 @@
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>4.43</y-m>
-			<z-m>1.38</z-m>
+			<z-m>1.37</z-m>
 			<roll-deg>0</roll-deg>
 			<pitch-deg>3</pitch-deg>
 		</offsets>
@@ -871,12 +871,12 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>2RUB-32</object-name>
+		<object-name>2RB-8M1</object-name>
 		<condition>
 			<and>
 				<equals>
 					<property>sim/weight[8]/selected</property>
-					<value>UB-32 rockets</value>
+					<value>S-8 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[8]/release</property>

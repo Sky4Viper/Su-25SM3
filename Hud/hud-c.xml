@@ -783,7 +783,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[1]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -829,7 +829,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[2]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -875,7 +875,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[3]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -921,7 +921,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[4]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -967,7 +967,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[5]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -1013,7 +1013,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[6]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -1059,7 +1059,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[7]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -1105,7 +1105,7 @@
               </equals>
 	            <equals>
                 <property>sim/weight[8]/selected</property>
-                <value>UB-32 rockets</value>
+                <value>S-8 rockets</value>
               </equals>
 	          </and>
 	          <and>
@@ -1186,7 +1186,7 @@
               <and>
                 <equals>
                    <property>sim/weight[0]/selected</property>
-                   <value>UB-32 rockets</value>
+                   <value>S-8 rockets</value>
                 </equals>
                 <equals>
                   <property>controls/power/mslrkt</property>
@@ -1210,7 +1210,7 @@
             </equals>
             <not-equals>
               <property>sim/weight[0]/selected</property>
-              <value>UB-32 rockets</value>
+              <value>S-8 rockets</value>
             </not-equals>
           </and>
           <and>
@@ -1220,7 +1220,7 @@
             </equals>
             <equals>
               <property>sim/weight[0]/selected</property>
-              <value>UB-32 rockets</value>
+              <value>S-8 rockets</value>
             </equals>
             <greater-than>
               <property>/controls/armament/rocketsLeft</property>

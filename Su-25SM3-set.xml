@@ -256,7 +256,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -275,7 +275,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -302,7 +302,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -325,7 +325,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -357,7 +357,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -388,7 +388,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -411,7 +411,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -438,7 +438,7 @@
 				<lbs>0</lbs>
 			</opt>
 			<opt>
-				<name>UB-32 rockets</name>
+				<name>S-8 rockets</name>
 				<lbs>580</lbs>
 			</opt>
 			<opt>
@@ -597,7 +597,7 @@
 				<int n="6" alias="/engines/engine[1]/state" />
 				<int n="7" alias="/sim/crashed" />
 				<int n="8" alias="/controls/armament/trigger-GSh-30-2" />
-				<int n="9" alias="/controls/armament/trigger-S-5" />
+				<int n="9" alias="/controls/armament/trigger-S-8" />
 				<int type="int" n="11">0</int>
 				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
 				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>

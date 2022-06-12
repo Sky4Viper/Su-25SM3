@@ -1,6 +1,7 @@
 var showPylonsDlg = func{
 var (width,height) = (1400,500);
 var title = 'Su-25SM3 Payload:';
+setprop("/sim/menubar/visibility",0);
  
 # create a new window, dimensions are WIDTH x HEIGHT, using the dialog decoration (i.e. titlebar)
 var window = canvas.Window.new([width,height],"dialog").set('title',title);
@@ -17,10 +18,16 @@ var mainVBox = canvas.VBoxLayout.new();
 
 myCanvas.setLayout(mainVBox);
 
-var pylonsMap = canvas.gui.widgets.Label.new(root, canvas.style, {} )
-	.setImage("Aircraft/Su-25/Dialogs/Su-25-Pylons.svg")
-	.setFixedSize(697,197); # image dimensions
-mainVBox.addItem(pylonsMap);
+var bgimage = root.createChild("image")
+     .setFile("Aircraft/Su-25/Dialogs/Su-25-Pylons-BG.png")
+	 #.setTranslation(100, 10)
+     .setSize(1400,500);
+
+var TopSpaceFiller = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 0});
+TopSpaceFiller.setText("")
+.setFixedSize(697,210);
+
+mainVBox.addItem(TopSpaceFiller);
 
 var Hbox1 = canvas.HBoxLayout.new(); # Labels
 mainVBox.addItem(Hbox1);
@@ -158,20 +165,24 @@ var Lbl_pyln1 = canvas.gui.widgets.Label.new(root, canvas.style, {} )
 Hbox1LW.addItem(Lbl_pyln1);
 
 var P3_PTB = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 1})
-	.setText("kg" ~ getprop("consumables/fuel/tank[4]/level-kg"))
+	# .setText("kg" ~ getprop("consumables/fuel/tank[4]/level-kg"))
+	.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[4]/level-kg")))
 	.setFixedSize(90, 25);
 var P5_PTB = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 1} )
-	.setText("kg:" ~ getprop("consumables/fuel/tank[5]/level-kg"))
+	# .setText("kg:" ~ getprop("consumables/fuel/tank[5]/level-kg"))
+	.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[5]/level-kg")))
 	.setFixedSize(90, 25);
 var P6_PTB = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 1} )
-	.setText("kg:" ~ getprop("consumables/fuel/tank[6]/level-kg"))
+	# .setText("kg:" ~ getprop("consumables/fuel/tank[6]/level-kg"))
+	.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[6]/level-kg")))
 	.setFixedSize(90, 25);
 var P8_PTB = canvas.gui.widgets.Label.new(root, canvas.style, {wordWrap: 1} )
-	.setText("kg:" ~ getprop("consumables/fuel/tank[7]/level-kg"))
+	# .setText("kg:" ~ getprop("consumables/fuel/tank[7]/level-kg"))
+	.setText(sprintf("kg: %3d", getprop("consumables/fuel/tank[7]/level-kg")))
 	.setFixedSize(90, 25);
 var TotalFuelKg = canvas.gui.widgets.Label.new(root, canvas.style, {} )
 	#.setText("Total Fuel (kg):" ~ getprop("consumables/fuel/total-fuel-kg"))
-	.setText(sprintf("Total Fuel (kg): %5d", getprop("consumables/fuel/total-fuel-kg")))
+	.setText(sprintf("Total Fuel (kg): %4d", getprop("consumables/fuel/total-fuel-kg")))
 	.setFixedSize(200, 25);
 
 
@@ -292,7 +303,7 @@ P2Ctls.addItem(btn_P2_empty);
 #btn_P2_UB32.listen("toggled", func (e) {
 #        if( e.detail.checked ) {
 #		print("P2: B-8M1");
-#		setprop("sim/weight[1]/selected","UB-32 rockets");
+#		setprop("sim/weight[1]/selected","S-8 rockets");
 #		setprop("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",580); # KG
 #		pylons_update();
 #        } else {
@@ -311,7 +322,7 @@ var btn_P2_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 btn_P2_UB32.listen("clicked", func {
         # add code here to react on click on button.
 		print("P2: B-8M1");
-		setprop("sim/weight[1]/selected","UB-32 rockets");
+		setprop("sim/weight[1]/selected","S-8 rockets");
 		setprop("sim/weight[1]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);
@@ -372,7 +383,7 @@ btn_P3_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[4]/selected", 0);
 		setprop("/consumables/fuel/tank[4]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[4]/level-gal_us", 0.0);
-		setprop("sim/weight[2]/selected","UB-32 rockets");
+		setprop("sim/weight[2]/selected","S-8 rockets");
 		setprop("sim/weight[2]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);
@@ -476,7 +487,7 @@ var btn_P4_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 btn_P4_UB32.listen("clicked", func {
         # add code here to react on click on button.
 		print("P4: B-8M1");
-		setprop("sim/weight[3]/selected","UB-32 rockets");
+		setprop("sim/weight[3]/selected","S-8 rockets");
 		setprop("sim/weight[3]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);
@@ -553,7 +564,7 @@ btn_P5_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[5]/selected", 0);
 		setprop("/consumables/fuel/tank[5]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[5]/level-gal_us", 0.0);
-		setprop("sim/weight[4]/selected","UB-32 rockets");
+		setprop("sim/weight[4]/selected","S-8 rockets");
 		setprop("sim/weight[4]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);
@@ -672,7 +683,7 @@ btn_P6_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[6]/selected", 0);
 		setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[6]/level-gal_us", 0.0);
-		setprop("sim/weight[5]/selected","UB-32 rockets");
+		setprop("sim/weight[5]/selected","S-8 rockets");
 		setprop("sim/weight[5]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);
@@ -786,7 +797,7 @@ var btn_P7_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 btn_P7_UB32.listen("clicked", func {
         # add code here to react on click on button.
 		print("P7: B-8M1");
-		setprop("sim/weight[6]/selected","UB-32 rockets");
+		setprop("sim/weight[6]/selected","S-8 rockets");
 		setprop("sim/weight[6]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);
@@ -863,7 +874,7 @@ btn_P8_UB32.listen("clicked", func {
 		setprop("/consumables/fuel/tank[7]/selected", 0);
 		setprop("/consumables/fuel/tank[7]/capacity-gal_us", 0.0);
 		setprop("/consumables/fuel/tank[7]/level-gal_us", 0.0);
-		setprop("sim/weight[7]/selected","UB-32 rockets");
+		setprop("sim/weight[7]/selected","S-8 rockets");
 		setprop("sim/weight[7]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);
@@ -958,7 +969,7 @@ var btn_P9_UB32 = canvas.gui.widgets.Button.new(root, canvas.style, {})
 btn_P9_UB32.listen("clicked", func {
         # add code here to react on click on button.
 		print("P9: B-8M1");
-		setprop("sim/weight[8]/selected","UB-32 rockets");
+		setprop("sim/weight[8]/selected","S-8 rockets");
 		setprop("sim/weight[8]/weight-lb",580);
 		setprop("/controls/armament/rocketsLeft", 20);
 		setprop("/controls/armament/rocketsCount", 20);

@@ -23,6 +23,10 @@
       </and>-->
       <property>sim/model/ground-equipment-f</property>
       <property>controls/gear/brake-parking</property>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.2</value>
+      </greater-than>
     </condition>
   </animation>
 

@@ -1462,6 +1462,32 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 			</greater-than>
 		</condition>
 	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>WheelNose</object-name>
+		<object-name>WheelShaft</object-name>
+		<object-name>WheelShaftStrut</object-name>
+		<object-name>Fender</object-name>
+		<object-name>FenderCarrier</object-name>
+		<object-name>NoseStrutMain</object-name>
+		<object-name>NoseStrutUp1</object-name>
+		<object-name>NoseStrutUp2</object-name>
+		<object-name>NoseStrutDown</object-name>
+		<object-name>NoseStrutDown</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>25</factor>
+		<center>
+			<x-m>-3.0851</x-m>
+			<y-m>-0.05813</y-m>
+			<z-m>1.54017</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
 	
 	<animation>
 		<type>rotate</type>

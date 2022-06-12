@@ -5,14 +5,14 @@ props.globals.initNode("/sim/is-MP-Aircraft", 0, "BOOL");
 props.globals.initNode("/controls/armament/trigger1", 0, "BOOL");
 setprop("/controls/armament/trigger1", 0);
 
-props.globals.initNode("/controls/armament/trigger-UB32-1-L", 0, "BOOL");
-props.globals.initNode("/controls/armament/trigger-UB32-2-L", 0, "BOOL");
-props.globals.initNode("/controls/armament/trigger-UB32-3-L", 0, "BOOL");
-props.globals.initNode("/controls/armament/trigger-UB32-4-L", 0, "BOOL");
-props.globals.initNode("/controls/armament/trigger-UB16-5-R", 0, "BOOL");
-props.globals.initNode("/controls/armament/trigger-UB16-6-R", 0, "BOOL");
-props.globals.initNode("/controls/armament/trigger-UB16-7-R", 0, "BOOL");
-props.globals.initNode("/controls/armament/trigger-UB16-8-R", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-1-L", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-2-L", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-3-L", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-4-L", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-5-R", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-6-R", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-7-R", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S8-8-R", 0, "BOOL");
 
 #props.globals.initNode("/sim/multiplay/generic/int[9]", 0, "INT");
 
@@ -44,14 +44,14 @@ var outOfAmmo = maketimer(1.0,
 	func { 
 		#print("Out of rockets! ");
 		screen.log.write("Out of rockets! ", 1, 0.6, 0.1);
-		setprop("/controls/armament/trigger-UB32-1-L", 0);
-		setprop("/controls/armament/trigger-UB32-2-L", 0);
-		setprop("/controls/armament/trigger-UB32-3-L", 0);
-		setprop("/controls/armament/trigger-UB32-4-L", 0);
-		setprop("/controls/armament/trigger-UB32-5-R", 0);
-		setprop("/controls/armament/trigger-UB32-6-R", 0);
-		setprop("/controls/armament/trigger-UB32-7-R", 0);
-		setprop("/controls/armament/trigger-UB32-8-R", 0);
+		setprop("/controls/armament/trigger-S8-1-L", 0);
+		setprop("/controls/armament/trigger-S8-2-L", 0);
+		setprop("/controls/armament/trigger-S8-3-L", 0);
+		setprop("/controls/armament/trigger-S8-4-L", 0);
+		setprop("/controls/armament/trigger-S8-5-R", 0);
+		setprop("/controls/armament/trigger-S8-6-R", 0);
+		setprop("/controls/armament/trigger-S8-7-R", 0);
+		setprop("/controls/armament/trigger-S8-8-R", 0);
 		setprop("/sim/multiplay/generic/int[9]", 0);
 		setprop("/controls/armament/rocketsCount", 0);
 		setprop("/controls/armament/rocketsLeft", 0);
@@ -77,35 +77,35 @@ var triggerControl = func {
 		if(UB32mounted1L or UB32mounted2L or UB32mounted3L or UB32mounted4L or UB32mounted5R or UB32mounted6R or UB32mounted7R or UB32mounted8R) {
 			var fireTime = 1.0; #continuous fire for 0.15s intervals
 			if(UB32mounted1L) {
-				setprop("/controls/armament/trigger-UB32-1-L", 1);
+				setprop("/controls/armament/trigger-S8-1-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(UB32mounted2L) {
-				setprop("/controls/armament/trigger-UB32-2-L", 1);
+				setprop("/controls/armament/trigger-S8-2-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(UB32mounted3L) {
-				setprop("/controls/armament/trigger-UB32-3-L", 1);
+				setprop("/controls/armament/trigger-S8-3-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(UB32mounted4L) {
-				setprop("/controls/armament/trigger-UB32-4-L", 1);
+				setprop("/controls/armament/trigger-S8-4-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(UB32mounted5R) {
-				setprop("/controls/armament/trigger-UB32-5-R", 1);
+				setprop("/controls/armament/trigger-S8-5-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(UB32mounted6R) {
-				setprop("/controls/armament/trigger-UB32-6-R", 1);
+				setprop("/controls/armament/trigger-S8-6-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(UB32mounted7R) {
-				setprop("/controls/armament/trigger-UB32-7-R", 1);
+				setprop("/controls/armament/trigger-S8-7-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(UB32mounted8R) {
-				setprop("/controls/armament/trigger-UB32-8-R", 1);
+				setprop("/controls/armament/trigger-S8-8-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			var rocketsLeft = getprop("/controls/armament/rocketsLeft");
@@ -117,14 +117,14 @@ var triggerControl = func {
 	}
 	else {
 		setprop("/controls/armament/trigger1", 0);
-		setprop("/controls/armament/trigger-UB32-1-L", 0);
-		setprop("/controls/armament/trigger-UB32-2-L", 0);
-		setprop("/controls/armament/trigger-UB32-3-L", 0);
-		setprop("/controls/armament/trigger-UB32-4-L", 0);
-		setprop("/controls/armament/trigger-UB32-5-R", 0);
-		setprop("/controls/armament/trigger-UB32-6-R", 0);
-		setprop("/controls/armament/trigger-UB32-7-R", 0);
-		setprop("/controls/armament/trigger-UB32-8-R", 0);
+		setprop("/controls/armament/trigger-S8-1-L", 0);
+		setprop("/controls/armament/trigger-S8-2-L", 0);
+		setprop("/controls/armament/trigger-S8-3-L", 0);
+		setprop("/controls/armament/trigger-S8-4-L", 0);
+		setprop("/controls/armament/trigger-S8-5-R", 0);
+		setprop("/controls/armament/trigger-S8-6-R", 0);
+		setprop("/controls/armament/trigger-S8-7-R", 0);
+		setprop("/controls/armament/trigger-S8-8-R", 0);
 		
 		setprop("/sim/multiplay/generic/int[9]", 0);
 		

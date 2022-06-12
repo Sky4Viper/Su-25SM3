@@ -1,4 +1,4 @@
-# for UB-32
+# for B-8M1
 fire_Rocket = func {
                       setprop("/controls/armament/trigger1", 1);
 			 }

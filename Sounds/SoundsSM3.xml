@@ -955,26 +955,25 @@
 			<path>Aircraft/Su-25/Sounds/Samples/Missile.wav</path>
 		</crash>
 		
-		<!-- UB-32 fire  -->
+		<!-- S-8-Rocket fire  -->
 		
-		<UB-32>
-			<name>ub-32</name>
+		<S-8-Rocket>
+			<name>S-8-Rocket</name>
 			<mode>looped</mode>
 			<path>Aircraft/Su-25/Sounds/Samples/rockets_ripple2.wav</path>
 			
 			<condition>
 				<property>controls/armament/trigger1</property>
-                    <or>
-					<property>controls/armament/trigger-UB32-1-L</property>
-					<property>controls/armament/trigger-UB32-2-L</property>
-					<property>controls/armament/trigger-UB32-3-L</property>
-					<property>controls/armament/trigger-UB32-4-L</property>
-					<property>controls/armament/trigger-UB32-5-R</property>
-					<property>controls/armament/trigger-UB32-6-R</property>
-					<property>controls/armament/trigger-UB32-7-R</property>
-					<property>controls/armament/trigger-UB32-8-R</property>  
-                    </or>
-                    
+                <or>
+					<property>controls/armament/trigger-S8-1-L</property>
+					<property>controls/armament/trigger-S8-2-L</property>
+					<property>controls/armament/trigger-S8-3-L</property>
+					<property>controls/armament/trigger-S8-4-L</property>
+					<property>controls/armament/trigger-S8-5-R</property>
+					<property>controls/armament/trigger-S8-6-R</property>
+					<property>controls/armament/trigger-S8-7-R</property>
+					<property>controls/armament/trigger-S8-8-R</property>  
+                </or>
 			</condition>
 
 			<volume>
@@ -985,26 +984,25 @@
 			<reference-dist>100</reference-dist>
 			<max-dist>1000</max-dist>
 
-		</UB-32>
+		</S-8-Rocket>
 
-		<UB-32-Single>
-			<name>ub-32-Single</name>
+		<S-8-Rocket-Single>
+			<name>S-8-Rocket-Single</name>
 			<mode>once</mode>
 			<path>Aircraft/Su-25/Sounds/Samples/rockets.wav</path>
 			
 			<condition>
 				<property>controls/armament/trigger1</property>
-                    <or>
-					<property>controls/armament/trigger-UB32-1-L</property>
-					<property>controls/armament/trigger-UB32-2-L</property>
-					<property>controls/armament/trigger-UB32-3-L</property>
-					<property>controls/armament/trigger-UB32-4-L</property>
-					<property>controls/armament/trigger-UB32-5-R</property>
-					<property>controls/armament/trigger-UB32-6-R</property>
-					<property>controls/armament/trigger-UB32-7-R</property>
-					<property>controls/armament/trigger-UB32-8-R</property>  
-                    </or>
-                    
+                <or>
+					<property>controls/armament/trigger-S8-1-L</property>
+					<property>controls/armament/trigger-S8-2-L</property>
+					<property>controls/armament/trigger-S8-3-L</property>
+					<property>controls/armament/trigger-S8-4-L</property>
+					<property>controls/armament/trigger-S8-5-R</property>
+					<property>controls/armament/trigger-S8-6-R</property>
+					<property>controls/armament/trigger-S8-7-R</property>
+					<property>controls/armament/trigger-S8-8-R</property>  
+                </or>
 			</condition>
 
 			<volume>
@@ -1015,7 +1013,7 @@
 			<reference-dist>100</reference-dist>
 			<max-dist>1000</max-dist>
 			
-		</UB-32-Single>
+		</S-8-Rocket-Single>
 		
 		<!-- Bomb release -->
 		

@@ -46,7 +46,7 @@ Performance
 <control-setting axis="/controls/gear/gear-down" value="0"/>
 </cruise>
 
-<cockpit x="2.819" y="0" z="2.450"/>
+<cockpit x="3.218" y="0" z="2.722"/>
 
 <fuselage ax="6.0" ay="0" az="1.787" bx="2.449" by="0" bz="2" width="1.4" taper="0.2" midpoint="1"/>
 

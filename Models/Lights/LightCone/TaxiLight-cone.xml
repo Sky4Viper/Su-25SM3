@@ -35,7 +35,7 @@
     <object-name>Cone</object-name>
   </effect>
   
-    <animation>
+  <animation>
     <type>select</type>
     <object-name>Cone</object-name>
     <object-name>Cone-texture</object-name>
@@ -43,6 +43,25 @@
     <condition>
       <not><property>/sim/rendering/rembrandt/enabled</property></not>
     </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
+    <object-name>Light</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+		<factor>25</factor>
+		<center>
+      <x-m>0.2318</x-m>
+      <y-m>0.00</y-m>
+      <z-m>0.00</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
   </animation>
   
  </PropertyList>

@@ -54,7 +54,7 @@
 		<submodel-path>Aircraft/Su-25/Models/Effects/Gun/Bullet-Submodel.xml</submodel-path>
 	</submodel>
 	
-	<!-- UB-32-rocket-pod -->
+	<!-- B-8M1-rocket-pod -->
 	
 	<!-- Pylon-2 -->
 	
@@ -62,7 +62,7 @@
 		<name>pylon-two-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-1-L</trigger>
+		<trigger>controls/armament/trigger-S8-1-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -90,7 +90,7 @@
 		<name>pylon-two-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-1-L</trigger>
+		<trigger>controls/armament/trigger-S8-1-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -117,7 +117,7 @@
 		<name>pylon-three-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-2-L</trigger>
+		<trigger>controls/armament/trigger-S8-2-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -144,7 +144,7 @@
 		<name>pylon-three-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-2-L</trigger>
+		<trigger>controls/armament/trigger-S8-2-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -171,7 +171,7 @@
 		<name>pylon-four-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-2-L</trigger>
+		<trigger>controls/armament/trigger-S8-2-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -198,7 +198,7 @@
 		<name>pylon-four-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-3-L</trigger>
+		<trigger>controls/armament/trigger-S8-3-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -225,7 +225,7 @@
 		<name>pylon-five-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-4-L</trigger>
+		<trigger>controls/armament/trigger-S8-4-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -252,7 +252,7 @@
 		<name>pylon-five-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-4-L</trigger>
+		<trigger>controls/armament/trigger-S8-4-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -281,7 +281,7 @@
 		<name>pylon-nine-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-8-R</trigger>
+		<trigger>controls/armament/trigger-S8-8-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -309,7 +309,7 @@
 		<name>pylon-nine-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-8-R</trigger>
+		<trigger>controls/armament/trigger-S8-8-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -336,7 +336,7 @@
 		<name>pylon-eight-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-7-R</trigger>
+		<trigger>controls/armament/trigger-S8-7-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -363,7 +363,7 @@
 		<name>pylon-eight-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-7-R</trigger>
+		<trigger>controls/armament/trigger-S8-7-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -390,7 +390,7 @@
 		<name>pylon-seven-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-6-R</trigger>
+		<trigger>controls/armament/trigger-S8-6-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -417,7 +417,7 @@
 		<name>pylon-seven-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-6-R</trigger>
+		<trigger>controls/armament/trigger-S8-6-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -444,7 +444,7 @@
 		<name>pylon-six-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-5-R</trigger>
+		<trigger>controls/armament/trigger-S8-5-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -471,7 +471,7 @@
 		<name>pylon-six-rockets-blank</name>
 		<model>Aircraft/Su-25/Models/Payload/rocket_blank.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-UB32-5-R</trigger>
+		<trigger>controls/armament/trigger-S8-5-R</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>

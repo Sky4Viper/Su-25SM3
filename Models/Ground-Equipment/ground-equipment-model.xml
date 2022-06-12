@@ -60,6 +60,10 @@ changelog
         <property>/engines/engine[1]/rpm</property>
         <value>0.01</value>
       </less-than>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.99</value>
+      </greater-than>
     </condition>
   </animation>
 
@@ -84,6 +88,10 @@ changelog
         <property>controls/flight/flaps</property>
         <value>0.00</value>
       </equals>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.99</value>
+      </greater-than>
     </condition>
   </animation>
 
@@ -99,6 +107,10 @@ changelog
           <property>velocities/groundspeed-kt</property>
           <value>2</value>
       </less-than>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.99</value>
+      </greater-than>
       <!-- <or>
         <less-than>
           <property>velocities/groundspeed-kt</property>
@@ -123,6 +135,10 @@ changelog
           <property>velocities/groundspeed-kt</property>
           <value>2</value>
       </less-than>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.9</value>
+      </greater-than>
       <!-- <or>
         <less-than>
           <property>velocities/groundspeed-kt</property>
@@ -157,7 +173,7 @@ changelog
       <property>/gear/gear[2]/wow</property>
       <greater-than>
         <property>/canopy/position-norm</property>
-        <value>0</value>
+        <value>0.8</value>
       </greater-than>
       <less-than>
           <property>velocities/groundspeed-kt</property>
@@ -188,6 +204,10 @@ changelog
         <property>velocities/groundspeed-kt</property>
         <value>2</value>
       </less-than>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.1</value>
+      </greater-than>
     </condition>
   </animation>
   
@@ -205,6 +225,10 @@ changelog
         <property>velocities/groundspeed-kt</property>
         <value>2</value>
       </less-than>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.9</value>
+      </greater-than>
     </condition>
   </animation>
 
@@ -222,6 +246,10 @@ changelog
         <property>velocities/groundspeed-kt</property>
         <value>2</value>
       </less-than>
+      <greater-than>
+        <property>/canopy/position-norm</property>
+        <value>0.1</value>
+      </greater-than>
     </condition>
   </animation>
 

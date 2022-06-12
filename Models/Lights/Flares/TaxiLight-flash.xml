@@ -78,4 +78,21 @@
     </interpolation>
   </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name>flash</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+		<factor>45</factor>
+		<center>
+      <x-m>0.2328</x-m>
+      <y-m>0.00</y-m>
+      <z-m>0.00</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+  </animation>
+
 </PropertyList>
