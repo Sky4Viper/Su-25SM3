@@ -1488,6 +1488,43 @@ var listenMpDecode = setlistener(mpPath~"sim/multiplay/generic/string["~stringIn
 			<z>1.0</z>
 		</axis>
 	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>LightBoxLandingLeft</object-name>
+		<object-name>LightLandingLeft</object-name>
+		<object-name>LightBoxLandingRight</object-name>
+		<object-name>LightLandingRight</object-name>
+		<property>lightpack/taxi-light-intensity</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.950685</x-m>
+			<y-m>0.00</y-m>
+			<z-m>1.73948</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	
 	<animation>
 		<type>rotate</type>

@@ -272,7 +272,7 @@
    <!-- <turn-bank-indicator>
       <name>Turn Bank Indicator</name>
       <x>-70</x>
-      <y>-5</y>
+      <y>-15</y>
       <width>140</width>
       <height>140</height>
       <bank-input>
@@ -283,7 +283,7 @@
       </sideslip-input>
       <enable-side-slip-marker>false</enable-side-slip-marker>
       <bank-scale>true</bank-scale>
-      <bank-scale-radius>180</bank-scale-radius>
+      <bank-scale-radius>120</bank-scale-radius>
       <option>false</option>
 
       <condition>

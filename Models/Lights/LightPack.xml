@@ -70,7 +70,7 @@
     <name>LandingLight1</name>
     <path>Aircraft/Su-25/Models/Lights/LandingLight.xml</path>
     <offsets>
-     <x-m>0.91</x-m>
+      <x-m>0.94</x-m>
 			<y-m>6.98</y-m>
 			<z-m>1.67</z-m>
 			<pitch-deg>-3</pitch-deg>
@@ -81,25 +81,27 @@
     <name>LandingLight2</name>
     <path>Aircraft/Su-25/Models/Lights/LandingLight.xml</path>
     <offsets>
-      <x-m> 0.91</x-m>
+      <x-m> 0.94</x-m>
 			<y-m>-6.98</y-m>
 			<z-m> 1.67</z-m> 
 			<pitch-deg>-3</pitch-deg>
     </offsets>
   </model>
 
+<!-- taxi light -->
+
   <model>
-    <name>LandingLight3</name>
+    <name>TaxiLight</name>
     <path>Aircraft/Su-25/Models/Lights/TaxiLight.xml</path>
     <offsets>
-      <x-m> -3.31991</x-m>
+      <x-m> -3.32991</x-m>
 			<y-m>-0.058129</y-m>
 			<z-m> 1.04966</z-m> 
 			<pitch-deg>-3</pitch-deg>
     </offsets>
   </model>
   
-  <!-- taxi light -->
+  
   <!-- a weaker front facing spotlight, often mounted on the front gear 
   <model>
     <name>TaxiLight</name>
