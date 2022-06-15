@@ -1060,6 +1060,20 @@
 		</bomb>
 
 		<bomb>
+			<name>Single_Bomb_on_hardpoints7</name>
+			<mode>once</mode>
+			
+			<condition>
+				<and>
+					<property>controls/armament/station[3]/release</property>
+					<property>controls/armament/station[6]/release</property>
+				</and>
+			</condition>
+			
+			<path>Aircraft/Su-25/Sounds/Samples/Bomb.wav</path>
+		</bomb>
+
+		<bomb>
 			<name>Bomb_on_hardpoints56</name>
 			<mode>once</mode>
 			
@@ -1068,6 +1082,20 @@
 					<property>controls/armament/station[4]/release</property>
 					<property>controls/armament/station[5]/release</property>
 				</or>
+			</condition>
+			
+			<path>Aircraft/Su-25/Sounds/Samples/Bomb.wav</path>
+		</bomb>
+
+		<bomb>
+			<name>Single_Bomb_on_hardpoints6</name>
+			<mode>once</mode>
+			
+			<condition>
+				<and>
+					<property>controls/armament/station[4]/release</property>
+					<property>controls/armament/station[5]/release</property>
+				</and>
 			</condition>
 			
 			<path>Aircraft/Su-25/Sounds/Samples/Bomb.wav</path>

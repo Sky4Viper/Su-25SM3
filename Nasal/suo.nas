@@ -57,7 +57,7 @@ if (getprop("controls/armament/pickle") == 1 and getprop("controls/armament/mast
 	}
 
 	#Release FAB250 from pylons 3 and 6
-	if (getprop("/sim/weight[3]/payload-int") == 4 and getprop("/sim/weight[6]/payload-int") == 4 and getprop("controls/armament/station[3]/release") != 1 and getprop("controls/armament/station[6]/release") != 1)
+	if ((getprop("/sim/weight[3]/payload-int") == 4 or getprop("/sim/weight[6]/payload-int") == 4) and (getprop("controls/armament/station[3]/release") != 1 or getprop("controls/armament/station[6]/release") != 1))
     {
 		#screen.log.write("release interval: " ~release_int, 1, 0.6, 0.1);
 		release250_3_6.singleShot = 1; # timer will only be run once
@@ -65,7 +65,7 @@ if (getprop("controls/armament/pickle") == 1 and getprop("controls/armament/mast
 	}
 
 	#Release FAB250 from pylons 4 and 5
-	if (getprop("/sim/weight[4]/payload-int") == 4 and getprop("/sim/weight[5]/payload-int") == 4 and getprop("controls/armament/station[4]/release") != 1 and getprop("controls/armament/station[5]/release") != 1)
+	if ((getprop("/sim/weight[4]/payload-int") == 4 or getprop("/sim/weight[5]/payload-int") == 4) and (getprop("controls/armament/station[4]/release") != 1 or getprop("controls/armament/station[5]/release") != 1))
     {
 		#screen.log.write("release interval: " ~release_int, 1, 0.6, 0.1);
 		release250_4_5.singleShot = 1; # timer will only be run once
@@ -141,6 +141,8 @@ var release250_2_7 = maketimer(2*getprop("controls/armament/releasei"), func(){
 });
 
 var release250_3_6 = maketimer(3*getprop("controls/armament/releasei"), func(){
+	if (getprop("controls/armament/releaseq") >= 1)
+	{
 	setprop("controls/armament/station[3]/release", 1);
 	setprop("controls/armament/station[6]/release", 1);
 	print("Released FAB-250 from pylons 3 and 6" );
@@ -149,14 +151,38 @@ var release250_3_6 = maketimer(3*getprop("controls/armament/releasei"), func(){
 	setprop("sim/weight[3]/weight-lb", 0);
 	setprop("sim/weight[6]/weight-lb", 0);
 	setprop("controls/armament/pickle", 0);
-	#screen.log.write("Pylons 3 and 6 released! ", 1, 0.6, 0.1);
-	if (getprop("controls/armament/releaseq") <= 1)
-	{
+		if (getprop("controls/armament/releaseq") <= 1)
+		{
 		release250_4_5.stop();
+		}
 	}
+	if (getprop("controls/armament/releaseq") == 0 and getprop("/sim/weight[6]/payload-int") == 4 and getprop("controls/armament/station[3]/release") == 1)
+	{
+	setprop("controls/armament/station[6]/release", 1);
+	print("Released FAB-250 from pylon 6" );
+	setprop("/sim/weight[6]/selected", "none");
+	setprop("sim/weight[6]/weight-lb", 0);
+	setprop("controls/armament/pickle", 0);
+	release250_4_5.stop();
+	}
+	if (getprop("controls/armament/releaseq") == 0 and getprop("/sim/weight[3]/payload-int") == 4)
+	{
+	setprop("controls/armament/station[3]/release", 1);
+	print("Released FAB-250 from pylon 3" );
+	setprop("/sim/weight[3]/selected", "none");
+	setprop("sim/weight[3]/weight-lb", 0);
+	setprop("controls/armament/pickle", 0);
+	release250_4_5.stop();
+	release250_3_6.stop();
+	}
+	#screen.log.write("Pylons 3 and 6 released! ", 1, 0.6, 0.1);
+	
 });
 
 var release250_4_5 = maketimer(4*getprop("controls/armament/releasei"), func(){
+
+	if (getprop("controls/armament/releaseq") >= 1)
+	{
 	setprop("controls/armament/station[4]/release", 1);
 	setprop("controls/armament/station[5]/release", 1);
 	print("Released FAB-250 from pylons 4 and 5" );
@@ -165,5 +191,23 @@ var release250_4_5 = maketimer(4*getprop("controls/armament/releasei"), func(){
 	setprop("sim/weight[4]/weight-lb", 0);
 	setprop("sim/weight[5]/weight-lb", 0);
 	setprop("controls/armament/pickle", 0);
+	}
+	if (getprop("controls/armament/releaseq") == 0 and getprop("/sim/weight[5]/payload-int") == 4 and getprop("controls/armament/station[4]/release") == 1)
+	{
+	setprop("controls/armament/station[5]/release", 1);
+	print("Released FAB-250 from pylon 5" );
+	setprop("/sim/weight[5]/selected", "none");
+	setprop("sim/weight[5]/weight-lb", 0);
+	setprop("controls/armament/pickle", 0);
+	}
+	if (getprop("controls/armament/releaseq") == 0 and getprop("/sim/weight[4]/payload-int") == 4)
+	{
+	setprop("controls/armament/station[4]/release", 1);
+	print("Released FAB-250 from pylon 4" );
+	setprop("/sim/weight[4]/selected", "none");
+	setprop("sim/weight[4]/weight-lb", 0);
+	setprop("controls/armament/pickle", 0);
+	release250_4_5.stop();
+	}
 	#screen.log.write("Pylons 4 and 5 released! ", 1, 0.6, 0.1);
 });
