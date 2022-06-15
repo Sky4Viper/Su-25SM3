@@ -14,8 +14,8 @@ Rreload = func {
 }
 
 var flash_trigger1 = props.globals.getNode("controls/armament/trigger1", 0);
-var rockets_left = props.globals.initNode("/controls/armament/rocketsLeft", 20, "INT");
-var rockets_count = props.globals.initNode("/controls/armament/rocketsCount", 20, "DOUBLE");
+var rockets_left = props.globals.initNode("/controls/armament/rocketsLeft", 0.0, "INT");
+var rockets_count = props.globals.initNode("/controls/armament/rocketsCount", 0.0, "DOUBLE");
 
 # for GSh-30-2
 fire_MG = func {

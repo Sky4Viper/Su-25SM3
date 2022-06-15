@@ -1501,7 +1501,7 @@
     <height>8</height>
     <input>
       <property>/controls/armament/roundsLeft</property>
-      <factor>0.02</factor>
+      <factor>0.016</factor>
     </input>
     <format>%1d</format>
     <halign>right</halign>

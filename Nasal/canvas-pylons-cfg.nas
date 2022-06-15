@@ -2,6 +2,8 @@ var showPylonsDlg = func{
 var (width,height) = (1400,500);
 var title = 'Su-25SM3 Payload:';
 setprop("/sim/menubar/visibility",0);
+setprop("/controls/armament/roundsLeft", 250);
+setprop("/controls/armament/roundsCount", 250);
  
 # create a new window, dimensions are WIDTH x HEIGHT, using the dialog decoration (i.e. titlebar)
 var window = canvas.Window.new([width,height],"dialog").set('title',title);

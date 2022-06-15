@@ -52,6 +52,21 @@
 			<preview>
         		<type>exterior</type>
         		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview6.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview7.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/Preview8.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
         		<path>gui/Previews/Preview5.png</path>
 			</preview>
 		</previews>
@@ -497,6 +512,13 @@
 						<binding>
 							<command>nasal</command>
 							<script>weapons.Rreload()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Reload cannon</label>
+						<binding>
+							<command>nasal</command>
+							<script>cannon.reload()</script>
 						</binding>
 					</item>
 					<item>
@@ -1427,6 +1449,10 @@
 		<rockets>
 			<file>Aircraft/Su-25/Nasal/rockets.nas</file>
 		</rockets>
+
+		<cannon>
+			<file>Aircraft/Su-25/Nasal/cannon.nas</file>
+		</cannon>
 
 		<launchauthorizer>
 			<file>Aircraft/Su-25/Nasal/launchauthorizer.nas</file>

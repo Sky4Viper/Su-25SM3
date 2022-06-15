@@ -17,8 +17,8 @@ props.globals.initNode("/controls/armament/trigger-S8-8-R", 0, "BOOL");
 #props.globals.initNode("/sim/multiplay/generic/int[9]", 0, "INT");
 
 #ammo counter
-props.globals.initNode("/controls/armament/rocketsLeft", 20, "INT");
-props.globals.initNode("/controls/armament/rocketsCount", 20, "DOUBLE");
+props.globals.initNode("/controls/armament/rocketsLeft", 0.0, "INT");
+props.globals.initNode("/controls/armament/rocketsCount", 0.0, "DOUBLE");
 #props.globals.initNode("/controls/armament/UB32rocketsLeft", 32, "INT");
 #props.globals.initNode("/controls/armament/UB32rocketsCount", 32, "DOUBLE");
 #var reload = func {

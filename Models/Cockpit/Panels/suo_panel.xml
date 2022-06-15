@@ -21,6 +21,9 @@
     <object-name>suo_switch.012</object-name>
     <object-name>suo_knob.001</object-name>
     <object-name>suo_knob.002</object-name>
+    <object-name>suo_wep</object-name>
+    <object-name>suo_res</object-name>
+    <object-name>suo_gun</object-name>
     <emission>
 		    <red>0.05</red>
       	<green>0.03</green>
@@ -170,5 +173,41 @@
       <z> -1 </z>
     </axis>
   </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>suo_wep</object-name>
+  <property>controls/armament/selectedweapon</property>
+  <factor>-0.030762</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>suo_res</object-name>
+  <property>controls/armament/rocketsLeft</property>
+  <factor>0.0063365</factor>
+  <step>5</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>suo_gun</object-name>
+  <property>controls/armament/roundsLeft</property>
+  <factor>0.00050692</factor>
+  <step>62.5</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+  </axis>
+ </animation>
 
 </PropertyList>
