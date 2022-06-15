@@ -12,6 +12,10 @@
 		<usage>interior</usage>
 		<path>Aircraft/Su-25/Models/CockpitSM3.xml</path>
 	</model>
+
+	<model>
+		<path>Aircraft/Su-25/Models/Effects/shadow.xml</path>
+	</model>
 	
 	<!-- Rembrandt -->
 	
