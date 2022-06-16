@@ -86,7 +86,7 @@ the shadow seems to disappear into the ground.
    <type>translate</type>
    <object-name>shadow</object-name>
    <property>sim/multiplay/generic/float[4]</property>
-   <factor>-0.3048</factor>
+   <factor>-1.0</factor>
    <center>
      <x-m>0</x-m>
      <y-m>0</y-m>
