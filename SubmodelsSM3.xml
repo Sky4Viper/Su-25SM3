@@ -171,7 +171,7 @@
 		<name>pylon-four-rockets</name>
 		<model>Aircraft/Su-25/Models/Payload/Rocket.xml</model>
 		<!-- <trigger>controls/armament/trigger1</trigger> -->
-		<trigger>controls/armament/trigger-S8-2-L</trigger>
+		<trigger>controls/armament/trigger-S8-3-L</trigger>
 		<speed>2000</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
