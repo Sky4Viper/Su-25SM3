@@ -1156,7 +1156,7 @@
 				<property>controls/armament/trigger2</property>
 			</condition>
 			
-			<path>Aircraft/Su-25/Sounds/Samples/Flare2.wav</path>
+			<path>Aircraft/Su-25/Sounds/Samples/Flare_single.wav</path>
 			<mode>once</mode>
 		</flare>
 
@@ -1178,6 +1178,29 @@
         		<factor>1.0</factor>
       		</volume>
     	</inrange>
+
+		<navinrange>
+      		<name>nav inrange beep</name>
+      		<mode>once</mode>
+      		<path>Aircraft/Su-25/Sounds/Samples/rwr-new.wav</path>
+      		<type>avionics</type>
+			<condition>
+				<and>
+				<less-than>
+					<property>su25/instrumentation/dme/nav-target-km</property>
+					<value>0.5</value>
+				</less-than>
+				<greater-than>
+					<property>su25/instrumentation/dme/nav-target-km</property>
+					<value>0.0</value>
+				</greater-than> 
+				</and>
+			</condition>
+      		<volume>
+        		<property>/sim/current-view/internal</property>
+        		<factor>1.0</factor>
+      		</volume>
+    	</navinrange>
 		
 		<!-- Stall warning -->
 		
@@ -1292,10 +1315,10 @@
 			<type>avionics</type>
 			
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<!-- <property>/sim/current-view/internal</property> -->
 				<less-than-equals>
           			<property>position/altitude-agl-ft</property>
-          			<value>2900</value>
+          			<property>controls/instrumentation/danger-altitude-ft</property>
         		</less-than-equals>
 				<not>
 					<property>/controls/gear/gear-down</property>

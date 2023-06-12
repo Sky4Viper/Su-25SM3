@@ -67,62 +67,73 @@
 </animation>
 -->
 
+<!--Needles-->
 <animation>
- <type>rotate</type>
- <object-name>RV-21.Needle</object-name>
- <!--<property>mig29/instrumentation/RV-21/indicated-altitude-m</property>-->
- <property>instrumentation/altimeter/indicated-altitude-ft</property>
- <interpolation>
-  <entry><ind>  -5</ind><dep>-5.375</dep></entry>  <!--   -5 -->
-  <entry><ind>   0</ind><dep> 0.0  </dep></entry>  <!--    0 -->
-  <entry><ind>  20</ind><dep>21.5  </dep></entry>  <!--   20 -->
-  <entry><ind>  40</ind><dep>43.0  </dep></entry>  <!--   40 -->
-  <entry><ind>  60</ind><dep>64.5  </dep></entry>  <!--   60 -->
-  <entry><ind>  80</ind><dep>86.0  </dep></entry>  <!--   80 -->
-  <entry><ind> 100</ind><dep>107.5 </dep></entry>  <!--  100 -->
-  <entry><ind> 150</ind><dep>161.25</dep></entry>  <!--  150 -->
-  <entry><ind> 175</ind><dep>177.0 </dep></entry>  <!--  175 -->
-  <entry><ind> 200</ind><dep>191.0 </dep></entry>  <!--  200 -->
-  <entry><ind> 250</ind><dep>209.4 </dep></entry>  <!--  250 -->
-  <entry><ind> 300</ind><dep>225.0 </dep></entry>  <!--  300 -->
-  <entry><ind> 400</ind><dep>247.0 </dep></entry>  <!--  400 -->
-  <entry><ind> 500</ind><dep>267.5 </dep></entry>  <!--  500 -->
-  <entry><ind> 600</ind><dep>274.0 </dep></entry>  <!--  600 -->
-  <entry><ind> 700</ind><dep>283.5 </dep></entry>  <!--  700 -->
-  <entry><ind> 800</ind><dep>290.3 </dep></entry>  <!--  800 -->
-  <entry><ind> 900</ind><dep>295.5 </dep></entry>  <!--  900 -->
-  <entry><ind>1000</ind><dep>300.5 </dep></entry>  <!-- 1000 -->
-  <entry><ind>1250</ind><dep>309.5 </dep></entry>  <!-- 1250 -->
-  <entry><ind>1500</ind><dep>315.5 </dep></entry>  <!-- 1500 -->
-  <entry><ind>1501</ind><dep>315.55</dep></entry>
-  <entry><ind>1502</ind><dep>320.6 </dep></entry>
- </interpolation>
- <axis>
-  <x>-1</x>
-  <y> 0</y>
-  <z> 0</z>
- </axis>
+    <type>rotate</type>
+    <object-name>RV-21.Needle</object-name>
+  <expression>
+    <table>
+      <product>
+          <sum>
+            <property>/position/altitude-agl-ft</property>
+            <value>-3</value>
+          </sum>
+        <value>0.3048</value>
+      </product>
+        <entry><ind>  -5</ind><dep>-5.375</dep></entry>  <!--   -5 -->
+        <entry><ind>   0</ind><dep> 0.0  </dep></entry>  <!--    0 -->
+        <entry><ind>  20</ind><dep>21.5  </dep></entry>  <!--   20 -->
+        <entry><ind>  40</ind><dep>43.0  </dep></entry>  <!--   40 -->
+        <entry><ind>  60</ind><dep>64.5  </dep></entry>  <!--   60 -->
+        <entry><ind>  80</ind><dep>86.0  </dep></entry>  <!--   80 -->
+        <entry><ind> 100</ind><dep>107.5 </dep></entry>  <!--  100 -->
+        <entry><ind> 150</ind><dep>161.25</dep></entry>  <!--  150 -->
+        <entry><ind> 175</ind><dep>177.0 </dep></entry>  <!--  175 -->
+        <entry><ind> 200</ind><dep>191.0 </dep></entry>  <!--  200 -->
+        <entry><ind> 250</ind><dep>209.4 </dep></entry>  <!--  250 -->
+        <entry><ind> 300</ind><dep>225.0 </dep></entry>  <!--  300 -->
+        <entry><ind> 400</ind><dep>247.0 </dep></entry>  <!--  400 -->
+        <entry><ind> 500</ind><dep>267.5 </dep></entry>  <!--  500 -->
+        <entry><ind> 600</ind><dep>274.0 </dep></entry>  <!--  600 -->
+        <entry><ind> 700</ind><dep>283.5 </dep></entry>  <!--  700 -->
+        <entry><ind> 800</ind><dep>290.3 </dep></entry>  <!--  800 -->
+        <entry><ind> 900</ind><dep>295.5 </dep></entry>  <!--  900 -->
+        <entry><ind>1000</ind><dep>300.5 </dep></entry>  <!-- 1000 -->
+        <entry><ind>1250</ind><dep>309.5 </dep></entry>  <!-- 1250 -->
+        <entry><ind>1500</ind><dep>315.5 </dep></entry>  <!-- 1500 -->
+        <entry><ind>1501</ind><dep>315.55</dep></entry>
+        <entry><ind>1502</ind><dep>320.6 </dep></entry>
+    </table>
+  </expression>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+    <!-- <condition>
+        <property>/controls/electric/ralt-switch</property>
+    </condition> -->
 </animation>
 
 <animation>
  <type>rotate</type>
  <object-name>RV-21.DAM</object-name>
- <property>mig29/instrumentation/RV-21/DAMarker</property>
- <interpolation>
-  <entry><ind>   0</ind><dep>  0.0</dep>></entry>
-  <entry><ind>  20</ind><dep> 21.5</dep></entry>
-  <entry><ind>  40</ind><dep> 43.0</dep></entry>
-  <entry><ind>  60</ind><dep> 64.5</dep></entry>
-  <entry><ind>  80</ind><dep> 86.0</dep></entry>
-  <entry><ind> 100</ind><dep>107.5</dep></entry>
-  <entry><ind> 150</ind><dep>161.25</dep></entry>
-  <entry><ind> 200</ind><dep>191.0</dep></entry>
-  <entry><ind> 300</ind><dep>225.0</dep></entry>
-  <entry><ind> 400</ind><dep>247.0</dep></entry>
-  <entry><ind> 500</ind><dep>267.5</dep></entry>
-  <entry><ind> 600</ind><dep>274.0</dep></entry>
-  <entry><ind>1250</ind><dep>300.5</dep></entry>
-  <entry><ind>1500</ind><dep>315.5</dep></entry>
+ <property>controls/instrumentation/danger-altitude-ft</property>
+  <interpolation>
+  <entry><ind>   0</ind><dep>  0.0</dep></entry>
+  <entry><ind>  65.62</ind><dep> 21.5</dep></entry>
+  <entry><ind>  131.24</ind><dep> 43.0</dep></entry>
+  <entry><ind>  196.86</ind><dep> 64.5</dep></entry>
+  <entry><ind>  262.48</ind><dep> 86.0</dep></entry>
+  <entry><ind> 328.1</ind><dep>107.5</dep></entry>
+  <entry><ind> 492.15</ind><dep>161.25</dep></entry>
+  <entry><ind> 656.2</ind><dep>191.0</dep></entry>
+  <entry><ind> 984.3</ind><dep>225.0</dep></entry>
+  <entry><ind> 1312.4</ind><dep>247.0</dep></entry>
+  <entry><ind> 1640.5</ind><dep>267.5</dep></entry>
+  <entry><ind> 1968.6</ind><dep>274.0</dep></entry>
+  <entry><ind>4101.25</ind><dep>300.5</dep></entry>
+  <entry><ind>4921.5</ind><dep>315.5</dep></entry>
  </interpolation>
  <axis>
   <x>-1</x>
@@ -135,12 +146,12 @@
  <type>rotate</type>
  <object-name>RV-21.Knob</object-name>
  <object-name>RV-21.KnobL</object-name>
- <property>mig29/instrumentation/RV-21/DAMarker</property>
+ <property>controls/instrumentation/danger-altitude-ft</property>
  <factor>10</factor>
  <center>
-  <x-m> 0.000</x-m>
-  <y-m> 0.030</y-m>
-  <z-m>-0.030</z-m>
+  <x-m> 0.007891</x-m>
+  <y-m> 0.021948</y-m>
+  <z-m>-0.021947</z-m>
  </center>
  <axis>
   <x>-1</x>
@@ -268,5 +279,45 @@
   </mod-up>
  </action>
 </animation>
+
+    <animation>
+        <type>knob</type>
+        <object-name>RV-21.Knob</object-name>
+        <increase>
+          <binding>
+              <command>property-adjust</command>
+              <property>controls/instrumentation/danger-altitude-ft</property>
+              <step>3.281</step>
+              <min>0</min>
+              <max>1509.26</max>
+              <wrap>0</wrap>
+          </binding>
+          <binding>
+            <command>nasal</command>
+            <script>switchclicksound.click("adf-dial")</script>
+          </binding>
+        </increase>
+        <decrease>
+          <binding>
+              <command>property-adjust</command>
+              <property>controls/instrumentation/danger-altitude-ft</property>
+              <step>-3.281</step>
+              <min>0</min>
+              <max>1509.26</max>
+              <wrap>0</wrap>
+          </binding>
+          <binding>
+                <command>nasal</command>
+                <script>switchclicksound.click("adf-dial")</script>
+          </binding>
+        </decrease>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rv-5m-dh</tooltip-id>
+                <label>Adjust danger altitude warning</label>
+            </binding>
+        </hovered>
+    </animation>
 
 </PropertyList>
