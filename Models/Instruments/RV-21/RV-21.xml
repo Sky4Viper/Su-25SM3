@@ -289,7 +289,7 @@
               <property>controls/instrumentation/danger-altitude-ft</property>
               <step>3.281</step>
               <min>0</min>
-              <max>1509.26</max>
+              <max>4928.062</max>
               <wrap>0</wrap>
           </binding>
           <binding>
@@ -303,7 +303,7 @@
               <property>controls/instrumentation/danger-altitude-ft</property>
               <step>-3.281</step>
               <min>0</min>
-              <max>1509.26</max>
+              <max>4928.062</max>
               <wrap>0</wrap>
           </binding>
           <binding>
