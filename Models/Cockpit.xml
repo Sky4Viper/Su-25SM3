@@ -7,7 +7,7 @@
 	<!-- Pilot -->
 	
 	<model>
-		<path>Aircraft/Su-25/Models/Pilot/Pilot.xml</path>
+		<path>Aircraft/Su-25/Models/Pilot-Old/Pilot.xml</path>
 		<offsets>
 			<x-m>-3.32</x-m>
 			<y-m>0.00</y-m>

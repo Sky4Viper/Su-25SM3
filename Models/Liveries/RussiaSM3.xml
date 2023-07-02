@@ -14,7 +14,11 @@
             <fueltk>
             	<name type="string">Russia04</name>
             	<texture>Liveries/DroptankRU04.png</texture>
-            </fueltk> 
+            </fueltk>
+            <pilotsuit>
+                <name type="string">BlueFlightsuit</name>
+                <texture>Liveries/Pilot/pilot_camo.png</texture>
+            </pilotsuit>
         </model>
     </sim>
 

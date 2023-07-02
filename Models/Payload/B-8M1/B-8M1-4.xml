@@ -3,12 +3,10 @@
 	<path>b-8m1.ac</path>
 
   <effect>
-    <!--<inherits-from>Aircraft/MiG-21UPG/Models/Effects/Fx/ub32-shader</inherits-from>-->
-    <!--enabling bumpmap shader causing FG crash on linux, works ok on windows though :(-->
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <object-name>outpod</object-name>
-    <object-name>inpod</object-name>
-    <object-name>intubes</object-name>
+        <inherits-from>Aircraft/Su-25/Models/Effects/ArmReflect</inherits-from>
+        <object-name>outpod</object-name>
+        <object-name>inpod</object-name>
+        <object-name>intubes</object-name>
   </effect>
 
 <animation>

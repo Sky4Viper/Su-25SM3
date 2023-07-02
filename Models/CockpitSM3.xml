@@ -8,11 +8,14 @@
 	<!-- Pilot -->
 	
 	<model>
-		<path>Aircraft/Su-25/Models/Pilot/Pilot.xml</path>
+		<path>Aircraft/Su-25/Models/Pilot/pilot.xml</path>
 		<offsets>
-			<x-m>-3.32</x-m>
+			<!-- <x-m>-3.32</x-m>
 			<y-m>0.00</y-m>
-			<z-m>2.23</z-m>
+			<z-m>2.23</z-m> -->
+			<x-m>-3.283</x-m>
+			<y-m>0.00</y-m>
+			<z-m>2.069</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 		<condition>

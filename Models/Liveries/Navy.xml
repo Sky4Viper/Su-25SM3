@@ -15,6 +15,10 @@
             	<name type="string">DefaultDroptank</name>
             	<texture>Liveries/Droptank.png</texture>
             </fueltk>
+            <pilotsuit>
+                <name type="string">BlueFlightsuit</name>
+                <texture>Liveries/Pilot/pilot_blue.png</texture>
+            </pilotsuit>
         </model>
     </sim>
 

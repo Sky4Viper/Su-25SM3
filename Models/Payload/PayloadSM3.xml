@@ -96,10 +96,13 @@
 		</condition>
 	</animation>
 	
+	
+
+	<!-- FAB-250 bomb 1 -->
+
 	<model>
-		<name>2LFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
-		<!-- <path>Aircraft/Su-25/Models/Payload/fab-500-m54.ac</path> -->
+		<name>P2-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-1.xml</path>
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>-4.43</y-m>
@@ -111,7 +114,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>2LFAB-250</object-name>
+		<object-name>P2-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -217,10 +220,12 @@
 			</and>
 		</condition>
 	</animation>
-	
+
+	<!-- FAB-250 bomb 2 -->
+
 	<model>
-		<name>3LFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<name>P3-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-2.xml</path>
 		<offsets>
 			<x-m>0.60</x-m>
 			<y-m>-3.66</y-m>
@@ -232,7 +237,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>3LFAB-250</object-name>
+		<object-name>P3-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -309,10 +314,12 @@
 			</and>
 		</condition>
 	</animation>
-	
+
+	<!-- FAB-250 bomb 3 -->
+
 	<model>
-		<name>4LFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<name>P4-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-3.xml</path>
 		<offsets>
 			<x-m>0.40</x-m>
 			<y-m>-2.86</y-m>
@@ -324,7 +331,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>4LFAB-250</object-name>
+		<object-name>P4-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -401,10 +408,12 @@
 			</and>
 		</condition>
 	</animation>
-	
+
+	<!-- FAB-250 bomb 4 -->
+
 	<model>
-		<name>5LFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<name>P5-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-4.xml</path>
 		<offsets>
 			<x-m>0.00</x-m>
 			<y-m>-2.06</y-m>
@@ -416,7 +425,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>5LFAB-250</object-name>
+		<object-name>P5-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -551,10 +560,12 @@
 			</and>
 		</condition>
 	</animation>
-	
+
+	<!-- FAB-250 bomb 5 -->
+
 	<model>
-		<name>5RFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<name>P6-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-5.xml</path>
 		<offsets>
 			<x-m>0.00</x-m>
 			<y-m>2.06</y-m>
@@ -566,7 +577,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>5RFAB-250</object-name>
+		<object-name>P6-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -701,10 +712,12 @@
 			</and>
 		</condition>
 	</animation>
-	
+
+	<!-- FAB-250 bomb 6 -->
+
 	<model>
-		<name>4RFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<name>P7-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-6.xml</path>
 		<offsets>
 			<x-m>0.40</x-m>
 			<y-m>2.86</y-m>
@@ -716,7 +729,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>4RFAB-250</object-name>
+		<object-name>P7-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -822,10 +835,12 @@
 			</and>
 		</condition>
 	</animation>
-	
+
+	<!-- FAB-250 bomb 7 -->
+
 	<model>
-		<name>3RFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<name>P8-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-7.xml</path>
 		<offsets>
 			<x-m>0.60</x-m>
 			<y-m>3.66</y-m>
@@ -837,7 +852,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>3RFAB-250</object-name>
+		<object-name>P8-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
@@ -885,10 +900,12 @@
 			</and>
 		</condition>
 	</animation>
-	
+
+	<!-- FAB-250 bomb 8 -->
+
 	<model>
-		<name>2RFAB-250</name>
-		<path>Aircraft/Su-25/Models/Payload/FAB-250.ac</path>
+		<name>P9-FAB-250</name>
+		<path>Aircraft/Su-25/Models/Payload/FAB-250/FAB-250-8.xml</path>
 		<offsets>
 			<x-m>0.80</x-m>
 			<y-m>4.43</y-m>
@@ -900,7 +917,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>2RFAB-250</object-name>
+		<object-name>P9-FAB-250</object-name>
 		<condition>
 			<and>
 				<equals>
