@@ -528,6 +528,30 @@
 							<script>weapons.Freload()</script>
 						</binding>
 					</item>
+					<item>
+            			<label>ARK-19 setup</label>
+            			<name>config</name>
+            			<binding>
+              				<command>dialog-show</command>
+              				<dialog-name>ARK-19</dialog-name>
+            			</binding>
+          			</item>
+					<item>
+            			<label>RSBN setup</label>
+            			<name>config</name>
+            			<binding>
+              				<command>dialog-show</command>
+              				<dialog-name>RSBN</dialog-name>
+            			</binding>
+          			</item>
+					<item>
+            			<label>PRMG setup</label>
+            			<name>config</name>
+            			<binding>
+              				<command>dialog-show</command>
+              				<dialog-name>PRMG</dialog-name>
+            			</binding>
+          			</item>
           <item>
             <label>Ground Equipment Toggle</label>
             <binding>
@@ -1107,6 +1131,10 @@
 			<hudmode type="double">0</hudmode>
 		</hud>
 
+		<navigation>
+			<target-range type="double">0.0</target-range>
+		</navigation>
+
 		<mfd>
       		<mfdpage type="double">0</mfdpage>
       		<hdgbugset type="double">0</hdgbugset>
@@ -1390,6 +1418,10 @@
 		<fuel>
 			<file>Aircraft/Su-25/Nasal/fuel.nas</file>
 		</fuel>
+
+		<radiocfg>
+      		<file>Aircraft/Su-25/Nasal/radiocfg.nas</file>
+    	</radiocfg>
 		
 		<!-- <Eject>
 			<file>Aircraft/Su-25/Nasal/eject.nas</file>

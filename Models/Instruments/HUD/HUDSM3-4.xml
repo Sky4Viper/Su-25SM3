@@ -108,6 +108,8 @@
        <object-name>comm2</object-name>
        <object-name>nav1</object-name>
        <object-name>nav2</object-name> 
+       <object-name>nav1-chnl</object-name>
+       <object-name>nav2-chnl</object-name>
     </effect>
 
     <animation>
@@ -192,6 +194,16 @@
       <object-name>hud_sw1</object-name>
       <object-name>hud_sw2</object-name>
       <object-name>hud_bright_knob</object-name>
+      <object-name>hud_btn.001</object-name>
+      <object-name>hud_btn.002</object-name>
+      <object-name>hud_btn.003</object-name>
+      <object-name>hud_btn.004</object-name>
+      <object-name>hud_btn.005</object-name>
+      <object-name>hud_btn.006</object-name>
+      <object-name>hud_btn.007</object-name>
+      <object-name>hud_btn.008</object-name>
+      <object-name>hud_btn.009</object-name>
+      <object-name>hud_btn.010</object-name>
       <emission>
         <red>0.1</red>
         <green>0.1</green>
@@ -326,6 +338,8 @@
         <object-name>nav1-label</object-name>
         <object-name>nav2</object-name>
         <object-name>nav2-label</object-name>
+        <object-name>nav1-chnl</object-name>
+        <object-name>nav2-chnl</object-name>
         <ambient>
             <red>0.3</red>
             <green>1.0</green>
@@ -363,6 +377,8 @@
         <object-name>nav1-label</object-name>
         <object-name>nav2</object-name>
         <object-name>nav2-label</object-name>
+        <object-name>nav1-chnl</object-name>
+        <object-name>nav2-chnl</object-name>
         <ambient>
             <red>1.0</red>
             <green>0.3</green>
@@ -759,7 +775,7 @@
         </offsets>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">literal</type>
-        <text type="string">-COM1</text>
+        <text type="string">-COM1></text>
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
     </text>
@@ -827,7 +843,25 @@
         </offsets>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">literal</type>
-        <text type="string">-NAV1</text>
+        <text type="string">-RSBN></text>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
+
+    <text>
+        <name>nav1-chnl</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.005</y-m>
+            <z-m>-0.095491</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%1.0f-</format>
+        <truncate type="bool">false</truncate>
+        <property>su-25/instrumentation/RSBN/channel</property>
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
     </text>
@@ -861,7 +895,25 @@
         </offsets>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">literal</type>
-        <text type="string">-NAV2</text>
+        <text type="string">-PRMG</text>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
+
+    <text>
+        <name>nav2-chnl</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.005</y-m>
+            <z-m>-0.111475</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%1.0f-</format>
+        <truncate type="bool">false</truncate>
+        <property>su-25/instrumentation/PRMG/channel</property>
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
     </text>
@@ -883,6 +935,122 @@
         <draw-text type="bool">true</draw-text>
         <alignment>right-top</alignment>
     </text>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.003</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/RSBN/channel</property>
+          <step>-1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>prmg</tooltip-id>
+          <label>RSBN Channel -</label>
+        </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.008</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/RSBN/channel</property>
+          <step>1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>prmg</tooltip-id>
+          <label>RSBN Channel +</label>
+        </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.004</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/PRMG/channel</property>
+          <step>-1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>prmg</tooltip-id>
+          <label>PRMG Channel -</label>
+        </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.009</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/PRMG/channel</property>
+          <step>1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>prmg</tooltip-id>
+          <label>PRMG Channel +</label>
+        </binding>
+      </hovered>
+    </animation>
 
 
 </PropertyList>

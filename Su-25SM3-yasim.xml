@@ -158,7 +158,7 @@ sweep="24">
 
 <!-- 2 × Soyuz/Tumansky R-195 turbojet engine, 44.18 kN (9,930 lbf) thrust each -->
 
-<jet x="-0.7" y="0.8" z="1.7"
+<jet x="-0.7" y="0.84" z="1.7"
 rotate="4"
 mass="1784"
 thrust="9930" >
@@ -166,7 +166,7 @@ thrust="9930" >
 <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
 </jet>
 
-<jet x="-0.7" y="-0.8" z="1.7"
+<jet x="-0.7" y="-0.84" z="1.7"
 rotate="4"
 mass="1784"
 thrust="9930">
@@ -214,7 +214,7 @@ damp="3.0">
 
 <!-- Left main -->
 
-<gear x="-0.62964" y="1.351" z="0"
+<gear x="-0.62964" y="2.351" z="0"
 compression="0.3" upx="-0.02" upy="-0.1" upz="0.29"
 spring="0.8"
 damp="3">
@@ -227,7 +227,7 @@ damp="3">
 
 <!-- Right main -->
 
-<gear x="-0.62964" y="-1.351" z="0"
+<gear x="-0.62964" y="-2.351" z="0"
 compression="0.3" upx="-0.02" upy="0.1" upz="0.29"
 spring="0.8"
 damp="3">
@@ -262,7 +262,7 @@ damp="3">
 <tank x="-0.6" y="-3.66" z="1.40" jet="true" capacity="1415.96"/>
 
 <!-- Center of gravity placement -->
-<ballast x="3.3" y="0" z="1.4176" mass="7450"/>
+<ballast x="1.3" y="0" z="1.4176" mass="9950"/>
 
 <!-- External loads -->
 
