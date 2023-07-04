@@ -13,7 +13,16 @@ var ARK_channel_5 = 0;
 var ARK_channel_6 = 0;
 var ARK_channel_7 = 0;
 var ARK_channel_8 = 0;
-var ARK_channel_9 = 0;
+
+var COM1_channel = 0;
+var COM1_channel_1 = 0;
+var COM1_channel_2 = 0;
+var COM1_channel_3 = 0;
+var COM1_channel_4 = 0;
+var COM1_channel_5 = 0;
+var COM1_channel_6 = 0;
+var COM1_channel_7 = 0;
+var COM1_channel_8 = 0;
 
 var RSBN_channel = 0;
 var RSBN_channel_1 = 0;
@@ -46,17 +55,36 @@ var ARK_channel_handler = func{
   var ARK_channel_6 = getprop("/su-25/instrumentation/ARK-19/channel-6");
   var ARK_channel_7 = getprop("/su-25/instrumentation/ARK-19/channel-7");
   var ARK_channel_8 = getprop("/su-25/instrumentation/ARK-19/channel-8");
-  var ARK_channel_9 = getprop("/su-25/instrumentation/ARK-19/channel-9");
-  if (ARK_channel == 1) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_1); }
-  if (ARK_channel == 2) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_2); }
-  if (ARK_channel == 3) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_3); }
-  if (ARK_channel == 4) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_4); }
-  if (ARK_channel == 5) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_5); }
-  if (ARK_channel == 6) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_6); }
-  if (ARK_channel == 7) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_7); }
-  if (ARK_channel == 8) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_8); }
-  if (ARK_channel == 9) { setprop("/instrumentation/comm/frequencies/selected-mhz", ARK_channel_9); }
-  if (ARK_channel == 10) { print("P :)"); }
+  if (ARK_channel == 1) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_1); }
+  if (ARK_channel == 2) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_2); }
+  if (ARK_channel == 3) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_3); }
+  if (ARK_channel == 4) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_4); }
+  if (ARK_channel == 5) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_5); }
+  if (ARK_channel == 6) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_6); }
+  if (ARK_channel == 7) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_7); }
+  if (ARK_channel == 8) { setprop("/instrumentation/adf[0]/frequencies/selected-khz", ARK_channel_8); }
+  if (ARK_channel == 9) { print("P :)"); }
+}
+
+var COM1_channel_handler = func{
+  var COM1_channel = getprop("/su-25/instrumentation/COM1/channel");
+  var COM1_channel_1 = getprop("/su-25/instrumentation/COM1/channel-1");
+  var COM1_channel_2 = getprop("/su-25/instrumentation/COM1/channel-2");
+  var COM1_channel_3 = getprop("/su-25/instrumentation/COM1/channel-3");
+  var COM1_channel_4 = getprop("/su-25/instrumentation/COM1/channel-4");
+  var COM1_channel_5 = getprop("/su-25/instrumentation/COM1/channel-5");
+  var COM1_channel_6 = getprop("/su-25/instrumentation/COM1/channel-6");
+  var COM1_channel_7 = getprop("/su-25/instrumentation/COM1/channel-7");
+  var COM1_channel_8 = getprop("/su-25/instrumentation/COM1/channel-8");
+  if (COM1_channel == 1) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_1); }
+  if (COM1_channel == 2) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_2); }
+  if (COM1_channel == 3) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_3); }
+  if (COM1_channel == 4) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_4); }
+  if (COM1_channel == 5) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_5); }
+  if (COM1_channel == 6) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_6); }
+  if (COM1_channel == 7) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_7); }
+  if (COM1_channel == 8) { setprop("/instrumentation/comm[0]/frequencies/selected-mhz", COM1_channel_8); }
+  if (COM1_channel == 9) { print("P :)"); }
 }
 
 var RSBN_channel_handler = func{
@@ -106,19 +134,15 @@ var PRMG_channel_handler = func{
 
 var ARK_init = func{
   setprop("/su-25/instrumentation/ARK-19/channel", 1);
-  setprop("/su-25/instrumentation/ARK-19/channel-1", 119.0);
-  setprop("/su-25/instrumentation/ARK-19/channel-2", 119.7);
-  setprop("/su-25/instrumentation/ARK-19/channel-3", 121.7);
-  setprop("/su-25/instrumentation/ARK-19/channel-4", 124.0);
-  setprop("/su-25/instrumentation/ARK-19/channel-5", 127.1);
-  setprop("/su-25/instrumentation/ARK-19/channel-6", 128.2);
-  setprop("/su-25/instrumentation/ARK-19/channel-7", 119.0);
-  setprop("/su-25/instrumentation/ARK-19/channel-8", 119.7);
-  setprop("/su-25/instrumentation/ARK-19/channel-9", 121.7);
-#  setprop("/su-25/instrumentation/ARK-19/komp-ant", 1);
-#  setprop("/su-25/instrumentation/ARK-19/tlg-tlf", 1);
-#  setprop("/su-25/instrumentation/ARK-19/ramka", 0);
-#  setprop("/su-25/instrumentation/ARK-19/volume", 0.6);
+  setprop("/su-25/instrumentation/ARK-19/channel-1", 320); #Rostov-na-Donu
+  setprop("/su-25/instrumentation/ARK-19/channel-2", 493); #Krasnodar
+  setprop("/su-25/instrumentation/ARK-19/channel-3", 414); #Bassel-al Assad
+  setprop("/su-25/instrumentation/ARK-19/channel-4", 395); #Shannon
+  setprop("/su-25/instrumentation/ARK-19/channel-5", 316); #Dublin
+  setprop("/su-25/instrumentation/ARK-19/channel-6", 390); #Aviano
+  setprop("/su-25/instrumentation/ARK-19/channel-7", 356); #Praha
+  setprop("/su-25/instrumentation/ARK-19/channel-8", 429); #Bratislava
+
   setlistener("/su-25/instrumentation/ARK-19/channel", ARK_channel_handler,0,0 );
   setlistener("/su-25/instrumentation/ARK-19/channel-1", ARK_channel_handler,0,0 );
   setlistener("/su-25/instrumentation/ARK-19/channel-2", ARK_channel_handler,0,0 );
@@ -128,9 +152,32 @@ var ARK_init = func{
   setlistener("/su-25/instrumentation/ARK-19/channel-6", ARK_channel_handler,0,0 );
   setlistener("/su-25/instrumentation/ARK-19/channel-7", ARK_channel_handler,0,0 );
   setlistener("/su-25/instrumentation/ARK-19/channel-8", ARK_channel_handler,0,0 );
-  setlistener("/su-25/instrumentation/ARK-19/channel-9", ARK_channel_handler,0,0 );
-#  setlistener("/su-25/instrumentation/ARK-19/volume", ARK_volume_handler,0,0 );
-#  setlistener("/su-25/instrumentation/electrical/v27", ARK_volume_handler,0,0 );
+
+  setprop("/instrumentation/adf[0]/frequencies/selected-khz", 320);
+}
+
+var COM1_init = func{
+  setprop("/su-25/instrumentation/COM1/channel", 1);
+  setprop("/su-25/instrumentation/COM1/channel-1", 119.0); #Rostov-na-Donu
+  setprop("/su-25/instrumentation/COM1/channel-2", 119.7); #Krasnodar
+  setprop("/su-25/instrumentation/COM1/channel-3", 121.7); #Bassel-al Assad
+  setprop("/su-25/instrumentation/COM1/channel-4", 124.0); #Shannon
+  setprop("/su-25/instrumentation/COM1/channel-5", 127.1); #Dublin
+  setprop("/su-25/instrumentation/COM1/channel-6", 128.2); #Aviano
+  setprop("/su-25/instrumentation/COM1/channel-7", 119.0); #Praha
+  setprop("/su-25/instrumentation/COM1/channel-8", 119.7); #Bratislava
+
+  setlistener("/su-25/instrumentation/COM1/channel", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-1", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-2", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-3", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-4", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-5", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-6", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-7", COM1_channel_handler,0,0 );
+  setlistener("/su-25/instrumentation/COM1/channel-8", COM1_channel_handler,0,0 );
+
+  setprop("/instrumentation/comm[0]/frequencies/selected-mhz", 119.0);
 }
 
 var PRMG_init = func{
@@ -155,7 +202,6 @@ var PRMG_init = func{
   setlistener("/su-25/instrumentation/PRMG/channel-8", PRMG_channel_handler,0,0 );
 
 setprop("/instrumentation/nav[1]/frequencies/selected-mhz", 110.5);
-
 #  screen.log.write("PRMG set", 1, 0.6, 0.1);
 }
 
@@ -188,7 +234,6 @@ var RSBN_init = func{
   setlistener("/su-25/instrumentation/RSBN/channel-7", RSBN_channel_handler,0,0 );
   setlistener("/su-25/instrumentation/RSBN/channel-8", RSBN_channel_handler,0,0 );
 
-setprop("/instrumentation/nav/frequencies/selected-mhz", 114.700);
-
+  setprop("/instrumentation/nav/frequencies/selected-mhz", 114.700);
 #  screen.log.write("RSBN set", 1, 0.6, 0.1);
 }

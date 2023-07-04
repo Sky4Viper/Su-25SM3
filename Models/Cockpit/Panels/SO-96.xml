@@ -22,6 +22,16 @@ so96-screws -->
   <object-name>kontrlightbutton</object-name>
   <object-name>switchtext</object-name>
   <object-name>button_restart</object-name>
+  <object-name>radio_sw.001</object-name>
+  <object-name>radio_sw.002</object-name>
+  <object-name>radio_sw.003</object-name>
+  <object-name>radio_sw.004</object-name>
+  <object-name>radio_sw.005</object-name>
+  <object-name>radio_sw.006</object-name>
+  <object-name>radio_sw.007</object-name>
+  <object-name>radio_sw.008</object-name>
+  <object-name>radio_sw.009</object-name>
+  <object-name>radio_sw.010</object-name>
    <emission>
         <red>0.2</red>
         <green>0.2</green>
@@ -41,6 +51,16 @@ so96-screws -->
   <object-name>kontrlightbutton</object-name>
   <object-name>switchtext</object-name>
   <object-name>button_restart</object-name>
+  <object-name>radio_sw.001</object-name>
+  <object-name>radio_sw.002</object-name>
+  <object-name>radio_sw.003</object-name>
+  <object-name>radio_sw.004</object-name>
+  <object-name>radio_sw.005</object-name>
+  <object-name>radio_sw.006</object-name>
+  <object-name>radio_sw.007</object-name>
+  <object-name>radio_sw.008</object-name>
+  <object-name>radio_sw.009</object-name>
+  <object-name>radio_sw.010</object-name>
    <emission>
         <red>0.8</red>
         <green>0.3</green>
@@ -109,6 +129,24 @@ so96-screws -->
   		</specular>
   		<shininess>105</shininess>
 	</animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>radio_sw.001</object-name>
+      <property>/controls/power/rsbn-ark</property>
+      <offset-deg>-25</offset-deg>
+      <factor>50</factor>
+      <center>
+        <x-m>0.07199</x-m>
+        <y-m>0</y-m>
+        <z-m>0.00533</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+  </animation>
  
    <text>
     <name>transponder_id</name>
@@ -129,6 +167,75 @@ so96-screws -->
     <draw-text type="bool">true</draw-text>
     <alignment>left-top</alignment>
   </text>
+
+  <text>
+    <name>ac_longitude</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>0.008</x-m>
+      <y-m>-0.02342</y-m>
+      <z-m>0.01076</z-m>
+      <pitch-deg>-75</pitch-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%3.4f</format>
+    <truncate type="bool">false</truncate>
+    <property>/position/longitude-deg</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>ac_latitude</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>0.0145</x-m>
+      <y-m>-0.02342</y-m>
+      <z-m>0.01076</z-m>
+      <pitch-deg>-75</pitch-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%3.4f</format>
+    <truncate type="bool">false</truncate>
+    <property>/position/latitude-deg</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>
+
+  <animation>
+    <type>pick</type>
+    <object-name>radio_sw.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/power/rsbn-ark</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch2")</script>
+      </binding>
+    </action>
+    <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rsbn-ark-switch-lbl</tooltip-id>
+                <label>Mode: %s</label>
+                <property>/controls/power/rsbn-ark</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['ARK', 'RSBN'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+    </hovered>
+  </animation>
 
 
 </PropertyList>

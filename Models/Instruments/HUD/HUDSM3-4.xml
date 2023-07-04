@@ -104,12 +104,14 @@
        <object-name>range_digit.002</object-name>
        <object-name>range_digit.003</object-name>
        <object-name>range_decimal</object-name>
-       <object-name>comm1</object-name>
-       <object-name>comm2</object-name>
+       <object-name>com1</object-name>
+       <object-name>ark</object-name>
        <object-name>nav1</object-name>
        <object-name>nav2</object-name> 
        <object-name>nav1-chnl</object-name>
        <object-name>nav2-chnl</object-name>
+       <object-name>ark-chnl</object-name>
+       <object-name>com1-chnl</object-name>
     </effect>
 
     <animation>
@@ -330,16 +332,18 @@
 
     <animation>
         <type>material</type>
-        <object-name>comm1</object-name>
-        <object-name>comm1-label</object-name>
-        <object-name>comm2</object-name>
-        <object-name>comm2-label</object-name>
+        <object-name>com1</object-name>
+        <object-name>com1-label</object-name>
+        <object-name>ark</object-name>
+        <object-name>ark-label</object-name>
         <object-name>nav1</object-name>
         <object-name>nav1-label</object-name>
         <object-name>nav2</object-name>
         <object-name>nav2-label</object-name>
         <object-name>nav1-chnl</object-name>
         <object-name>nav2-chnl</object-name>
+        <object-name>ark-chnl</object-name>
+        <object-name>com1-chnl</object-name>
         <ambient>
             <red>0.3</red>
             <green>1.0</green>
@@ -369,16 +373,18 @@
 
     <animation>
         <type>material</type>
-        <object-name>comm1</object-name>
-        <object-name>comm1-label</object-name>
-        <object-name>comm2</object-name>
-        <object-name>comm2-label</object-name>
+        <object-name>com1</object-name>
+        <object-name>com1-label</object-name>
+        <object-name>ark</object-name>
+        <object-name>ark-label</object-name>
         <object-name>nav1</object-name>
         <object-name>nav1-label</object-name>
         <object-name>nav2</object-name>
         <object-name>nav2-label</object-name>
         <object-name>nav1-chnl</object-name>
         <object-name>nav2-chnl</object-name>
+        <object-name>ark-chnl</object-name>
+        <object-name>com1-chnl</object-name>
         <ambient>
             <red>1.0</red>
             <green>0.3</green>
@@ -765,7 +771,7 @@
   <!-- COM and NAV texts -->
     
     <text>
-        <name>comm1-label</name>
+        <name>com1-label</name>
         <font>lcd.txf</font>
         <character-size type="double">0.006</character-size>
         <offsets>
@@ -779,9 +785,27 @@
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
     </text>
+
+    <text>
+        <name>com1-chnl</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.005</y-m>
+            <z-m>-0.065524</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%1.0f-</format>
+        <truncate type="bool">false</truncate>
+        <property>su-25/instrumentation/COM1/channel</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
     
     <text>
-        <name>comm1</name>
+        <name>com1</name>
         <font>lcd.txf</font>
         <character-size type="double">0.006</character-size>
         <offsets>
@@ -793,13 +817,13 @@
         <type type="string">number-value</type>
         <format type="string">%3.3f-</format>
         <truncate type="bool">false</truncate>
-        <property>instrumentation/comm/frequencies/selected-mhz</property>
+        <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
         <draw-text type="bool">true</draw-text>
         <alignment>right-top</alignment>
     </text>
     
     <text>
-        <name>comm2-label</name>
+        <name>ark-label</name>
         <font>lcd.txf</font>
         <character-size type="double">0.006</character-size>
         <offsets>
@@ -809,13 +833,31 @@
         </offsets>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">literal</type>
-        <text type="string">-COM2</text>
+        <text type="string">-ARK</text>
+        <draw-text type="bool">true</draw-text>
+        <alignment>left-top</alignment>
+    </text>
+
+    <text>
+        <name>ark-chnl</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.006</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> 0.005</y-m>
+            <z-m>-0.080507</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%1.0f-</format>
+        <truncate type="bool">false</truncate>
+        <property>su-25/instrumentation/ARK-19/channel</property>
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
     </text>
     
     <text>
-        <name>comm2</name>
+        <name>ark</name>
         <font>lcd.txf</font>
         <character-size type="double">0.006</character-size>
         <offsets>
@@ -827,7 +869,7 @@
         <type type="string">number-value</type>
         <format type="string">%3.3f-</format>
         <truncate type="bool">false</truncate>
-        <property>instrumentation/comm[1]/frequencies/selected-mhz</property>
+        <property>instrumentation/adf[0]/frequencies/selected-khz</property>
         <draw-text type="bool">true</draw-text>
         <alignment>right-top</alignment>
     </text>
@@ -935,6 +977,122 @@
         <draw-text type="bool">true</draw-text>
         <alignment>right-top</alignment>
     </text>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.001</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/COM1/channel</property>
+          <step>-1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>comm1</tooltip-id>
+          <label>COM1 Channel -</label>
+        </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.006</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/COM1/channel</property>
+          <step>1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>comm1</tooltip-id>
+          <label>COM1 Channel +</label>
+        </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.002</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/ARK-19/channel</property>
+          <step>-1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>prmg</tooltip-id>
+          <label>ARK Channel -</label>
+        </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>hud_btn.007</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>su-25/instrumentation/ARK-19/channel</property>
+          <step>1</step>
+          <min>1</min>
+          <max>8</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>switchclicksound.click("switch")</script>
+        </binding>
+      </action>
+      <hovered>
+          <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>prmg</tooltip-id>
+          <label>ARK Channel +</label>
+        </binding>
+      </hovered>
+    </animation>
 
     <animation>
       <type>pick</type>

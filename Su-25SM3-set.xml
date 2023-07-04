@@ -529,6 +529,14 @@
 						</binding>
 					</item>
 					<item>
+            			<label>COM1 setup</label>
+            			<name>config</name>
+            			<binding>
+              				<command>dialog-show</command>
+              				<dialog-name>COM1</dialog-name>
+            			</binding>
+          			</item>
+					<item>
             			<label>ARK-19 setup</label>
             			<name>config</name>
             			<binding>
@@ -598,7 +606,7 @@
 			</key>
 
 			<key>
-				<name>p</name>
+				<name>O</name>
 				<desc>Break chute deploy/retract</desc>
 			</key>
 			
@@ -794,6 +802,15 @@
 					<max type="double">1</max>
 				</binding>
 			</key>
+
+			<key n="79">
+        		<name>O</name>
+        		<desc>Deploy braking parachute</desc>
+        		<binding>
+				<command>property-toggle</command>
+          		<property>controls/flight/chute_deploy</property>
+        		</binding>
+      		</key>
 			
 			<key n="99">
 				<name>c</name>
@@ -930,33 +947,6 @@
 					<max type="double">1</max>
 				</binding>
 			</key>
-
-			<key n="112">
-        		<name>p</name>
-        		<desc>Deploy braking parachute</desc>
-        		<binding>
-				<command>property-toggle</command>
-          		<property>controls/flight/chute_deploy</property>
-          		<!-- <condition>
-            	<property>controls/flight/chute_loaded</property>
-          		</condition>
-          		<command>property-assign</command>
-          		<property>controls/flight/chute_deploy</property>
-          		<value type="bool">1</value>
-        		</binding>
-        		<binding>
-          		<condition>
-            	<property>controls/flight/chute_loaded</property>
-          		</condition>
-          		<command>property-assign</command>
-          		<property>controls/flight/chute_loaded</property>
-          		<value type="bool">0</value>
-        		</binding>
-        		<binding>
-          		<command>nasal</command>
-          		<script>dragchute.chute_deployed()</script> -->
-        		</binding>
-      		</key>
 			
 			<key n="113">
 				<name>q</name>
@@ -1038,7 +1028,8 @@
 			<fuelpump3 type="bool">true</fuelpump3>
       		<fuelpump1 type="bool">true</fuelpump1>
       		<fuelpump0 type="bool">true</fuelpump0>
-      		<rsbn type="bool">true</rsbn>
+      		<rsbn type="bool">false</rsbn>
+			<rsbn-ark type="bool">false</rsbn-ark>
 
 		<sound>
         	<click-switch type="bool">false</click-switch>
