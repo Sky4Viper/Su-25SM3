@@ -60,10 +60,65 @@ var outOfAmmo = maketimer(1.0,
 );
 outOfAmmo.singleShot = 1;
 
+var Rockets_Stop = maketimer(0.1, 
+	func { 
+		#print("Rockets Stopped! ");
+		setprop("/controls/armament/trigger1", 0);
+		setprop("/controls/armament/trigger-S8-1-L", 0);
+		setprop("/controls/armament/trigger-S8-2-L", 0);
+		setprop("/controls/armament/trigger-S8-3-L", 0);
+		setprop("/controls/armament/trigger-S8-4-L", 0);
+		setprop("/controls/armament/trigger-S8-5-R", 0);
+		setprop("/controls/armament/trigger-S8-6-R", 0);
+		setprop("/controls/armament/trigger-S8-7-R", 0);
+		setprop("/controls/armament/trigger-S8-8-R", 0);
+		setprop("/sim/multiplay/generic/int[9]", 0);
+        if(getprop("/controls/armament/report-ammo")) {
+			screen.log.write("S-5 rockets left: " ~ getprop("/controls/armament/rocketsLeft1"), 1, 0.6, 0.1);
+        }
+	}
+);
+Rockets_Stop.singleShot = 1;
+
+var Rockets_Ripple_2 = maketimer(0.05, 
+	func { 
+		#print("2x more rockets! ");
+		setprop("/controls/armament/trigger-S8-1-L", 1);
+		setprop("/controls/armament/trigger-S8-2-L", 1);
+		setprop("/controls/armament/trigger-S8-3-L", 1);
+		setprop("/controls/armament/trigger-S8-4-L", 1);
+		setprop("/controls/armament/trigger-S8-5-R", 1);
+		setprop("/controls/armament/trigger-S8-6-R", 1);
+		setprop("/controls/armament/trigger-S8-7-R", 1);
+		setprop("/controls/armament/trigger-S8-8-R", 1);
+        Rockets_Stop.start(0.05);
+        Rockets_Ripple_2.stop();
+	}
+);
+Rockets_Ripple_2.singleShot = 1;
+
+var Rockets_Ripple_4 = maketimer(0.1, 
+	func { 
+		#print("2x more rockets! ");
+		setprop("/controls/armament/trigger-S8-1-L", 1);
+		setprop("/controls/armament/trigger-S8-2-L", 1);
+		setprop("/controls/armament/trigger-S8-3-L", 1);
+		setprop("/controls/armament/trigger-S8-4-L", 1);
+		setprop("/controls/armament/trigger-S8-5-R", 1);
+		setprop("/controls/armament/trigger-S8-6-R", 1);
+		setprop("/controls/armament/trigger-S8-7-R", 1);
+		setprop("/controls/armament/trigger-S8-8-R", 1);
+        Rockets_Stop.start(0.1);
+        Rockets_Ripple_4.stop();
+	}
+);
+Rockets_Ripple_4.singleShot = 1;
+
 #trigger control with ammo counting
 # 1L(1) 2L(2) 3L(3) 4L(4)
 var triggerControl = func {
 	triggerState = getprop("controls/armament/trigger1");
+	RippleType = getprop("controls/armament/releaseq");
 	if(triggerState and getprop("/controls/armament/rocketsLeft") > 0) {
 		var UB32mounted1L = (getprop("/sim/weight[1]/payload-int") == 3);
 		var UB32mounted2L = (getprop("/sim/weight[2]/payload-int") == 3);
@@ -74,8 +129,8 @@ var triggerControl = func {
 		var UB32mounted7R = (getprop("/sim/weight[7]/payload-int") == 3);
 		var UB32mounted8R = (getprop("/sim/weight[8]/payload-int") == 3);
 		
-		if(UB32mounted1L or UB32mounted2L or UB32mounted3L or UB32mounted4L or UB32mounted5R or UB32mounted6R or UB32mounted7R or UB32mounted8R) {
-			var fireTime = 1.0; #continuous fire for 0.15s intervals
+		if((UB32mounted1L or UB32mounted2L or UB32mounted3L or UB32mounted4L or UB32mounted5R or UB32mounted6R or UB32mounted7R or UB32mounted8R) and RippleType ==4) {
+			var fireTime = 0.75; #continuous fire for 0.15s intervals
 			if(UB32mounted1L) {
 				setprop("/controls/armament/trigger-S8-1-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
@@ -114,6 +169,123 @@ var triggerControl = func {
 				fireTime*(rocketsLeft/20));
 			outOfAmmo.restart(fireTime*(rocketsLeft/20));
 		}
+
+		if((UB32mounted1L or UB32mounted2L or UB32mounted3L or UB32mounted4L or UB32mounted5R or UB32mounted6R or UB32mounted7R or UB32mounted8R) and RippleType ==1) {
+			var fireTime = 0.75; #continuous fire for 0.15s intervals
+			if(UB32mounted1L) {
+				setprop("/controls/armament/trigger-S8-1-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted2L) {
+				setprop("/controls/armament/trigger-S8-2-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted3L) {
+				setprop("/controls/armament/trigger-S8-3-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted4L) {
+				setprop("/controls/armament/trigger-S8-4-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted5R) {
+				setprop("/controls/armament/trigger-S8-5-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted6R) {
+				setprop("/controls/armament/trigger-S8-6-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted7R) {
+				setprop("/controls/armament/trigger-S8-7-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted8R) {
+				setprop("/controls/armament/trigger-S8-8-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			var rocketsLeft = (getprop("/controls/armament/rocketsLeft") -1);
+			setprop("/controls/armament/rocketsCount", rocketsLeft);
+			Rockets_Stop.start(0.1);
+		}
+
+		if((UB32mounted1L or UB32mounted2L or UB32mounted3L or UB32mounted4L or UB32mounted5R or UB32mounted6R or UB32mounted7R or UB32mounted8R) and RippleType ==2) {
+			var fireTime = 0.75; #continuous fire for 0.15s intervals
+			if(UB32mounted1L) {
+				setprop("/controls/armament/trigger-S8-1-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted2L) {
+				setprop("/controls/armament/trigger-S8-2-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted3L) {
+				setprop("/controls/armament/trigger-S8-3-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted4L) {
+				setprop("/controls/armament/trigger-S8-4-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted5R) {
+				setprop("/controls/armament/trigger-S8-5-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted6R) {
+				setprop("/controls/armament/trigger-S8-6-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted7R) {
+				setprop("/controls/armament/trigger-S8-7-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted8R) {
+				setprop("/controls/armament/trigger-S8-8-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			var rocketsLeft = (getprop("/controls/armament/rocketsLeft") -2);
+			setprop("/controls/armament/rocketsCount", rocketsLeft);
+			Rockets_Ripple_2.start();
+		}
+
+		if((UB32mounted1L or UB32mounted2L or UB32mounted3L or UB32mounted4L or UB32mounted5R or UB32mounted6R or UB32mounted7R or UB32mounted8R) and RippleType ==3) {
+			var fireTime = 0.75; #continuous fire for 0.15s intervals
+			if(UB32mounted1L) {
+				setprop("/controls/armament/trigger-S8-1-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted2L) {
+				setprop("/controls/armament/trigger-S8-2-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted3L) {
+				setprop("/controls/armament/trigger-S8-3-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted4L) {
+				setprop("/controls/armament/trigger-S8-4-L", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted5R) {
+				setprop("/controls/armament/trigger-S8-5-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted6R) {
+				setprop("/controls/armament/trigger-S8-6-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted7R) {
+				setprop("/controls/armament/trigger-S8-7-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			if(UB32mounted8R) {
+				setprop("/controls/armament/trigger-S8-8-R", 1);
+				setprop("/sim/multiplay/generic/int[9]", 1);
+			}
+			var rocketsLeft = (getprop("/controls/armament/rocketsLeft") -4);
+			setprop("/controls/armament/rocketsCount", rocketsLeft);
+			Rockets_Ripple_4.start();
+		}
 	}
 	else {
 		setprop("/controls/armament/trigger1", 0);
@@ -125,14 +297,14 @@ var triggerControl = func {
 		setprop("/controls/armament/trigger-S8-6-R", 0);
 		setprop("/controls/armament/trigger-S8-7-R", 0);
 		setprop("/controls/armament/trigger-S8-8-R", 0);
-		
 		setprop("/sim/multiplay/generic/int[9]", 0);
-		
 		setprop("/controls/armament/rocketsLeft", 
 			getprop("/controls/armament/rocketsCount"));#gets truncated
 		interpolate("/controls/armament/rocketsCount", 
 			getprop("/controls/armament/rocketsLeft"), 0);
 		outOfAmmo.stop();
+		Rockets_Ripple_2.stop();
+		Rockets_Ripple_4.stop();
 		#ammo count report on trigger release
 		if(getprop("/controls/armament/report-ammo"))
 			screen.log.write("S-8 rockets left: " ~ getprop("/controls/armament/rocketsLeft") ~ ((getprop("/sim/weight[1]/payload-int") == 3 and  getprop("/sim/weight[8]/payload-int") == 3)?" x2":""), 1, 0.6, 0.1);
