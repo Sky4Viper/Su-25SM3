@@ -105,6 +105,19 @@ Switch_test_base -->
   	</animation>
 
   <animation>
+    <type>select</type>
+      <object-name>Arc-digit-cents</object-name>
+      <object-name>Arc-digit-tens</object-name>
+      <object-name>Arc-digit-ones</object-name>
+      <object-name>Disp-digit-cents</object-name>
+      <object-name>Disp-digit-tens</object-name>
+      <object-name>Disp-digit-ones</object-name>
+      <condition>
+    		  <property>/controls/power/rsbn</property>
+  	  </condition>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>Knob_bright</object-name>
     <property>controls/lighting/instruments-norm</property>
@@ -198,6 +211,38 @@ Switch_test_base -->
                 <command>set-tooltip</command>
                 <tooltip-id>instruments-lighting-adj</tooltip-id>
                 <label>Instruments lights</label>
+        </binding>
+  </hovered>
+</animation>
+
+ <animation>
+ <type>knob</type>
+ <object-name>Knob-channel</object-name>
+         <increase>
+             <binding>
+          <command>property-adjust</command>
+          <property>controls/navigation/target-range</property>
+            <step>1.0</step>
+            <min>0.0</min>
+            <max>999.0</max>
+          <wrap>false</wrap>
+        </binding>
+        </increase>
+        <decrease>
+             <binding>
+          <command>property-adjust</command>
+          <property>controls/navigation/target-range</property>
+            <step>-1.0</step>
+            <min>0.0</min>
+            <max>999.0</max>
+          <wrap>false</wrap>
+        </binding>
+        </decrease>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>nav-range-adj</tooltip-id>
+                <label>Nav target range</label>
         </binding>
   </hovered>
 </animation>
@@ -302,7 +347,8 @@ Switch_test_base -->
   <animation>
     <type>textranslate</type>
     <object-name>Arc-digit-ones</object-name>
-    <property>instrumentation/dme/indicated-distance-nm</property>
+    <!-- <property>instrumentation/dme/indicated-distance-nm</property> -->
+    <property>su25/instrumentation/dme/nav-target-km</property>
     <factor>0.1</factor>
     <!-- <offset>-1</offset> -->
     <axis>
@@ -315,7 +361,8 @@ Switch_test_base -->
   <animation>
     <type>textranslate</type>
     <object-name>Arc-digit-tens</object-name>
-    <property>instrumentation/dme/indicated-distance-nm</property>
+    <!-- <property>instrumentation/dme/indicated-distance-nm</property> -->
+    <property>su25/instrumentation/dme/nav-target-km</property>
     <factor>0.01</factor>
     <!-- <offset>-10</offset> -->
     <step>10</step>
@@ -330,7 +377,8 @@ Switch_test_base -->
   <animation>
     <type>textranslate</type>
     <object-name>Arc-digit-cents</object-name>
-    <property>instrumentation/dme/indicated-distance-nm</property>
+    <!-- <property>instrumentation/dme/indicated-distance-nm</property> -->
+    <property>su25/instrumentation/dme/nav-target-km</property>
     <factor>0.001</factor>
     <!-- <offset>-100</offset> -->
     <step>100</step>

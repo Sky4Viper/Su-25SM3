@@ -163,8 +163,26 @@
         </binding>
   </hovered>
     </animation>
+    
+  <animation>
+    <type>rotate</type>
+    <object-name>rp_switch.014</object-name>
+    <property>/controls/power/rsbn</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>-0.134309</x-m>
+      <y-m>-0.003099</y-m>
+      <z-m>-0.038611</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
-    <animation>
+  <animation>
     <type>pick</type>
     <object-name>rp_switch.014</object-name>
     <visible>true</visible>
@@ -173,7 +191,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/electric/rsbn-switch</property>
+        <property>/controls/power/rsbn</property>
       </binding>
       <binding>
         <command>nasal</command>
@@ -185,6 +203,14 @@
       </binding>
       <binding>
         <command>nasal</command>
+        <script>radiocfg.ARK_init()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>radiocfg.COM1_init()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
         <script>switchclicksound.click("switch2")</script>
       </binding>
     </action>
@@ -193,7 +219,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>rsbn-switch-lbl</tooltip-id>
                 <label>Radio %s</label>
-                <property>/controls/electric/rsbn-switch</property>
+                <property>/controls/power/rsbn</property>
                 <mapping>nasal</mapping>
                 <script>
                     var modes = ['OFF', 'ON'];
