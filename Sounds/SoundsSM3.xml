@@ -1179,6 +1179,23 @@
       		</volume>
     	</inrange>
 
+		<inrange2>
+      		<name>launch authorized</name>
+      		<mode>once</mode>
+      		<path>Aircraft/Su-25/Sounds/Samples/launch_ru.wav</path>
+      		<type>avionics</type>
+      		<condition>
+        		<and>
+          			<property>/controls/armament/masterarm</property>
+		  			<property>/controls/armament/LAMarkerON</property>
+        		</and>
+      		</condition>
+      		<volume>
+        		<property>/sim/current-view/internal</property>
+        		<factor>1.0</factor>
+      		</volume>
+    	</inrange2>
+
 		<navinrange>
       		<name>nav inrange beep</name>
       		<mode>once</mode>
@@ -1307,6 +1324,80 @@
 			<reference-dist>1.0</reference-dist>
 			<max-dist>2.0</max-dist>
 		</stall>
+
+		<pullup>
+      		<name>pullup</name>
+      		<mode>looped</mode>
+      		<path>Aircraft/Su-25/Sounds/Samples/pullup_ru.wav</path>
+      		<condition>
+        		<property>/sim/current-view/internal</property>
+        		<!-- <property>/controls/power/sound/pulup-alert</property>
+        		<less-than-equals>
+          			<property>position/altitude-agl-ft</property>
+          		<value>1500</value>
+        		</less-than-equals> -->
+				<less-than-equals>
+          			<property>position/altitude-agl-ft</property>
+          			<property>controls/instrumentation/danger-altitude-ft</property>
+        		</less-than-equals>
+        		<less-than-equals>
+          			<property>autopilot/internal/vert-speed-fpm</property>
+          			<value>-4000</value>
+        		</less-than-equals>
+        		<equals>
+          			<property>/gear/gear[0]/position-norm</property>
+          		<value>0</value>
+        		</equals>
+      		</condition>
+    	</pullup>
+
+		<low-fuel>
+            <name>low-fuel</name>
+            <mode>once</mode>
+            <path>Aircraft/Su-25/Sounds/Samples/bingofuel_ru.wav</path>
+            <condition>
+                <less-than>
+                    <property>/consumables/fuel/total-fuel-gals</property>
+                    <value>65.00</value>
+                </less-than>
+            </condition>
+        </low-fuel> 
+        
+        <low-fuel5>
+            <name>low-fuel5</name>
+            <mode>once</mode>
+            <path>Aircraft/Su-25/Sounds/Samples/fuel_500_ru.wav</path>
+            <condition>
+                <less-than>
+                    <property>/consumables/fuel/total-fuel-gals</property>
+                    <value>167.0</value>
+                </less-than>
+            </condition>
+        </low-fuel5>
+
+		<low-fuel8>
+            <name>low-fuel8</name>
+            <mode>once</mode>
+            <path>Aircraft/Su-25/Sounds/Samples/fuel_800_ru.wav</path>
+            <condition>
+                <less-than>
+                    <property>/consumables/fuel/total-fuel-gals</property>
+                    <value>265.0</value>
+                </less-than>
+            </condition>
+        </low-fuel8>
+
+		<low-fuel15>
+            <name>low-fuel15</name>
+            <mode>once</mode>
+            <path>Aircraft/Su-25/Sounds/Samples/fuel_1500_ru.wav</path>
+            <condition>
+                <less-than>
+                    <property>/consumables/fuel/total-fuel-gals</property>
+                    <value>493.0</value>
+                </less-than>
+            </condition>
+        </low-fuel15>
 
 		<rita>
 			<name>danger-altitude</name>
