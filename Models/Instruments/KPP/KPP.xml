@@ -12,11 +12,11 @@
   <object-name>AltitudeScale</object-name>
   <object-name>CourseScale</object-name>
   <object-name>PitchScale</object-name>
-  <object-name>KPP.AltitudeDirector</object-name>
+  <!-- <object-name>KPP.AltitudeDirector</object-name> -->
   <object-name>KPP.BankDirector</object-name>
   <object-name>KPP.BlenkerK</object-name>
   <object-name>KPP.BlenkerT</object-name>
-  <object-name>KPP.CourseDirector</object-name>
+  <!-- <object-name>KPP.CourseDirector</object-name> -->
   <object-name>KPP.PitchDirector</object-name>
   <object-name>KPP.PitchAngleScale</object-name>
   <object-name>KPP.Roll</object-name>
@@ -47,11 +47,11 @@
   <object-name>AltitudeScale</object-name>
   <object-name>CourseScale</object-name>
   <object-name>PitchScale</object-name>
-  <object-name>KPP.AltitudeDirector</object-name>
+  <!-- <object-name>KPP.AltitudeDirector</object-name> -->
   <object-name>KPP.BankDirector</object-name>
   <object-name>KPP.BlenkerK</object-name>
   <object-name>KPP.BlenkerT</object-name>
-  <object-name>KPP.CourseDirector</object-name>
+  <!-- <object-name>KPP.CourseDirector</object-name> -->
   <object-name>KPP.PitchDirector</object-name>
   <object-name>KPP.PitchAngleScale</object-name>
   <object-name>KPP.Roll</object-name>
@@ -84,7 +84,7 @@
   </emission>
  </animation>-->
 
- <animation>
+ <!-- <animation>
   <type>material</type>
   <object-name>KPP.ArrKnorLamp</object-name>
   <emission>
@@ -93,7 +93,7 @@
    <blue> 1.0</blue>
     <factor-prop>controls/lighting/instruments-norm</factor-prop>
   </emission>
- </animation>
+ </animation> -->
 
  <!--<effect>
   <inherits-from>Aircraft/MiG-29_9-12/Models/Effects/model-transparent</inherits-from>
@@ -185,7 +185,7 @@
   </axis>
  </animation>
 
- <animation>
+ <!-- <animation>
   <type>translate</type>
   <object-name>KPP.AltitudeDirector</object-name>
   <property>mig29/o/snv</property>
@@ -197,12 +197,11 @@
    <y>0</y>
    <z>1</z>
   </axis>
- </animation>
+ </animation> -->
 
- <animation>
+ <!-- <animation>
   <type>translate</type>
   <object-name>KPP.CourseDirector</object-name>
-  <!-- <property>mig29/instrumentation/KPP/course-director</property> -->
   <property>instrumentation/nav/heading-needle-deflection</property>
   <factor>0.0155</factor>
   <min>-0.0155</min>
@@ -212,7 +211,7 @@
    <y>1</y>
    <z>0</z>
   </axis>
- </animation>
+ </animation> -->
 
  <animation>
   <type>translate</type>
@@ -277,7 +276,7 @@
   </action>
  </animation> -->
 
- <animation>
+ <!-- <animation>
   <type>select</type>
   <object-name>KPP.ArrKnorLamp</object-name>
   <condition>
@@ -298,7 +297,7 @@
     </or>
    </and>
   </condition>
- </animation>
+ </animation> -->
 
  <animation>
   <type>select</type>

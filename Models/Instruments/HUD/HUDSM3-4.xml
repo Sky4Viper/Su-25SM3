@@ -217,7 +217,7 @@
       </condition>
     </animation>
 
-    <animation>
+    <!-- <animation>
       <type>material</type>
       <object-name>hud_lights</object-name>
       <emission>
@@ -229,9 +229,9 @@
       <condition>
         <property>/controls/power/battery</property>
       </condition>
-    </animation>
+    </animation> -->
 
-    <animation>
+    <!-- <animation>
       <type>material</type>
       <object-name>marm_light_on</object-name>
       <emission>
@@ -243,9 +243,9 @@
       <condition>
         <property>/controls/power/battery</property>
       </condition>
-    </animation>
+    </animation> -->
 
-    <animation>
+    <!-- <animation>
       <type>material</type>
       <object-name>marm_light_off</object-name>
       <emission>
@@ -257,7 +257,7 @@
       <condition>
         <property>/controls/power/battery</property>
       </condition>
-    </animation>
+    </animation> -->
 
     <animation>
       <type>material</type>
@@ -409,7 +409,7 @@
       </condition>
     </animation>
 
-    <animation>
+    <!-- <animation>
       <type>select</type>
       <object-name>marm_light_on</object-name>
       <condition>
@@ -418,9 +418,9 @@
           <value>1</value>
         </equals>
       </condition>
-    </animation>
+    </animation> -->
 
-    <animation>
+    <!-- <animation>
       <type>select</type>
       <object-name>marm_light_off</object-name>
       <condition>
@@ -429,7 +429,7 @@
           <value>0</value>
         </equals>
       </condition>
-    </animation>
+    </animation> -->
 
     <animation>
       <type>rotate</type>

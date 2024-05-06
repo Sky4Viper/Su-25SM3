@@ -42,7 +42,7 @@
         </condition>
 </animation>
 
-<animation>
+<!-- <animation>
  <type>material</type>
  <object-name>screws</object-name>
  <emission>
@@ -51,7 +51,7 @@
   <blue>0.8</blue>
   <factor-prop>controls/lighting/instruments-norm</factor-prop>
  </emission>
-</animation>
+</animation> -->
 
 <effect>
             <inherits-from>Effects/model-transparent</inherits-from>
