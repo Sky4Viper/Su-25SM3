@@ -86,6 +86,29 @@
         </less-than>
       </condition>
     </animation>
+
+  <animation>
+   <type>select</type>
+    <object-name>com1</object-name>
+    <object-name>com1-id</object-name>
+    <object-name>com1-label</object-name>
+    <object-name>ark</object-name>
+    <object-name>ark-id</object-name>
+    <object-name>ark-label</object-name>
+    <object-name>nav1</object-name>
+    <object-name>nav1-label</object-name>
+    <object-name>nav2</object-name>
+    <object-name>nav2-label</object-name>
+    <object-name>nav1-chnl</object-name>
+    <object-name>nav2-chnl</object-name>
+    <object-name>ark-chnl</object-name>
+    <object-name>com1-chnl</object-name>
+    <object-name>nav1-id</object-name>
+    <object-name>nav2-id</object-name> 
+   <condition>
+    <property>/controls/power/rsbn</property>
+   </condition>
+  </animation>
     
     <effect>
         <inherits-from>Effects/model-transparent</inherits-from>
@@ -105,9 +128,13 @@
        <object-name>range_digit.003</object-name>
        <object-name>range_decimal</object-name>
        <object-name>com1</object-name>
+       <object-name>com1-id</object-name>
        <object-name>ark</object-name>
+       <object-name>ark-id</object-name>
        <object-name>nav1</object-name>
-       <object-name>nav2</object-name> 
+       <object-name>nav2</object-name>
+       <object-name>nav1-id</object-name>
+       <object-name>nav2-id</object-name> 
        <object-name>nav1-chnl</object-name>
        <object-name>nav2-chnl</object-name>
        <object-name>ark-chnl</object-name>
@@ -333,8 +360,10 @@
     <animation>
         <type>material</type>
         <object-name>com1</object-name>
+        <object-name>com1-id</object-name>
         <object-name>com1-label</object-name>
         <object-name>ark</object-name>
+        <object-name>ark-id</object-name>
         <object-name>ark-label</object-name>
         <object-name>nav1</object-name>
         <object-name>nav1-label</object-name>
@@ -344,6 +373,8 @@
         <object-name>nav2-chnl</object-name>
         <object-name>ark-chnl</object-name>
         <object-name>com1-chnl</object-name>
+        <object-name>nav1-id</object-name>
+        <object-name>nav2-id</object-name> 
         <ambient>
             <red>0.3</red>
             <green>1.0</green>
@@ -374,8 +405,10 @@
     <animation>
         <type>material</type>
         <object-name>com1</object-name>
+        <object-name>com1-id</object-name>
         <object-name>com1-label</object-name>
         <object-name>ark</object-name>
+        <object-name>ark-id</object-name>
         <object-name>ark-label</object-name>
         <object-name>nav1</object-name>
         <object-name>nav1-label</object-name>
@@ -385,6 +418,8 @@
         <object-name>nav2-chnl</object-name>
         <object-name>ark-chnl</object-name>
         <object-name>com1-chnl</object-name>
+        <object-name>nav1-id</object-name>
+        <object-name>nav2-id</object-name> 
         <ambient>
             <red>1.0</red>
             <green>0.3</green>
@@ -787,6 +822,23 @@
     </text>
 
     <text>
+        <name>com1-id</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.004</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> -0.000</y-m>
+            <z-m> -0.066524</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <format type="string">%4.4s</format>
+        <property>instrumentation/comm[0]/station-name</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
+    </text>
+
+    <text>
         <name>com1-chnl</name>
         <font>lcd.txf</font>
         <character-size type="double">0.006</character-size>
@@ -836,6 +888,22 @@
         <text type="string">-ARK</text>
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
+    </text>
+
+    <text>
+        <name>ark-id</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.004</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> -0.000</y-m>
+            <z-m> -0.081507</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <property>instrumentation/adf/ident</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
     </text>
 
     <text>
@@ -907,6 +975,22 @@
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
     </text>
+
+    <text>
+        <name>nav1-id</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.004</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> -0.000</y-m>
+            <z-m> -0.096491</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <property>instrumentation/nav/nav-id</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
+    </text>
     
     <text>
         <name>nav1</name>
@@ -958,6 +1042,22 @@
         <property>su-25/instrumentation/PRMG/channel</property>
         <draw-text type="bool">true</draw-text>
         <alignment>left-top</alignment>
+    </text>
+
+    <text>
+        <name>nav2-id</name>
+        <font>lcd.txf</font>
+        <character-size type="double">0.004</character-size>
+        <offsets>
+            <x-m> 0.195895</x-m>
+            <y-m> -0.000</y-m>
+            <z-m> -0.112475</z-m>
+        </offsets>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <property>instrumentation/nav[1]/nav-id</property>
+        <draw-text type="bool">true</draw-text>
+        <alignment>right-top</alignment>
     </text>
     
     <text>
