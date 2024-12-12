@@ -300,6 +300,10 @@
 				<lbs>580</lbs>
 			</opt>
 			<opt>
+				<name>S-13 rockets</name>
+				<lbs>1102</lbs>
+			</opt>
+			<opt>
 				<name>Kh-25 missile</name>
 				<lbs>659</lbs>
 			</opt>
@@ -325,6 +329,10 @@
 			<opt>
 				<name>S-8 rockets</name>
 				<lbs>580</lbs>
+			</opt>
+			<opt>
+				<name>S-13 rockets</name>
+				<lbs>1102</lbs>
 			</opt>
 			<opt>
 				<name>Kh-25 missile</name>
@@ -413,6 +421,10 @@
 				<lbs>580</lbs>
 			</opt>
 			<opt>
+				<name>S-13 rockets</name>
+				<lbs>1102</lbs>
+			</opt>
+			<opt>
 				<name>Kh-25 missile</name>
 				<lbs>659</lbs>
 			</opt>
@@ -434,6 +446,10 @@
 			<opt>
 				<name>S-8 rockets</name>
 				<lbs>580</lbs>
+			</opt>
+			<opt>
+				<name>S-13 rockets</name>
+				<lbs>1102</lbs>
 			</opt>
 			<opt>
 				<name>Kh-25 missile</name>
@@ -610,14 +626,19 @@
 				<desc>Break chute deploy/retract</desc>
 			</key>
 			
+			<!-- <key>
+				<name>e</name>
+				<desc>Eject</desc>
+			</key> -->
+
+			<key>
+				<name>m</name>
+				<desc>Master Arm</desc>
+			</key>
+
 			<key>
 				<name>f</name>
 				<desc>Gun trigger</desc>
-			</key>
-			
-			<key>
-				<name>e</name>
-				<desc>Eject</desc>
 			</key>
 			
 			<key>
@@ -935,6 +956,30 @@
 					</binding>
 				</mod-up>
 			</key>
+
+    		<key n="109">
+        		<name>m</name>
+        		<desc>Masterarm</desc>
+        		<binding>
+            		<command>nasal</command>
+            		<script><![CDATA[
+                		setprop("controls/armament/masterarm",!getprop("controls/armament/masterarm"));
+                		screen.log.write("Master-arm "~(getprop("controls/armament/masterarm")==0?"OFF":"ON"), 0.1, 0.9, 0.4);
+                		]]>
+				    </script>
+        		</binding>
+				<binding>
+        			<command>nasal</command>
+        			<script>switchclicksound.click("switch")</script>
+      			</binding>
+				<binding>
+        			<command>property-cycle</command>
+        			<property>controls/hud/hudmode</property>
+        			<value>4</value>
+        			<value>0</value>
+        			<wrap>true</wrap>
+      			</binding>
+    		</key>
 			
 			<key n="110">
 				<name>n</name>

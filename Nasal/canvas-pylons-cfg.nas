@@ -433,6 +433,22 @@ btn_P3_KH25.listen("clicked", func {
 		});
 P3Ctls.addItem(btn_P3_KH25);
 
+# click button P3:BL-13
+var btn_P3_BL13 = canvas.gui.widgets.Button.new(root, canvas.style, {})
+        .setText("BL-13")
+        .setFixedSize(90, 25);
+
+btn_P3_BL13.listen("clicked", func {
+        # add code here to react on click on button.
+		print("P3: BL-13");
+		setprop("sim/weight[2]/selected","S-13 rockets");
+		setprop("sim/weight[2]/weight-lb",1102);
+		setprop("/controls/armament/rocketsLeftS13", 5);
+		setprop("/controls/armament/rocketsCountS13", 5);
+		pylons_update();
+		});
+P3Ctls.addItem(btn_P3_BL13);
+
 # click button P3:PTB-800
 var btn_P3_PTB800 = canvas.gui.widgets.Button.new(root, canvas.style, {})
         .setText("PTB-800")
@@ -530,6 +546,23 @@ btn_P4_KH25.listen("clicked", func {
 		pylons_update();
 		});
 P4Ctls.addItem(btn_P4_KH25);
+
+# click button P3:BL-13
+var btn_P4_BL13 = canvas.gui.widgets.Button.new(root, canvas.style, {})
+        .setText("BL-13")
+        #.move(300, 300)
+        .setFixedSize(90, 25);
+
+btn_P4_BL13.listen("clicked", func {
+        # add code here to react on click on button.
+		print("P4: BL-13");
+		setprop("sim/weight[3]/selected","S-13 rockets");
+		setprop("sim/weight[3]/weight-lb",1102);
+		setprop("/controls/armament/rocketsLeftS13", 5);
+		setprop("/controls/armament/rocketsCountS13", 5);
+		pylons_update();
+		});
+P4Ctls.addItem(btn_P4_BL13);
 
 ###############################
 ######### Pylon5 ##############
@@ -841,6 +874,22 @@ btn_P7_KH25.listen("clicked", func {
 		});
 P7Ctls.addItem(btn_P7_KH25);
 
+# click button P7:BL-13
+var btn_P7_BL13 = canvas.gui.widgets.Button.new(root, canvas.style, {})
+        .setText("BL-13")
+        .setFixedSize(90, 25);
+
+btn_P7_BL13.listen("clicked", func {
+        # add code here to react on click on button.
+		print("P7: BL-13");
+		setprop("sim/weight[6]/selected","S-13 rockets");
+		setprop("sim/weight[6]/weight-lb",1102);
+		setprop("/controls/armament/rocketsLeftS13", 5);
+		setprop("/controls/armament/rocketsCountS13", 5);
+		pylons_update();
+		});
+P7Ctls.addItem(btn_P7_BL13);
+
 ###############################
 ######### Pylon8 ##############
 ###############################
@@ -923,6 +972,22 @@ btn_P8_KH25.listen("clicked", func {
 		pylons_update();
 		});
 P8Ctls.addItem(btn_P8_KH25);
+
+# click button P8:BL-13
+var btn_P8_BL13 = canvas.gui.widgets.Button.new(root, canvas.style, {})
+        .setText("BL-13")
+        .setFixedSize(90, 25);
+
+btn_P8_BL13.listen("clicked", func {
+        # add code here to react on click on button.
+		print("P8: BL-13");
+		setprop("sim/weight[7]/selected","S-13 rockets");
+		setprop("sim/weight[7]/weight-lb",1102);
+		setprop("/controls/armament/rocketsLeftS13", 5);
+		setprop("/controls/armament/rocketsCountS13", 5);
+		pylons_update();
+		});
+P8Ctls.addItem(btn_P8_BL13);
 
 # click button P8:PTB-800
 var btn_P8_PTB800 = canvas.gui.widgets.Button.new(root, canvas.style, {})
@@ -1057,19 +1122,17 @@ SpaceFiller.setText("")
 
 P10Ctls.addItem(SpaceFiller);
 P10Ctls.addItem(SpaceFiller);
-#P10Ctls.addItem(SpaceFiller);
 
 P9Ctls.addItem(SpaceFiller);
 P9Ctls.addItem(SpaceFiller);
 
-P8Ctls.addItem(SpaceFiller);
+#P8Ctls.addItem(SpaceFiller);
 
-P7Ctls.addItem(SpaceFiller);
+#P7Ctls.addItem(SpaceFiller);
 
+#P4Ctls.addItem(SpaceFiller);
 
-P4Ctls.addItem(SpaceFiller);
-
-P3Ctls.addItem(SpaceFiller);
+#P3Ctls.addItem(SpaceFiller);
 
 P2Ctls.addItem(SpaceFiller);
 P2Ctls.addItem(SpaceFiller);

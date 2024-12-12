@@ -827,10 +827,16 @@
                 <property>controls/armament/selectedweapon</property>
                 <value>2</value>
               </equals>
+	            <or>
 	            <equals>
                 <property>sim/weight[2]/selected</property>
                 <value>S-8 rockets</value>
               </equals>
+              <equals>
+                <property>sim/weight[2]/selected</property>
+                <value>S-13 rockets</value>
+              </equals>
+              </or>
 	          </and>
 	          <and>
               <equals>
@@ -873,10 +879,16 @@
                 <property>controls/armament/selectedweapon</property>
                 <value>2</value>
               </equals>
+              <or>
 	            <equals>
                 <property>sim/weight[3]/selected</property>
                 <value>S-8 rockets</value>
               </equals>
+              <equals>
+                <property>sim/weight[3]/selected</property>
+                <value>S-13 rockets</value>
+              </equals>
+              </or>
 	          </and>
 	          <and>
               <equals>
@@ -1011,10 +1023,16 @@
                 <property>controls/armament/selectedweapon</property>
                 <value>2</value>
               </equals>
+	            <or>
 	            <equals>
                 <property>sim/weight[6]/selected</property>
                 <value>S-8 rockets</value>
               </equals>
+              <equals>
+                <property>sim/weight[6]/selected</property>
+                <value>S-13 rockets</value>
+              </equals>
+              </or>
 	          </and>
 	          <and>
               <equals>
@@ -1057,10 +1075,16 @@
                 <property>controls/armament/selectedweapon</property>
                 <value>2</value>
               </equals>
+	            <or>
 	            <equals>
                 <property>sim/weight[7]/selected</property>
                 <value>S-8 rockets</value>
               </equals>
+              <equals>
+                <property>sim/weight[7]/selected</property>
+                <value>S-13 rockets</value>
+              </equals>
+              </or>
 	          </and>
 	          <and>
               <equals>
@@ -1384,10 +1408,10 @@
   </label>
 
   <label>
-    <name>S-5 Rockets</name>
+    <name>S-8 Rockets</name>
     <!-- <x>38</x> -->
     <x>-55</x>
-    <y>-43</y>
+    <y>-40</y>
     <width>12</width>
     <height>8</height>
     <format>C-8</format>
@@ -1395,6 +1419,7 @@
     <box>false</box>
 
     <condition>
+      <and>
       <property>/controls/power/battery</property>
       <equals>
         <property>controls/hud/hudmode</property>
@@ -1404,6 +1429,89 @@
         <property>controls/armament/selectedweapon</property>
         <value>2</value>
       </equals>
+      <or>
+        <equals>
+          <property>sim/weight[1]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+	      <equals>
+          <property>sim/weight[2]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[3]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[4]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[5]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[6]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[7]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[8]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[9]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+      </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name>S-13 Rockets</name>
+    <!-- <x>38</x> -->
+    <x>-55</x>
+    <y>-49</y>
+    <width>12</width>
+    <height>8</height>
+    <format>C-13</format>
+    <halign>left</halign>
+    <box>false</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <equals>
+          <property>controls/armament/selectedweapon</property>
+          <value>2</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </equals>
+         <or>
+	      <equals>
+          <property>sim/weight[2]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[3]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[6]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[7]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+      </or>
+      </and>
     </condition>
   </label>
 
@@ -1523,9 +1631,9 @@
   </label>
 
   <label>
-    <name>Rockets left</name>
+    <name>Rockets left S-8</name>
     <x>52</x>
-    <y>-43</y>
+    <y>-40</y>
     <width>8</width>
     <height>8</height>
     <input>
@@ -1547,6 +1655,91 @@
           <property>controls/hud/hudmode</property>
           <value>4</value>
         </equals>
+         <or>
+        <equals>
+          <property>sim/weight[1]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+	      <equals>
+          <property>sim/weight[2]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[3]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[4]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[5]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[6]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[7]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[8]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[9]/selected</property>
+          <value>S-8 rockets</value>
+        </equals>
+      </or>
+      </and>
+    </condition>
+  </label>
+
+  <label>
+    <name>Rockets left S-13</name>
+    <x>52</x>
+    <y>-49</y>
+    <width>8</width>
+    <height>8</height>
+    <input>
+      <property>/controls/armament/rocketsLeftS13</property>
+      <factor>0.8</factor>
+    </input>
+    <format>%1d</format>
+    <halign>right</halign>
+    <box>true</box>
+
+    <condition>
+      <property>/controls/power/battery</property>
+      <and>
+        <equals>
+          <property>controls/armament/selectedweapon</property>
+          <value>2</value>
+        </equals>
+        <equals>
+          <property>controls/hud/hudmode</property>
+          <value>4</value>
+        </equals>
+         <or>
+	      <equals>
+          <property>sim/weight[2]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[3]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[6]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+        <equals>
+          <property>sim/weight[7]/selected</property>
+          <value>S-13 rockets</value>
+        </equals>
+      </or>
       </and>
     </condition>
   </label>

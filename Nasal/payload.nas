@@ -16,7 +16,7 @@
 
 #initialize MP transferred ints
 var weightsNode = props.globals.getNode("/sim");
-var numWeights = 10;
+var numWeights = 11;
 
 for(var i=0; i<numWeights; i+=1) {
 	props.globals.initNode("/sim/weight["~i~"]/payload-int", 0, "INT");
@@ -50,7 +50,9 @@ var setLoadInt = func(pylon_index) {
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 7);
 	else if( payload == "Kh-29T missile" )
 		setprop("/sim/weight["~pylon_index~"]/payload-int", 8);
-	
+	else if( payload == "S-13 rockets" )
+		setprop("/sim/weight["~pylon_index~"]/payload-int", 9);
+
 	#error case - weapon from payloads dialog not implemented here
 	else setprop("/sim/weight["~pylon_index~"]/payload-int", -1);
 }

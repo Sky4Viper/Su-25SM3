@@ -251,6 +251,35 @@
 			</and>
 		</condition>
 	</animation>
+
+	<model>
+		<name>P3-BL-13</name>
+		<path>Aircraft/Su-25/Models/Payload/BL-13/BL-13-1.xml</path>
+		<offsets>
+			<x-m>0.50</x-m>
+			<y-m>-3.66</y-m>
+			<z-m>1.50</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P3-BL-13</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[2]/selected</property>
+					<value>S-13 rockets</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[2]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
 	
 	<!-- 4 Pylon 4 L -->
 	
@@ -337,6 +366,35 @@
 				<equals>
 					<property>sim/weight[3]/selected</property>
 					<value>FAB-250 bomb</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[3]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<model>
+		<name>P4-BL-13</name>
+		<path>Aircraft/Su-25/Models/Payload/BL-13/BL-13-2.xml</path>
+		<offsets>
+			<x-m>0.14</x-m>
+			<y-m>-2.86</y-m>
+			<z-m>1.57</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P4-BL-13</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[3]/selected</property>
+					<value>S-13 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[3]/release</property>
@@ -743,6 +801,35 @@
 			</and>
 		</condition>
 	</animation>
+
+	<model>
+		<name>P7-BL-13</name>
+		<path>Aircraft/Su-25/Models/Payload/BL-13/BL-13-3.xml</path>
+		<offsets>
+			<x-m>0.14</x-m>
+			<y-m>2.86</y-m>
+			<z-m>1.57</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P7-BL-13</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[6]/selected</property>
+					<value>S-13 rockets</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[6]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
 	
 	<!-- 8 Pylon 3 R -->
 	
@@ -858,6 +945,35 @@
 				<equals>
 					<property>sim/weight[7]/selected</property>
 					<value>FAB-250 bomb</value>
+				</equals>
+				<equals>
+					<property>controls/armament/station[7]/release</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<model>
+		<name>P8-BL-13</name>
+		<path>Aircraft/Su-25/Models/Payload/BL-13/BL-13-4.xml</path>
+		<offsets>
+			<x-m>0.50</x-m>
+			<y-m>3.66</y-m>
+			<z-m>1.50</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P8-BL-13</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[7]/selected</property>
+					<value>S-13 rockets</value>
 				</equals>
 				<equals>
 					<property>controls/armament/station[7]/release</property>
