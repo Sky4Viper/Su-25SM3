@@ -972,7 +972,11 @@
 					<property>controls/armament/trigger-S8-5-R</property>
 					<property>controls/armament/trigger-S8-6-R</property>
 					<property>controls/armament/trigger-S8-7-R</property>
-					<property>controls/armament/trigger-S8-8-R</property>  
+					<property>controls/armament/trigger-S8-8-R</property>
+					<property>controls/armament/trigger-S13-2-L</property>
+					<property>controls/armament/trigger-S13-3-L</property>
+					<property>controls/armament/trigger-S13-6-R</property>
+					<property>controls/armament/trigger-S13-7-R</property>
                 </or>
 			</condition>
 
@@ -1001,7 +1005,11 @@
 					<property>controls/armament/trigger-S8-5-R</property>
 					<property>controls/armament/trigger-S8-6-R</property>
 					<property>controls/armament/trigger-S8-7-R</property>
-					<property>controls/armament/trigger-S8-8-R</property>  
+					<property>controls/armament/trigger-S8-8-R</property>
+					<property>controls/armament/trigger-S13-2-L</property>
+					<property>controls/armament/trigger-S13-3-L</property>
+					<property>controls/armament/trigger-S13-6-R</property>
+					<property>controls/armament/trigger-S13-7-R</property> 
                 </or>
 			</condition>
 

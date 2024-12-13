@@ -14,6 +14,11 @@ props.globals.initNode("/controls/armament/trigger-S8-6-R", 0, "BOOL");
 props.globals.initNode("/controls/armament/trigger-S8-7-R", 0, "BOOL");
 props.globals.initNode("/controls/armament/trigger-S8-8-R", 0, "BOOL");
 
+props.globals.initNode("/controls/armament/trigger-S13-2-L", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S13-3-L", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S13-6-R", 0, "BOOL");
+props.globals.initNode("/controls/armament/trigger-S13-7-R", 0, "BOOL");
+
 #props.globals.initNode("/sim/multiplay/generic/int[9]", 0, "INT");
 
 #ammo counter
@@ -89,10 +94,10 @@ var outOfAmmoS13 = maketimer(1.0,
 	func { 
 		#print("Out of S-13 rockets! ");
 		screen.log.write("Out of S-13 rockets! ", 1, 0.6, 0.1);
-		setprop("/controls/armament/trigger-S8-2-L", 0);
-		setprop("/controls/armament/trigger-S8-3-L", 0);
-		setprop("/controls/armament/trigger-S8-6-R", 0);
-		setprop("/controls/armament/trigger-S8-7-R", 0);
+		setprop("/controls/armament/trigger-S13-2-L", 0);
+		setprop("/controls/armament/trigger-S13-3-L", 0);
+		setprop("/controls/armament/trigger-S13-6-R", 0);
+		setprop("/controls/armament/trigger-S13-7-R", 0);
 		setprop("/sim/multiplay/generic/int[9]", 0);
 		setprop("/controls/armament/rocketsCountS13", 0);
 		setprop("/controls/armament/rocketsLeftS13", 0);
@@ -112,6 +117,12 @@ var Rockets_Stop = maketimer(0.1,
 		setprop("/controls/armament/trigger-S8-5-R", 0);
 		setprop("/controls/armament/trigger-S8-6-R", 0);
 		setprop("/controls/armament/trigger-S8-7-R", 0);
+
+		setprop("/controls/armament/trigger-S13-2-L", 0);
+		setprop("/controls/armament/trigger-S13-3-L", 0);
+		setprop("/controls/armament/trigger-S13-6-R", 0);
+		setprop("/controls/armament/trigger-S13-7-R", 0);
+
 		setprop("/controls/armament/trigger-S8-8-R", 0);
 		setprop("/sim/multiplay/generic/int[9]", 0);
         if(getprop("/controls/armament/report-ammo")) {
@@ -172,19 +183,19 @@ var triggerControl = func {
 			var fireTimeS13 = 0.25;
 
 			if(BL13mounted3L) {
-				setprop("/controls/armament/trigger-S8-2-L", 1);
+				setprop("/controls/armament/trigger-S13-2-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(BL13mounted4L) {
-				setprop("/controls/armament/trigger-S8-3-L", 1);
+				setprop("/controls/armament/trigger-S13-3-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(BL13mounted7R) {
-				setprop("/controls/armament/trigger-S8-6-R", 1);
+				setprop("/controls/armament/trigger-S13-6-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(BL13mounted8R) {
-				setprop("/controls/armament/trigger-S8-7-R", 1);
+				setprop("/controls/armament/trigger-S13-7-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			var rocketsLeftS13 = getprop("/controls/armament/rocketsLeftS13");
@@ -197,19 +208,19 @@ var triggerControl = func {
 		if((BL13mounted3L or BL13mounted4L or BL13mounted7R or BL13mounted8R) and RippleType ==1) {
 			print("BL-13, Fire single!");
 			if(BL13mounted3L) {
-				setprop("/controls/armament/trigger-S8-2-L", 1);
+				setprop("/controls/armament/trigger-S13-2-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(BL13mounted4L) {
-				setprop("/controls/armament/trigger-S8-3-L", 1);
+				setprop("/controls/armament/trigger-S13-3-L", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(BL13mounted7R) {
-				setprop("/controls/armament/trigger-S8-6-R", 1);
+				setprop("/controls/armament/trigger-S13-6-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			if(BL13mounted8R) {
-				setprop("/controls/armament/trigger-S8-7-R", 1);
+				setprop("/controls/armament/trigger-S13-7-R", 1);
 				setprop("/sim/multiplay/generic/int[9]", 1);
 			}
 			var rocketsLeftS13 = (getprop("/controls/armament/rocketsLeftS13") -1);
@@ -397,6 +408,13 @@ var triggerControl = func {
 		setprop("/controls/armament/trigger-S8-6-R", 0);
 		setprop("/controls/armament/trigger-S8-7-R", 0);
 		setprop("/controls/armament/trigger-S8-8-R", 0);
+
+		setprop("/controls/armament/trigger-S13-2-L", 0);
+		setprop("/controls/armament/trigger-S13-3-L", 0);
+		setprop("/controls/armament/trigger-S13-6-R", 0);
+		setprop("/controls/armament/trigger-S13-7-R", 0);
+
+		setprop("/controls/armament/trigger-S13-2-L", 0);
 		setprop("/sim/multiplay/generic/int[9]", 0);
 		setprop("/controls/armament/rocketsLeft", 
 			getprop("/controls/armament/rocketsCount"));#gets truncated

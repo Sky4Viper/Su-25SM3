@@ -6,7 +6,7 @@
     	<type>material</type>
     	<object-name>BL-13.002</object-name>
     	<emission>
-      		<factor-prop>/controls/armament/trigger-S8-6-R</factor-prop>
+      		<factor-prop>/controls/armament/trigger-S13-6-R</factor-prop>
       		<red>0.12</red>
       		<green>0.05</green>
       		<blue>0.00</blue>
@@ -20,7 +20,7 @@
     	<path>Aircraft/Su-25/Models/Effects/S-5/Flame.xml</path>
     	<condition>
       		<and>
-        		<property>/controls/armament/trigger-S8-6-R</property>
+        		<property>/controls/armament/trigger-S13-6-R</property>
       		</and>
     	</condition>
     	<offsets>
@@ -47,7 +47,7 @@
     	<path>Aircraft/Su-25/Models/Effects/S-5/Flack.xml</path>
     	<condition>
       		<and>
-        		<property>/controls/armament/trigger-S8-6-R</property>
+        		<property>/controls/armament/trigger-S13-6-R</property>
       		</and>
     	</condition>
     	<offsets>
