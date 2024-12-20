@@ -576,29 +576,36 @@
               				<dialog-name>PRMG</dialog-name>
             			</binding>
           			</item>
-          <item>
-            <label>Ground Equipment Toggle</label>
-            <binding>
-              <command>property-toggle</command>
-              <property>sim/model/ground-equipment-e</property>
-            </binding>
-            <binding>
-              <command>property-toggle</command>
-              <property>sim/model/ground-equipment-g</property>
-            </binding>
-            <binding>
-              <command>property-toggle</command>
-              <property>sim/model/ground-equipment-s</property>
-            </binding>
-            <binding>
-              <command>property-toggle</command>
-              <property>sim/model/ground-equipment-p</property>
-            </binding>
-            <binding>
-              <command>property-toggle</command>
-              <property>sim/model/ground-equipment-f</property>
-            </binding>
-          </item>
+					<item>
+        				<label>Event Log</label>
+        				<binding>
+            				<command>dialog-show</command>
+            				<dialog-name>flightlog</dialog-name>
+        					</binding>
+					</item>
+          			<item>
+            			<label>Ground Equipment Toggle</label>
+            			<binding>
+              				<command>property-toggle</command>
+              				<property>sim/model/ground-equipment-e</property>
+            			</binding>
+            			<binding>
+              				<command>property-toggle</command>
+              				<property>sim/model/ground-equipment-g</property>
+            			</binding>
+            			<binding>
+              				<command>property-toggle</command>
+              				<property>sim/model/ground-equipment-s</property>
+            			</binding>
+            			<binding>
+              				<command>property-toggle</command>
+              				<property>sim/model/ground-equipment-p</property>
+            			</binding>
+            			<binding>
+              				<command>property-toggle</command>
+              				<property>sim/model/ground-equipment-f</property>
+            			</binding>
+          			</item>
 				</menu>
 			</default>
 		</menubar>
@@ -696,6 +703,35 @@
 		</mp-systems>
 		
 	</sim>
+
+	<payload>
+		<d-config>
+            <full_damage_dist_m type="double">2</full_damage_dist_m>
+            <use_hitpoints_instead_of_failure_modes_bool type="bool">true</use_hitpoints_instead_of_failure_modes_bool>
+            <hp_max type="double">90</hp_max>
+            <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
+            <hitable_by_cannon type="bool">true</hitable_by_cannon>
+            <is_fleet type="bool">false</is_fleet>
+            <rwr_to_screen type="bool">true</rwr_to_screen>
+            <rwr_audio_extended type="bool">false</rwr_audio_extended>
+            <tacview_supported type="bool">false</tacview_supported>
+            <m28_auto type="bool">false</m28_auto>
+            <mlw_max type="double">0</mlw_max>
+            <auto_flare_caller type="bool">false</auto_flare_caller>
+        </d-config>
+		<armament>
+			<enable-craters type="bool">true</enable-craters>
+			<MLW-bearing type="double">0</MLW-bearing>
+			<MLW-count type="int">0</MLW-count>
+			<MLW-launcher type="string"></MLW-launcher>
+			<MAW-bearing type="double">0</MAW-bearing>
+			<MAW-active type="bool">false</MAW-active>
+        	<MAW-semiactive type="bool">false</MAW-semiactive>
+        	<msg type="bool">true</msg>
+			<spike type="bool">false</spike>
+        	<models type="string">Aircraft/Su-25/Models/emesary/</models>
+		</armament>
+	</payload>
 	
 	<!-- Keyboard shortcuts -->
 	
@@ -1540,6 +1576,15 @@
    		<radar>
     		<file>Aircraft/Su-25/Nasal/radar2.nas</file>
    		</radar>
+
+		<notifications>
+    		<file>Aircraft/Su-25/Nasal/ArmamentNotification.nas</file>
+			<file>Aircraft/Su-25/Nasal/GeoBridgedTransmitter.nas</file>
+   		</notifications>
+
+		<damage>
+    		<file>Aircraft/Su-25/Nasal/damage.nas</file>
+   		</damage>
 
 	</nasal>
 	
